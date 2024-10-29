@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- generated with COPASI 4.44 (Build 295) (http://www.copasi.org) at 2024-08-29T13:27:41Z -->
+<!-- generated with COPASI 4.44 (Build 295) (http://www.copasi.org) at 2024-10-29T15:14:43Z -->
 <?oxygen RNGSchema="http://www.copasi.org/static/schema/CopasiML.rng" type="xml"?>
 <COPASI xmlns="http://www.copasi.org/static/schema" versionMajor="4" versionMinor="44" versionDevel="295" copasiSourcesModified="0">
   <ListOfFunctions>
@@ -27,451 +27,747 @@ Reaction scheme where the products are created from the reactants and the change
         <ParameterDescription key="FunctionParameter_81" name="substrate" order="1" role="substrate"/>
       </ListOfParameterDescriptions>
     </Function>
-    <Function key="Function_46" name="Rate Law for Th2 cells" type="UserDefined" reversible="unspecified">
+    <Function key="Function_41" name="Rate Law for Th2 cells" type="UserDefined" reversible="unspecified">
+      <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Function_41">
+</rdf:Description>
+</rdf:RDF>
+      </MiriamAnnotation>
       <Expression>
         (s4*I4*M/(c4 + I4))*(1/(1+T1/g1))*(1/(1+Tr/gr2))
       </Expression>
       <ListOfParameterDescriptions>
-        <ParameterDescription key="FunctionParameter_343" name="s4" order="0" role="constant"/>
-        <ParameterDescription key="FunctionParameter_342" name="I4" order="1" role="modifier"/>
-        <ParameterDescription key="FunctionParameter_341" name="M" order="2" role="modifier"/>
-        <ParameterDescription key="FunctionParameter_340" name="c4" order="3" role="constant"/>
-        <ParameterDescription key="FunctionParameter_339" name="T1" order="4" role="modifier"/>
-        <ParameterDescription key="FunctionParameter_338" name="g1" order="5" role="constant"/>
-        <ParameterDescription key="FunctionParameter_337" name="Tr" order="6" role="modifier"/>
-        <ParameterDescription key="FunctionParameter_336" name="gr2" order="7" role="constant"/>
+        <ParameterDescription key="FunctionParameter_275" name="s4" order="0" role="constant"/>
+        <ParameterDescription key="FunctionParameter_274" name="I4" order="1" role="modifier"/>
+        <ParameterDescription key="FunctionParameter_273" name="M" order="2" role="modifier"/>
+        <ParameterDescription key="FunctionParameter_272" name="c4" order="3" role="constant"/>
+        <ParameterDescription key="FunctionParameter_266" name="T1" order="4" role="modifier"/>
+        <ParameterDescription key="FunctionParameter_276" name="g1" order="5" role="constant"/>
+        <ParameterDescription key="FunctionParameter_277" name="Tr" order="6" role="modifier"/>
+        <ParameterDescription key="FunctionParameter_278" name="gr2" order="7" role="constant"/>
       </ListOfParameterDescriptions>
     </Function>
-    <Function key="Function_47" name="Rate Law for Th17 cells" type="UserDefined" reversible="unspecified">
+    <Function key="Function_42" name="Rate Law for Th17 cells" type="UserDefined" reversible="unspecified">
+      <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Function_42">
+</rdf:Description>
+</rdf:RDF>
+      </MiriamAnnotation>
       <Expression>
         ((s21*I21/(c21 + I21) + s6*I6/(c6+I6))*(Ib/(cb + Ib))*(M/((1+Ig/cg)*(1+I4/c4))))*(1/(1+Tr/gr17))
       </Expression>
       <ListOfParameterDescriptions>
-        <ParameterDescription key="FunctionParameter_348" name="s21" order="0" role="constant"/>
-        <ParameterDescription key="FunctionParameter_347" name="I21" order="1" role="modifier"/>
-        <ParameterDescription key="FunctionParameter_346" name="c21" order="2" role="constant"/>
-        <ParameterDescription key="FunctionParameter_345" name="s6" order="3" role="constant"/>
-        <ParameterDescription key="FunctionParameter_344" name="I6" order="4" role="modifier"/>
-        <ParameterDescription key="FunctionParameter_329" name="c6" order="5" role="constant"/>
-        <ParameterDescription key="FunctionParameter_330" name="Ib" order="6" role="modifier"/>
-        <ParameterDescription key="FunctionParameter_331" name="cb" order="7" role="constant"/>
-        <ParameterDescription key="FunctionParameter_332" name="M" order="8" role="modifier"/>
-        <ParameterDescription key="FunctionParameter_333" name="Ig" order="9" role="modifier"/>
-        <ParameterDescription key="FunctionParameter_349" name="cg" order="10" role="constant"/>
-        <ParameterDescription key="FunctionParameter_350" name="I4" order="11" role="modifier"/>
-        <ParameterDescription key="FunctionParameter_351" name="c4" order="12" role="constant"/>
-        <ParameterDescription key="FunctionParameter_352" name="Tr" order="13" role="modifier"/>
-        <ParameterDescription key="FunctionParameter_353" name="gr17" order="14" role="constant"/>
+        <ParameterDescription key="FunctionParameter_286" name="s21" order="0" role="constant"/>
+        <ParameterDescription key="FunctionParameter_285" name="I21" order="1" role="modifier"/>
+        <ParameterDescription key="FunctionParameter_284" name="c21" order="2" role="constant"/>
+        <ParameterDescription key="FunctionParameter_283" name="s6" order="3" role="constant"/>
+        <ParameterDescription key="FunctionParameter_282" name="I6" order="4" role="modifier"/>
+        <ParameterDescription key="FunctionParameter_281" name="c6" order="5" role="constant"/>
+        <ParameterDescription key="FunctionParameter_280" name="Ib" order="6" role="modifier"/>
+        <ParameterDescription key="FunctionParameter_279" name="cb" order="7" role="constant"/>
+        <ParameterDescription key="FunctionParameter_287" name="M" order="8" role="modifier"/>
+        <ParameterDescription key="FunctionParameter_288" name="Ig" order="9" role="modifier"/>
+        <ParameterDescription key="FunctionParameter_289" name="cg" order="10" role="constant"/>
+        <ParameterDescription key="FunctionParameter_290" name="I4" order="11" role="modifier"/>
+        <ParameterDescription key="FunctionParameter_291" name="c4" order="12" role="constant"/>
+        <ParameterDescription key="FunctionParameter_292" name="Tr" order="13" role="modifier"/>
+        <ParameterDescription key="FunctionParameter_293" name="gr17" order="14" role="constant"/>
       </ListOfParameterDescriptions>
     </Function>
-    <Function key="Function_48" name="Rate Law for Thr cells" type="UserDefined" reversible="unspecified">
+    <Function key="Function_43" name="Rate Law for Thr cells" type="UserDefined" reversible="unspecified">
+      <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Function_43">
+</rdf:Description>
+</rdf:RDF>
+      </MiriamAnnotation>
       <Expression>
         ((sb*Ib/(cb+Ib) + s10*I10/(c10+I10))*(I2/(c2+I2))*(M/(1+Ia/ca)))*(1/(1+T17/g17))
       </Expression>
       <ListOfParameterDescriptions>
-        <ParameterDescription key="FunctionParameter_372" name="sb" order="0" role="constant"/>
-        <ParameterDescription key="FunctionParameter_371" name="Ib" order="1" role="modifier"/>
-        <ParameterDescription key="FunctionParameter_370" name="cb" order="2" role="constant"/>
-        <ParameterDescription key="FunctionParameter_369" name="s10" order="3" role="constant"/>
-        <ParameterDescription key="FunctionParameter_368" name="I10" order="4" role="modifier"/>
-        <ParameterDescription key="FunctionParameter_367" name="c10" order="5" role="constant"/>
-        <ParameterDescription key="FunctionParameter_366" name="I2" order="6" role="modifier"/>
-        <ParameterDescription key="FunctionParameter_365" name="c2" order="7" role="constant"/>
-        <ParameterDescription key="FunctionParameter_364" name="M" order="8" role="modifier"/>
-        <ParameterDescription key="FunctionParameter_363" name="Ia" order="9" role="modifier"/>
-        <ParameterDescription key="FunctionParameter_362" name="ca" order="10" role="constant"/>
-        <ParameterDescription key="FunctionParameter_361" name="T17" order="11" role="modifier"/>
-        <ParameterDescription key="FunctionParameter_360" name="g17" order="12" role="constant"/>
+        <ParameterDescription key="FunctionParameter_308" name="sb" order="0" role="constant"/>
+        <ParameterDescription key="FunctionParameter_307" name="Ib" order="1" role="modifier"/>
+        <ParameterDescription key="FunctionParameter_306" name="cb" order="2" role="constant"/>
+        <ParameterDescription key="FunctionParameter_305" name="s10" order="3" role="constant"/>
+        <ParameterDescription key="FunctionParameter_304" name="I10" order="4" role="modifier"/>
+        <ParameterDescription key="FunctionParameter_303" name="c10" order="5" role="constant"/>
+        <ParameterDescription key="FunctionParameter_302" name="I2" order="6" role="modifier"/>
+        <ParameterDescription key="FunctionParameter_301" name="c2" order="7" role="constant"/>
+        <ParameterDescription key="FunctionParameter_300" name="M" order="8" role="modifier"/>
+        <ParameterDescription key="FunctionParameter_299" name="Ia" order="9" role="modifier"/>
+        <ParameterDescription key="FunctionParameter_298" name="ca" order="10" role="constant"/>
+        <ParameterDescription key="FunctionParameter_297" name="T17" order="11" role="modifier"/>
+        <ParameterDescription key="FunctionParameter_296" name="g17" order="12" role="constant"/>
       </ListOfParameterDescriptions>
     </Function>
-    <Function key="Function_60" name="activated first order reaction" type="UserDefined" reversible="unspecified">
+    <Function key="Function_44" name="activated first order reaction" type="UserDefined" reversible="unspecified">
+      <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Function_44">
+</rdf:Description>
+</rdf:RDF>
+      </MiriamAnnotation>
       <Expression>
         sigma * act / (zeta+act)*S
       </Expression>
       <ListOfParameterDescriptions>
-        <ParameterDescription key="FunctionParameter_501" name="sigma" order="0" role="constant"/>
-        <ParameterDescription key="FunctionParameter_513" name="act" order="1" role="modifier"/>
-        <ParameterDescription key="FunctionParameter_458" name="zeta" order="2" role="constant"/>
-        <ParameterDescription key="FunctionParameter_472" name="S" order="3" role="substrate"/>
+        <ParameterDescription key="FunctionParameter_319" name="sigma" order="0" role="constant"/>
+        <ParameterDescription key="FunctionParameter_318" name="act" order="1" role="modifier"/>
+        <ParameterDescription key="FunctionParameter_317" name="zeta" order="2" role="constant"/>
+        <ParameterDescription key="FunctionParameter_316" name="S" order="3" role="substrate"/>
       </ListOfParameterDescriptions>
     </Function>
-    <Function key="Function_63" name="Rate Law for Prod of I10 from Tr" type="UserDefined" reversible="unspecified">
+    <Function key="Function_45" name="Rate Law for Prod of I10 from Tr" type="UserDefined" reversible="unspecified">
+      <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Function_45">
+</rdf:Description>
+</rdf:RDF>
+      </MiriamAnnotation>
       <Expression>
         v10r*(1 + n2r*(I2/(c2 + I2)))*Tr
       </Expression>
       <ListOfParameterDescriptions>
-        <ParameterDescription key="FunctionParameter_479" name="v10r" order="0" role="constant"/>
-        <ParameterDescription key="FunctionParameter_535" name="n2r" order="1" role="constant"/>
-        <ParameterDescription key="FunctionParameter_421" name="I2" order="2" role="modifier"/>
-        <ParameterDescription key="FunctionParameter_473" name="c2" order="3" role="constant"/>
-        <ParameterDescription key="FunctionParameter_493" name="Tr" order="4" role="modifier"/>
+        <ParameterDescription key="FunctionParameter_312" name="v10r" order="0" role="constant"/>
+        <ParameterDescription key="FunctionParameter_313" name="n2r" order="1" role="constant"/>
+        <ParameterDescription key="FunctionParameter_314" name="I2" order="2" role="modifier"/>
+        <ParameterDescription key="FunctionParameter_315" name="c2" order="3" role="constant"/>
+        <ParameterDescription key="FunctionParameter_311" name="Tr" order="4" role="modifier"/>
       </ListOfParameterDescriptions>
     </Function>
-    <Function key="Function_64" name="Rate Law for Prod of I12 from M1" type="UserDefined" reversible="unspecified">
+    <Function key="Function_46" name="Rate Law for Prod of I12 from M1" type="UserDefined" reversible="unspecified">
+      <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Function_46">
+</rdf:Description>
+</rdf:RDF>
+      </MiriamAnnotation>
       <Expression>
         v12m*M1/(1 + I10/c10)
       </Expression>
       <ListOfParameterDescriptions>
-        <ParameterDescription key="FunctionParameter_555" name="v12m" order="0" role="constant"/>
-        <ParameterDescription key="FunctionParameter_531" name="M1" order="1" role="modifier"/>
-        <ParameterDescription key="FunctionParameter_434" name="I10" order="2" role="modifier"/>
-        <ParameterDescription key="FunctionParameter_448" name="c10" order="3" role="constant"/>
+        <ParameterDescription key="FunctionParameter_320" name="v12m" order="0" role="constant"/>
+        <ParameterDescription key="FunctionParameter_295" name="M1" order="1" role="modifier"/>
+        <ParameterDescription key="FunctionParameter_294" name="I10" order="2" role="modifier"/>
+        <ParameterDescription key="FunctionParameter_309" name="c10" order="3" role="constant"/>
       </ListOfParameterDescriptions>
     </Function>
-    <Function key="Function_65" name="Rate Law for Differentiation" type="UserDefined" reversible="unspecified">
+    <Function key="Function_47" name="Rate Law for Differentiation" type="UserDefined" reversible="unspecified">
+      <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Function_47">
+</rdf:Description>
+</rdf:RDF>
+      </MiriamAnnotation>
       <Expression>
         base_mac*(f + delta_m_cit*cit/(zet_cit + cit))
       </Expression>
       <ListOfParameterDescriptions>
-        <ParameterDescription key="FunctionParameter_491" name="base_mac" order="0" role="substrate"/>
-        <ParameterDescription key="FunctionParameter_436" name="f" order="1" role="constant"/>
-        <ParameterDescription key="FunctionParameter_476" name="delta_m_cit" order="2" role="constant"/>
-        <ParameterDescription key="FunctionParameter_496" name="cit" order="3" role="modifier"/>
-        <ParameterDescription key="FunctionParameter_477" name="zet_cit" order="4" role="constant"/>
+        <ParameterDescription key="FunctionParameter_323" name="base_mac" order="0" role="substrate"/>
+        <ParameterDescription key="FunctionParameter_322" name="f" order="1" role="constant"/>
+        <ParameterDescription key="FunctionParameter_321" name="delta_m_cit" order="2" role="constant"/>
+        <ParameterDescription key="FunctionParameter_310" name="cit" order="3" role="modifier"/>
+        <ParameterDescription key="FunctionParameter_324" name="zet_cit" order="4" role="constant"/>
       </ListOfParameterDescriptions>
     </Function>
-    <Function key="Function_66" name="Rate Law for Induction of T1 from M" type="UserDefined" reversible="unspecified">
+    <Function key="Function_48" name="Rate Law for Induction of T1 from M" type="UserDefined" reversible="unspecified">
+      <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Function_48">
+</rdf:Description>
+</rdf:RDF>
+      </MiriamAnnotation>
       <Expression>
         (s12*I12/(c12 + I12)*(1/(1 + I10/c10))*M)*(1/(1 + T2/g2))*(1/(1+Tr/gr1))
       </Expression>
       <ListOfParameterDescriptions>
-        <ParameterDescription key="FunctionParameter_457" name="T2" order="0" role="modifier"/>
-        <ParameterDescription key="FunctionParameter_488" name="g2" order="1" role="constant"/>
-        <ParameterDescription key="FunctionParameter_494" name="Tr" order="2" role="modifier"/>
-        <ParameterDescription key="FunctionParameter_483" name="gr1" order="3" role="constant"/>
-        <ParameterDescription key="FunctionParameter_484" name="s12" order="4" role="constant"/>
-        <ParameterDescription key="FunctionParameter_587" name="I12" order="5" role="modifier"/>
-        <ParameterDescription key="FunctionParameter_481" name="c12" order="6" role="constant"/>
-        <ParameterDescription key="FunctionParameter_599" name="I10" order="7" role="modifier"/>
-        <ParameterDescription key="FunctionParameter_465" name="c10" order="8" role="constant"/>
-        <ParameterDescription key="FunctionParameter_554" name="M" order="9" role="modifier"/>
+        <ParameterDescription key="FunctionParameter_329" name="T2" order="0" role="modifier"/>
+        <ParameterDescription key="FunctionParameter_328" name="g2" order="1" role="constant"/>
+        <ParameterDescription key="FunctionParameter_327" name="Tr" order="2" role="modifier"/>
+        <ParameterDescription key="FunctionParameter_326" name="gr1" order="3" role="constant"/>
+        <ParameterDescription key="FunctionParameter_325" name="s12" order="4" role="constant"/>
+        <ParameterDescription key="FunctionParameter_330" name="I12" order="5" role="modifier"/>
+        <ParameterDescription key="FunctionParameter_331" name="c12" order="6" role="constant"/>
+        <ParameterDescription key="FunctionParameter_332" name="I10" order="7" role="modifier"/>
+        <ParameterDescription key="FunctionParameter_333" name="c10" order="8" role="constant"/>
+        <ParameterDescription key="FunctionParameter_334" name="M" order="9" role="modifier"/>
       </ListOfParameterDescriptions>
     </Function>
-    <Function key="Function_67" name="Rate Law for Proliferation of T1" type="UserDefined" reversible="unspecified">
+    <Function key="Function_49" name="Rate Law for Proliferation of T1" type="UserDefined" reversible="unspecified">
+      <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Function_49">
+</rdf:Description>
+</rdf:RDF>
+      </MiriamAnnotation>
       <Expression>
         ( s2*I2*T1/(c2 + I2))*(1/(1 + T2/g2))*(1/(1+Tr/gr1))
       </Expression>
       <ListOfParameterDescriptions>
-        <ParameterDescription key="FunctionParameter_598" name="s2" order="0" role="constant"/>
-        <ParameterDescription key="FunctionParameter_597" name="I2" order="1" role="modifier"/>
-        <ParameterDescription key="FunctionParameter_611" name="T1" order="2" role="product"/>
-        <ParameterDescription key="FunctionParameter_619" name="c2" order="3" role="constant"/>
-        <ParameterDescription key="FunctionParameter_571" name="T2" order="4" role="modifier"/>
-        <ParameterDescription key="FunctionParameter_482" name="g2" order="5" role="constant"/>
-        <ParameterDescription key="FunctionParameter_475" name="Tr" order="6" role="modifier"/>
-        <ParameterDescription key="FunctionParameter_570" name="gr1" order="7" role="constant"/>
+        <ParameterDescription key="FunctionParameter_344" name="s2" order="0" role="constant"/>
+        <ParameterDescription key="FunctionParameter_343" name="I2" order="1" role="modifier"/>
+        <ParameterDescription key="FunctionParameter_342" name="T1" order="2" role="product"/>
+        <ParameterDescription key="FunctionParameter_341" name="c2" order="3" role="constant"/>
+        <ParameterDescription key="FunctionParameter_340" name="T2" order="4" role="modifier"/>
+        <ParameterDescription key="FunctionParameter_339" name="g2" order="5" role="constant"/>
+        <ParameterDescription key="FunctionParameter_338" name="Tr" order="6" role="modifier"/>
+        <ParameterDescription key="FunctionParameter_337" name="gr1" order="7" role="constant"/>
       </ListOfParameterDescriptions>
     </Function>
   </ListOfFunctions>
-  <Model key="Model_0" name="New Model" simulationType="time" timeUnit="s" volumeUnit="cm³" areaUnit="cm²" lengthUnit="cm" quantityUnit="g" type="deterministic" avogadroConstant="6.0221407599999999e+23">
+  <Model key="Model_1" name="New Model" simulationType="time" timeUnit="s" volumeUnit="cm³" areaUnit="cm²" lengthUnit="cm" quantityUnit="g" type="deterministic" avogadroConstant="6.0221407599999999e+23">
     <MiriamAnnotation>
 <rdf:RDF
+   xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
    xmlns:dcterms="http://purl.org/dc/terms/"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <rdf:Description rdf:about="#Model_0">
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#">
+  <rdf:Description rdf:about="#Model_1">
+    <dcterms:bibliographicCitation>
+      <rdf:Description>
+        <CopasiMT:isDescribedBy rdf:resource="urn:miriam:doi:10.1371/journal.pone.0165782"/>
+      </rdf:Description>
+    </dcterms:bibliographicCitation>
     <dcterms:created>
       <rdf:Description>
         <dcterms:W3CDTF>2024-08-28T10:13:54Z</dcterms:W3CDTF>
       </rdf:Description>
     </dcterms:created>
+    <dcterms:creator>
+      <rdf:Description>
+        <vCard:EMAIL>bastien_chassagnol@laposte.net</vCard:EMAIL>
+        <vCard:N>
+          <rdf:Description>
+            <vCard:Family>chassagnol</vCard:Family>
+            <vCard:Given>bastien</vCard:Given>
+          </rdf:Description>
+        </vCard:N>
+        <vCard:ORG>
+          <rdf:Description>
+            <vCard:Orgname>Sorbonne Université</vCard:Orgname>
+          </rdf:Description>
+        </vCard:ORG>
+      </rdf:Description>
+    </dcterms:creator>
+    <dcterms:creator>
+      <rdf:Description>
+        <vCard:EMAIL>oria.gasparini@stud.uni-heidelberg.de</vCard:EMAIL>
+        <vCard:N>
+          <rdf:Description>
+            <vCard:Family>gasparini</vCard:Family>
+            <vCard:Given>soria</vCard:Given>
+          </rdf:Description>
+        </vCard:N>
+        <vCard:ORG>
+          <rdf:Description>
+            <vCard:Orgname>Heidelberg Universität</vCard:Orgname>
+          </rdf:Description>
+        </vCard:ORG>
+      </rdf:Description>
+    </dcterms:creator>
+    <dcterms:creator>
+      <rdf:Description>
+        <vCard:EMAIL>banerjeea@mpip-mainz.mpg.de</vCard:EMAIL>
+        <vCard:N>
+          <rdf:Description>
+            <vCard:Family>Banerjee</vCard:Family>
+            <vCard:Given>Atreyee</vCard:Given>
+          </rdf:Description>
+        </vCard:N>
+        <vCard:ORG>
+          <rdf:Description>
+            <vCard:Orgname>Mainz Universität</vCard:Orgname>
+          </rdf:Description>
+        </vCard:ORG>
+      </rdf:Description>
+    </dcterms:creator>
+    <dcterms:modified>
+      <rdf:Description>
+        <dcterms:W3CDTF>2024-10-29T16:03:51</dcterms:W3CDTF>
+      </rdf:Description>
+    </dcterms:modified>
   </rdf:Description>
 </rdf:RDF>
 
     </MiriamAnnotation>
     <ListOfCompartments>
       <Compartment key="Compartment_0" name="compartment" simulationType="fixed" dimensionality="3" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Compartment_0">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
       </Compartment>
     </ListOfCompartments>
     <ListOfMetabolites>
-      <Metabolite key="Metabolite_3" name="Ig" simulationType="reactions" compartment="Compartment_0" addNoise="false">
-      </Metabolite>
-      <Metabolite key="Metabolite_4" name="M1" simulationType="reactions" compartment="Compartment_0" addNoise="false">
-      </Metabolite>
-      <Metabolite key="Metabolite_7" name="I2" simulationType="reactions" compartment="Compartment_0" addNoise="false">
-      </Metabolite>
-      <Metabolite key="Metabolite_5" name="T1" simulationType="reactions" compartment="Compartment_0" addNoise="false">
-      </Metabolite>
-      <Metabolite key="Metabolite_8" name="I4" simulationType="reactions" compartment="Compartment_0" addNoise="false">
-      </Metabolite>
-      <Metabolite key="Metabolite_6" name="T2" simulationType="reactions" compartment="Compartment_0" addNoise="false">
-      </Metabolite>
-      <Metabolite key="Metabolite_9" name="M2" simulationType="reactions" compartment="Compartment_0" addNoise="false">
+      <Metabolite key="Metabolite_0" name="Ig" simulationType="reactions" compartment="Compartment_0" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#Metabolite_8">
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Metabolite_0">
 </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
       </Metabolite>
-      <Metabolite key="Metabolite_10" name="I21" simulationType="reactions" compartment="Compartment_0" addNoise="false">
+      <Metabolite key="Metabolite_1" name="M1" simulationType="reactions" compartment="Compartment_0" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+   xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
+   xmlns:bqbiol="http://biomodels.net/biology-qualifiers/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:Description rdf:about="#Metabolite_1">
+    <bqbiol:hasProperty rdf:resource="urn:miriam:cco:CL_0000863"/>
+    <CopasiMT:is rdf:resource="urn:miriam:cco:CLO_0007448"/>
+  </rdf:Description>
+</rdf:RDF>
+
+        </MiriamAnnotation>
       </Metabolite>
-      <Metabolite key="Metabolite_17" name="M" simulationType="assignment" compartment="Compartment_0" addNoise="false">
+      <Metabolite key="Metabolite_2" name="I2" simulationType="reactions" compartment="Compartment_0" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Metabolite_2">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
+      </Metabolite>
+      <Metabolite key="Metabolite_3" name="T1" simulationType="reactions" compartment="Compartment_0" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Metabolite_3">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
+      </Metabolite>
+      <Metabolite key="Metabolite_4" name="I4" simulationType="reactions" compartment="Compartment_0" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Metabolite_4">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
+      </Metabolite>
+      <Metabolite key="Metabolite_5" name="T2" simulationType="reactions" compartment="Compartment_0" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Metabolite_5">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
+      </Metabolite>
+      <Metabolite key="Metabolite_6" name="M2" simulationType="reactions" compartment="Compartment_0" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+   xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
+   xmlns:bqbiol="http://biomodels.net/biology-qualifiers/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:Description rdf:about="#Metabolite_6">
+    <bqbiol:hasProperty rdf:resource="urn:miriam:cco:CL_0000863"/>
+    <CopasiMT:is rdf:resource="urn:miriam:cco:BTO:0006111"/>
+  </rdf:Description>
+</rdf:RDF>
+
+        </MiriamAnnotation>
+      </Metabolite>
+      <Metabolite key="Metabolite_7" name="I21" simulationType="reactions" compartment="Compartment_0" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Metabolite_7">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
+      </Metabolite>
+      <Metabolite key="Metabolite_8" name="M" simulationType="assignment" compartment="Compartment_0" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+   xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:Description rdf:about="#Metabolite_8">
+    <CopasiMT:is rdf:resource="urn:miriam:cl:CL:0000235"/>
+  </rdf:Description>
+</rdf:RDF>
+
+        </MiriamAnnotation>
         <Expression>
           &lt;CN=Root,Model=New Model,Vector=Compartments[compartment],Vector=Metabolites[M1],Reference=Concentration>+&lt;CN=Root,Model=New Model,Vector=Compartments[compartment],Vector=Metabolites[M2],Reference=Concentration>
         </Expression>
       </Metabolite>
-      <Metabolite key="Metabolite_12" name="I6" simulationType="reactions" compartment="Compartment_0" addNoise="false">
+      <Metabolite key="Metabolite_9" name="I6" simulationType="reactions" compartment="Compartment_0" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Metabolite_9">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
       </Metabolite>
-      <Metabolite key="Metabolite_13" name="Ia" simulationType="reactions" compartment="Compartment_0" addNoise="false">
+      <Metabolite key="Metabolite_10" name="Ia" simulationType="reactions" compartment="Compartment_0" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Metabolite_10">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
       </Metabolite>
       <Metabolite key="Metabolite_11" name="T17" simulationType="reactions" compartment="Compartment_0" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Metabolite_11">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
       </Metabolite>
-      <Metabolite key="Metabolite_15" name="Tr" simulationType="reactions" compartment="Compartment_0" addNoise="false">
+      <Metabolite key="Metabolite_12" name="Tr" simulationType="reactions" compartment="Compartment_0" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Metabolite_12">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
       </Metabolite>
-      <Metabolite key="Metabolite_14" name="Ib" simulationType="reactions" compartment="Compartment_0" addNoise="false">
+      <Metabolite key="Metabolite_13" name="Ib" simulationType="reactions" compartment="Compartment_0" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Metabolite_13">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
+      </Metabolite>
+      <Metabolite key="Metabolite_14" name="I10" simulationType="reactions" compartment="Compartment_0" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 <rdf:Description rdf:about="#Metabolite_14">
 </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
       </Metabolite>
-      <Metabolite key="Metabolite_16" name="I10" simulationType="reactions" compartment="Compartment_0" addNoise="false">
+      <Metabolite key="Metabolite_15" name="I12" simulationType="reactions" compartment="Compartment_0" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Metabolite_15">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
       </Metabolite>
-      <Metabolite key="Metabolite_18" name="I12" simulationType="reactions" compartment="Compartment_0" addNoise="false">
-      </Metabolite>
-      <Metabolite key="Metabolite_2" name="M0" simulationType="fixed" compartment="Compartment_0" addNoise="false">
+      <Metabolite key="Metabolite_16" name="M0" simulationType="fixed" compartment="Compartment_0" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+   xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:Description rdf:about="#Metabolite_16">
+    <CopasiMT:is rdf:resource="urn:miriam:cco:"/>
+  </rdf:Description>
+</rdf:RDF>
+
+        </MiriamAnnotation>
       </Metabolite>
     </ListOfMetabolites>
     <ListOfReactions>
-      <Reaction key="Reaction_14" name="Induction of Tr" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_0" name="Induction of Tr" reversible="false" fast="false" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Reaction_0">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
         <ListOfProducts>
-          <Product metabolite="Metabolite_15" stoichiometry="1"/>
+          <Product metabolite="Metabolite_12" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfModifiers>
-          <Modifier metabolite="Metabolite_14" stoichiometry="1"/>
-          <Modifier metabolite="Metabolite_16" stoichiometry="1"/>
-          <Modifier metabolite="Metabolite_7" stoichiometry="1"/>
-          <Modifier metabolite="Metabolite_17" stoichiometry="1"/>
           <Modifier metabolite="Metabolite_13" stoichiometry="1"/>
+          <Modifier metabolite="Metabolite_14" stoichiometry="1"/>
+          <Modifier metabolite="Metabolite_2" stoichiometry="1"/>
+          <Modifier metabolite="Metabolite_8" stoichiometry="1"/>
+          <Modifier metabolite="Metabolite_10" stoichiometry="1"/>
           <Modifier metabolite="Metabolite_11" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_7082" name="sb" value="14.02"/>
-          <Constant key="Parameter_8620" name="cb" value="6.77e-12"/>
-          <Constant key="Parameter_8312" name="s10" value="14.02"/>
-          <Constant key="Parameter_8756" name="c10" value="1.54e-06"/>
-          <Constant key="Parameter_4937" name="c2" value="6.86e-08"/>
-          <Constant key="Parameter_5785" name="ca" value="9.75e-06"/>
-          <Constant key="Parameter_6057" name="g17" value="0.337"/>
+          <Constant key="Parameter_5511" name="sb" value="14.02"/>
+          <Constant key="Parameter_5507" name="cb" value="6.77e-12"/>
+          <Constant key="Parameter_5510" name="s10" value="14.02"/>
+          <Constant key="Parameter_4676" name="c10" value="1.54e-06"/>
+          <Constant key="Parameter_4677" name="c2" value="6.86e-08"/>
+          <Constant key="Parameter_4680" name="ca" value="9.75e-06"/>
+          <Constant key="Parameter_4675" name="g17" value="0.337"/>
         </ListOfConstants>
-        <KineticLaw function="Function_48" unitType="Default" scalingCompartment="CN=Root,Model=New Model,Vector=Compartments[compartment]">
+        <KineticLaw function="Function_43" unitType="Default" scalingCompartment="CN=Root,Model=New Model,Vector=Compartments[compartment]">
           <ListOfCallParameters>
-            <CallParameter functionParameter="FunctionParameter_372">
-              <SourceParameter reference="Parameter_7082"/>
+            <CallParameter functionParameter="FunctionParameter_308">
+              <SourceParameter reference="Parameter_5511"/>
             </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_371">
-              <SourceParameter reference="Metabolite_14"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_370">
-              <SourceParameter reference="Parameter_8620"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_369">
-              <SourceParameter reference="Parameter_8312"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_368">
-              <SourceParameter reference="Metabolite_16"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_367">
-              <SourceParameter reference="Parameter_8756"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_366">
-              <SourceParameter reference="Metabolite_7"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_365">
-              <SourceParameter reference="Parameter_4937"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_364">
-              <SourceParameter reference="Metabolite_17"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_363">
+            <CallParameter functionParameter="FunctionParameter_307">
               <SourceParameter reference="Metabolite_13"/>
             </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_362">
-              <SourceParameter reference="Parameter_5785"/>
+            <CallParameter functionParameter="FunctionParameter_306">
+              <SourceParameter reference="Parameter_5507"/>
             </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_361">
-              <SourceParameter reference="Metabolite_11"/>
+            <CallParameter functionParameter="FunctionParameter_305">
+              <SourceParameter reference="Parameter_5510"/>
             </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_360">
-              <SourceParameter reference="Parameter_6057"/>
+            <CallParameter functionParameter="FunctionParameter_304">
+              <SourceParameter reference="Metabolite_14"/>
             </CallParameter>
-          </ListOfCallParameters>
-        </KineticLaw>
-      </Reaction>
-      <Reaction key="Reaction_12" name="Induction of T2" reversible="false" fast="false" addNoise="false">
-        <ListOfProducts>
-          <Product metabolite="Metabolite_6" stoichiometry="1"/>
-        </ListOfProducts>
-        <ListOfModifiers>
-          <Modifier metabolite="Metabolite_8" stoichiometry="1"/>
-          <Modifier metabolite="Metabolite_17" stoichiometry="1"/>
-          <Modifier metabolite="Metabolite_5" stoichiometry="1"/>
-          <Modifier metabolite="Metabolite_15" stoichiometry="1"/>
-        </ListOfModifiers>
-        <ListOfConstants>
-          <Constant key="Parameter_7838" name="s4" value="1.94"/>
-          <Constant key="Parameter_7840" name="c4" value="9.7e-09"/>
-          <Constant key="Parameter_8314" name="g1" value="0.183"/>
-          <Constant key="Parameter_7837" name="gr2" value="0.0606"/>
-        </ListOfConstants>
-        <KineticLaw function="Function_46" unitType="Default" scalingCompartment="CN=Root,Model=New Model,Vector=Compartments[compartment]">
-          <ListOfCallParameters>
-            <CallParameter functionParameter="FunctionParameter_343">
-              <SourceParameter reference="Parameter_7838"/>
+            <CallParameter functionParameter="FunctionParameter_303">
+              <SourceParameter reference="Parameter_4676"/>
             </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_342">
+            <CallParameter functionParameter="FunctionParameter_302">
+              <SourceParameter reference="Metabolite_2"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_301">
+              <SourceParameter reference="Parameter_4677"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_300">
               <SourceParameter reference="Metabolite_8"/>
             </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_341">
-              <SourceParameter reference="Metabolite_17"/>
+            <CallParameter functionParameter="FunctionParameter_299">
+              <SourceParameter reference="Metabolite_10"/>
             </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_340">
-              <SourceParameter reference="Parameter_7840"/>
+            <CallParameter functionParameter="FunctionParameter_298">
+              <SourceParameter reference="Parameter_4680"/>
             </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_339">
-              <SourceParameter reference="Metabolite_5"/>
+            <CallParameter functionParameter="FunctionParameter_297">
+              <SourceParameter reference="Metabolite_11"/>
             </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_338">
-              <SourceParameter reference="Parameter_8314"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_337">
-              <SourceParameter reference="Metabolite_15"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_336">
-              <SourceParameter reference="Parameter_7837"/>
+            <CallParameter functionParameter="FunctionParameter_296">
+              <SourceParameter reference="Parameter_4675"/>
             </CallParameter>
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_13" name="Induction of T17" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_1" name="Induction of T2" reversible="false" fast="false" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Reaction_1">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
+        <ListOfProducts>
+          <Product metabolite="Metabolite_5" stoichiometry="1"/>
+        </ListOfProducts>
+        <ListOfModifiers>
+          <Modifier metabolite="Metabolite_4" stoichiometry="1"/>
+          <Modifier metabolite="Metabolite_8" stoichiometry="1"/>
+          <Modifier metabolite="Metabolite_3" stoichiometry="1"/>
+          <Modifier metabolite="Metabolite_12" stoichiometry="1"/>
+        </ListOfModifiers>
+        <ListOfConstants>
+          <Constant key="Parameter_4679" name="s4" value="1.94"/>
+          <Constant key="Parameter_4678" name="c4" value="9.7e-09"/>
+          <Constant key="Parameter_6924" name="g1" value="0.183"/>
+          <Constant key="Parameter_6925" name="gr2" value="0.0606"/>
+        </ListOfConstants>
+        <KineticLaw function="Function_41" unitType="Default" scalingCompartment="CN=Root,Model=New Model,Vector=Compartments[compartment]">
+          <ListOfCallParameters>
+            <CallParameter functionParameter="FunctionParameter_275">
+              <SourceParameter reference="Parameter_4679"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_274">
+              <SourceParameter reference="Metabolite_4"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_273">
+              <SourceParameter reference="Metabolite_8"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_272">
+              <SourceParameter reference="Parameter_4678"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_266">
+              <SourceParameter reference="Metabolite_3"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_276">
+              <SourceParameter reference="Parameter_6924"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_277">
+              <SourceParameter reference="Metabolite_12"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_278">
+              <SourceParameter reference="Parameter_6925"/>
+            </CallParameter>
+          </ListOfCallParameters>
+        </KineticLaw>
+      </Reaction>
+      <Reaction key="Reaction_2" name="Induction of T17" reversible="false" fast="false" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Reaction_2">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
         <ListOfProducts>
           <Product metabolite="Metabolite_11" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfModifiers>
-          <Modifier metabolite="Metabolite_10" stoichiometry="1"/>
-          <Modifier metabolite="Metabolite_12" stoichiometry="1"/>
-          <Modifier metabolite="Metabolite_14" stoichiometry="1"/>
-          <Modifier metabolite="Metabolite_17" stoichiometry="1"/>
-          <Modifier metabolite="Metabolite_3" stoichiometry="1"/>
+          <Modifier metabolite="Metabolite_7" stoichiometry="1"/>
+          <Modifier metabolite="Metabolite_9" stoichiometry="1"/>
+          <Modifier metabolite="Metabolite_13" stoichiometry="1"/>
           <Modifier metabolite="Metabolite_8" stoichiometry="1"/>
-          <Modifier metabolite="Metabolite_15" stoichiometry="1"/>
+          <Modifier metabolite="Metabolite_0" stoichiometry="1"/>
+          <Modifier metabolite="Metabolite_4" stoichiometry="1"/>
+          <Modifier metabolite="Metabolite_12" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_6852" name="s21" value="156.17"/>
-          <Constant key="Parameter_6384" name="c21" value="4.25e-06"/>
-          <Constant key="Parameter_8160" name="s6" value="156.17"/>
-          <Constant key="Parameter_5182" name="c6" value="8e-06"/>
-          <Constant key="Parameter_7302" name="cb" value="6.77e-12"/>
-          <Constant key="Parameter_7184" name="cg" value="2.58e-06"/>
-          <Constant key="Parameter_8157" name="c4" value="9.7e-09"/>
-          <Constant key="Parameter_7258" name="gr17" value="0.0606"/>
+          <Constant key="Parameter_6928" name="s21" value="156.17"/>
+          <Constant key="Parameter_6923" name="c21" value="4.25e-06"/>
+          <Constant key="Parameter_6927" name="s6" value="156.17"/>
+          <Constant key="Parameter_6926" name="c6" value="8e-06"/>
+          <Constant key="Parameter_4648" name="cb" value="6.77e-12"/>
+          <Constant key="Parameter_4649" name="cg" value="2.58e-06"/>
+          <Constant key="Parameter_4655" name="c4" value="9.7e-09"/>
+          <Constant key="Parameter_4647" name="gr17" value="0.0606"/>
         </ListOfConstants>
-        <KineticLaw function="Function_47" unitType="Default" scalingCompartment="CN=Root,Model=New Model,Vector=Compartments[compartment]">
+        <KineticLaw function="Function_42" unitType="Default" scalingCompartment="CN=Root,Model=New Model,Vector=Compartments[compartment]">
           <ListOfCallParameters>
-            <CallParameter functionParameter="FunctionParameter_348">
-              <SourceParameter reference="Parameter_6852"/>
+            <CallParameter functionParameter="FunctionParameter_286">
+              <SourceParameter reference="Parameter_6928"/>
             </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_347">
-              <SourceParameter reference="Metabolite_10"/>
+            <CallParameter functionParameter="FunctionParameter_285">
+              <SourceParameter reference="Metabolite_7"/>
             </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_346">
-              <SourceParameter reference="Parameter_6384"/>
+            <CallParameter functionParameter="FunctionParameter_284">
+              <SourceParameter reference="Parameter_6923"/>
             </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_345">
-              <SourceParameter reference="Parameter_8160"/>
+            <CallParameter functionParameter="FunctionParameter_283">
+              <SourceParameter reference="Parameter_6927"/>
             </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_344">
-              <SourceParameter reference="Metabolite_12"/>
+            <CallParameter functionParameter="FunctionParameter_282">
+              <SourceParameter reference="Metabolite_9"/>
             </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_329">
-              <SourceParameter reference="Parameter_5182"/>
+            <CallParameter functionParameter="FunctionParameter_281">
+              <SourceParameter reference="Parameter_6926"/>
             </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_330">
-              <SourceParameter reference="Metabolite_14"/>
+            <CallParameter functionParameter="FunctionParameter_280">
+              <SourceParameter reference="Metabolite_13"/>
             </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_331">
-              <SourceParameter reference="Parameter_7302"/>
+            <CallParameter functionParameter="FunctionParameter_279">
+              <SourceParameter reference="Parameter_4648"/>
             </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_332">
-              <SourceParameter reference="Metabolite_17"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_333">
-              <SourceParameter reference="Metabolite_3"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_349">
-              <SourceParameter reference="Parameter_7184"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_350">
+            <CallParameter functionParameter="FunctionParameter_287">
               <SourceParameter reference="Metabolite_8"/>
             </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_351">
-              <SourceParameter reference="Parameter_8157"/>
+            <CallParameter functionParameter="FunctionParameter_288">
+              <SourceParameter reference="Metabolite_0"/>
             </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_352">
-              <SourceParameter reference="Metabolite_15"/>
+            <CallParameter functionParameter="FunctionParameter_289">
+              <SourceParameter reference="Parameter_4649"/>
             </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_353">
-              <SourceParameter reference="Parameter_7258"/>
-            </CallParameter>
-          </ListOfCallParameters>
-        </KineticLaw>
-      </Reaction>
-      <Reaction key="Reaction_16" name="Prod of Ig from M1" reversible="false" fast="false" addNoise="false">
-        <ListOfSubstrates>
-          <Substrate metabolite="Metabolite_4" stoichiometry="1"/>
-        </ListOfSubstrates>
-        <ListOfProducts>
-          <Product metabolite="Metabolite_4" stoichiometry="1"/>
-          <Product metabolite="Metabolite_3" stoichiometry="1"/>
-        </ListOfProducts>
-        <ListOfConstants>
-          <Constant key="Parameter_10371" name="k1" value="8.2e-06"/>
-        </ListOfConstants>
-        <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=New Model,Vector=Compartments[compartment]">
-          <ListOfCallParameters>
-            <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_10371"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_81">
+            <CallParameter functionParameter="FunctionParameter_290">
               <SourceParameter reference="Metabolite_4"/>
             </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_291">
+              <SourceParameter reference="Parameter_4655"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_292">
+              <SourceParameter reference="Metabolite_12"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_293">
+              <SourceParameter reference="Parameter_4647"/>
+            </CallParameter>
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_17" name="Prod of Ig from T1" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_3" name="Prod of Ig from M1" reversible="false" fast="false" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Reaction_3">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
         <ListOfSubstrates>
-          <Substrate metabolite="Metabolite_5" stoichiometry="1"/>
+          <Substrate metabolite="Metabolite_1" stoichiometry="1"/>
         </ListOfSubstrates>
         <ListOfProducts>
-          <Product metabolite="Metabolite_5" stoichiometry="1"/>
-          <Product metabolite="Metabolite_3" stoichiometry="1"/>
+          <Product metabolite="Metabolite_1" stoichiometry="1"/>
+          <Product metabolite="Metabolite_0" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfConstants>
-          <Constant key="Parameter_6739" name="k1" value="4.1e-05"/>
+          <Constant key="Parameter_4653" name="k1" value="8.2e-06"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=New Model,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_6739"/>
+              <SourceParameter reference="Parameter_4653"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
-              <SourceParameter reference="Metabolite_5"/>
+              <SourceParameter reference="Metabolite_1"/>
             </CallParameter>
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_18" name="Decay of Ig" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_4" name="Prod of Ig from T1" reversible="false" fast="false" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Reaction_4">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
         <ListOfSubstrates>
           <Substrate metabolite="Metabolite_3" stoichiometry="1"/>
         </ListOfSubstrates>
+        <ListOfProducts>
+          <Product metabolite="Metabolite_3" stoichiometry="1"/>
+          <Product metabolite="Metabolite_0" stoichiometry="1"/>
+        </ListOfProducts>
         <ListOfConstants>
-          <Constant key="Parameter_12094" name="k1" value="29.12"/>
+          <Constant key="Parameter_4654" name="k1" value="4.1e-05"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=New Model,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_12094"/>
+              <SourceParameter reference="Parameter_4654"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_3"/>
@@ -479,83 +775,111 @@ Reaction scheme where the products are created from the reactants and the change
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_0" name="Prod of I2 from T1" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_5" name="Decay of Ig" reversible="false" fast="false" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Reaction_5">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
         <ListOfSubstrates>
-          <Substrate metabolite="Metabolite_5" stoichiometry="1"/>
+          <Substrate metabolite="Metabolite_0" stoichiometry="1"/>
+        </ListOfSubstrates>
+        <ListOfConstants>
+          <Constant key="Parameter_4652" name="k1" value="29.12"/>
+        </ListOfConstants>
+        <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=New Model,Vector=Compartments[compartment]">
+          <ListOfCallParameters>
+            <CallParameter functionParameter="FunctionParameter_80">
+              <SourceParameter reference="Parameter_4652"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_81">
+              <SourceParameter reference="Metabolite_0"/>
+            </CallParameter>
+          </ListOfCallParameters>
+        </KineticLaw>
+      </Reaction>
+      <Reaction key="Reaction_6" name="Prod of I2 from T1" reversible="false" fast="false" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Reaction_6">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
+        <ListOfSubstrates>
+          <Substrate metabolite="Metabolite_3" stoichiometry="1"/>
         </ListOfSubstrates>
         <ListOfProducts>
-          <Product metabolite="Metabolite_5" stoichiometry="1"/>
-          <Product metabolite="Metabolite_7" stoichiometry="1"/>
+          <Product metabolite="Metabolite_3" stoichiometry="1"/>
+          <Product metabolite="Metabolite_2" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfConstants>
-          <Constant key="Parameter_7245" name="k1" value="4.1e-05"/>
+          <Constant key="Parameter_4651" name="k1" value="4.1e-05"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=New Model,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_7245"/>
+              <SourceParameter reference="Parameter_4651"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
-              <SourceParameter reference="Metabolite_5"/>
+              <SourceParameter reference="Metabolite_3"/>
             </CallParameter>
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_19" name="Decay of I2" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_7" name="Decay of I2" reversible="false" fast="false" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Reaction_7">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
         <ListOfSubstrates>
-          <Substrate metabolite="Metabolite_7" stoichiometry="1"/>
+          <Substrate metabolite="Metabolite_2" stoichiometry="1"/>
         </ListOfSubstrates>
         <ListOfConstants>
-          <Constant key="Parameter_7243" name="k1" value="537.46"/>
+          <Constant key="Parameter_4650" name="k1" value="537.46"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=New Model,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_7243"/>
+              <SourceParameter reference="Parameter_4650"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
-              <SourceParameter reference="Metabolite_7"/>
+              <SourceParameter reference="Metabolite_2"/>
             </CallParameter>
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_1" name="Prof of I4 from M2" reversible="false" fast="false" addNoise="false">
-        <ListOfSubstrates>
-          <Substrate metabolite="Metabolite_9" stoichiometry="1"/>
-        </ListOfSubstrates>
-        <ListOfProducts>
-          <Product metabolite="Metabolite_9" stoichiometry="1"/>
-          <Product metabolite="Metabolite_8" stoichiometry="1"/>
-        </ListOfProducts>
-        <ListOfConstants>
-          <Constant key="Parameter_7246" name="k1" value="5.83e-05"/>
-        </ListOfConstants>
-        <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=New Model,Vector=Compartments[compartment]">
-          <ListOfCallParameters>
-            <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_7246"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_81">
-              <SourceParameter reference="Metabolite_9"/>
-            </CallParameter>
-          </ListOfCallParameters>
-        </KineticLaw>
-      </Reaction>
-      <Reaction key="Reaction_20" name="Prod of I4 from T2" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_8" name="Prof of I4 from M2" reversible="false" fast="false" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Reaction_8">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
         <ListOfSubstrates>
           <Substrate metabolite="Metabolite_6" stoichiometry="1"/>
         </ListOfSubstrates>
         <ListOfProducts>
           <Product metabolite="Metabolite_6" stoichiometry="1"/>
-          <Product metabolite="Metabolite_8" stoichiometry="1"/>
+          <Product metabolite="Metabolite_4" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfConstants>
-          <Constant key="Parameter_12114" name="k1" value="0.000175"/>
+          <Constant key="Parameter_7508" name="k1" value="5.83e-05"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=New Model,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_12114"/>
+              <SourceParameter reference="Parameter_7508"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_6"/>
@@ -563,39 +887,85 @@ Reaction scheme where the products are created from the reactants and the change
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_21" name="Decay of I4" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_9" name="Prod of I4 from T2" reversible="false" fast="false" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Reaction_9">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
         <ListOfSubstrates>
-          <Substrate metabolite="Metabolite_8" stoichiometry="1"/>
+          <Substrate metabolite="Metabolite_5" stoichiometry="1"/>
         </ListOfSubstrates>
+        <ListOfProducts>
+          <Product metabolite="Metabolite_5" stoichiometry="1"/>
+          <Product metabolite="Metabolite_4" stoichiometry="1"/>
+        </ListOfProducts>
         <ListOfConstants>
-          <Constant key="Parameter_8826" name="k1" value="349.37"/>
+          <Constant key="Parameter_7509" name="k1" value="0.000175"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=New Model,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_8826"/>
+              <SourceParameter reference="Parameter_7509"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
-              <SourceParameter reference="Metabolite_8"/>
+              <SourceParameter reference="Metabolite_5"/>
             </CallParameter>
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_2" name="Prod of I21 from T17" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_10" name="Decay of I4" reversible="false" fast="false" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Reaction_10">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
+        <ListOfSubstrates>
+          <Substrate metabolite="Metabolite_4" stoichiometry="1"/>
+        </ListOfSubstrates>
+        <ListOfConstants>
+          <Constant key="Parameter_7512" name="k1" value="349.37"/>
+        </ListOfConstants>
+        <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=New Model,Vector=Compartments[compartment]">
+          <ListOfCallParameters>
+            <CallParameter functionParameter="FunctionParameter_80">
+              <SourceParameter reference="Parameter_7512"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_81">
+              <SourceParameter reference="Metabolite_4"/>
+            </CallParameter>
+          </ListOfCallParameters>
+        </KineticLaw>
+      </Reaction>
+      <Reaction key="Reaction_11" name="Prod of I21 from T17" reversible="false" fast="false" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Reaction_11">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
         <ListOfSubstrates>
           <Substrate metabolite="Metabolite_11" stoichiometry="1"/>
         </ListOfSubstrates>
         <ListOfProducts>
           <Product metabolite="Metabolite_11" stoichiometry="1"/>
-          <Product metabolite="Metabolite_10" stoichiometry="1"/>
+          <Product metabolite="Metabolite_7" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfConstants>
-          <Constant key="Parameter_4702" name="k1" value="0.000805"/>
+          <Constant key="Parameter_7507" name="k1" value="0.000805"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=New Model,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_4702"/>
+              <SourceParameter reference="Parameter_7507"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_11"/>
@@ -603,17 +973,167 @@ Reaction scheme where the products are created from the reactants and the change
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_22" name="Decay of I21" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_12" name="Decay of I21" reversible="false" fast="false" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Reaction_12">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
         <ListOfSubstrates>
-          <Substrate metabolite="Metabolite_10" stoichiometry="1"/>
+          <Substrate metabolite="Metabolite_7" stoichiometry="1"/>
         </ListOfSubstrates>
         <ListOfConstants>
-          <Constant key="Parameter_4700" name="k1" value="63.98"/>
+          <Constant key="Parameter_7511" name="k1" value="63.98"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=New Model,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_4700"/>
+              <SourceParameter reference="Parameter_7511"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_81">
+              <SourceParameter reference="Metabolite_7"/>
+            </CallParameter>
+          </ListOfCallParameters>
+        </KineticLaw>
+      </Reaction>
+      <Reaction key="Reaction_13" name="Prod of I6 from M1" reversible="false" fast="false" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Reaction_13">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
+        <ListOfSubstrates>
+          <Substrate metabolite="Metabolite_1" stoichiometry="1"/>
+        </ListOfSubstrates>
+        <ListOfProducts>
+          <Product metabolite="Metabolite_1" stoichiometry="1"/>
+          <Product metabolite="Metabolite_9" stoichiometry="1"/>
+        </ListOfProducts>
+        <ListOfConstants>
+          <Constant key="Parameter_7510" name="k1" value="0.00363"/>
+        </ListOfConstants>
+        <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=New Model,Vector=Compartments[compartment]">
+          <ListOfCallParameters>
+            <CallParameter functionParameter="FunctionParameter_80">
+              <SourceParameter reference="Parameter_7510"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_81">
+              <SourceParameter reference="Metabolite_1"/>
+            </CallParameter>
+          </ListOfCallParameters>
+        </KineticLaw>
+      </Reaction>
+      <Reaction key="Reaction_14" name="Decay of I6" reversible="false" fast="false" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Reaction_14">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
+        <ListOfSubstrates>
+          <Substrate metabolite="Metabolite_9" stoichiometry="1"/>
+        </ListOfSubstrates>
+        <ListOfConstants>
+          <Constant key="Parameter_6027" name="k1" value="29.11"/>
+        </ListOfConstants>
+        <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=New Model,Vector=Compartments[compartment]">
+          <ListOfCallParameters>
+            <CallParameter functionParameter="FunctionParameter_80">
+              <SourceParameter reference="Parameter_6027"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_81">
+              <SourceParameter reference="Metabolite_9"/>
+            </CallParameter>
+          </ListOfCallParameters>
+        </KineticLaw>
+      </Reaction>
+      <Reaction key="Reaction_15" name="Prod of Ia from M1" reversible="false" fast="false" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Reaction_15">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
+        <ListOfSubstrates>
+          <Substrate metabolite="Metabolite_1" stoichiometry="1"/>
+        </ListOfSubstrates>
+        <ListOfProducts>
+          <Product metabolite="Metabolite_1" stoichiometry="1"/>
+          <Product metabolite="Metabolite_10" stoichiometry="1"/>
+        </ListOfProducts>
+        <ListOfConstants>
+          <Constant key="Parameter_6028" name="k1" value="0.021"/>
+        </ListOfConstants>
+        <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=New Model,Vector=Compartments[compartment]">
+          <ListOfCallParameters>
+            <CallParameter functionParameter="FunctionParameter_80">
+              <SourceParameter reference="Parameter_6028"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_81">
+              <SourceParameter reference="Metabolite_1"/>
+            </CallParameter>
+          </ListOfCallParameters>
+        </KineticLaw>
+      </Reaction>
+      <Reaction key="Reaction_16" name="Prod of Ia from T1" reversible="false" fast="false" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Reaction_16">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
+        <ListOfSubstrates>
+          <Substrate metabolite="Metabolite_3" stoichiometry="1"/>
+        </ListOfSubstrates>
+        <ListOfProducts>
+          <Product metabolite="Metabolite_3" stoichiometry="1"/>
+          <Product metabolite="Metabolite_10" stoichiometry="1"/>
+        </ListOfProducts>
+        <ListOfConstants>
+          <Constant key="Parameter_6030" name="k1" value="0.0735"/>
+        </ListOfConstants>
+        <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=New Model,Vector=Compartments[compartment]">
+          <ListOfCallParameters>
+            <CallParameter functionParameter="FunctionParameter_80">
+              <SourceParameter reference="Parameter_6030"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_81">
+              <SourceParameter reference="Metabolite_3"/>
+            </CallParameter>
+          </ListOfCallParameters>
+        </KineticLaw>
+      </Reaction>
+      <Reaction key="Reaction_17" name="Decay of Ia" reversible="false" fast="false" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Reaction_17">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
+        <ListOfSubstrates>
+          <Substrate metabolite="Metabolite_10" stoichiometry="1"/>
+        </ListOfSubstrates>
+        <ListOfConstants>
+          <Constant key="Parameter_6026" name="k1" value="388.15"/>
+        </ListOfConstants>
+        <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=New Model,Vector=Compartments[compartment]">
+          <ListOfCallParameters>
+            <CallParameter functionParameter="FunctionParameter_80">
+              <SourceParameter reference="Parameter_6026"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_10"/>
@@ -621,39 +1141,59 @@ Reaction scheme where the products are created from the reactants and the change
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_3" name="Prod of I6 from M1" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_18" name="Prod of Ib from M2" reversible="false" fast="false" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Reaction_18">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
         <ListOfSubstrates>
-          <Substrate metabolite="Metabolite_4" stoichiometry="1"/>
+          <Substrate metabolite="Metabolite_6" stoichiometry="1"/>
         </ListOfSubstrates>
         <ListOfProducts>
-          <Product metabolite="Metabolite_4" stoichiometry="1"/>
-          <Product metabolite="Metabolite_12" stoichiometry="1"/>
+          <Product metabolite="Metabolite_6" stoichiometry="1"/>
+          <Product metabolite="Metabolite_13" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfConstants>
-          <Constant key="Parameter_8506" name="k1" value="0.00363"/>
+          <Constant key="Parameter_6029" name="k1" value="5.6e-09"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=New Model,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_8506"/>
+              <SourceParameter reference="Parameter_6029"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
-              <SourceParameter reference="Metabolite_4"/>
+              <SourceParameter reference="Metabolite_6"/>
             </CallParameter>
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_23" name="Decay of I6" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_19" name="Prod of Ib from Tr" reversible="false" fast="false" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Reaction_19">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
         <ListOfSubstrates>
           <Substrate metabolite="Metabolite_12" stoichiometry="1"/>
         </ListOfSubstrates>
+        <ListOfProducts>
+          <Product metabolite="Metabolite_12" stoichiometry="1"/>
+          <Product metabolite="Metabolite_13" stoichiometry="1"/>
+        </ListOfProducts>
         <ListOfConstants>
-          <Constant key="Parameter_4703" name="k1" value="29.11"/>
+          <Constant key="Parameter_6511" name="k1" value="3.9e-08"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=New Model,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_4703"/>
+              <SourceParameter reference="Parameter_6511"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_12"/>
@@ -661,61 +1201,25 @@ Reaction scheme where the products are created from the reactants and the change
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_4" name="Prod of Ia from M1" reversible="false" fast="false" addNoise="false">
-        <ListOfSubstrates>
-          <Substrate metabolite="Metabolite_4" stoichiometry="1"/>
-        </ListOfSubstrates>
-        <ListOfProducts>
-          <Product metabolite="Metabolite_4" stoichiometry="1"/>
-          <Product metabolite="Metabolite_13" stoichiometry="1"/>
-        </ListOfProducts>
-        <ListOfConstants>
-          <Constant key="Parameter_4704" name="k1" value="0.021"/>
-        </ListOfConstants>
-        <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=New Model,Vector=Compartments[compartment]">
-          <ListOfCallParameters>
-            <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_4704"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_81">
-              <SourceParameter reference="Metabolite_4"/>
-            </CallParameter>
-          </ListOfCallParameters>
-        </KineticLaw>
-      </Reaction>
-      <Reaction key="Reaction_24" name="Prod of Ia from T1" reversible="false" fast="false" addNoise="false">
-        <ListOfSubstrates>
-          <Substrate metabolite="Metabolite_5" stoichiometry="1"/>
-        </ListOfSubstrates>
-        <ListOfProducts>
-          <Product metabolite="Metabolite_5" stoichiometry="1"/>
-          <Product metabolite="Metabolite_13" stoichiometry="1"/>
-        </ListOfProducts>
-        <ListOfConstants>
-          <Constant key="Parameter_4698" name="k1" value="0.0735"/>
-        </ListOfConstants>
-        <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=New Model,Vector=Compartments[compartment]">
-          <ListOfCallParameters>
-            <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_4698"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_81">
-              <SourceParameter reference="Metabolite_5"/>
-            </CallParameter>
-          </ListOfCallParameters>
-        </KineticLaw>
-      </Reaction>
-      <Reaction key="Reaction_25" name="Decay of Ia" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_20" name="Decay of Ib" reversible="false" fast="false" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Reaction_20">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
         <ListOfSubstrates>
           <Substrate metabolite="Metabolite_13" stoichiometry="1"/>
         </ListOfSubstrates>
         <ListOfConstants>
-          <Constant key="Parameter_8509" name="k1" value="388.15"/>
+          <Constant key="Parameter_6512" name="k1" value="349.37"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=New Model,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_8509"/>
+              <SourceParameter reference="Parameter_6512"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_13"/>
@@ -723,61 +1227,100 @@ Reaction scheme where the products are created from the reactants and the change
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_5" name="Prod of Ib from M2" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_21" name="Prod of I10 from M2" reversible="false" fast="false" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Reaction_21">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
         <ListOfSubstrates>
-          <Substrate metabolite="Metabolite_9" stoichiometry="1"/>
+          <Substrate metabolite="Metabolite_6" stoichiometry="1"/>
         </ListOfSubstrates>
         <ListOfProducts>
-          <Product metabolite="Metabolite_9" stoichiometry="1"/>
+          <Product metabolite="Metabolite_6" stoichiometry="1"/>
           <Product metabolite="Metabolite_14" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfConstants>
-          <Constant key="Parameter_4699" name="k1" value="5.6e-09"/>
+          <Constant key="Parameter_6514" name="k1" value="0.000372"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=New Model,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_4699"/>
+              <SourceParameter reference="Parameter_6514"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
-              <SourceParameter reference="Metabolite_9"/>
+              <SourceParameter reference="Metabolite_6"/>
             </CallParameter>
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_26" name="Prod of Ib from Tr" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_22" name="Prod of I10 from Tr" reversible="false" fast="false" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Reaction_22">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
         <ListOfSubstrates>
-          <Substrate metabolite="Metabolite_15" stoichiometry="1"/>
+          <Substrate metabolite="Metabolite_12" stoichiometry="1"/>
         </ListOfSubstrates>
         <ListOfProducts>
-          <Product metabolite="Metabolite_15" stoichiometry="1"/>
+          <Product metabolite="Metabolite_12" stoichiometry="1"/>
           <Product metabolite="Metabolite_14" stoichiometry="1"/>
         </ListOfProducts>
+        <ListOfModifiers>
+          <Modifier metabolite="Metabolite_2" stoichiometry="1"/>
+          <Modifier metabolite="Metabolite_12" stoichiometry="1"/>
+        </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_8510" name="k1" value="3.9e-08"/>
+          <Constant key="Parameter_6510" name="v10r" value="0.00112"/>
+          <Constant key="Parameter_6513" name="n2r" value="3"/>
+          <Constant key="Parameter_7346" name="c2" value="6.86e-08"/>
         </ListOfConstants>
-        <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=New Model,Vector=Compartments[compartment]">
+        <KineticLaw function="Function_45" unitType="Default" scalingCompartment="CN=Root,Model=New Model,Vector=Compartments[compartment]">
           <ListOfCallParameters>
-            <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_8510"/>
+            <CallParameter functionParameter="FunctionParameter_312">
+              <SourceParameter reference="Parameter_6510"/>
             </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_81">
-              <SourceParameter reference="Metabolite_15"/>
+            <CallParameter functionParameter="FunctionParameter_313">
+              <SourceParameter reference="Parameter_6513"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_314">
+              <SourceParameter reference="Metabolite_2"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_315">
+              <SourceParameter reference="Parameter_7346"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_311">
+              <SourceParameter reference="Metabolite_12"/>
             </CallParameter>
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_27" name="Decay of Ib" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_23" name="Decay of I10" reversible="false" fast="false" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Reaction_23">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
         <ListOfSubstrates>
           <Substrate metabolite="Metabolite_14" stoichiometry="1"/>
         </ListOfSubstrates>
         <ListOfConstants>
-          <Constant key="Parameter_8508" name="k1" value="349.37"/>
+          <Constant key="Parameter_7347" name="k1" value="116.48"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=New Model,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_8508"/>
+              <SourceParameter reference="Parameter_7347"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_14"/>
@@ -785,450 +1328,469 @@ Reaction scheme where the products are created from the reactants and the change
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_6" name="Prod of I10 from M2" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_24" name="Prod of I12 from M1" reversible="false" fast="false" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Reaction_24">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
         <ListOfSubstrates>
-          <Substrate metabolite="Metabolite_9" stoichiometry="1"/>
+          <Substrate metabolite="Metabolite_1" stoichiometry="1"/>
         </ListOfSubstrates>
         <ListOfProducts>
-          <Product metabolite="Metabolite_9" stoichiometry="1"/>
-          <Product metabolite="Metabolite_16" stoichiometry="1"/>
+          <Product metabolite="Metabolite_1" stoichiometry="1"/>
+          <Product metabolite="Metabolite_15" stoichiometry="1"/>
         </ListOfProducts>
+        <ListOfModifiers>
+          <Modifier metabolite="Metabolite_1" stoichiometry="1"/>
+          <Modifier metabolite="Metabolite_14" stoichiometry="1"/>
+        </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_4639" name="k1" value="0.000372"/>
+          <Constant key="Parameter_7349" name="v12m" value="0.000265"/>
+          <Constant key="Parameter_7345" name="c10" value="1.54e-06"/>
         </ListOfConstants>
-        <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=New Model,Vector=Compartments[compartment]">
+        <KineticLaw function="Function_46" unitType="Default" scalingCompartment="CN=Root,Model=New Model,Vector=Compartments[compartment]">
           <ListOfCallParameters>
-            <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_4639"/>
+            <CallParameter functionParameter="FunctionParameter_320">
+              <SourceParameter reference="Parameter_7349"/>
             </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_81">
-              <SourceParameter reference="Metabolite_9"/>
+            <CallParameter functionParameter="FunctionParameter_295">
+              <SourceParameter reference="Metabolite_1"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_294">
+              <SourceParameter reference="Metabolite_14"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_309">
+              <SourceParameter reference="Parameter_7345"/>
             </CallParameter>
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_28" name="Prod of I10 from Tr" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_25" name="Decay of I12" reversible="false" fast="false" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Reaction_25">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
         <ListOfSubstrates>
           <Substrate metabolite="Metabolite_15" stoichiometry="1"/>
         </ListOfSubstrates>
-        <ListOfProducts>
-          <Product metabolite="Metabolite_15" stoichiometry="1"/>
-          <Product metabolite="Metabolite_16" stoichiometry="1"/>
-        </ListOfProducts>
-        <ListOfModifiers>
-          <Modifier metabolite="Metabolite_7" stoichiometry="1"/>
-          <Modifier metabolite="Metabolite_15" stoichiometry="1"/>
-        </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_7716" name="v10r" value="0.00112"/>
-          <Constant key="Parameter_8662" name="n2r" value="3"/>
-          <Constant key="Parameter_4558" name="c2" value="6.86e-08"/>
+          <Constant key="Parameter_7348" name="k1" value="8.33"/>
         </ListOfConstants>
-        <KineticLaw function="Function_63" unitType="Default" scalingCompartment="CN=Root,Model=New Model,Vector=Compartments[compartment]">
+        <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=New Model,Vector=Compartments[compartment]">
           <ListOfCallParameters>
-            <CallParameter functionParameter="FunctionParameter_479">
-              <SourceParameter reference="Parameter_7716"/>
+            <CallParameter functionParameter="FunctionParameter_80">
+              <SourceParameter reference="Parameter_7348"/>
             </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_535">
-              <SourceParameter reference="Parameter_8662"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_421">
-              <SourceParameter reference="Metabolite_7"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_473">
-              <SourceParameter reference="Parameter_4558"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_493">
+            <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_15"/>
             </CallParameter>
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_29" name="Decay of I10" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_26" name="Diff of M0 to M1" reversible="false" fast="false" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Reaction_26">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
         <ListOfSubstrates>
           <Substrate metabolite="Metabolite_16" stoichiometry="1"/>
         </ListOfSubstrates>
-        <ListOfConstants>
-          <Constant key="Parameter_8407" name="k1" value="116.48"/>
-        </ListOfConstants>
-        <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=New Model,Vector=Compartments[compartment]">
-          <ListOfCallParameters>
-            <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_8407"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_81">
-              <SourceParameter reference="Metabolite_16"/>
-            </CallParameter>
-          </ListOfCallParameters>
-        </KineticLaw>
-      </Reaction>
-      <Reaction key="Reaction_7" name="Prod of I12 from M1" reversible="false" fast="false" addNoise="false">
-        <ListOfSubstrates>
-          <Substrate metabolite="Metabolite_4" stoichiometry="1"/>
-        </ListOfSubstrates>
         <ListOfProducts>
-          <Product metabolite="Metabolite_4" stoichiometry="1"/>
-          <Product metabolite="Metabolite_18" stoichiometry="1"/>
+          <Product metabolite="Metabolite_1" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfModifiers>
-          <Modifier metabolite="Metabolite_4" stoichiometry="1"/>
-          <Modifier metabolite="Metabolite_16" stoichiometry="1"/>
+          <Modifier metabolite="Metabolite_10" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_5830" name="v12m" value="0.000265"/>
-          <Constant key="Parameter_5780" name="c10" value="1.54e-06"/>
+          <Constant key="Parameter_4927" name="f" value="1"/>
+          <Constant key="Parameter_4928" name="delta_m_cit" value="2.4"/>
+          <Constant key="Parameter_4930" name="zet_cit" value="9.75e-06"/>
         </ListOfConstants>
-        <KineticLaw function="Function_64" unitType="Default" scalingCompartment="CN=Root,Model=New Model,Vector=Compartments[compartment]">
+        <KineticLaw function="Function_47" unitType="Default" scalingCompartment="CN=Root,Model=New Model,Vector=Compartments[compartment]">
           <ListOfCallParameters>
-            <CallParameter functionParameter="FunctionParameter_555">
-              <SourceParameter reference="Parameter_5830"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_531">
-              <SourceParameter reference="Metabolite_4"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_434">
+            <CallParameter functionParameter="FunctionParameter_323">
               <SourceParameter reference="Metabolite_16"/>
             </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_448">
-              <SourceParameter reference="Parameter_5780"/>
+            <CallParameter functionParameter="FunctionParameter_322">
+              <SourceParameter reference="Parameter_4927"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_321">
+              <SourceParameter reference="Parameter_4928"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_310">
+              <SourceParameter reference="Metabolite_10"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_324">
+              <SourceParameter reference="Parameter_4930"/>
             </CallParameter>
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_30" name="Decay of I12" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_27" name="Diff of M1 to M2" reversible="false" fast="false" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Reaction_27">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
         <ListOfSubstrates>
-          <Substrate metabolite="Metabolite_18" stoichiometry="1"/>
-        </ListOfSubstrates>
-        <ListOfConstants>
-          <Constant key="Parameter_4680" name="k1" value="8.33"/>
-        </ListOfConstants>
-        <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=New Model,Vector=Compartments[compartment]">
-          <ListOfCallParameters>
-            <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_4680"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_81">
-              <SourceParameter reference="Metabolite_18"/>
-            </CallParameter>
-          </ListOfCallParameters>
-        </KineticLaw>
-      </Reaction>
-      <Reaction key="Reaction_9" name="Diff of M0 to M1" reversible="false" fast="false" addNoise="false">
-        <ListOfSubstrates>
-          <Substrate metabolite="Metabolite_2" stoichiometry="1"/>
+          <Substrate metabolite="Metabolite_1" stoichiometry="1"/>
         </ListOfSubstrates>
         <ListOfProducts>
-          <Product metabolite="Metabolite_4" stoichiometry="1"/>
+          <Product metabolite="Metabolite_6" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfModifiers>
           <Modifier metabolite="Metabolite_13" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_8453" name="f" value="1"/>
-          <Constant key="Parameter_6459" name="delta_m_cit" value="2.4"/>
-          <Constant key="Parameter_8944" name="zet_cit" value="9.75e-06"/>
+          <Constant key="Parameter_4926" name="sigma" value="24"/>
+          <Constant key="Parameter_4929" name="zeta" value="6.77e-12"/>
         </ListOfConstants>
-        <KineticLaw function="Function_65" unitType="Default" scalingCompartment="CN=Root,Model=New Model,Vector=Compartments[compartment]">
+        <KineticLaw function="Function_44" unitType="Default" scalingCompartment="CN=Root,Model=New Model,Vector=Compartments[compartment]">
           <ListOfCallParameters>
-            <CallParameter functionParameter="FunctionParameter_491">
-              <SourceParameter reference="Metabolite_2"/>
+            <CallParameter functionParameter="FunctionParameter_319">
+              <SourceParameter reference="Parameter_4926"/>
             </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_436">
-              <SourceParameter reference="Parameter_8453"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_476">
-              <SourceParameter reference="Parameter_6459"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_496">
+            <CallParameter functionParameter="FunctionParameter_318">
               <SourceParameter reference="Metabolite_13"/>
             </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_477">
-              <SourceParameter reference="Parameter_8944"/>
+            <CallParameter functionParameter="FunctionParameter_317">
+              <SourceParameter reference="Parameter_4929"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_316">
+              <SourceParameter reference="Metabolite_1"/>
             </CallParameter>
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_31" name="Diff of M1 to M2" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_28" name="Diff of M2 to M1" reversible="false" fast="false" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Reaction_28">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
         <ListOfSubstrates>
-          <Substrate metabolite="Metabolite_4" stoichiometry="1"/>
+          <Substrate metabolite="Metabolite_6" stoichiometry="1"/>
         </ListOfSubstrates>
         <ListOfProducts>
-          <Product metabolite="Metabolite_9" stoichiometry="1"/>
+          <Product metabolite="Metabolite_1" stoichiometry="1"/>
+        </ListOfProducts>
+        <ListOfModifiers>
+          <Modifier metabolite="Metabolite_0" stoichiometry="1"/>
+        </ListOfModifiers>
+        <ListOfConstants>
+          <Constant key="Parameter_6778" name="sigma" value="24"/>
+          <Constant key="Parameter_6779" name="zeta" value="2.58e-06"/>
+        </ListOfConstants>
+        <KineticLaw function="Function_44" unitType="Default" scalingCompartment="CN=Root,Model=New Model,Vector=Compartments[compartment]">
+          <ListOfCallParameters>
+            <CallParameter functionParameter="FunctionParameter_319">
+              <SourceParameter reference="Parameter_6778"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_318">
+              <SourceParameter reference="Metabolite_0"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_317">
+              <SourceParameter reference="Parameter_6779"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_316">
+              <SourceParameter reference="Metabolite_6"/>
+            </CallParameter>
+          </ListOfCallParameters>
+        </KineticLaw>
+      </Reaction>
+      <Reaction key="Reaction_29" name="Death of M1" reversible="false" fast="false" addNoise="false">
+        <ListOfSubstrates>
+          <Substrate metabolite="Metabolite_1" stoichiometry="1"/>
+        </ListOfSubstrates>
+        <ListOfConstants>
+          <Constant key="Parameter_6781" name="k1" value="1"/>
+        </ListOfConstants>
+        <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=New Model,Vector=Compartments[compartment]">
+          <ListOfCallParameters>
+            <CallParameter functionParameter="FunctionParameter_80">
+              <SourceParameter reference="Parameter_6781"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_81">
+              <SourceParameter reference="Metabolite_1"/>
+            </CallParameter>
+          </ListOfCallParameters>
+        </KineticLaw>
+      </Reaction>
+      <Reaction key="Reaction_30" name="Diff of M0 to M2" reversible="false" fast="false" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Reaction_30">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
+        <ListOfSubstrates>
+          <Substrate metabolite="Metabolite_16" stoichiometry="1"/>
+        </ListOfSubstrates>
+        <ListOfProducts>
+          <Product metabolite="Metabolite_6" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfModifiers>
           <Modifier metabolite="Metabolite_14" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_8642" name="sigma" value="24"/>
-          <Constant key="Parameter_6399" name="zeta" value="6.77e-12"/>
+          <Constant key="Parameter_6777" name="f" value="10"/>
+          <Constant key="Parameter_6780" name="delta_m_cit" value="24"/>
+          <Constant key="Parameter_8033" name="zet_cit" value="1.54e-06"/>
         </ListOfConstants>
-        <KineticLaw function="Function_60" unitType="Default" scalingCompartment="CN=Root,Model=New Model,Vector=Compartments[compartment]">
+        <KineticLaw function="Function_47" unitType="Default" scalingCompartment="CN=Root,Model=New Model,Vector=Compartments[compartment]">
           <ListOfCallParameters>
-            <CallParameter functionParameter="FunctionParameter_501">
-              <SourceParameter reference="Parameter_8642"/>
+            <CallParameter functionParameter="FunctionParameter_323">
+              <SourceParameter reference="Metabolite_16"/>
             </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_513">
+            <CallParameter functionParameter="FunctionParameter_322">
+              <SourceParameter reference="Parameter_6777"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_321">
+              <SourceParameter reference="Parameter_6780"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_310">
               <SourceParameter reference="Metabolite_14"/>
             </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_458">
-              <SourceParameter reference="Parameter_6399"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_472">
-              <SourceParameter reference="Metabolite_4"/>
+            <CallParameter functionParameter="FunctionParameter_324">
+              <SourceParameter reference="Parameter_8033"/>
             </CallParameter>
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
-      <Reaction key="Reaction_32" name="Diff of M2 to M1" reversible="false" fast="false" addNoise="false">
-        <ListOfSubstrates>
-          <Substrate metabolite="Metabolite_9" stoichiometry="1"/>
-        </ListOfSubstrates>
-        <ListOfProducts>
-          <Product metabolite="Metabolite_4" stoichiometry="1"/>
-        </ListOfProducts>
-        <ListOfModifiers>
-          <Modifier metabolite="Metabolite_3" stoichiometry="1"/>
-        </ListOfModifiers>
-        <ListOfConstants>
-          <Constant key="Parameter_5693" name="sigma" value="24"/>
-          <Constant key="Parameter_6709" name="zeta" value="2.58e-06"/>
-        </ListOfConstants>
-        <KineticLaw function="Function_60" unitType="Default" scalingCompartment="CN=Root,Model=New Model,Vector=Compartments[compartment]">
-          <ListOfCallParameters>
-            <CallParameter functionParameter="FunctionParameter_501">
-              <SourceParameter reference="Parameter_5693"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_513">
-              <SourceParameter reference="Metabolite_3"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_458">
-              <SourceParameter reference="Parameter_6709"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_472">
-              <SourceParameter reference="Metabolite_9"/>
-            </CallParameter>
-          </ListOfCallParameters>
-        </KineticLaw>
-      </Reaction>
-      <Reaction key="Reaction_33" name="Death of M1" reversible="false" fast="false" addNoise="false">
-        <ListOfSubstrates>
-          <Substrate metabolite="Metabolite_4" stoichiometry="1"/>
-        </ListOfSubstrates>
-        <ListOfConstants>
-          <Constant key="Parameter_12831" name="k1" value="1"/>
-        </ListOfConstants>
-        <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=New Model,Vector=Compartments[compartment]">
-          <ListOfCallParameters>
-            <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_12831"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_81">
-              <SourceParameter reference="Metabolite_4"/>
-            </CallParameter>
-          </ListOfCallParameters>
-        </KineticLaw>
-      </Reaction>
-      <Reaction key="Reaction_15" name="Diff of M0 to M2" reversible="false" fast="false" addNoise="false">
-        <ListOfSubstrates>
-          <Substrate metabolite="Metabolite_2" stoichiometry="1"/>
-        </ListOfSubstrates>
-        <ListOfProducts>
-          <Product metabolite="Metabolite_9" stoichiometry="1"/>
-        </ListOfProducts>
-        <ListOfModifiers>
-          <Modifier metabolite="Metabolite_16" stoichiometry="1"/>
-        </ListOfModifiers>
-        <ListOfConstants>
-          <Constant key="Parameter_8604" name="f" value="10"/>
-          <Constant key="Parameter_8645" name="delta_m_cit" value="24"/>
-          <Constant key="Parameter_5378" name="zet_cit" value="1.54e-06"/>
-        </ListOfConstants>
-        <KineticLaw function="Function_65" unitType="Default" scalingCompartment="CN=Root,Model=New Model,Vector=Compartments[compartment]">
-          <ListOfCallParameters>
-            <CallParameter functionParameter="FunctionParameter_491">
-              <SourceParameter reference="Metabolite_2"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_436">
-              <SourceParameter reference="Parameter_8604"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_476">
-              <SourceParameter reference="Parameter_8645"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_496">
-              <SourceParameter reference="Metabolite_16"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_477">
-              <SourceParameter reference="Parameter_5378"/>
-            </CallParameter>
-          </ListOfCallParameters>
-        </KineticLaw>
-      </Reaction>
-      <Reaction key="Reaction_35" name="Death of M2" reversible="false" fast="false" addNoise="false">
-        <ListOfSubstrates>
-          <Substrate metabolite="Metabolite_9" stoichiometry="1"/>
-        </ListOfSubstrates>
-        <ListOfConstants>
-          <Constant key="Parameter_5757" name="k1" value="1"/>
-        </ListOfConstants>
-        <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=New Model,Vector=Compartments[compartment]">
-          <ListOfCallParameters>
-            <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_5757"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_81">
-              <SourceParameter reference="Metabolite_9"/>
-            </CallParameter>
-          </ListOfCallParameters>
-        </KineticLaw>
-      </Reaction>
-      <Reaction key="Reaction_34" name="Induction of T1 from M" reversible="false" fast="false" addNoise="false">
-        <ListOfSubstrates>
-          <Substrate metabolite="Metabolite_17" stoichiometry="1"/>
-        </ListOfSubstrates>
-        <ListOfProducts>
-          <Product metabolite="Metabolite_17" stoichiometry="1"/>
-          <Product metabolite="Metabolite_5" stoichiometry="1"/>
-        </ListOfProducts>
-        <ListOfModifiers>
-          <Modifier metabolite="Metabolite_6" stoichiometry="1"/>
-          <Modifier metabolite="Metabolite_15" stoichiometry="1"/>
-          <Modifier metabolite="Metabolite_18" stoichiometry="1"/>
-          <Modifier metabolite="Metabolite_16" stoichiometry="1"/>
-          <Modifier metabolite="Metabolite_17" stoichiometry="1"/>
-        </ListOfModifiers>
-        <ListOfConstants>
-          <Constant key="Parameter_5384" name="g2" value="0.0535"/>
-          <Constant key="Parameter_5381" name="gr1" value="0.0606"/>
-          <Constant key="Parameter_5565" name="s12" value="10.93"/>
-          <Constant key="Parameter_5382" name="c12" value="4.9e-08"/>
-          <Constant key="Parameter_5383" name="c10" value="1.45e-06"/>
-        </ListOfConstants>
-        <KineticLaw function="Function_66" unitType="Default" scalingCompartment="CN=Root,Model=New Model,Vector=Compartments[compartment]">
-          <ListOfCallParameters>
-            <CallParameter functionParameter="FunctionParameter_457">
-              <SourceParameter reference="Metabolite_6"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_488">
-              <SourceParameter reference="Parameter_5384"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_494">
-              <SourceParameter reference="Metabolite_15"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_483">
-              <SourceParameter reference="Parameter_5381"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_484">
-              <SourceParameter reference="Parameter_5565"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_587">
-              <SourceParameter reference="Metabolite_18"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_481">
-              <SourceParameter reference="Parameter_5382"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_599">
-              <SourceParameter reference="Metabolite_16"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_465">
-              <SourceParameter reference="Parameter_5383"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_554">
-              <SourceParameter reference="Metabolite_17"/>
-            </CallParameter>
-          </ListOfCallParameters>
-        </KineticLaw>
-      </Reaction>
-      <Reaction key="Reaction_8" name="Proliferation of T1" reversible="false" fast="false" addNoise="false">
-        <ListOfProducts>
-          <Product metabolite="Metabolite_5" stoichiometry="1"/>
-        </ListOfProducts>
-        <ListOfModifiers>
-          <Modifier metabolite="Metabolite_7" stoichiometry="1"/>
-          <Modifier metabolite="Metabolite_6" stoichiometry="1"/>
-          <Modifier metabolite="Metabolite_15" stoichiometry="1"/>
-        </ListOfModifiers>
-        <ListOfConstants>
-          <Constant key="Parameter_7072" name="s2" value="0.1"/>
-          <Constant key="Parameter_5064" name="c2" value="0.1"/>
-          <Constant key="Parameter_5572" name="g2" value="0.1"/>
-          <Constant key="Parameter_5815" name="gr1" value="0.1"/>
-        </ListOfConstants>
-        <KineticLaw function="Function_67" unitType="Default" scalingCompartment="CN=Root,Model=New Model,Vector=Compartments[compartment]">
-          <ListOfCallParameters>
-            <CallParameter functionParameter="FunctionParameter_598">
-              <SourceParameter reference="Parameter_7072"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_597">
-              <SourceParameter reference="Metabolite_7"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_611">
-              <SourceParameter reference="Metabolite_5"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_619">
-              <SourceParameter reference="Parameter_5064"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_571">
-              <SourceParameter reference="Metabolite_6"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_482">
-              <SourceParameter reference="Parameter_5572"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_475">
-              <SourceParameter reference="Metabolite_15"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_570">
-              <SourceParameter reference="Parameter_5815"/>
-            </CallParameter>
-          </ListOfCallParameters>
-        </KineticLaw>
-      </Reaction>
-      <Reaction key="Reaction_10" name="Death of T1" reversible="false" fast="false" addNoise="false">
-        <ListOfSubstrates>
-          <Substrate metabolite="Metabolite_5" stoichiometry="1"/>
-        </ListOfSubstrates>
-        <ListOfConstants>
-          <Constant key="Parameter_8186" name="k1" value="1.4"/>
-        </ListOfConstants>
-        <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=New Model,Vector=Compartments[compartment]">
-          <ListOfCallParameters>
-            <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_8186"/>
-            </CallParameter>
-            <CallParameter functionParameter="FunctionParameter_81">
-              <SourceParameter reference="Metabolite_5"/>
-            </CallParameter>
-          </ListOfCallParameters>
-        </KineticLaw>
-      </Reaction>
-      <Reaction key="Reaction_11" name="Death of T2" reversible="false" fast="false" addNoise="false">
+      <Reaction key="Reaction_31" name="Death of M2" reversible="false" fast="false" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Reaction_31">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
         <ListOfSubstrates>
           <Substrate metabolite="Metabolite_6" stoichiometry="1"/>
         </ListOfSubstrates>
         <ListOfConstants>
-          <Constant key="Parameter_8649" name="k1" value="1.4"/>
+          <Constant key="Parameter_8034" name="k1" value="1"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=New Model,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_8649"/>
+              <SourceParameter reference="Parameter_8034"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_6"/>
+            </CallParameter>
+          </ListOfCallParameters>
+        </KineticLaw>
+      </Reaction>
+      <Reaction key="Reaction_32" name="Induction of T1 from M" reversible="false" fast="false" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Reaction_32">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
+        <ListOfSubstrates>
+          <Substrate metabolite="Metabolite_8" stoichiometry="1"/>
+        </ListOfSubstrates>
+        <ListOfProducts>
+          <Product metabolite="Metabolite_8" stoichiometry="1"/>
+          <Product metabolite="Metabolite_3" stoichiometry="1"/>
+        </ListOfProducts>
+        <ListOfModifiers>
+          <Modifier metabolite="Metabolite_5" stoichiometry="1"/>
+          <Modifier metabolite="Metabolite_12" stoichiometry="1"/>
+          <Modifier metabolite="Metabolite_15" stoichiometry="1"/>
+          <Modifier metabolite="Metabolite_14" stoichiometry="1"/>
+          <Modifier metabolite="Metabolite_8" stoichiometry="1"/>
+        </ListOfModifiers>
+        <ListOfConstants>
+          <Constant key="Parameter_8036" name="g2" value="0.0535"/>
+          <Constant key="Parameter_8032" name="gr1" value="0.0606"/>
+          <Constant key="Parameter_8035" name="s12" value="10.93"/>
+          <Constant key="Parameter_8008" name="c12" value="4.9e-08"/>
+          <Constant key="Parameter_8009" name="c10" value="1.45e-06"/>
+        </ListOfConstants>
+        <KineticLaw function="Function_48" unitType="Default" scalingCompartment="CN=Root,Model=New Model,Vector=Compartments[compartment]">
+          <ListOfCallParameters>
+            <CallParameter functionParameter="FunctionParameter_329">
+              <SourceParameter reference="Metabolite_5"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_328">
+              <SourceParameter reference="Parameter_8036"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_327">
+              <SourceParameter reference="Metabolite_12"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_326">
+              <SourceParameter reference="Parameter_8032"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_325">
+              <SourceParameter reference="Parameter_8035"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_330">
+              <SourceParameter reference="Metabolite_15"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_331">
+              <SourceParameter reference="Parameter_8008"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_332">
+              <SourceParameter reference="Metabolite_14"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_333">
+              <SourceParameter reference="Parameter_8009"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_334">
+              <SourceParameter reference="Metabolite_8"/>
+            </CallParameter>
+          </ListOfCallParameters>
+        </KineticLaw>
+      </Reaction>
+      <Reaction key="Reaction_33" name="Proliferation of T1" reversible="false" fast="false" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Reaction_33">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
+        <ListOfProducts>
+          <Product metabolite="Metabolite_3" stoichiometry="1"/>
+        </ListOfProducts>
+        <ListOfModifiers>
+          <Modifier metabolite="Metabolite_2" stoichiometry="1"/>
+          <Modifier metabolite="Metabolite_5" stoichiometry="1"/>
+          <Modifier metabolite="Metabolite_12" stoichiometry="1"/>
+        </ListOfModifiers>
+        <ListOfConstants>
+          <Constant key="Parameter_8011" name="s2" value="0.1"/>
+          <Constant key="Parameter_8007" name="c2" value="0.1"/>
+          <Constant key="Parameter_8010" name="g2" value="0.1"/>
+          <Constant key="Parameter_6839" name="gr1" value="0.1"/>
+        </ListOfConstants>
+        <KineticLaw function="Function_49" unitType="Default" scalingCompartment="CN=Root,Model=New Model,Vector=Compartments[compartment]">
+          <ListOfCallParameters>
+            <CallParameter functionParameter="FunctionParameter_344">
+              <SourceParameter reference="Parameter_8011"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_343">
+              <SourceParameter reference="Metabolite_2"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_342">
+              <SourceParameter reference="Metabolite_3"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_341">
+              <SourceParameter reference="Parameter_8007"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_340">
+              <SourceParameter reference="Metabolite_5"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_339">
+              <SourceParameter reference="Parameter_8010"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_338">
+              <SourceParameter reference="Metabolite_12"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_337">
+              <SourceParameter reference="Parameter_6839"/>
+            </CallParameter>
+          </ListOfCallParameters>
+        </KineticLaw>
+      </Reaction>
+      <Reaction key="Reaction_34" name="Death of T1" reversible="false" fast="false" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Reaction_34">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
+        <ListOfSubstrates>
+          <Substrate metabolite="Metabolite_3" stoichiometry="1"/>
+        </ListOfSubstrates>
+        <ListOfConstants>
+          <Constant key="Parameter_6840" name="k1" value="1.4"/>
+        </ListOfConstants>
+        <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=New Model,Vector=Compartments[compartment]">
+          <ListOfCallParameters>
+            <CallParameter functionParameter="FunctionParameter_80">
+              <SourceParameter reference="Parameter_6840"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_81">
+              <SourceParameter reference="Metabolite_3"/>
+            </CallParameter>
+          </ListOfCallParameters>
+        </KineticLaw>
+      </Reaction>
+      <Reaction key="Reaction_35" name="Death of T2" reversible="false" fast="false" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Reaction_35">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
+        <ListOfSubstrates>
+          <Substrate metabolite="Metabolite_5" stoichiometry="1"/>
+        </ListOfSubstrates>
+        <ListOfConstants>
+          <Constant key="Parameter_6842" name="k1" value="1.4"/>
+        </ListOfConstants>
+        <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=New Model,Vector=Compartments[compartment]">
+          <ListOfCallParameters>
+            <CallParameter functionParameter="FunctionParameter_80">
+              <SourceParameter reference="Parameter_6842"/>
+            </CallParameter>
+            <CallParameter functionParameter="FunctionParameter_81">
+              <SourceParameter reference="Metabolite_5"/>
             </CallParameter>
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
       <Reaction key="Reaction_36" name="Death of T17" reversible="false" fast="false" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Reaction_36">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
         <ListOfSubstrates>
           <Substrate metabolite="Metabolite_11" stoichiometry="1"/>
         </ListOfSubstrates>
         <ListOfConstants>
-          <Constant key="Parameter_4612" name="k1" value="1.4"/>
+          <Constant key="Parameter_6838" name="k1" value="1.4"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=New Model,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_4612"/>
+              <SourceParameter reference="Parameter_6838"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_11"/>
@@ -1237,31 +1799,39 @@ Reaction scheme where the products are created from the reactants and the change
         </KineticLaw>
       </Reaction>
       <Reaction key="Reaction_37" name="Death of Tr" reversible="false" fast="false" addNoise="false">
+        <MiriamAnnotation>
+<rdf:RDF
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#Reaction_37">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
         <ListOfSubstrates>
-          <Substrate metabolite="Metabolite_15" stoichiometry="1"/>
+          <Substrate metabolite="Metabolite_12" stoichiometry="1"/>
         </ListOfSubstrates>
         <ListOfConstants>
-          <Constant key="Parameter_9511" name="k1" value="1.4"/>
+          <Constant key="Parameter_6841" name="k1" value="1.4"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=New Model,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_9511"/>
+              <SourceParameter reference="Parameter_6841"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
-              <SourceParameter reference="Metabolite_15"/>
+              <SourceParameter reference="Metabolite_12"/>
             </CallParameter>
           </ListOfCallParameters>
         </KineticLaw>
       </Reaction>
     </ListOfReactions>
-    <ListOfModelParameterSets activeSet="ModelParameterSet_0">
-      <ModelParameterSet key="ModelParameterSet_0" name="Initial State">
+    <ListOfModelParameterSets activeSet="ModelParameterSet_1">
+      <ModelParameterSet key="ModelParameterSet_1" name="Initial State">
         <MiriamAnnotation>
 <rdf:RDF
 xmlns:dcterms="http://purl.org/dc/terms/"
 xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#ModelParameterSet_0">
+<rdf:Description rdf:about="#ModelParameterSet_1">
 </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
@@ -1441,184 +2011,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           </ModelParameterGroup>
         </ModelParameterGroup>
       </ModelParameterSet>
-      <ModelParameterSet key="ModelParameterSet_1" name="initial">
-        <ModelParameterGroup cn="String=Initial Time" type="Group">
-          <ModelParameter cn="CN=Root,Model=New Model" value="0" type="Model" simulationType="time"/>
-        </ModelParameterGroup>
-        <ModelParameterGroup cn="String=Initial Compartment Sizes" type="Group">
-          <ModelParameter cn="CN=Root,Model=New Model,Vector=Compartments[compartment]" value="1" type="Compartment" simulationType="fixed"/>
-        </ModelParameterGroup>
-        <ModelParameterGroup cn="String=Initial Species Values" type="Group">
-          <ModelParameter cn="CN=Root,Model=New Model,Vector=Compartments[compartment],Vector=Metabolites[Ig]" value="2.5799999999999999e-06" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=New Model,Vector=Compartments[compartment],Vector=Metabolites[M1]" value="0.023399999999999921" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=New Model,Vector=Compartments[compartment],Vector=Metabolites[I2]" value="6.8599999999999304e-08" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=New Model,Vector=Compartments[compartment],Vector=Metabolites[T1]" value="0.045799999999999993" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=New Model,Vector=Compartments[compartment],Vector=Metabolites[I4]" value="9.6999999999999462e-09" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=New Model,Vector=Compartments[compartment],Vector=Metabolites[T2]" value="0.0134" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=New Model,Vector=Compartments[compartment],Vector=Metabolites[M2]" value="0.025000000000000001" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=New Model,Vector=Compartments[compartment],Vector=Metabolites[I21]" value="4.25e-06" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=New Model,Vector=Compartments[compartment],Vector=Metabolites[M]" value="0.048399999999999922" type="Species" simulationType="assignment"/>
-          <ModelParameter cn="CN=Root,Model=New Model,Vector=Compartments[compartment],Vector=Metabolites[I6]" value="7.9999999999999996e-06" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=New Model,Vector=Compartments[compartment],Vector=Metabolites[Ia]" value="9.7499999999998948e-06" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=New Model,Vector=Compartments[compartment],Vector=Metabolites[T17]" value="0.33699999999999997" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=New Model,Vector=Compartments[compartment],Vector=Metabolites[Tr]" value="0.060599999999999925" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=New Model,Vector=Compartments[compartment],Vector=Metabolites[Ib]" value="6.7699999999999689e-12" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=New Model,Vector=Compartments[compartment],Vector=Metabolites[I10]" value="1.5399999999999836e-06" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=New Model,Vector=Compartments[compartment],Vector=Metabolites[I12]" value="4.8999999999999373e-08" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=New Model,Vector=Compartments[compartment],Vector=Metabolites[M0]" value="0.0015" type="Species" simulationType="reactions"/>
-        </ModelParameterGroup>
-        <ModelParameterGroup cn="String=Initial Global Quantities" type="Group">
-        </ModelParameterGroup>
-        <ModelParameterGroup cn="String=Kinetic Parameters" type="Group">
-          <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[Induction of Tr]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=sb" value="14.02" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=cb" value="6.7699999999999996e-12" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=s10" value="14.02" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=c10" value="1.5400000000000001e-06" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=c2" value="6.8600000000000005e-08" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=ca" value="9.7499999999999998e-06" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=g17" value="0.33700000000000002" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[Induction of T2]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Induction of T2],ParameterGroup=Parameters,Parameter=s4" value="1.9399999999999999" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Induction of T2],ParameterGroup=Parameters,Parameter=c4" value="9.6999999999999992e-09" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Induction of T2],ParameterGroup=Parameters,Parameter=g1" value="0.183" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Induction of T2],ParameterGroup=Parameters,Parameter=gr2" value="0.060600000000000001" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[Induction of T17]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=s21" value="156.16999999999999" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=c21" value="4.25e-06" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=s6" value="156.16999999999999" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=c6" value="7.9999999999999996e-06" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=cb" value="6.7699999999999996e-12" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=cg" value="2.5799999999999999e-06" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=c4" value="9.6999999999999992e-09" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=gr17" value="0.060600000000000001" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[Prod of Ig from M1]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Prod of Ig from M1],ParameterGroup=Parameters,Parameter=k1" value="8.1999999999999994e-06" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[Prod of Ig from T1]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Prod of Ig from T1],ParameterGroup=Parameters,Parameter=k1" value="4.1e-05" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[Decay of Ig]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Decay of Ig],ParameterGroup=Parameters,Parameter=k1" value="29.120000000000001" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[Prod of I2 from T1]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Prod of I2 from T1],ParameterGroup=Parameters,Parameter=k1" value="4.1e-05" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[Decay of I2]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Decay of I2],ParameterGroup=Parameters,Parameter=k1" value="537.46000000000004" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[Prof of I4 from M2]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Prof of I4 from M2],ParameterGroup=Parameters,Parameter=k1" value="5.8300000000000001e-05" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[Prod of I4 from T2]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Prod of I4 from T2],ParameterGroup=Parameters,Parameter=k1" value="0.000175" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[Decay of I4]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Decay of I4],ParameterGroup=Parameters,Parameter=k1" value="349.37" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[Prod of I21 from T17]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Prod of I21 from T17],ParameterGroup=Parameters,Parameter=k1" value="0.00080500000000000005" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[Decay of I21]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Decay of I21],ParameterGroup=Parameters,Parameter=k1" value="63.979999999999997" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[Prod of I6 from M1]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Prod of I6 from M1],ParameterGroup=Parameters,Parameter=k1" value="0.00363" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[Decay of I6]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Decay of I6],ParameterGroup=Parameters,Parameter=k1" value="29.109999999999999" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[Prod of Ia from M1]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Prod of Ia from M1],ParameterGroup=Parameters,Parameter=k1" value="0.021000000000000001" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[Prod of Ia from T1]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Prod of Ia from T1],ParameterGroup=Parameters,Parameter=k1" value="0.073499999999999996" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[Decay of Ia]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Decay of Ia],ParameterGroup=Parameters,Parameter=k1" value="388.14999999999998" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[Prod of Ib from M2]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Prod of Ib from M2],ParameterGroup=Parameters,Parameter=k1" value="5.5999999999999997e-09" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[Prod of Ib from Tr]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Prod of Ib from Tr],ParameterGroup=Parameters,Parameter=k1" value="3.8999999999999998e-08" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[Decay of Ib]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Decay of Ib],ParameterGroup=Parameters,Parameter=k1" value="349.37" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[Prod of I10 from M2]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Prod of I10 from M2],ParameterGroup=Parameters,Parameter=k1" value="0.00037199999999999999" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[Prod of I10 from Tr]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Prod of I10 from Tr],ParameterGroup=Parameters,Parameter=v10r" value="0.0011199999999999999" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Prod of I10 from Tr],ParameterGroup=Parameters,Parameter=n2r" value="3" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Prod of I10 from Tr],ParameterGroup=Parameters,Parameter=c2" value="6.8600000000000005e-08" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[Decay of I10]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Decay of I10],ParameterGroup=Parameters,Parameter=k1" value="116.48" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[Prod of I12 from M1]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Prod of I12 from M1],ParameterGroup=Parameters,Parameter=v12m" value="0.00026499999999999999" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Prod of I12 from M1],ParameterGroup=Parameters,Parameter=c10" value="1.5400000000000001e-06" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[Decay of I12]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Decay of I12],ParameterGroup=Parameters,Parameter=k1" value="8.3300000000000001" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[Diff of M0 to M1]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Diff of M0 to M1],ParameterGroup=Parameters,Parameter=f" value="1" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Diff of M0 to M1],ParameterGroup=Parameters,Parameter=delta_m_cit" value="2.3999999999999999" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Diff of M0 to M1],ParameterGroup=Parameters,Parameter=zet_cit" value="9.7499999999999998e-06" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[Diff of M1 to M2]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Diff of M1 to M2],ParameterGroup=Parameters,Parameter=sigma" value="24" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Diff of M1 to M2],ParameterGroup=Parameters,Parameter=zeta" value="6.7699999999999996e-12" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[Diff of M2 to M1]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Diff of M2 to M1],ParameterGroup=Parameters,Parameter=sigma" value="24" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Diff of M2 to M1],ParameterGroup=Parameters,Parameter=zeta" value="2.5799999999999999e-06" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[Death of M1]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Death of M1],ParameterGroup=Parameters,Parameter=k1" value="1" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[Diff of M0 to M2]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Diff of M0 to M2],ParameterGroup=Parameters,Parameter=f" value="10" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Diff of M0 to M2],ParameterGroup=Parameters,Parameter=delta_m_cit" value="24" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Diff of M0 to M2],ParameterGroup=Parameters,Parameter=zet_cit" value="1.5400000000000001e-06" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[Death of M2]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Death of M2],ParameterGroup=Parameters,Parameter=k1" value="1" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[Induction of T1 from M]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Induction of T1 from M],ParameterGroup=Parameters,Parameter=g2" value="0.053499999999999999" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Induction of T1 from M],ParameterGroup=Parameters,Parameter=gr1" value="0.060600000000000001" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Induction of T1 from M],ParameterGroup=Parameters,Parameter=s12" value="10.93" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Induction of T1 from M],ParameterGroup=Parameters,Parameter=c12" value="4.9000000000000002e-08" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Induction of T1 from M],ParameterGroup=Parameters,Parameter=c10" value="1.4500000000000001e-06" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[Proliferation of T1]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Proliferation of T1],ParameterGroup=Parameters,Parameter=s2" value="0.10000000000000001" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Proliferation of T1],ParameterGroup=Parameters,Parameter=c2" value="0.10000000000000001" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Proliferation of T1],ParameterGroup=Parameters,Parameter=g2" value="0.10000000000000001" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Proliferation of T1],ParameterGroup=Parameters,Parameter=gr1" value="0.10000000000000001" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[Death of T1]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Death of T1],ParameterGroup=Parameters,Parameter=k1" value="1.3999999999999999" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[Death of T2]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Death of T2],ParameterGroup=Parameters,Parameter=k1" value="1.3999999999999999" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[Death of T17]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Death of T17],ParameterGroup=Parameters,Parameter=k1" value="1.3999999999999999" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[Death of Tr]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Death of Tr],ParameterGroup=Parameters,Parameter=k1" value="1.3999999999999999" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-        </ModelParameterGroup>
-      </ModelParameterSet>
-      <ModelParameterSet key="ModelParameterSet_3" name="Parameter Set 2024-08-29T14:56:53">
+      <ModelParameterSet key="ModelParameterSet_3" name="initial">
         <MiriamAnnotation>
 <rdf:RDF
 xmlns:dcterms="http://purl.org/dc/terms/"
@@ -1803,26 +2196,209 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           </ModelParameterGroup>
         </ModelParameterGroup>
       </ModelParameterSet>
+      <ModelParameterSet key="ModelParameterSet_4" name="Parameter Set 2024-08-29T14:56:53">
+        <MiriamAnnotation>
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelParameterSet_4">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
+        <ModelParameterGroup cn="String=Initial Time" type="Group">
+          <ModelParameter cn="CN=Root,Model=New Model" value="0" type="Model" simulationType="time"/>
+        </ModelParameterGroup>
+        <ModelParameterGroup cn="String=Initial Compartment Sizes" type="Group">
+          <ModelParameter cn="CN=Root,Model=New Model,Vector=Compartments[compartment]" value="1" type="Compartment" simulationType="fixed"/>
+        </ModelParameterGroup>
+        <ModelParameterGroup cn="String=Initial Species Values" type="Group">
+          <ModelParameter cn="CN=Root,Model=New Model,Vector=Compartments[compartment],Vector=Metabolites[Ig]" value="2.5799999999999999e-06" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=New Model,Vector=Compartments[compartment],Vector=Metabolites[M1]" value="0.023399999999999921" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=New Model,Vector=Compartments[compartment],Vector=Metabolites[I2]" value="6.8599999999999304e-08" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=New Model,Vector=Compartments[compartment],Vector=Metabolites[T1]" value="0.045799999999999993" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=New Model,Vector=Compartments[compartment],Vector=Metabolites[I4]" value="9.6999999999999462e-09" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=New Model,Vector=Compartments[compartment],Vector=Metabolites[T2]" value="0.0134" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=New Model,Vector=Compartments[compartment],Vector=Metabolites[M2]" value="0.025000000000000001" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=New Model,Vector=Compartments[compartment],Vector=Metabolites[I21]" value="4.25e-06" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=New Model,Vector=Compartments[compartment],Vector=Metabolites[M]" value="0.048399999999999922" type="Species" simulationType="assignment"/>
+          <ModelParameter cn="CN=Root,Model=New Model,Vector=Compartments[compartment],Vector=Metabolites[I6]" value="7.9999999999999996e-06" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=New Model,Vector=Compartments[compartment],Vector=Metabolites[Ia]" value="9.7499999999998948e-06" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=New Model,Vector=Compartments[compartment],Vector=Metabolites[T17]" value="0.33699999999999997" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=New Model,Vector=Compartments[compartment],Vector=Metabolites[Tr]" value="0.060599999999999925" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=New Model,Vector=Compartments[compartment],Vector=Metabolites[Ib]" value="6.7699999999999689e-12" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=New Model,Vector=Compartments[compartment],Vector=Metabolites[I10]" value="1.5399999999999836e-06" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=New Model,Vector=Compartments[compartment],Vector=Metabolites[I12]" value="4.8999999999999373e-08" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=New Model,Vector=Compartments[compartment],Vector=Metabolites[M0]" value="0.0015" type="Species" simulationType="reactions"/>
+        </ModelParameterGroup>
+        <ModelParameterGroup cn="String=Initial Global Quantities" type="Group">
+        </ModelParameterGroup>
+        <ModelParameterGroup cn="String=Kinetic Parameters" type="Group">
+          <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[Induction of Tr]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=sb" value="14.02" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=cb" value="6.7699999999999996e-12" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=s10" value="14.02" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=c10" value="1.5400000000000001e-06" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=c2" value="6.8600000000000005e-08" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=ca" value="9.7499999999999998e-06" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=g17" value="0.33700000000000002" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[Induction of T2]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Induction of T2],ParameterGroup=Parameters,Parameter=s4" value="1.9399999999999999" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Induction of T2],ParameterGroup=Parameters,Parameter=c4" value="9.6999999999999992e-09" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Induction of T2],ParameterGroup=Parameters,Parameter=g1" value="0.183" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Induction of T2],ParameterGroup=Parameters,Parameter=gr2" value="0.060600000000000001" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[Induction of T17]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=s21" value="156.16999999999999" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=c21" value="4.25e-06" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=s6" value="156.16999999999999" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=c6" value="7.9999999999999996e-06" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=cb" value="6.7699999999999996e-12" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=cg" value="2.5799999999999999e-06" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=c4" value="9.6999999999999992e-09" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=gr17" value="0.060600000000000001" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[Prod of Ig from M1]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Prod of Ig from M1],ParameterGroup=Parameters,Parameter=k1" value="8.1999999999999994e-06" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[Prod of Ig from T1]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Prod of Ig from T1],ParameterGroup=Parameters,Parameter=k1" value="4.1e-05" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[Decay of Ig]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Decay of Ig],ParameterGroup=Parameters,Parameter=k1" value="29.120000000000001" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[Prod of I2 from T1]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Prod of I2 from T1],ParameterGroup=Parameters,Parameter=k1" value="4.1e-05" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[Decay of I2]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Decay of I2],ParameterGroup=Parameters,Parameter=k1" value="537.46000000000004" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[Prof of I4 from M2]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Prof of I4 from M2],ParameterGroup=Parameters,Parameter=k1" value="5.8300000000000001e-05" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[Prod of I4 from T2]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Prod of I4 from T2],ParameterGroup=Parameters,Parameter=k1" value="0.000175" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[Decay of I4]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Decay of I4],ParameterGroup=Parameters,Parameter=k1" value="349.37" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[Prod of I21 from T17]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Prod of I21 from T17],ParameterGroup=Parameters,Parameter=k1" value="0.00080500000000000005" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[Decay of I21]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Decay of I21],ParameterGroup=Parameters,Parameter=k1" value="63.979999999999997" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[Prod of I6 from M1]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Prod of I6 from M1],ParameterGroup=Parameters,Parameter=k1" value="0.00363" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[Decay of I6]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Decay of I6],ParameterGroup=Parameters,Parameter=k1" value="29.109999999999999" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[Prod of Ia from M1]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Prod of Ia from M1],ParameterGroup=Parameters,Parameter=k1" value="0.021000000000000001" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[Prod of Ia from T1]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Prod of Ia from T1],ParameterGroup=Parameters,Parameter=k1" value="0.073499999999999996" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[Decay of Ia]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Decay of Ia],ParameterGroup=Parameters,Parameter=k1" value="388.14999999999998" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[Prod of Ib from M2]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Prod of Ib from M2],ParameterGroup=Parameters,Parameter=k1" value="5.5999999999999997e-09" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[Prod of Ib from Tr]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Prod of Ib from Tr],ParameterGroup=Parameters,Parameter=k1" value="3.8999999999999998e-08" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[Decay of Ib]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Decay of Ib],ParameterGroup=Parameters,Parameter=k1" value="349.37" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[Prod of I10 from M2]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Prod of I10 from M2],ParameterGroup=Parameters,Parameter=k1" value="0.00037199999999999999" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[Prod of I10 from Tr]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Prod of I10 from Tr],ParameterGroup=Parameters,Parameter=v10r" value="0.0011199999999999999" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Prod of I10 from Tr],ParameterGroup=Parameters,Parameter=n2r" value="3" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Prod of I10 from Tr],ParameterGroup=Parameters,Parameter=c2" value="6.8600000000000005e-08" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[Decay of I10]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Decay of I10],ParameterGroup=Parameters,Parameter=k1" value="116.48" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[Prod of I12 from M1]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Prod of I12 from M1],ParameterGroup=Parameters,Parameter=v12m" value="0.00026499999999999999" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Prod of I12 from M1],ParameterGroup=Parameters,Parameter=c10" value="1.5400000000000001e-06" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[Decay of I12]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Decay of I12],ParameterGroup=Parameters,Parameter=k1" value="8.3300000000000001" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[Diff of M0 to M1]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Diff of M0 to M1],ParameterGroup=Parameters,Parameter=f" value="1" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Diff of M0 to M1],ParameterGroup=Parameters,Parameter=delta_m_cit" value="2.3999999999999999" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Diff of M0 to M1],ParameterGroup=Parameters,Parameter=zet_cit" value="9.7499999999999998e-06" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[Diff of M1 to M2]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Diff of M1 to M2],ParameterGroup=Parameters,Parameter=sigma" value="24" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Diff of M1 to M2],ParameterGroup=Parameters,Parameter=zeta" value="6.7699999999999996e-12" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[Diff of M2 to M1]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Diff of M2 to M1],ParameterGroup=Parameters,Parameter=sigma" value="24" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Diff of M2 to M1],ParameterGroup=Parameters,Parameter=zeta" value="2.5799999999999999e-06" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[Death of M1]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Death of M1],ParameterGroup=Parameters,Parameter=k1" value="1" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[Diff of M0 to M2]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Diff of M0 to M2],ParameterGroup=Parameters,Parameter=f" value="10" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Diff of M0 to M2],ParameterGroup=Parameters,Parameter=delta_m_cit" value="24" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Diff of M0 to M2],ParameterGroup=Parameters,Parameter=zet_cit" value="1.5400000000000001e-06" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[Death of M2]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Death of M2],ParameterGroup=Parameters,Parameter=k1" value="1" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[Induction of T1 from M]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Induction of T1 from M],ParameterGroup=Parameters,Parameter=g2" value="0.053499999999999999" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Induction of T1 from M],ParameterGroup=Parameters,Parameter=gr1" value="0.060600000000000001" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Induction of T1 from M],ParameterGroup=Parameters,Parameter=s12" value="10.93" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Induction of T1 from M],ParameterGroup=Parameters,Parameter=c12" value="4.9000000000000002e-08" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Induction of T1 from M],ParameterGroup=Parameters,Parameter=c10" value="1.4500000000000001e-06" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[Proliferation of T1]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Proliferation of T1],ParameterGroup=Parameters,Parameter=s2" value="0.10000000000000001" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Proliferation of T1],ParameterGroup=Parameters,Parameter=c2" value="0.10000000000000001" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Proliferation of T1],ParameterGroup=Parameters,Parameter=g2" value="0.10000000000000001" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Proliferation of T1],ParameterGroup=Parameters,Parameter=gr1" value="0.10000000000000001" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[Death of T1]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Death of T1],ParameterGroup=Parameters,Parameter=k1" value="1.3999999999999999" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[Death of T2]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Death of T2],ParameterGroup=Parameters,Parameter=k1" value="1.3999999999999999" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[Death of T17]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Death of T17],ParameterGroup=Parameters,Parameter=k1" value="1.3999999999999999" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=New Model,Vector=Reactions[Death of Tr]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=New Model,Vector=Reactions[Death of Tr],ParameterGroup=Parameters,Parameter=k1" value="1.3999999999999999" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+        </ModelParameterGroup>
+      </ModelParameterSet>
     </ListOfModelParameterSets>
     <StateTemplate>
-      <StateTemplateVariable objectReference="Model_0"/>
-      <StateTemplateVariable objectReference="Metabolite_4"/>
+      <StateTemplateVariable objectReference="Model_1"/>
+      <StateTemplateVariable objectReference="Metabolite_1"/>
+      <StateTemplateVariable objectReference="Metabolite_0"/>
       <StateTemplateVariable objectReference="Metabolite_3"/>
-      <StateTemplateVariable objectReference="Metabolite_5"/>
-      <StateTemplateVariable objectReference="Metabolite_8"/>
-      <StateTemplateVariable objectReference="Metabolite_9"/>
+      <StateTemplateVariable objectReference="Metabolite_4"/>
+      <StateTemplateVariable objectReference="Metabolite_6"/>
+      <StateTemplateVariable objectReference="Metabolite_10"/>
       <StateTemplateVariable objectReference="Metabolite_13"/>
       <StateTemplateVariable objectReference="Metabolite_14"/>
-      <StateTemplateVariable objectReference="Metabolite_16"/>
-      <StateTemplateVariable objectReference="Metabolite_12"/>
-      <StateTemplateVariable objectReference="Metabolite_6"/>
+      <StateTemplateVariable objectReference="Metabolite_9"/>
+      <StateTemplateVariable objectReference="Metabolite_5"/>
       <StateTemplateVariable objectReference="Metabolite_11"/>
-      <StateTemplateVariable objectReference="Metabolite_15"/>
-      <StateTemplateVariable objectReference="Metabolite_7"/>
-      <StateTemplateVariable objectReference="Metabolite_10"/>
-      <StateTemplateVariable objectReference="Metabolite_18"/>
-      <StateTemplateVariable objectReference="Metabolite_17"/>
+      <StateTemplateVariable objectReference="Metabolite_12"/>
       <StateTemplateVariable objectReference="Metabolite_2"/>
+      <StateTemplateVariable objectReference="Metabolite_7"/>
+      <StateTemplateVariable objectReference="Metabolite_15"/>
+      <StateTemplateVariable objectReference="Metabolite_8"/>
+      <StateTemplateVariable objectReference="Metabolite_16"/>
       <StateTemplateVariable objectReference="Compartment_0"/>
     </StateTemplate>
     <InitialState type="initialState">
@@ -1830,8 +2406,8 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
     </InitialState>
   </Model>
   <ListOfTasks>
-    <Task key="Task_13" name="Steady-State" type="steadyState" scheduled="false" updateModel="false">
-      <Report reference="Report_10" target="steady_state_test1.txt" append="1" confirmOverwrite="1"/>
+    <Task key="Task_17" name="Steady-State" type="steadyState" scheduled="false" updateModel="false">
+      <Report reference="Report_11" target="steady_state_test1.txt" append="1" confirmOverwrite="1"/>
       <Problem>
         <Parameter name="JacobianRequested" type="bool" value="1"/>
         <Parameter name="StabilityAnalysisRequested" type="bool" value="1"/>
@@ -1849,8 +2425,8 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Parameter name="Target Criterion" type="string" value="Distance and Rate"/>
       </Method>
     </Task>
-    <Task key="Task_12" name="Time-Course" type="timeCourse" scheduled="false" updateModel="false">
-      <Report reference="Report_20" target="" append="1" confirmOverwrite="1"/>
+    <Task key="Task_18" name="Time-Course" type="timeCourse" scheduled="false" updateModel="false">
+      <Report reference="Report_23" target="" append="1" confirmOverwrite="1"/>
       <Problem>
         <Parameter name="AutomaticStepSize" type="bool" value="0"/>
         <Parameter name="StepNumber" type="unsignedInteger" value="2000"/>
@@ -1871,7 +2447,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Parameter name="Max Internal Step Size" type="unsignedFloat" value="0"/>
       </Method>
     </Task>
-    <Task key="Task_11" name="Scan" type="scan" scheduled="false" updateModel="false">
+    <Task key="Task_19" name="Scan" type="scan" scheduled="false" updateModel="false">
       <Problem>
         <Parameter name="Subtask" type="unsignedInteger" value="1"/>
         <ParameterGroup name="ScanItems">
@@ -1883,15 +2459,15 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <Method name="Scan Framework" type="ScanFramework">
       </Method>
     </Task>
-    <Task key="Task_10" name="Elementary Flux Modes" type="fluxMode" scheduled="false" updateModel="false">
-      <Report reference="Report_8" target="" append="1" confirmOverwrite="1"/>
+    <Task key="Task_20" name="Elementary Flux Modes" type="fluxMode" scheduled="false" updateModel="false">
+      <Report reference="Report_13" target="" append="1" confirmOverwrite="1"/>
       <Problem>
       </Problem>
       <Method name="EFM Algorithm" type="EFMAlgorithm">
       </Method>
     </Task>
-    <Task key="Task_9" name="Optimization" type="optimization" scheduled="false" updateModel="false">
-      <Report reference="Report_7" target="" append="1" confirmOverwrite="1"/>
+    <Task key="Task_21" name="Optimization" type="optimization" scheduled="false" updateModel="false">
+      <Report reference="Report_14" target="" append="1" confirmOverwrite="1"/>
       <Problem>
         <Parameter name="Subtask" type="cn" value="CN=Root,Vector=TaskList[Steady-State]"/>
         <ParameterText name="ObjectiveExpression" type="expression">
@@ -1912,8 +2488,8 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Parameter name="Seed" type="unsignedInteger" value="0"/>
       </Method>
     </Task>
-    <Task key="Task_8" name="Parameter Estimation" type="parameterFitting" scheduled="false" updateModel="false">
-      <Report reference="Report_6" target="" append="1" confirmOverwrite="1"/>
+    <Task key="Task_22" name="Parameter Estimation" type="parameterFitting" scheduled="false" updateModel="false">
+      <Report reference="Report_15" target="" append="1" confirmOverwrite="1"/>
       <Problem>
         <Parameter name="Maximize" type="bool" value="0"/>
         <Parameter name="Randomize Start Values" type="bool" value="0"/>
@@ -1943,10 +2519,10 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Parameter name="Stop after # Stalled Generations" type="unsignedInteger" value="0"/>
       </Method>
     </Task>
-    <Task key="Task_7" name="Metabolic Control Analysis" type="metabolicControlAnalysis" scheduled="false" updateModel="false">
-      <Report reference="Report_5" target="" append="1" confirmOverwrite="1"/>
+    <Task key="Task_23" name="Metabolic Control Analysis" type="metabolicControlAnalysis" scheduled="false" updateModel="false">
+      <Report reference="Report_16" target="" append="1" confirmOverwrite="1"/>
       <Problem>
-        <Parameter name="Steady-State" type="key" value="Task_13"/>
+        <Parameter name="Steady-State" type="key" value="Task_17"/>
       </Problem>
       <Method name="MCA Method (Reder)" type="MCAMethod(Reder)">
         <Parameter name="Modulation Factor" type="unsignedFloat" value="1.0000000000000001e-09"/>
@@ -1954,8 +2530,8 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Parameter name="Use Smallbone" type="bool" value="1"/>
       </Method>
     </Task>
-    <Task key="Task_6" name="Lyapunov Exponents" type="lyapunovExponents" scheduled="false" updateModel="false">
-      <Report reference="Report_4" target="" append="1" confirmOverwrite="1"/>
+    <Task key="Task_24" name="Lyapunov Exponents" type="lyapunovExponents" scheduled="false" updateModel="false">
+      <Report reference="Report_17" target="" append="1" confirmOverwrite="1"/>
       <Problem>
         <Parameter name="ExponentNumber" type="unsignedInteger" value="3"/>
         <Parameter name="DivergenceRequested" type="bool" value="1"/>
@@ -1969,8 +2545,8 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Parameter name="Max Internal Steps" type="unsignedInteger" value="10000"/>
       </Method>
     </Task>
-    <Task key="Task_5" name="Time Scale Separation Analysis" type="timeScaleSeparationAnalysis" scheduled="false" updateModel="false">
-      <Report reference="Report_3" target="" append="1" confirmOverwrite="1"/>
+    <Task key="Task_25" name="Time Scale Separation Analysis" type="timeScaleSeparationAnalysis" scheduled="false" updateModel="false">
+      <Report reference="Report_18" target="" append="1" confirmOverwrite="1"/>
       <Problem>
         <Parameter name="StepNumber" type="unsignedInteger" value="100"/>
         <Parameter name="StepSize" type="float" value="0.01"/>
@@ -1982,8 +2558,8 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Parameter name="Deuflhard Tolerance" type="unsignedFloat" value="0.0001"/>
       </Method>
     </Task>
-    <Task key="Task_16" name="Sensitivities" type="sensitivities" scheduled="false" updateModel="false">
-      <Report reference="Report_2" target="" append="1" confirmOverwrite="1"/>
+    <Task key="Task_26" name="Sensitivities" type="sensitivities" scheduled="false" updateModel="false">
+      <Report reference="Report_19" target="" append="1" confirmOverwrite="1"/>
       <Problem>
         <Parameter name="SubtaskType" type="unsignedInteger" value="1"/>
         <ParameterGroup name="TargetFunctions">
@@ -2006,14 +2582,14 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Parameter name="Delta minimum" type="unsignedFloat" value="9.9999999999999998e-13"/>
       </Method>
     </Task>
-    <Task key="Task_15" name="Moieties" type="moieties" scheduled="false" updateModel="false">
-      <Report reference="Report_18" target="" append="1" confirmOverwrite="1"/>
+    <Task key="Task_27" name="Moieties" type="moieties" scheduled="false" updateModel="false">
+      <Report reference="Report_25" target="" append="1" confirmOverwrite="1"/>
       <Problem>
       </Problem>
       <Method name="Householder Reduction" type="Householder">
       </Method>
     </Task>
-    <Task key="Task_4" name="Cross Section" type="crosssection" scheduled="false" updateModel="false">
+    <Task key="Task_28" name="Cross Section" type="crosssection" scheduled="false" updateModel="false">
       <Problem>
         <Parameter name="AutomaticStepSize" type="bool" value="0"/>
         <Parameter name="StepNumber" type="unsignedInteger" value="100"/>
@@ -2049,15 +2625,15 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Parameter name="Max Internal Step Size" type="unsignedFloat" value="0"/>
       </Method>
     </Task>
-    <Task key="Task_3" name="Linear Noise Approximation" type="linearNoiseApproximation" scheduled="false" updateModel="false">
-      <Report reference="Report_0" target="" append="1" confirmOverwrite="1"/>
+    <Task key="Task_29" name="Linear Noise Approximation" type="linearNoiseApproximation" scheduled="false" updateModel="false">
+      <Report reference="Report_21" target="" append="1" confirmOverwrite="1"/>
       <Problem>
-        <Parameter name="Steady-State" type="key" value="Task_13"/>
+        <Parameter name="Steady-State" type="key" value="Task_17"/>
       </Problem>
       <Method name="Linear Noise Approximation" type="LinearNoiseApproximation">
       </Method>
     </Task>
-    <Task key="Task_2" name="Time-Course Sensitivities" type="timeSensitivities" scheduled="false" updateModel="false">
+    <Task key="Task_30" name="Time-Course Sensitivities" type="timeSensitivities" scheduled="false" updateModel="false">
       <Problem>
         <Parameter name="AutomaticStepSize" type="bool" value="0"/>
         <Parameter name="StepNumber" type="unsignedInteger" value="100"/>
@@ -2084,7 +2660,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
     </Task>
   </ListOfTasks>
   <ListOfReports>
-    <Report key="Report_10" name="Steady-State" taskType="steadyState" separator="&#x09;" precision="6">
+    <Report key="Report_11" name="Steady-State" taskType="steadyState" separator="&#x09;" precision="6">
       <Comment>
         Automatically generated report.
       </Comment>
@@ -2092,7 +2668,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Object cn="CN=Root,Vector=TaskList[Steady-State]"/>
       </Footer>
     </Report>
-    <Report key="Report_9" name="Time-Course" taskType="timeCourse" separator="&#x09;" precision="6">
+    <Report key="Report_12" name="Time-Course" taskType="timeCourse" separator="&#x09;" precision="6">
       <Comment>
         Automatically generated report.
       </Comment>
@@ -2103,7 +2679,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Object cn="CN=Root,Vector=TaskList[Time-Course],Object=Result"/>
       </Footer>
     </Report>
-    <Report key="Report_8" name="Elementary Flux Modes" taskType="fluxMode" separator="&#x09;" precision="6">
+    <Report key="Report_13" name="Elementary Flux Modes" taskType="fluxMode" separator="&#x09;" precision="6">
       <Comment>
         Automatically generated report.
       </Comment>
@@ -2111,7 +2687,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Object cn="CN=Root,Vector=TaskList[Elementary Flux Modes],Object=Result"/>
       </Footer>
     </Report>
-    <Report key="Report_7" name="Optimization" taskType="optimization" separator="&#x09;" precision="6">
+    <Report key="Report_14" name="Optimization" taskType="optimization" separator="&#x09;" precision="6">
       <Comment>
         Automatically generated report.
       </Comment>
@@ -2135,7 +2711,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Object cn="CN=Root,Vector=TaskList[Optimization],Object=Result"/>
       </Footer>
     </Report>
-    <Report key="Report_6" name="Parameter Estimation" taskType="parameterFitting" separator="&#x09;" precision="6">
+    <Report key="Report_15" name="Parameter Estimation" taskType="parameterFitting" separator="&#x09;" precision="6">
       <Comment>
         Automatically generated report.
       </Comment>
@@ -2159,7 +2735,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Object cn="CN=Root,Vector=TaskList[Parameter Estimation],Object=Result"/>
       </Footer>
     </Report>
-    <Report key="Report_5" name="Metabolic Control Analysis" taskType="metabolicControlAnalysis" separator="&#x09;" precision="6">
+    <Report key="Report_16" name="Metabolic Control Analysis" taskType="metabolicControlAnalysis" separator="&#x09;" precision="6">
       <Comment>
         Automatically generated report.
       </Comment>
@@ -2171,7 +2747,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Object cn="CN=Root,Vector=TaskList[Metabolic Control Analysis],Object=Result"/>
       </Footer>
     </Report>
-    <Report key="Report_4" name="Lyapunov Exponents" taskType="lyapunovExponents" separator="&#x09;" precision="6">
+    <Report key="Report_17" name="Lyapunov Exponents" taskType="lyapunovExponents" separator="&#x09;" precision="6">
       <Comment>
         Automatically generated report.
       </Comment>
@@ -2183,7 +2759,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Object cn="CN=Root,Vector=TaskList[Lyapunov Exponents],Object=Result"/>
       </Footer>
     </Report>
-    <Report key="Report_3" name="Time Scale Separation Analysis" taskType="timeScaleSeparationAnalysis" separator="&#x09;" precision="6">
+    <Report key="Report_18" name="Time Scale Separation Analysis" taskType="timeScaleSeparationAnalysis" separator="&#x09;" precision="6">
       <Comment>
         Automatically generated report.
       </Comment>
@@ -2195,7 +2771,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Object cn="CN=Root,Vector=TaskList[Time Scale Separation Analysis],Object=Result"/>
       </Footer>
     </Report>
-    <Report key="Report_2" name="Sensitivities" taskType="sensitivities" separator="&#x09;" precision="6">
+    <Report key="Report_19" name="Sensitivities" taskType="sensitivities" separator="&#x09;" precision="6">
       <Comment>
         Automatically generated report.
       </Comment>
@@ -2207,7 +2783,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Object cn="CN=Root,Vector=TaskList[Sensitivities],Object=Result"/>
       </Footer>
     </Report>
-    <Report key="Report_1" name="Moieties" taskType="moieties" separator="&#x09;" precision="6">
+    <Report key="Report_20" name="Moieties" taskType="moieties" separator="&#x09;" precision="6">
       <Comment>
         Automatically generated report.
       </Comment>
@@ -2219,7 +2795,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Object cn="CN=Root,Vector=TaskList[Moieties],Object=Result"/>
       </Footer>
     </Report>
-    <Report key="Report_0" name="Linear Noise Approximation" taskType="linearNoiseApproximation" separator="&#x09;" precision="6">
+    <Report key="Report_21" name="Linear Noise Approximation" taskType="linearNoiseApproximation" separator="&#x09;" precision="6">
       <Comment>
         Automatically generated report.
       </Comment>
@@ -2231,7 +2807,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Object cn="CN=Root,Vector=TaskList[Linear Noise Approximation],Object=Result"/>
       </Footer>
     </Report>
-    <Report key="Report_21" name="Create New" taskType="unset" separator="&#x09;" precision="6">
+    <Report key="Report_22" name="Create New" taskType="unset" separator="&#x09;" precision="6">
       <Comment>
         A table with nothing in it.
       </Comment>
@@ -2239,7 +2815,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Object cn="CN=Root,Model=New Model,Reference=Time"/>
       </Table>
     </Report>
-    <Report key="Report_20" name="Time, Concentrations, Volumes, and Global Quantity Values" taskType="timeCourse" separator="&#x09;" precision="6">
+    <Report key="Report_23" name="Time, Concentrations, Volumes, and Global Quantity Values" taskType="timeCourse" separator="&#x09;" precision="6">
       <Comment>
         A table of time, variable species concentrations, variable compartment volumes, and variable global quantity values.
       </Comment>
@@ -2266,7 +2842,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Object cn="CN=Root,Model=New Model,Vector=Compartments[compartment],Vector=Metabolites[I12],Reference=Concentration"/>
       </Table>
     </Report>
-    <Report key="Report_19" name="Create New 1" taskType="unset" separator="&#x09;" precision="6">
+    <Report key="Report_24" name="Create New 1" taskType="unset" separator="&#x09;" precision="6">
       <Comment>
         A table with nothing in it.
       </Comment>
@@ -2274,7 +2850,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Object cn="CN=Root,Model=New Model,Reference=Time"/>
       </Table>
     </Report>
-    <Report key="Report_18" name="Create New 2" taskType="unset" separator="&#x09;" precision="6">
+    <Report key="Report_25" name="Create New 2" taskType="unset" separator="&#x09;" precision="6">
       <Comment>
         A table with nothing in it.
       </Comment>
@@ -2698,220 +3274,220 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <GUI>
   </GUI>
   <ListOfLayouts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    <Layout key="Layout_1" name="COPASI autolayout">
+    <Layout key="Layout_2" name="COPASI autolayout">
       <Dimensions width="734.54014624351112" height="723.39700321247983"/>
       <ListOfMetabGlyphs>
-        <MetaboliteGlyph key="Layout_2" name="MetabGlyph" metabolite="Metabolite_11">
+        <MetaboliteGlyph key="Layout_3" name="MetabGlyph" metabolite="Metabolite_11">
           <BoundingBox>
             <Position x="495.63535346977551" y="450.02336008179918"/>
             <Dimensions width="52" height="28"/>
           </BoundingBox>
         </MetaboliteGlyph>
-        <MetaboliteGlyph key="Layout_4" name="MetabGlyph" metabolite="Metabolite_7">
+        <MetaboliteGlyph key="Layout_4" name="MetabGlyph" metabolite="Metabolite_2">
           <BoundingBox>
             <Position x="240.53938061916961" y="497.39383117752368"/>
             <Dimensions width="36" height="28"/>
           </BoundingBox>
         </MetaboliteGlyph>
-        <MetaboliteGlyph key="Layout_6" name="MetabGlyph" metabolite="Metabolite_17">
+        <MetaboliteGlyph key="Layout_5" name="MetabGlyph" metabolite="Metabolite_8">
           <BoundingBox>
             <Position x="287.73652035655505" y="354.36872517801385"/>
             <Dimensions width="28" height="28"/>
           </BoundingBox>
         </MetaboliteGlyph>
-        <MetaboliteGlyph key="Layout_8" name="MetabGlyph" metabolite="Metabolite_15">
+        <MetaboliteGlyph key="Layout_6" name="MetabGlyph" metabolite="Metabolite_12">
           <BoundingBox>
             <Position x="310.43191067537737" y="400.18726653510566"/>
             <Dimensions width="36" height="28"/>
           </BoundingBox>
         </MetaboliteGlyph>
-        <MetaboliteGlyph key="Layout_10" name="MetabGlyph" metabolite="Metabolite_9">
+        <MetaboliteGlyph key="Layout_7" name="MetabGlyph" metabolite="Metabolite_6">
           <BoundingBox>
             <Position x="191.87488223751461" y="144.98138828932861"/>
             <Dimensions width="36" height="28"/>
           </BoundingBox>
         </MetaboliteGlyph>
-        <MetaboliteGlyph key="Layout_12" name="MetabGlyph" metabolite="Metabolite_3">
+        <MetaboliteGlyph key="Layout_8" name="MetabGlyph" metabolite="Metabolite_0">
           <BoundingBox>
             <Position x="462.45966986453277" y="259.264210806954"/>
             <Dimensions width="36" height="28"/>
           </BoundingBox>
         </MetaboliteGlyph>
-        <MetaboliteGlyph key="Layout_14" name="MetabGlyph" metabolite="Metabolite_8">
+        <MetaboliteGlyph key="Layout_9" name="MetabGlyph" metabolite="Metabolite_4">
           <BoundingBox>
             <Position x="377.40808019866017" y="226.58941173875064"/>
             <Dimensions width="36" height="28"/>
           </BoundingBox>
         </MetaboliteGlyph>
-        <MetaboliteGlyph key="Layout_16" name="MetabGlyph" metabolite="Metabolite_4">
+        <MetaboliteGlyph key="Layout_10" name="MetabGlyph" metabolite="Metabolite_1">
           <BoundingBox>
             <Position x="292.03470100926461" y="220.47457303060037"/>
             <Dimensions width="36" height="28"/>
           </BoundingBox>
         </MetaboliteGlyph>
-        <MetaboliteGlyph key="Layout_18" name="MetabGlyph" metabolite="Metabolite_5">
+        <MetaboliteGlyph key="Layout_11" name="MetabGlyph" metabolite="Metabolite_3">
           <BoundingBox>
             <Position x="401.38718836518819" y="417.51203206357604"/>
             <Dimensions width="36" height="28"/>
           </BoundingBox>
         </MetaboliteGlyph>
-        <MetaboliteGlyph key="Layout_20" name="MetabGlyph" metabolite="Metabolite_10">
+        <MetaboliteGlyph key="Layout_12" name="MetabGlyph" metabolite="Metabolite_7">
           <BoundingBox>
             <Position x="487.77388824739865" y="562.55103431837961"/>
             <Dimensions width="52" height="28"/>
           </BoundingBox>
         </MetaboliteGlyph>
-        <MetaboliteGlyph key="Layout_22" name="MetabGlyph" metabolite="Metabolite_12">
+        <MetaboliteGlyph key="Layout_13" name="MetabGlyph" metabolite="Metabolite_9">
           <BoundingBox>
             <Position x="160.06506766203711" y="304.01174425785757"/>
             <Dimensions width="36" height="28"/>
           </BoundingBox>
         </MetaboliteGlyph>
-        <MetaboliteGlyph key="Layout_24" name="MetabGlyph" metabolite="Metabolite_18">
+        <MetaboliteGlyph key="Layout_14" name="MetabGlyph" metabolite="Metabolite_15">
           <BoundingBox>
             <Position x="135.59483923262997" y="363.49889866491321"/>
             <Dimensions width="52" height="28"/>
           </BoundingBox>
         </MetaboliteGlyph>
-        <MetaboliteGlyph key="Layout_26" name="MetabGlyph" metabolite="Metabolite_6">
+        <MetaboliteGlyph key="Layout_15" name="MetabGlyph" metabolite="Metabolite_5">
           <BoundingBox>
             <Position x="356.04998975923991" y="425.46661609368857"/>
             <Dimensions width="36" height="28"/>
           </BoundingBox>
         </MetaboliteGlyph>
-        <MetaboliteGlyph key="Layout_28" name="MetabGlyph" metabolite="Metabolite_14">
+        <MetaboliteGlyph key="Layout_16" name="MetabGlyph" metabolite="Metabolite_13">
           <BoundingBox>
             <Position x="324.34160702173358" y="197.25161196515728"/>
             <Dimensions width="36" height="28"/>
           </BoundingBox>
         </MetaboliteGlyph>
-        <MetaboliteGlyph key="Layout_30" name="MetabGlyph" metabolite="Metabolite_13">
+        <MetaboliteGlyph key="Layout_17" name="MetabGlyph" metabolite="Metabolite_10">
           <BoundingBox>
             <Position x="432.96960942940677" y="220.17822624437576"/>
             <Dimensions width="36" height="28"/>
           </BoundingBox>
         </MetaboliteGlyph>
-        <MetaboliteGlyph key="Layout_32" name="MetabGlyph" metabolite="Metabolite_16">
+        <MetaboliteGlyph key="Layout_18" name="MetabGlyph" metabolite="Metabolite_14">
           <BoundingBox>
             <Position x="178.02583152860097" y="343.51600532415068"/>
             <Dimensions width="52" height="28"/>
           </BoundingBox>
         </MetaboliteGlyph>
-        <MetaboliteGlyph key="Layout_34" name="MetabGlyph" metabolite="Metabolite_2">
+        <MetaboliteGlyph key="Layout_19" name="MetabGlyph" metabolite="Metabolite_16">
           <BoundingBox>
             <Position x="136.39211966787479" y="119.40893882281671"/>
             <Dimensions width="36" height="28"/>
           </BoundingBox>
         </MetaboliteGlyph>
-        <MetaboliteGlyph key="Layout_37" name="MetabGlyph" objectRole="invisible">
+        <MetaboliteGlyph key="Layout_20" name="MetabGlyph" objectRole="invisible">
           <BoundingBox>
             <Position x="451.67055277187865" y="470.06059000860114"/>
             <Dimensions width="1" height="1"/>
           </BoundingBox>
         </MetaboliteGlyph>
-        <MetaboliteGlyph key="Layout_54" name="MetabGlyph" objectRole="invisible">
+        <MetaboliteGlyph key="Layout_21" name="MetabGlyph" objectRole="invisible">
           <BoundingBox>
             <Position x="126.67212632346127" y="0"/>
             <Dimensions width="1" height="1"/>
           </BoundingBox>
         </MetaboliteGlyph>
-        <MetaboliteGlyph key="Layout_61" name="MetabGlyph" objectRole="invisible">
+        <MetaboliteGlyph key="Layout_22" name="MetabGlyph" objectRole="invisible">
           <BoundingBox>
             <Position x="510.29739665111811" y="313.54603378936372"/>
             <Dimensions width="1" height="1"/>
           </BoundingBox>
         </MetaboliteGlyph>
-        <MetaboliteGlyph key="Layout_74" name="MetabGlyph" objectRole="invisible">
+        <MetaboliteGlyph key="Layout_23" name="MetabGlyph" objectRole="invisible">
           <BoundingBox>
             <Position x="6.2619087639668578" y="301.04373583976667"/>
             <Dimensions width="1" height="1"/>
           </BoundingBox>
         </MetaboliteGlyph>
-        <MetaboliteGlyph key="Layout_93" name="MetabGlyph" objectRole="invisible">
+        <MetaboliteGlyph key="Layout_24" name="MetabGlyph" objectRole="invisible">
           <BoundingBox>
             <Position x="81.329872179019731" y="496.78803094748037"/>
             <Dimensions width="1" height="1"/>
           </BoundingBox>
         </MetaboliteGlyph>
-        <MetaboliteGlyph key="Layout_97" name="MetabGlyph" objectRole="invisible">
+        <MetaboliteGlyph key="Layout_25" name="MetabGlyph" objectRole="invisible">
           <BoundingBox>
             <Position x="157.75816616745942" y="644.9408491967024"/>
             <Dimensions width="1" height="1"/>
           </BoundingBox>
         </MetaboliteGlyph>
-        <MetaboliteGlyph key="Layout_101" name="MetabGlyph" objectRole="invisible">
+        <MetaboliteGlyph key="Layout_26" name="MetabGlyph" objectRole="invisible">
           <BoundingBox>
             <Position x="507.42898469337342" y="81.39840573494439"/>
             <Dimensions width="1" height="1"/>
           </BoundingBox>
         </MetaboliteGlyph>
-        <MetaboliteGlyph key="Layout_121" name="MetabGlyph" objectRole="invisible">
+        <MetaboliteGlyph key="Layout_27" name="MetabGlyph" objectRole="invisible">
           <BoundingBox>
             <Position x="661.67098644145335" y="251.9774706756034"/>
             <Dimensions width="1" height="1"/>
           </BoundingBox>
         </MetaboliteGlyph>
-        <MetaboliteGlyph key="Layout_128" name="MetabGlyph" objectRole="invisible">
+        <MetaboliteGlyph key="Layout_28" name="MetabGlyph" objectRole="invisible">
           <BoundingBox>
             <Position x="547.80650674222852" y="358.60688774103619"/>
             <Dimensions width="1" height="1"/>
           </BoundingBox>
         </MetaboliteGlyph>
-        <MetaboliteGlyph key="Layout_164" name="MetabGlyph" objectRole="invisible">
+        <MetaboliteGlyph key="Layout_29" name="MetabGlyph" objectRole="invisible">
           <BoundingBox>
             <Position x="1.8922187093412504" y="359.7669762229234"/>
             <Dimensions width="1" height="1"/>
           </BoundingBox>
         </MetaboliteGlyph>
-        <MetaboliteGlyph key="Layout_172" name="MetabGlyph" objectRole="invisible">
+        <MetaboliteGlyph key="Layout_30" name="MetabGlyph" objectRole="invisible">
           <BoundingBox>
             <Position x="600.90796467462678" y="130.9754146596606"/>
             <Dimensions width="1" height="1"/>
           </BoundingBox>
         </MetaboliteGlyph>
-        <MetaboliteGlyph key="Layout_176" name="MetabGlyph" objectRole="invisible">
+        <MetaboliteGlyph key="Layout_31" name="MetabGlyph" objectRole="invisible">
           <BoundingBox>
             <Position x="326.93931356538451" y="2.5526989698573743"/>
             <Dimensions width="1" height="1"/>
           </BoundingBox>
         </MetaboliteGlyph>
-        <MetaboliteGlyph key="Layout_184" name="MetabGlyph" objectRole="invisible">
+        <MetaboliteGlyph key="Layout_32" name="MetabGlyph" objectRole="invisible">
           <BoundingBox>
             <Position x="575.99415119689729" y="728.41642049296024"/>
             <Dimensions width="1" height="1"/>
           </BoundingBox>
         </MetaboliteGlyph>
-        <MetaboliteGlyph key="Layout_188" name="MetabGlyph" objectRole="invisible">
+        <MetaboliteGlyph key="Layout_33" name="MetabGlyph" objectRole="invisible">
           <BoundingBox>
             <Position x="416.93743348697899" y="49.972450663826748"/>
             <Dimensions width="1" height="1"/>
           </BoundingBox>
         </MetaboliteGlyph>
-        <MetaboliteGlyph key="Layout_195" name="MetabGlyph" objectRole="invisible">
+        <MetaboliteGlyph key="Layout_34" name="MetabGlyph" objectRole="invisible">
           <BoundingBox>
             <Position x="298.86402338562038" y="599.17161828272583"/>
             <Dimensions width="1" height="1"/>
           </BoundingBox>
         </MetaboliteGlyph>
-        <MetaboliteGlyph key="Layout_203" name="MetabGlyph" objectRole="invisible">
+        <MetaboliteGlyph key="Layout_35" name="MetabGlyph" objectRole="invisible">
           <BoundingBox>
             <Position x="373.38064452547951" y="649.33244115087655"/>
             <Dimensions width="1" height="1"/>
           </BoundingBox>
         </MetaboliteGlyph>
-        <MetaboliteGlyph key="Layout_207" name="MetabGlyph" objectRole="invisible">
+        <MetaboliteGlyph key="Layout_36" name="MetabGlyph" objectRole="invisible">
           <BoundingBox>
             <Position x="621.17571122247318" y="401.84461900276256"/>
             <Dimensions width="1" height="1"/>
           </BoundingBox>
         </MetaboliteGlyph>
-        <MetaboliteGlyph key="Layout_211" name="MetabGlyph" objectRole="invisible">
+        <MetaboliteGlyph key="Layout_37" name="MetabGlyph" objectRole="invisible">
           <BoundingBox>
             <Position x="695.70805173551526" y="509.49884506257695"/>
             <Dimensions width="1" height="1"/>
           </BoundingBox>
         </MetaboliteGlyph>
-        <MetaboliteGlyph key="Layout_215" name="MetabGlyph" objectRole="invisible">
+        <MetaboliteGlyph key="Layout_38" name="MetabGlyph" objectRole="invisible">
           <BoundingBox>
             <Position x="437.24103798704527" y="584.34483803973671"/>
             <Dimensions width="1" height="1"/>
@@ -2919,7 +3495,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         </MetaboliteGlyph>
       </ListOfMetabGlyphs>
       <ListOfReactionGlyphs>
-        <ReactionGlyph key="Layout_36" name="ReactionGlyph" reaction="Reaction_14">
+        <ReactionGlyph key="Layout_39" name="ReactionGlyph" reaction="Reaction_0">
           <BoundingBox>
             <Position x="380.88433291349065" y="388.13656274553796"/>
             <Dimensions width="0" height="0"/>
@@ -2933,7 +3509,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             </ListOfCurveSegments>
           </Curve>
           <ListOfMetaboliteReferenceGlyphs>
-            <MetaboliteReferenceGlyph key="Layout_38" name="MetabReferenceGlyph" metaboliteGlyph="Layout_37" role="substrate">
+            <MetaboliteReferenceGlyph key="Layout_40" name="MetabReferenceGlyph" metaboliteGlyph="Layout_20" role="substrate">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -2945,7 +3521,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_39" name="MetabReferenceGlyph" metaboliteGlyph="Layout_8" role="product">
+            <MetaboliteReferenceGlyph key="Layout_41" name="MetabReferenceGlyph" metaboliteGlyph="Layout_6" role="product">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -2957,7 +3533,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_40" name="MetabReferenceGlyph" metaboliteGlyph="Layout_28" role="modifier">
+            <MetaboliteReferenceGlyph key="Layout_42" name="MetabReferenceGlyph" metaboliteGlyph="Layout_16" role="modifier">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -2969,7 +3545,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_41" name="MetabReferenceGlyph" metaboliteGlyph="Layout_32" role="modifier">
+            <MetaboliteReferenceGlyph key="Layout_43" name="MetabReferenceGlyph" metaboliteGlyph="Layout_18" role="modifier">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -2981,7 +3557,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_42" name="MetabReferenceGlyph" metaboliteGlyph="Layout_4" role="modifier">
+            <MetaboliteReferenceGlyph key="Layout_44" name="MetabReferenceGlyph" metaboliteGlyph="Layout_4" role="modifier">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -2993,7 +3569,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_43" name="MetabReferenceGlyph" metaboliteGlyph="Layout_6" role="modifier">
+            <MetaboliteReferenceGlyph key="Layout_45" name="MetabReferenceGlyph" metaboliteGlyph="Layout_5" role="modifier">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -3005,7 +3581,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_44" name="MetabReferenceGlyph" metaboliteGlyph="Layout_30" role="modifier">
+            <MetaboliteReferenceGlyph key="Layout_46" name="MetabReferenceGlyph" metaboliteGlyph="Layout_17" role="modifier">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -3017,7 +3593,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_45" name="MetabReferenceGlyph" metaboliteGlyph="Layout_2" role="modifier">
+            <MetaboliteReferenceGlyph key="Layout_47" name="MetabReferenceGlyph" metaboliteGlyph="Layout_3" role="modifier">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -3031,7 +3607,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             </MetaboliteReferenceGlyph>
           </ListOfMetaboliteReferenceGlyphs>
         </ReactionGlyph>
-        <ReactionGlyph key="Layout_46" name="ReactionGlyph" reaction="Reaction_7">
+        <ReactionGlyph key="Layout_48" name="ReactionGlyph" reaction="Reaction_24">
           <BoundingBox>
             <Position x="251.27420056390474" y="308.58013138013121"/>
             <Dimensions width="0" height="0"/>
@@ -3045,7 +3621,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             </ListOfCurveSegments>
           </Curve>
           <ListOfMetaboliteReferenceGlyphs>
-            <MetaboliteReferenceGlyph key="Layout_47" name="MetabReferenceGlyph" metaboliteGlyph="Layout_16" role="substrate">
+            <MetaboliteReferenceGlyph key="Layout_49" name="MetabReferenceGlyph" metaboliteGlyph="Layout_10" role="substrate">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -3057,7 +3633,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_48" name="MetabReferenceGlyph" metaboliteGlyph="Layout_16" role="product">
+            <MetaboliteReferenceGlyph key="Layout_50" name="MetabReferenceGlyph" metaboliteGlyph="Layout_10" role="product">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -3069,7 +3645,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_49" name="MetabReferenceGlyph" metaboliteGlyph="Layout_24" role="product">
+            <MetaboliteReferenceGlyph key="Layout_51" name="MetabReferenceGlyph" metaboliteGlyph="Layout_14" role="product">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -3081,7 +3657,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_50" name="MetabReferenceGlyph" metaboliteGlyph="Layout_16" role="modifier">
+            <MetaboliteReferenceGlyph key="Layout_52" name="MetabReferenceGlyph" metaboliteGlyph="Layout_10" role="modifier">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -3093,7 +3669,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_51" name="MetabReferenceGlyph" metaboliteGlyph="Layout_32" role="modifier">
+            <MetaboliteReferenceGlyph key="Layout_53" name="MetabReferenceGlyph" metaboliteGlyph="Layout_18" role="modifier">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -3107,7 +3683,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             </MetaboliteReferenceGlyph>
           </ListOfMetaboliteReferenceGlyphs>
         </ReactionGlyph>
-        <ReactionGlyph key="Layout_52" name="ReactionGlyph" reaction="Reaction_35">
+        <ReactionGlyph key="Layout_54" name="ReactionGlyph" reaction="Reaction_31">
           <BoundingBox>
             <Position x="170.65789692142062" y="67.164465551546527"/>
             <Dimensions width="0" height="0"/>
@@ -3121,7 +3697,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             </ListOfCurveSegments>
           </Curve>
           <ListOfMetaboliteReferenceGlyphs>
-            <MetaboliteReferenceGlyph key="Layout_53" name="MetabReferenceGlyph" metaboliteGlyph="Layout_10" role="substrate">
+            <MetaboliteReferenceGlyph key="Layout_55" name="MetabReferenceGlyph" metaboliteGlyph="Layout_7" role="substrate">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -3133,7 +3709,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_55" name="MetabReferenceGlyph" metaboliteGlyph="Layout_54" role="product">
+            <MetaboliteReferenceGlyph key="Layout_56" name="MetabReferenceGlyph" metaboliteGlyph="Layout_21" role="product">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -3147,7 +3723,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             </MetaboliteReferenceGlyph>
           </ListOfMetaboliteReferenceGlyphs>
         </ReactionGlyph>
-        <ReactionGlyph key="Layout_56" name="ReactionGlyph" reaction="Reaction_9">
+        <ReactionGlyph key="Layout_57" name="ReactionGlyph" reaction="Reaction_26">
           <BoundingBox>
             <Position x="256.80773830688122" y="160.30551027630463"/>
             <Dimensions width="0" height="0"/>
@@ -3161,7 +3737,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             </ListOfCurveSegments>
           </Curve>
           <ListOfMetaboliteReferenceGlyphs>
-            <MetaboliteReferenceGlyph key="Layout_57" name="MetabReferenceGlyph" metaboliteGlyph="Layout_34" role="substrate">
+            <MetaboliteReferenceGlyph key="Layout_58" name="MetabReferenceGlyph" metaboliteGlyph="Layout_19" role="substrate">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -3173,7 +3749,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_58" name="MetabReferenceGlyph" metaboliteGlyph="Layout_16" role="product">
+            <MetaboliteReferenceGlyph key="Layout_59" name="MetabReferenceGlyph" metaboliteGlyph="Layout_10" role="product">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -3185,7 +3761,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_59" name="MetabReferenceGlyph" metaboliteGlyph="Layout_30" role="modifier">
+            <MetaboliteReferenceGlyph key="Layout_60" name="MetabReferenceGlyph" metaboliteGlyph="Layout_17" role="modifier">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -3199,7 +3775,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             </MetaboliteReferenceGlyph>
           </ListOfMetaboliteReferenceGlyphs>
         </ReactionGlyph>
-        <ReactionGlyph key="Layout_60" name="ReactionGlyph" reaction="Reaction_12">
+        <ReactionGlyph key="Layout_61" name="ReactionGlyph" reaction="Reaction_1">
           <BoundingBox>
             <Position x="410.86474273078602" y="344.0443339196172"/>
             <Dimensions width="0" height="0"/>
@@ -3213,7 +3789,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             </ListOfCurveSegments>
           </Curve>
           <ListOfMetaboliteReferenceGlyphs>
-            <MetaboliteReferenceGlyph key="Layout_62" name="MetabReferenceGlyph" metaboliteGlyph="Layout_61" role="substrate">
+            <MetaboliteReferenceGlyph key="Layout_62" name="MetabReferenceGlyph" metaboliteGlyph="Layout_22" role="substrate">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -3225,7 +3801,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_63" name="MetabReferenceGlyph" metaboliteGlyph="Layout_26" role="product">
+            <MetaboliteReferenceGlyph key="Layout_63" name="MetabReferenceGlyph" metaboliteGlyph="Layout_15" role="product">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -3237,7 +3813,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_64" name="MetabReferenceGlyph" metaboliteGlyph="Layout_14" role="modifier">
+            <MetaboliteReferenceGlyph key="Layout_64" name="MetabReferenceGlyph" metaboliteGlyph="Layout_9" role="modifier">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -3249,7 +3825,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_65" name="MetabReferenceGlyph" metaboliteGlyph="Layout_6" role="modifier">
+            <MetaboliteReferenceGlyph key="Layout_65" name="MetabReferenceGlyph" metaboliteGlyph="Layout_5" role="modifier">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -3261,7 +3837,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_66" name="MetabReferenceGlyph" metaboliteGlyph="Layout_18" role="modifier">
+            <MetaboliteReferenceGlyph key="Layout_66" name="MetabReferenceGlyph" metaboliteGlyph="Layout_11" role="modifier">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -3273,7 +3849,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_67" name="MetabReferenceGlyph" metaboliteGlyph="Layout_8" role="modifier">
+            <MetaboliteReferenceGlyph key="Layout_67" name="MetabReferenceGlyph" metaboliteGlyph="Layout_6" role="modifier">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -3287,7 +3863,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             </MetaboliteReferenceGlyph>
           </ListOfMetaboliteReferenceGlyphs>
         </ReactionGlyph>
-        <ReactionGlyph key="Layout_68" name="ReactionGlyph" reaction="Reaction_6">
+        <ReactionGlyph key="Layout_68" name="ReactionGlyph" reaction="Reaction_21">
           <BoundingBox>
             <Position x="175.26329866435844" y="245.96811299008368"/>
             <Dimensions width="0" height="0"/>
@@ -3301,7 +3877,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             </ListOfCurveSegments>
           </Curve>
           <ListOfMetaboliteReferenceGlyphs>
-            <MetaboliteReferenceGlyph key="Layout_69" name="MetabReferenceGlyph" metaboliteGlyph="Layout_10" role="substrate">
+            <MetaboliteReferenceGlyph key="Layout_69" name="MetabReferenceGlyph" metaboliteGlyph="Layout_7" role="substrate">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -3313,7 +3889,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_70" name="MetabReferenceGlyph" metaboliteGlyph="Layout_10" role="product">
+            <MetaboliteReferenceGlyph key="Layout_70" name="MetabReferenceGlyph" metaboliteGlyph="Layout_7" role="product">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -3325,7 +3901,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_71" name="MetabReferenceGlyph" metaboliteGlyph="Layout_32" role="product">
+            <MetaboliteReferenceGlyph key="Layout_71" name="MetabReferenceGlyph" metaboliteGlyph="Layout_18" role="product">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -3339,7 +3915,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             </MetaboliteReferenceGlyph>
           </ListOfMetaboliteReferenceGlyphs>
         </ReactionGlyph>
-        <ReactionGlyph key="Layout_72" name="ReactionGlyph" reaction="Reaction_30">
+        <ReactionGlyph key="Layout_72" name="ReactionGlyph" reaction="Reaction_25">
           <BoundingBox>
             <Position x="67.718786846768126" y="373.42260629588418"/>
             <Dimensions width="0" height="0"/>
@@ -3353,7 +3929,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             </ListOfCurveSegments>
           </Curve>
           <ListOfMetaboliteReferenceGlyphs>
-            <MetaboliteReferenceGlyph key="Layout_73" name="MetabReferenceGlyph" metaboliteGlyph="Layout_24" role="substrate">
+            <MetaboliteReferenceGlyph key="Layout_73" name="MetabReferenceGlyph" metaboliteGlyph="Layout_14" role="substrate">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -3365,7 +3941,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_75" name="MetabReferenceGlyph" metaboliteGlyph="Layout_74" role="product">
+            <MetaboliteReferenceGlyph key="Layout_74" name="MetabReferenceGlyph" metaboliteGlyph="Layout_23" role="product">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -3379,7 +3955,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             </MetaboliteReferenceGlyph>
           </ListOfMetaboliteReferenceGlyphs>
         </ReactionGlyph>
-        <ReactionGlyph key="Layout_76" name="ReactionGlyph" reaction="Reaction_34">
+        <ReactionGlyph key="Layout_75" name="ReactionGlyph" reaction="Reaction_32">
           <BoundingBox>
             <Position x="289.92409400535144" y="438.86752562281254"/>
             <Dimensions width="0" height="0"/>
@@ -3393,7 +3969,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             </ListOfCurveSegments>
           </Curve>
           <ListOfMetaboliteReferenceGlyphs>
-            <MetaboliteReferenceGlyph key="Layout_77" name="MetabReferenceGlyph" metaboliteGlyph="Layout_6" role="substrate">
+            <MetaboliteReferenceGlyph key="Layout_76" name="MetabReferenceGlyph" metaboliteGlyph="Layout_5" role="substrate">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -3405,7 +3981,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_78" name="MetabReferenceGlyph" metaboliteGlyph="Layout_6" role="product">
+            <MetaboliteReferenceGlyph key="Layout_77" name="MetabReferenceGlyph" metaboliteGlyph="Layout_5" role="product">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -3417,7 +3993,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_79" name="MetabReferenceGlyph" metaboliteGlyph="Layout_18" role="product">
+            <MetaboliteReferenceGlyph key="Layout_78" name="MetabReferenceGlyph" metaboliteGlyph="Layout_11" role="product">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -3429,7 +4005,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_80" name="MetabReferenceGlyph" metaboliteGlyph="Layout_26" role="modifier">
+            <MetaboliteReferenceGlyph key="Layout_79" name="MetabReferenceGlyph" metaboliteGlyph="Layout_15" role="modifier">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -3441,7 +4017,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_81" name="MetabReferenceGlyph" metaboliteGlyph="Layout_8" role="modifier">
+            <MetaboliteReferenceGlyph key="Layout_80" name="MetabReferenceGlyph" metaboliteGlyph="Layout_6" role="modifier">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -3453,7 +4029,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_82" name="MetabReferenceGlyph" metaboliteGlyph="Layout_24" role="modifier">
+            <MetaboliteReferenceGlyph key="Layout_81" name="MetabReferenceGlyph" metaboliteGlyph="Layout_14" role="modifier">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -3465,7 +4041,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_83" name="MetabReferenceGlyph" metaboliteGlyph="Layout_32" role="modifier">
+            <MetaboliteReferenceGlyph key="Layout_82" name="MetabReferenceGlyph" metaboliteGlyph="Layout_18" role="modifier">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -3477,7 +4053,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_84" name="MetabReferenceGlyph" metaboliteGlyph="Layout_6" role="modifier">
+            <MetaboliteReferenceGlyph key="Layout_83" name="MetabReferenceGlyph" metaboliteGlyph="Layout_5" role="modifier">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -3491,7 +4067,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             </MetaboliteReferenceGlyph>
           </ListOfMetaboliteReferenceGlyphs>
         </ReactionGlyph>
-        <ReactionGlyph key="Layout_85" name="ReactionGlyph" reaction="Reaction_28">
+        <ReactionGlyph key="Layout_84" name="ReactionGlyph" reaction="Reaction_22">
           <BoundingBox>
             <Position x="242.72529728263726" y="426.77766488611996"/>
             <Dimensions width="0" height="0"/>
@@ -3505,7 +4081,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             </ListOfCurveSegments>
           </Curve>
           <ListOfMetaboliteReferenceGlyphs>
-            <MetaboliteReferenceGlyph key="Layout_86" name="MetabReferenceGlyph" metaboliteGlyph="Layout_8" role="substrate">
+            <MetaboliteReferenceGlyph key="Layout_85" name="MetabReferenceGlyph" metaboliteGlyph="Layout_6" role="substrate">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -3517,7 +4093,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_87" name="MetabReferenceGlyph" metaboliteGlyph="Layout_8" role="product">
+            <MetaboliteReferenceGlyph key="Layout_86" name="MetabReferenceGlyph" metaboliteGlyph="Layout_6" role="product">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -3529,7 +4105,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_88" name="MetabReferenceGlyph" metaboliteGlyph="Layout_32" role="product">
+            <MetaboliteReferenceGlyph key="Layout_87" name="MetabReferenceGlyph" metaboliteGlyph="Layout_18" role="product">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -3541,7 +4117,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_89" name="MetabReferenceGlyph" metaboliteGlyph="Layout_4" role="modifier">
+            <MetaboliteReferenceGlyph key="Layout_88" name="MetabReferenceGlyph" metaboliteGlyph="Layout_4" role="modifier">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -3553,7 +4129,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_90" name="MetabReferenceGlyph" metaboliteGlyph="Layout_8" role="modifier">
+            <MetaboliteReferenceGlyph key="Layout_89" name="MetabReferenceGlyph" metaboliteGlyph="Layout_6" role="modifier">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -3567,7 +4143,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             </MetaboliteReferenceGlyph>
           </ListOfMetaboliteReferenceGlyphs>
         </ReactionGlyph>
-        <ReactionGlyph key="Layout_91" name="ReactionGlyph" reaction="Reaction_29">
+        <ReactionGlyph key="Layout_90" name="ReactionGlyph" reaction="Reaction_23">
           <BoundingBox>
             <Position x="144.45768872616463" y="443.40901194828803"/>
             <Dimensions width="0" height="0"/>
@@ -3581,7 +4157,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             </ListOfCurveSegments>
           </Curve>
           <ListOfMetaboliteReferenceGlyphs>
-            <MetaboliteReferenceGlyph key="Layout_92" name="MetabReferenceGlyph" metaboliteGlyph="Layout_32" role="substrate">
+            <MetaboliteReferenceGlyph key="Layout_91" name="MetabReferenceGlyph" metaboliteGlyph="Layout_18" role="substrate">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -3593,7 +4169,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_94" name="MetabReferenceGlyph" metaboliteGlyph="Layout_93" role="product">
+            <MetaboliteReferenceGlyph key="Layout_92" name="MetabReferenceGlyph" metaboliteGlyph="Layout_24" role="product">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -3607,7 +4183,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             </MetaboliteReferenceGlyph>
           </ListOfMetaboliteReferenceGlyphs>
         </ReactionGlyph>
-        <ReactionGlyph key="Layout_95" name="ReactionGlyph" reaction="Reaction_19">
+        <ReactionGlyph key="Layout_93" name="ReactionGlyph" reaction="Reaction_7">
           <BoundingBox>
             <Position x="194.89872062102404" y="574.77529968589261"/>
             <Dimensions width="0" height="0"/>
@@ -3621,7 +4197,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             </ListOfCurveSegments>
           </Curve>
           <ListOfMetaboliteReferenceGlyphs>
-            <MetaboliteReferenceGlyph key="Layout_96" name="MetabReferenceGlyph" metaboliteGlyph="Layout_4" role="substrate">
+            <MetaboliteReferenceGlyph key="Layout_94" name="MetabReferenceGlyph" metaboliteGlyph="Layout_4" role="substrate">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -3633,7 +4209,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_98" name="MetabReferenceGlyph" metaboliteGlyph="Layout_97" role="product">
+            <MetaboliteReferenceGlyph key="Layout_95" name="MetabReferenceGlyph" metaboliteGlyph="Layout_25" role="product">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -3647,7 +4223,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             </MetaboliteReferenceGlyph>
           </ListOfMetaboliteReferenceGlyphs>
         </ReactionGlyph>
-        <ReactionGlyph key="Layout_99" name="ReactionGlyph" reaction="Reaction_21">
+        <ReactionGlyph key="Layout_96" name="ReactionGlyph" reaction="Reaction_10">
           <BoundingBox>
             <Position x="462.46213210763813" y="154.60167013484715"/>
             <Dimensions width="0" height="0"/>
@@ -3661,7 +4237,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             </ListOfCurveSegments>
           </Curve>
           <ListOfMetaboliteReferenceGlyphs>
-            <MetaboliteReferenceGlyph key="Layout_100" name="MetabReferenceGlyph" metaboliteGlyph="Layout_14" role="substrate">
+            <MetaboliteReferenceGlyph key="Layout_97" name="MetabReferenceGlyph" metaboliteGlyph="Layout_9" role="substrate">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -3673,7 +4249,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_102" name="MetabReferenceGlyph" metaboliteGlyph="Layout_101" role="product">
+            <MetaboliteReferenceGlyph key="Layout_98" name="MetabReferenceGlyph" metaboliteGlyph="Layout_26" role="product">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -3687,7 +4263,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             </MetaboliteReferenceGlyph>
           </ListOfMetaboliteReferenceGlyphs>
         </ReactionGlyph>
-        <ReactionGlyph key="Layout_103" name="ReactionGlyph" reaction="Reaction_15">
+        <ReactionGlyph key="Layout_99" name="ReactionGlyph" reaction="Reaction_30">
           <BoundingBox>
             <Position x="129.56067347923999" y="205.4855667593929"/>
             <Dimensions width="0" height="0"/>
@@ -3701,7 +4277,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             </ListOfCurveSegments>
           </Curve>
           <ListOfMetaboliteReferenceGlyphs>
-            <MetaboliteReferenceGlyph key="Layout_104" name="MetabReferenceGlyph" metaboliteGlyph="Layout_34" role="substrate">
+            <MetaboliteReferenceGlyph key="Layout_100" name="MetabReferenceGlyph" metaboliteGlyph="Layout_19" role="substrate">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -3713,7 +4289,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_105" name="MetabReferenceGlyph" metaboliteGlyph="Layout_10" role="product">
+            <MetaboliteReferenceGlyph key="Layout_101" name="MetabReferenceGlyph" metaboliteGlyph="Layout_7" role="product">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -3725,7 +4301,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_106" name="MetabReferenceGlyph" metaboliteGlyph="Layout_32" role="modifier">
+            <MetaboliteReferenceGlyph key="Layout_102" name="MetabReferenceGlyph" metaboliteGlyph="Layout_18" role="modifier">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -3739,7 +4315,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             </MetaboliteReferenceGlyph>
           </ListOfMetaboliteReferenceGlyphs>
         </ReactionGlyph>
-        <ReactionGlyph key="Layout_107" name="ReactionGlyph" reaction="Reaction_32">
+        <ReactionGlyph key="Layout_103" name="ReactionGlyph" reaction="Reaction_28">
           <BoundingBox>
             <Position x="321.67329545734538" y="157.30065383733199"/>
             <Dimensions width="0" height="0"/>
@@ -3753,7 +4329,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             </ListOfCurveSegments>
           </Curve>
           <ListOfMetaboliteReferenceGlyphs>
-            <MetaboliteReferenceGlyph key="Layout_108" name="MetabReferenceGlyph" metaboliteGlyph="Layout_10" role="substrate">
+            <MetaboliteReferenceGlyph key="Layout_104" name="MetabReferenceGlyph" metaboliteGlyph="Layout_7" role="substrate">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -3765,7 +4341,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_109" name="MetabReferenceGlyph" metaboliteGlyph="Layout_16" role="product">
+            <MetaboliteReferenceGlyph key="Layout_105" name="MetabReferenceGlyph" metaboliteGlyph="Layout_10" role="product">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -3777,7 +4353,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_110" name="MetabReferenceGlyph" metaboliteGlyph="Layout_12" role="modifier">
+            <MetaboliteReferenceGlyph key="Layout_106" name="MetabReferenceGlyph" metaboliteGlyph="Layout_8" role="modifier">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -3791,7 +4367,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             </MetaboliteReferenceGlyph>
           </ListOfMetaboliteReferenceGlyphs>
         </ReactionGlyph>
-        <ReactionGlyph key="Layout_111" name="ReactionGlyph" reaction="Reaction_17">
+        <ReactionGlyph key="Layout_107" name="ReactionGlyph" reaction="Reaction_4">
           <BoundingBox>
             <Position x="488.50382867577719" y="376.90425259579388"/>
             <Dimensions width="0" height="0"/>
@@ -3805,7 +4381,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             </ListOfCurveSegments>
           </Curve>
           <ListOfMetaboliteReferenceGlyphs>
-            <MetaboliteReferenceGlyph key="Layout_112" name="MetabReferenceGlyph" metaboliteGlyph="Layout_18" role="substrate">
+            <MetaboliteReferenceGlyph key="Layout_108" name="MetabReferenceGlyph" metaboliteGlyph="Layout_11" role="substrate">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -3817,7 +4393,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_113" name="MetabReferenceGlyph" metaboliteGlyph="Layout_18" role="product">
+            <MetaboliteReferenceGlyph key="Layout_109" name="MetabReferenceGlyph" metaboliteGlyph="Layout_11" role="product">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -3829,7 +4405,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_114" name="MetabReferenceGlyph" metaboliteGlyph="Layout_12" role="product">
+            <MetaboliteReferenceGlyph key="Layout_110" name="MetabReferenceGlyph" metaboliteGlyph="Layout_8" role="product">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -3843,7 +4419,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             </MetaboliteReferenceGlyph>
           </ListOfMetaboliteReferenceGlyphs>
         </ReactionGlyph>
-        <ReactionGlyph key="Layout_115" name="ReactionGlyph" reaction="Reaction_20">
+        <ReactionGlyph key="Layout_111" name="ReactionGlyph" reaction="Reaction_9">
           <BoundingBox>
             <Position x="364.0004308707048" y="343.09659239842404"/>
             <Dimensions width="0" height="0"/>
@@ -3857,7 +4433,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             </ListOfCurveSegments>
           </Curve>
           <ListOfMetaboliteReferenceGlyphs>
-            <MetaboliteReferenceGlyph key="Layout_116" name="MetabReferenceGlyph" metaboliteGlyph="Layout_26" role="substrate">
+            <MetaboliteReferenceGlyph key="Layout_112" name="MetabReferenceGlyph" metaboliteGlyph="Layout_15" role="substrate">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -3869,7 +4445,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_117" name="MetabReferenceGlyph" metaboliteGlyph="Layout_26" role="product">
+            <MetaboliteReferenceGlyph key="Layout_113" name="MetabReferenceGlyph" metaboliteGlyph="Layout_15" role="product">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -3881,7 +4457,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_118" name="MetabReferenceGlyph" metaboliteGlyph="Layout_14" role="product">
+            <MetaboliteReferenceGlyph key="Layout_114" name="MetabReferenceGlyph" metaboliteGlyph="Layout_9" role="product">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -3895,7 +4471,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             </MetaboliteReferenceGlyph>
           </ListOfMetaboliteReferenceGlyphs>
         </ReactionGlyph>
-        <ReactionGlyph key="Layout_119" name="ReactionGlyph" reaction="Reaction_18">
+        <ReactionGlyph key="Layout_115" name="ReactionGlyph" reaction="Reaction_5">
           <BoundingBox>
             <Position x="580.4481397142481" y="256.12411055279881"/>
             <Dimensions width="0" height="0"/>
@@ -3909,7 +4485,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             </ListOfCurveSegments>
           </Curve>
           <ListOfMetaboliteReferenceGlyphs>
-            <MetaboliteReferenceGlyph key="Layout_120" name="MetabReferenceGlyph" metaboliteGlyph="Layout_12" role="substrate">
+            <MetaboliteReferenceGlyph key="Layout_116" name="MetabReferenceGlyph" metaboliteGlyph="Layout_8" role="substrate">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -3921,7 +4497,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_122" name="MetabReferenceGlyph" metaboliteGlyph="Layout_121" role="product">
+            <MetaboliteReferenceGlyph key="Layout_117" name="MetabReferenceGlyph" metaboliteGlyph="Layout_27" role="product">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -3935,7 +4511,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             </MetaboliteReferenceGlyph>
           </ListOfMetaboliteReferenceGlyphs>
         </ReactionGlyph>
-        <ReactionGlyph key="Layout_123" name="ReactionGlyph" reaction="Reaction_16">
+        <ReactionGlyph key="Layout_118" name="ReactionGlyph" reaction="Reaction_3">
           <BoundingBox>
             <Position x="382.1367487470734" y="278.18615942072938"/>
             <Dimensions width="0" height="0"/>
@@ -3949,7 +4525,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             </ListOfCurveSegments>
           </Curve>
           <ListOfMetaboliteReferenceGlyphs>
-            <MetaboliteReferenceGlyph key="Layout_124" name="MetabReferenceGlyph" metaboliteGlyph="Layout_16" role="substrate">
+            <MetaboliteReferenceGlyph key="Layout_119" name="MetabReferenceGlyph" metaboliteGlyph="Layout_10" role="substrate">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -3961,7 +4537,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_125" name="MetabReferenceGlyph" metaboliteGlyph="Layout_16" role="product">
+            <MetaboliteReferenceGlyph key="Layout_120" name="MetabReferenceGlyph" metaboliteGlyph="Layout_10" role="product">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -3973,7 +4549,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_126" name="MetabReferenceGlyph" metaboliteGlyph="Layout_12" role="product">
+            <MetaboliteReferenceGlyph key="Layout_121" name="MetabReferenceGlyph" metaboliteGlyph="Layout_8" role="product">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -3987,7 +4563,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             </MetaboliteReferenceGlyph>
           </ListOfMetaboliteReferenceGlyphs>
         </ReactionGlyph>
-        <ReactionGlyph key="Layout_127" name="ReactionGlyph" reaction="Reaction_13">
+        <ReactionGlyph key="Layout_122" name="ReactionGlyph" reaction="Reaction_2">
           <BoundingBox>
             <Position x="437.76552671416357" y="382.70606777871217"/>
             <Dimensions width="0" height="0"/>
@@ -4001,7 +4577,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             </ListOfCurveSegments>
           </Curve>
           <ListOfMetaboliteReferenceGlyphs>
-            <MetaboliteReferenceGlyph key="Layout_129" name="MetabReferenceGlyph" metaboliteGlyph="Layout_128" role="substrate">
+            <MetaboliteReferenceGlyph key="Layout_123" name="MetabReferenceGlyph" metaboliteGlyph="Layout_28" role="substrate">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -4013,7 +4589,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_130" name="MetabReferenceGlyph" metaboliteGlyph="Layout_2" role="product">
+            <MetaboliteReferenceGlyph key="Layout_124" name="MetabReferenceGlyph" metaboliteGlyph="Layout_3" role="product">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -4025,7 +4601,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_131" name="MetabReferenceGlyph" metaboliteGlyph="Layout_20" role="modifier">
+            <MetaboliteReferenceGlyph key="Layout_125" name="MetabReferenceGlyph" metaboliteGlyph="Layout_12" role="modifier">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -4037,7 +4613,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_132" name="MetabReferenceGlyph" metaboliteGlyph="Layout_22" role="modifier">
+            <MetaboliteReferenceGlyph key="Layout_126" name="MetabReferenceGlyph" metaboliteGlyph="Layout_13" role="modifier">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -4049,7 +4625,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_133" name="MetabReferenceGlyph" metaboliteGlyph="Layout_28" role="modifier">
+            <MetaboliteReferenceGlyph key="Layout_127" name="MetabReferenceGlyph" metaboliteGlyph="Layout_16" role="modifier">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -4061,7 +4637,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_134" name="MetabReferenceGlyph" metaboliteGlyph="Layout_6" role="modifier">
+            <MetaboliteReferenceGlyph key="Layout_128" name="MetabReferenceGlyph" metaboliteGlyph="Layout_5" role="modifier">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -4073,7 +4649,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_135" name="MetabReferenceGlyph" metaboliteGlyph="Layout_12" role="modifier">
+            <MetaboliteReferenceGlyph key="Layout_129" name="MetabReferenceGlyph" metaboliteGlyph="Layout_8" role="modifier">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -4085,7 +4661,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_136" name="MetabReferenceGlyph" metaboliteGlyph="Layout_14" role="modifier">
+            <MetaboliteReferenceGlyph key="Layout_130" name="MetabReferenceGlyph" metaboliteGlyph="Layout_9" role="modifier">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -4097,7 +4673,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_137" name="MetabReferenceGlyph" metaboliteGlyph="Layout_8" role="modifier">
+            <MetaboliteReferenceGlyph key="Layout_131" name="MetabReferenceGlyph" metaboliteGlyph="Layout_6" role="modifier">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -4111,7 +4687,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             </MetaboliteReferenceGlyph>
           </ListOfMetaboliteReferenceGlyphs>
         </ReactionGlyph>
-        <ReactionGlyph key="Layout_138" name="ReactionGlyph" reaction="Reaction_5">
+        <ReactionGlyph key="Layout_132" name="ReactionGlyph" reaction="Reaction_18">
           <BoundingBox>
             <Position x="276.67608647480847" y="114.8190929668217"/>
             <Dimensions width="0" height="0"/>
@@ -4125,7 +4701,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             </ListOfCurveSegments>
           </Curve>
           <ListOfMetaboliteReferenceGlyphs>
-            <MetaboliteReferenceGlyph key="Layout_139" name="MetabReferenceGlyph" metaboliteGlyph="Layout_10" role="substrate">
+            <MetaboliteReferenceGlyph key="Layout_133" name="MetabReferenceGlyph" metaboliteGlyph="Layout_7" role="substrate">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -4137,7 +4713,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_140" name="MetabReferenceGlyph" metaboliteGlyph="Layout_10" role="product">
+            <MetaboliteReferenceGlyph key="Layout_134" name="MetabReferenceGlyph" metaboliteGlyph="Layout_7" role="product">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -4149,7 +4725,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_141" name="MetabReferenceGlyph" metaboliteGlyph="Layout_28" role="product">
+            <MetaboliteReferenceGlyph key="Layout_135" name="MetabReferenceGlyph" metaboliteGlyph="Layout_16" role="product">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -4163,7 +4739,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             </MetaboliteReferenceGlyph>
           </ListOfMetaboliteReferenceGlyphs>
         </ReactionGlyph>
-        <ReactionGlyph key="Layout_142" name="ReactionGlyph" reaction="Reaction_1">
+        <ReactionGlyph key="Layout_136" name="ReactionGlyph" reaction="Reaction_8">
           <BoundingBox>
             <Position x="288.28259632097615" y="195.62606070176116"/>
             <Dimensions width="0" height="0"/>
@@ -4177,7 +4753,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             </ListOfCurveSegments>
           </Curve>
           <ListOfMetaboliteReferenceGlyphs>
-            <MetaboliteReferenceGlyph key="Layout_143" name="MetabReferenceGlyph" metaboliteGlyph="Layout_10" role="substrate">
+            <MetaboliteReferenceGlyph key="Layout_137" name="MetabReferenceGlyph" metaboliteGlyph="Layout_7" role="substrate">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -4189,7 +4765,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_144" name="MetabReferenceGlyph" metaboliteGlyph="Layout_10" role="product">
+            <MetaboliteReferenceGlyph key="Layout_138" name="MetabReferenceGlyph" metaboliteGlyph="Layout_7" role="product">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -4201,7 +4777,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_145" name="MetabReferenceGlyph" metaboliteGlyph="Layout_14" role="product">
+            <MetaboliteReferenceGlyph key="Layout_139" name="MetabReferenceGlyph" metaboliteGlyph="Layout_9" role="product">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -4215,7 +4791,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             </MetaboliteReferenceGlyph>
           </ListOfMetaboliteReferenceGlyphs>
         </ReactionGlyph>
-        <ReactionGlyph key="Layout_146" name="ReactionGlyph" reaction="Reaction_0">
+        <ReactionGlyph key="Layout_140" name="ReactionGlyph" reaction="Reaction_6">
           <BoundingBox>
             <Position x="341.19367873138435" y="476.89419928112511"/>
             <Dimensions width="0" height="0"/>
@@ -4229,7 +4805,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             </ListOfCurveSegments>
           </Curve>
           <ListOfMetaboliteReferenceGlyphs>
-            <MetaboliteReferenceGlyph key="Layout_147" name="MetabReferenceGlyph" metaboliteGlyph="Layout_18" role="substrate">
+            <MetaboliteReferenceGlyph key="Layout_141" name="MetabReferenceGlyph" metaboliteGlyph="Layout_11" role="substrate">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -4241,7 +4817,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_148" name="MetabReferenceGlyph" metaboliteGlyph="Layout_18" role="product">
+            <MetaboliteReferenceGlyph key="Layout_142" name="MetabReferenceGlyph" metaboliteGlyph="Layout_11" role="product">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -4253,7 +4829,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_149" name="MetabReferenceGlyph" metaboliteGlyph="Layout_4" role="product">
+            <MetaboliteReferenceGlyph key="Layout_143" name="MetabReferenceGlyph" metaboliteGlyph="Layout_4" role="product">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -4267,7 +4843,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             </MetaboliteReferenceGlyph>
           </ListOfMetaboliteReferenceGlyphs>
         </ReactionGlyph>
-        <ReactionGlyph key="Layout_150" name="ReactionGlyph" reaction="Reaction_31">
+        <ReactionGlyph key="Layout_144" name="ReactionGlyph" reaction="Reaction_27">
           <BoundingBox>
             <Position x="233.54437160569432" y="218.51993555107219"/>
             <Dimensions width="0" height="0"/>
@@ -4281,7 +4857,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             </ListOfCurveSegments>
           </Curve>
           <ListOfMetaboliteReferenceGlyphs>
-            <MetaboliteReferenceGlyph key="Layout_151" name="MetabReferenceGlyph" metaboliteGlyph="Layout_16" role="substrate">
+            <MetaboliteReferenceGlyph key="Layout_145" name="MetabReferenceGlyph" metaboliteGlyph="Layout_10" role="substrate">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -4293,7 +4869,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_152" name="MetabReferenceGlyph" metaboliteGlyph="Layout_10" role="product">
+            <MetaboliteReferenceGlyph key="Layout_146" name="MetabReferenceGlyph" metaboliteGlyph="Layout_7" role="product">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -4305,7 +4881,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_153" name="MetabReferenceGlyph" metaboliteGlyph="Layout_28" role="modifier">
+            <MetaboliteReferenceGlyph key="Layout_147" name="MetabReferenceGlyph" metaboliteGlyph="Layout_16" role="modifier">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -4319,7 +4895,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             </MetaboliteReferenceGlyph>
           </ListOfMetaboliteReferenceGlyphs>
         </ReactionGlyph>
-        <ReactionGlyph key="Layout_154" name="ReactionGlyph" reaction="Reaction_3">
+        <ReactionGlyph key="Layout_148" name="ReactionGlyph" reaction="Reaction_13">
           <BoundingBox>
             <Position x="235.87297161548668" y="265.7416185530592"/>
             <Dimensions width="0" height="0"/>
@@ -4333,7 +4909,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             </ListOfCurveSegments>
           </Curve>
           <ListOfMetaboliteReferenceGlyphs>
-            <MetaboliteReferenceGlyph key="Layout_155" name="MetabReferenceGlyph" metaboliteGlyph="Layout_16" role="substrate">
+            <MetaboliteReferenceGlyph key="Layout_149" name="MetabReferenceGlyph" metaboliteGlyph="Layout_10" role="substrate">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -4345,7 +4921,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_156" name="MetabReferenceGlyph" metaboliteGlyph="Layout_16" role="product">
+            <MetaboliteReferenceGlyph key="Layout_150" name="MetabReferenceGlyph" metaboliteGlyph="Layout_10" role="product">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -4357,7 +4933,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_157" name="MetabReferenceGlyph" metaboliteGlyph="Layout_22" role="product">
+            <MetaboliteReferenceGlyph key="Layout_151" name="MetabReferenceGlyph" metaboliteGlyph="Layout_13" role="product">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -4371,7 +4947,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             </MetaboliteReferenceGlyph>
           </ListOfMetaboliteReferenceGlyphs>
         </ReactionGlyph>
-        <ReactionGlyph key="Layout_158" name="ReactionGlyph" reaction="Reaction_2">
+        <ReactionGlyph key="Layout_152" name="ReactionGlyph" reaction="Reaction_11">
           <BoundingBox>
             <Position x="567.44771115255389" y="529.35353514504641"/>
             <Dimensions width="0" height="0"/>
@@ -4385,7 +4961,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             </ListOfCurveSegments>
           </Curve>
           <ListOfMetaboliteReferenceGlyphs>
-            <MetaboliteReferenceGlyph key="Layout_159" name="MetabReferenceGlyph" metaboliteGlyph="Layout_2" role="substrate">
+            <MetaboliteReferenceGlyph key="Layout_153" name="MetabReferenceGlyph" metaboliteGlyph="Layout_3" role="substrate">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -4397,7 +4973,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_160" name="MetabReferenceGlyph" metaboliteGlyph="Layout_2" role="product">
+            <MetaboliteReferenceGlyph key="Layout_154" name="MetabReferenceGlyph" metaboliteGlyph="Layout_3" role="product">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -4409,7 +4985,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_161" name="MetabReferenceGlyph" metaboliteGlyph="Layout_20" role="product">
+            <MetaboliteReferenceGlyph key="Layout_155" name="MetabReferenceGlyph" metaboliteGlyph="Layout_12" role="product">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -4423,7 +4999,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             </MetaboliteReferenceGlyph>
           </ListOfMetaboliteReferenceGlyphs>
         </ReactionGlyph>
-        <ReactionGlyph key="Layout_162" name="ReactionGlyph" reaction="Reaction_23">
+        <ReactionGlyph key="Layout_156" name="ReactionGlyph" reaction="Reaction_14">
           <BoundingBox>
             <Position x="81.04073319719646" y="311.55638814062331"/>
             <Dimensions width="0" height="0"/>
@@ -4437,7 +5013,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             </ListOfCurveSegments>
           </Curve>
           <ListOfMetaboliteReferenceGlyphs>
-            <MetaboliteReferenceGlyph key="Layout_163" name="MetabReferenceGlyph" metaboliteGlyph="Layout_22" role="substrate">
+            <MetaboliteReferenceGlyph key="Layout_157" name="MetabReferenceGlyph" metaboliteGlyph="Layout_13" role="substrate">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -4449,7 +5025,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_165" name="MetabReferenceGlyph" metaboliteGlyph="Layout_164" role="product">
+            <MetaboliteReferenceGlyph key="Layout_158" name="MetabReferenceGlyph" metaboliteGlyph="Layout_29" role="product">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -4463,7 +5039,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             </MetaboliteReferenceGlyph>
           </ListOfMetaboliteReferenceGlyphs>
         </ReactionGlyph>
-        <ReactionGlyph key="Layout_166" name="ReactionGlyph" reaction="Reaction_4">
+        <ReactionGlyph key="Layout_159" name="ReactionGlyph" reaction="Reaction_15">
           <BoundingBox>
             <Position x="387.89583839449551" y="189.11238216348283"/>
             <Dimensions width="0" height="0"/>
@@ -4477,7 +5053,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             </ListOfCurveSegments>
           </Curve>
           <ListOfMetaboliteReferenceGlyphs>
-            <MetaboliteReferenceGlyph key="Layout_167" name="MetabReferenceGlyph" metaboliteGlyph="Layout_16" role="substrate">
+            <MetaboliteReferenceGlyph key="Layout_160" name="MetabReferenceGlyph" metaboliteGlyph="Layout_10" role="substrate">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -4489,7 +5065,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_168" name="MetabReferenceGlyph" metaboliteGlyph="Layout_16" role="product">
+            <MetaboliteReferenceGlyph key="Layout_161" name="MetabReferenceGlyph" metaboliteGlyph="Layout_10" role="product">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -4501,7 +5077,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_169" name="MetabReferenceGlyph" metaboliteGlyph="Layout_30" role="product">
+            <MetaboliteReferenceGlyph key="Layout_162" name="MetabReferenceGlyph" metaboliteGlyph="Layout_17" role="product">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -4515,7 +5091,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             </MetaboliteReferenceGlyph>
           </ListOfMetaboliteReferenceGlyphs>
         </ReactionGlyph>
-        <ReactionGlyph key="Layout_170" name="ReactionGlyph" reaction="Reaction_25">
+        <ReactionGlyph key="Layout_163" name="ReactionGlyph" reaction="Reaction_17">
           <BoundingBox>
             <Position x="535.84166607292536" y="182.15496624097796"/>
             <Dimensions width="0" height="0"/>
@@ -4529,7 +5105,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             </ListOfCurveSegments>
           </Curve>
           <ListOfMetaboliteReferenceGlyphs>
-            <MetaboliteReferenceGlyph key="Layout_171" name="MetabReferenceGlyph" metaboliteGlyph="Layout_30" role="substrate">
+            <MetaboliteReferenceGlyph key="Layout_164" name="MetabReferenceGlyph" metaboliteGlyph="Layout_17" role="substrate">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -4541,7 +5117,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_173" name="MetabReferenceGlyph" metaboliteGlyph="Layout_172" role="product">
+            <MetaboliteReferenceGlyph key="Layout_165" name="MetabReferenceGlyph" metaboliteGlyph="Layout_30" role="product">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -4555,7 +5131,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             </MetaboliteReferenceGlyph>
           </ListOfMetaboliteReferenceGlyphs>
         </ReactionGlyph>
-        <ReactionGlyph key="Layout_174" name="ReactionGlyph" reaction="Reaction_27">
+        <ReactionGlyph key="Layout_166" name="ReactionGlyph" reaction="Reaction_20">
           <BoundingBox>
             <Position x="339.86007633188638" y="88.16690525802187"/>
             <Dimensions width="0" height="0"/>
@@ -4569,7 +5145,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             </ListOfCurveSegments>
           </Curve>
           <ListOfMetaboliteReferenceGlyphs>
-            <MetaboliteReferenceGlyph key="Layout_175" name="MetabReferenceGlyph" metaboliteGlyph="Layout_28" role="substrate">
+            <MetaboliteReferenceGlyph key="Layout_167" name="MetabReferenceGlyph" metaboliteGlyph="Layout_16" role="substrate">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -4581,7 +5157,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_177" name="MetabReferenceGlyph" metaboliteGlyph="Layout_176" role="product">
+            <MetaboliteReferenceGlyph key="Layout_168" name="MetabReferenceGlyph" metaboliteGlyph="Layout_31" role="product">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -4595,7 +5171,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             </MetaboliteReferenceGlyph>
           </ListOfMetaboliteReferenceGlyphs>
         </ReactionGlyph>
-        <ReactionGlyph key="Layout_178" name="ReactionGlyph" reaction="Reaction_24">
+        <ReactionGlyph key="Layout_169" name="ReactionGlyph" reaction="Reaction_16">
           <BoundingBox>
             <Position x="455.12253010513268" y="336.31686773439287"/>
             <Dimensions width="0" height="0"/>
@@ -4609,7 +5185,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             </ListOfCurveSegments>
           </Curve>
           <ListOfMetaboliteReferenceGlyphs>
-            <MetaboliteReferenceGlyph key="Layout_179" name="MetabReferenceGlyph" metaboliteGlyph="Layout_18" role="substrate">
+            <MetaboliteReferenceGlyph key="Layout_170" name="MetabReferenceGlyph" metaboliteGlyph="Layout_11" role="substrate">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -4621,7 +5197,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_180" name="MetabReferenceGlyph" metaboliteGlyph="Layout_18" role="product">
+            <MetaboliteReferenceGlyph key="Layout_171" name="MetabReferenceGlyph" metaboliteGlyph="Layout_11" role="product">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -4633,7 +5209,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_181" name="MetabReferenceGlyph" metaboliteGlyph="Layout_30" role="product">
+            <MetaboliteReferenceGlyph key="Layout_172" name="MetabReferenceGlyph" metaboliteGlyph="Layout_17" role="product">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -4647,7 +5223,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             </MetaboliteReferenceGlyph>
           </ListOfMetaboliteReferenceGlyphs>
         </ReactionGlyph>
-        <ReactionGlyph key="Layout_182" name="ReactionGlyph" reaction="Reaction_22">
+        <ReactionGlyph key="Layout_173" name="ReactionGlyph" reaction="Reaction_12">
           <BoundingBox>
             <Position x="552.35412480833475" y="653.87359620491225"/>
             <Dimensions width="0" height="0"/>
@@ -4661,7 +5237,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             </ListOfCurveSegments>
           </Curve>
           <ListOfMetaboliteReferenceGlyphs>
-            <MetaboliteReferenceGlyph key="Layout_183" name="MetabReferenceGlyph" metaboliteGlyph="Layout_20" role="substrate">
+            <MetaboliteReferenceGlyph key="Layout_174" name="MetabReferenceGlyph" metaboliteGlyph="Layout_12" role="substrate">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -4673,7 +5249,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_185" name="MetabReferenceGlyph" metaboliteGlyph="Layout_184" role="product">
+            <MetaboliteReferenceGlyph key="Layout_175" name="MetabReferenceGlyph" metaboliteGlyph="Layout_32" role="product">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -4687,7 +5263,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             </MetaboliteReferenceGlyph>
           </ListOfMetaboliteReferenceGlyphs>
         </ReactionGlyph>
-        <ReactionGlyph key="Layout_186" name="ReactionGlyph" reaction="Reaction_33">
+        <ReactionGlyph key="Layout_176" name="ReactionGlyph" reaction="Reaction_29">
           <BoundingBox>
             <Position x="380.44203889624077" y="131.87430684338869"/>
             <Dimensions width="0" height="0"/>
@@ -4701,7 +5277,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             </ListOfCurveSegments>
           </Curve>
           <ListOfMetaboliteReferenceGlyphs>
-            <MetaboliteReferenceGlyph key="Layout_187" name="MetabReferenceGlyph" metaboliteGlyph="Layout_16" role="substrate">
+            <MetaboliteReferenceGlyph key="Layout_177" name="MetabReferenceGlyph" metaboliteGlyph="Layout_10" role="substrate">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -4713,7 +5289,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_189" name="MetabReferenceGlyph" metaboliteGlyph="Layout_188" role="product">
+            <MetaboliteReferenceGlyph key="Layout_178" name="MetabReferenceGlyph" metaboliteGlyph="Layout_33" role="product">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -4727,7 +5303,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             </MetaboliteReferenceGlyph>
           </ListOfMetaboliteReferenceGlyphs>
         </ReactionGlyph>
-        <ReactionGlyph key="Layout_190" name="ReactionGlyph" reaction="Reaction_26">
+        <ReactionGlyph key="Layout_179" name="ReactionGlyph" reaction="Reaction_19">
           <BoundingBox>
             <Position x="317.51550847141334" y="318.39403064184808"/>
             <Dimensions width="0" height="0"/>
@@ -4741,7 +5317,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             </ListOfCurveSegments>
           </Curve>
           <ListOfMetaboliteReferenceGlyphs>
-            <MetaboliteReferenceGlyph key="Layout_191" name="MetabReferenceGlyph" metaboliteGlyph="Layout_8" role="substrate">
+            <MetaboliteReferenceGlyph key="Layout_180" name="MetabReferenceGlyph" metaboliteGlyph="Layout_6" role="substrate">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -4753,7 +5329,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_192" name="MetabReferenceGlyph" metaboliteGlyph="Layout_8" role="product">
+            <MetaboliteReferenceGlyph key="Layout_181" name="MetabReferenceGlyph" metaboliteGlyph="Layout_6" role="product">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -4765,7 +5341,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_193" name="MetabReferenceGlyph" metaboliteGlyph="Layout_28" role="product">
+            <MetaboliteReferenceGlyph key="Layout_182" name="MetabReferenceGlyph" metaboliteGlyph="Layout_16" role="product">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -4779,7 +5355,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             </MetaboliteReferenceGlyph>
           </ListOfMetaboliteReferenceGlyphs>
         </ReactionGlyph>
-        <ReactionGlyph key="Layout_194" name="ReactionGlyph" reaction="Reaction_8">
+        <ReactionGlyph key="Layout_183" name="ReactionGlyph" reaction="Reaction_33">
           <BoundingBox>
             <Position x="337.9516839341486" y="520.06407594945449"/>
             <Dimensions width="0" height="0"/>
@@ -4793,7 +5369,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             </ListOfCurveSegments>
           </Curve>
           <ListOfMetaboliteReferenceGlyphs>
-            <MetaboliteReferenceGlyph key="Layout_196" name="MetabReferenceGlyph" metaboliteGlyph="Layout_195" role="substrate">
+            <MetaboliteReferenceGlyph key="Layout_184" name="MetabReferenceGlyph" metaboliteGlyph="Layout_34" role="substrate">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -4805,7 +5381,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_197" name="MetabReferenceGlyph" metaboliteGlyph="Layout_18" role="product">
+            <MetaboliteReferenceGlyph key="Layout_185" name="MetabReferenceGlyph" metaboliteGlyph="Layout_11" role="product">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -4817,7 +5393,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_198" name="MetabReferenceGlyph" metaboliteGlyph="Layout_4" role="modifier">
+            <MetaboliteReferenceGlyph key="Layout_186" name="MetabReferenceGlyph" metaboliteGlyph="Layout_4" role="modifier">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -4829,7 +5405,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_199" name="MetabReferenceGlyph" metaboliteGlyph="Layout_26" role="modifier">
+            <MetaboliteReferenceGlyph key="Layout_187" name="MetabReferenceGlyph" metaboliteGlyph="Layout_15" role="modifier">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -4841,7 +5417,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_200" name="MetabReferenceGlyph" metaboliteGlyph="Layout_8" role="modifier">
+            <MetaboliteReferenceGlyph key="Layout_188" name="MetabReferenceGlyph" metaboliteGlyph="Layout_6" role="modifier">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -4855,7 +5431,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             </MetaboliteReferenceGlyph>
           </ListOfMetaboliteReferenceGlyphs>
         </ReactionGlyph>
-        <ReactionGlyph key="Layout_201" name="ReactionGlyph" reaction="Reaction_11">
+        <ReactionGlyph key="Layout_189" name="ReactionGlyph" reaction="Reaction_35">
           <BoundingBox>
             <Position x="374.87638852255805" y="562.18824549475903"/>
             <Dimensions width="0" height="0"/>
@@ -4869,7 +5445,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             </ListOfCurveSegments>
           </Curve>
           <ListOfMetaboliteReferenceGlyphs>
-            <MetaboliteReferenceGlyph key="Layout_202" name="MetabReferenceGlyph" metaboliteGlyph="Layout_26" role="substrate">
+            <MetaboliteReferenceGlyph key="Layout_190" name="MetabReferenceGlyph" metaboliteGlyph="Layout_15" role="substrate">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -4881,7 +5457,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_204" name="MetabReferenceGlyph" metaboliteGlyph="Layout_203" role="product">
+            <MetaboliteReferenceGlyph key="Layout_191" name="MetabReferenceGlyph" metaboliteGlyph="Layout_35" role="product">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -4895,7 +5471,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             </MetaboliteReferenceGlyph>
           </ListOfMetaboliteReferenceGlyphs>
         </ReactionGlyph>
-        <ReactionGlyph key="Layout_205" name="ReactionGlyph" reaction="Reaction_10">
+        <ReactionGlyph key="Layout_192" name="ReactionGlyph" reaction="Reaction_34">
           <BoundingBox>
             <Position x="534.55736381660063" y="419.99999442902117"/>
             <Dimensions width="0" height="0"/>
@@ -4909,7 +5485,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             </ListOfCurveSegments>
           </Curve>
           <ListOfMetaboliteReferenceGlyphs>
-            <MetaboliteReferenceGlyph key="Layout_206" name="MetabReferenceGlyph" metaboliteGlyph="Layout_18" role="substrate">
+            <MetaboliteReferenceGlyph key="Layout_193" name="MetabReferenceGlyph" metaboliteGlyph="Layout_11" role="substrate">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -4921,7 +5497,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_208" name="MetabReferenceGlyph" metaboliteGlyph="Layout_207" role="product">
+            <MetaboliteReferenceGlyph key="Layout_194" name="MetabReferenceGlyph" metaboliteGlyph="Layout_36" role="product">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -4935,7 +5511,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             </MetaboliteReferenceGlyph>
           </ListOfMetaboliteReferenceGlyphs>
         </ReactionGlyph>
-        <ReactionGlyph key="Layout_209" name="ReactionGlyph" reaction="Reaction_36">
+        <ReactionGlyph key="Layout_195" name="ReactionGlyph" reaction="Reaction_36">
           <BoundingBox>
             <Position x="618.05345280963957" y="484.18888605617758"/>
             <Dimensions width="0" height="0"/>
@@ -4949,7 +5525,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             </ListOfCurveSegments>
           </Curve>
           <ListOfMetaboliteReferenceGlyphs>
-            <MetaboliteReferenceGlyph key="Layout_210" name="MetabReferenceGlyph" metaboliteGlyph="Layout_2" role="substrate">
+            <MetaboliteReferenceGlyph key="Layout_196" name="MetabReferenceGlyph" metaboliteGlyph="Layout_3" role="substrate">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -4961,7 +5537,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_212" name="MetabReferenceGlyph" metaboliteGlyph="Layout_211" role="product">
+            <MetaboliteReferenceGlyph key="Layout_197" name="MetabReferenceGlyph" metaboliteGlyph="Layout_37" role="product">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -4975,7 +5551,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             </MetaboliteReferenceGlyph>
           </ListOfMetaboliteReferenceGlyphs>
         </ReactionGlyph>
-        <ReactionGlyph key="Layout_213" name="ReactionGlyph" reaction="Reaction_37">
+        <ReactionGlyph key="Layout_198" name="ReactionGlyph" reaction="Reaction_37">
           <BoundingBox>
             <Position x="397.57387947613279" y="507.96618439953454"/>
             <Dimensions width="0" height="0"/>
@@ -4989,7 +5565,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             </ListOfCurveSegments>
           </Curve>
           <ListOfMetaboliteReferenceGlyphs>
-            <MetaboliteReferenceGlyph key="Layout_214" name="MetabReferenceGlyph" metaboliteGlyph="Layout_8" role="substrate">
+            <MetaboliteReferenceGlyph key="Layout_199" name="MetabReferenceGlyph" metaboliteGlyph="Layout_6" role="substrate">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -5001,7 +5577,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
                 </ListOfCurveSegments>
               </Curve>
             </MetaboliteReferenceGlyph>
-            <MetaboliteReferenceGlyph key="Layout_216" name="MetabReferenceGlyph" metaboliteGlyph="Layout_215" role="product">
+            <MetaboliteReferenceGlyph key="Layout_200" name="MetabReferenceGlyph" metaboliteGlyph="Layout_38" role="product">
               <Curve>
                 <ListOfCurveSegments>
                   <CurveSegment xsi:type="CubicBezier">
@@ -5017,103 +5593,103 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         </ReactionGlyph>
       </ListOfReactionGlyphs>
       <ListOfTextGlyphs>
-        <TextGlyph key="Layout_3" name="TextGlyph" graphicalObject="Layout_2" originOfText="Metabolite_11">
+        <TextGlyph key="Layout_201" name="TextGlyph" graphicalObject="Layout_3" originOfText="Metabolite_11">
           <BoundingBox>
             <Position x="495.63535346977551" y="450.02336008179918"/>
             <Dimensions width="48" height="24"/>
           </BoundingBox>
         </TextGlyph>
-        <TextGlyph key="Layout_5" name="TextGlyph" graphicalObject="Layout_4" originOfText="Metabolite_7">
+        <TextGlyph key="Layout_202" name="TextGlyph" graphicalObject="Layout_4" originOfText="Metabolite_2">
           <BoundingBox>
             <Position x="240.53938061916961" y="497.39383117752368"/>
             <Dimensions width="32" height="24"/>
           </BoundingBox>
         </TextGlyph>
-        <TextGlyph key="Layout_7" name="TextGlyph" graphicalObject="Layout_6" originOfText="Metabolite_17">
+        <TextGlyph key="Layout_203" name="TextGlyph" graphicalObject="Layout_5" originOfText="Metabolite_8">
           <BoundingBox>
             <Position x="287.73652035655505" y="354.36872517801385"/>
             <Dimensions width="24" height="24"/>
           </BoundingBox>
         </TextGlyph>
-        <TextGlyph key="Layout_9" name="TextGlyph" graphicalObject="Layout_8" originOfText="Metabolite_15">
+        <TextGlyph key="Layout_204" name="TextGlyph" graphicalObject="Layout_6" originOfText="Metabolite_12">
           <BoundingBox>
             <Position x="310.43191067537737" y="400.18726653510566"/>
             <Dimensions width="32" height="24"/>
           </BoundingBox>
         </TextGlyph>
-        <TextGlyph key="Layout_11" name="TextGlyph" graphicalObject="Layout_10" originOfText="Metabolite_9">
+        <TextGlyph key="Layout_205" name="TextGlyph" graphicalObject="Layout_7" originOfText="Metabolite_6">
           <BoundingBox>
             <Position x="191.87488223751461" y="144.98138828932861"/>
             <Dimensions width="32" height="24"/>
           </BoundingBox>
         </TextGlyph>
-        <TextGlyph key="Layout_13" name="TextGlyph" graphicalObject="Layout_12" originOfText="Metabolite_3">
+        <TextGlyph key="Layout_206" name="TextGlyph" graphicalObject="Layout_8" originOfText="Metabolite_0">
           <BoundingBox>
             <Position x="462.45966986453277" y="259.264210806954"/>
             <Dimensions width="32" height="24"/>
           </BoundingBox>
         </TextGlyph>
-        <TextGlyph key="Layout_15" name="TextGlyph" graphicalObject="Layout_14" originOfText="Metabolite_8">
+        <TextGlyph key="Layout_207" name="TextGlyph" graphicalObject="Layout_9" originOfText="Metabolite_4">
           <BoundingBox>
             <Position x="377.40808019866017" y="226.58941173875064"/>
             <Dimensions width="32" height="24"/>
           </BoundingBox>
         </TextGlyph>
-        <TextGlyph key="Layout_17" name="TextGlyph" graphicalObject="Layout_16" originOfText="Metabolite_4">
+        <TextGlyph key="Layout_208" name="TextGlyph" graphicalObject="Layout_10" originOfText="Metabolite_1">
           <BoundingBox>
             <Position x="292.03470100926461" y="220.47457303060037"/>
             <Dimensions width="32" height="24"/>
           </BoundingBox>
         </TextGlyph>
-        <TextGlyph key="Layout_19" name="TextGlyph" graphicalObject="Layout_18" originOfText="Metabolite_5">
+        <TextGlyph key="Layout_209" name="TextGlyph" graphicalObject="Layout_11" originOfText="Metabolite_3">
           <BoundingBox>
             <Position x="401.38718836518819" y="417.51203206357604"/>
             <Dimensions width="32" height="24"/>
           </BoundingBox>
         </TextGlyph>
-        <TextGlyph key="Layout_21" name="TextGlyph" graphicalObject="Layout_20" originOfText="Metabolite_10">
+        <TextGlyph key="Layout_210" name="TextGlyph" graphicalObject="Layout_12" originOfText="Metabolite_7">
           <BoundingBox>
             <Position x="487.77388824739865" y="562.55103431837961"/>
             <Dimensions width="48" height="24"/>
           </BoundingBox>
         </TextGlyph>
-        <TextGlyph key="Layout_23" name="TextGlyph" graphicalObject="Layout_22" originOfText="Metabolite_12">
+        <TextGlyph key="Layout_211" name="TextGlyph" graphicalObject="Layout_13" originOfText="Metabolite_9">
           <BoundingBox>
             <Position x="160.06506766203711" y="304.01174425785757"/>
             <Dimensions width="32" height="24"/>
           </BoundingBox>
         </TextGlyph>
-        <TextGlyph key="Layout_25" name="TextGlyph" graphicalObject="Layout_24" originOfText="Metabolite_18">
+        <TextGlyph key="Layout_212" name="TextGlyph" graphicalObject="Layout_14" originOfText="Metabolite_15">
           <BoundingBox>
             <Position x="135.59483923262997" y="363.49889866491321"/>
             <Dimensions width="48" height="24"/>
           </BoundingBox>
         </TextGlyph>
-        <TextGlyph key="Layout_27" name="TextGlyph" graphicalObject="Layout_26" originOfText="Metabolite_6">
+        <TextGlyph key="Layout_213" name="TextGlyph" graphicalObject="Layout_15" originOfText="Metabolite_5">
           <BoundingBox>
             <Position x="356.04998975923991" y="425.46661609368857"/>
             <Dimensions width="32" height="24"/>
           </BoundingBox>
         </TextGlyph>
-        <TextGlyph key="Layout_29" name="TextGlyph" graphicalObject="Layout_28" originOfText="Metabolite_14">
+        <TextGlyph key="Layout_214" name="TextGlyph" graphicalObject="Layout_16" originOfText="Metabolite_13">
           <BoundingBox>
             <Position x="324.34160702173358" y="197.25161196515728"/>
             <Dimensions width="32" height="24"/>
           </BoundingBox>
         </TextGlyph>
-        <TextGlyph key="Layout_31" name="TextGlyph" graphicalObject="Layout_30" originOfText="Metabolite_13">
+        <TextGlyph key="Layout_215" name="TextGlyph" graphicalObject="Layout_17" originOfText="Metabolite_10">
           <BoundingBox>
             <Position x="432.96960942940677" y="220.17822624437576"/>
             <Dimensions width="32" height="24"/>
           </BoundingBox>
         </TextGlyph>
-        <TextGlyph key="Layout_33" name="TextGlyph" graphicalObject="Layout_32" originOfText="Metabolite_16">
+        <TextGlyph key="Layout_216" name="TextGlyph" graphicalObject="Layout_18" originOfText="Metabolite_14">
           <BoundingBox>
             <Position x="178.02583152860097" y="343.51600532415068"/>
             <Dimensions width="48" height="24"/>
           </BoundingBox>
         </TextGlyph>
-        <TextGlyph key="Layout_35" name="TextGlyph" graphicalObject="Layout_34" originOfText="Metabolite_2">
+        <TextGlyph key="Layout_217" name="TextGlyph" graphicalObject="Layout_19" originOfText="Metabolite_16">
           <BoundingBox>
             <Position x="136.39211966787479" y="119.40893882281671"/>
             <Dimensions width="32" height="24"/>
@@ -5121,7 +5697,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         </TextGlyph>
       </ListOfTextGlyphs>
       <ListOfAdditionalGraphicalObjects>
-        <AdditionalGraphicalObject key="Layout_217" name="GeneralGlyph" objectRole="rule">
+        <AdditionalGraphicalObject key="Layout_218" name="GeneralGlyph" objectRole="rule">
           <BoundingBox>
             <Position x="307.64751867044731" y="335.42297795938089"/>
             <Dimensions width="10" height="10"/>
@@ -5131,70 +5707,70 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
     </Layout>
   </ListOfLayouts>
   <SBMLReference file="version_allequationssplit.xml">
-    <SBMLMap SBMLid="Death_of_M1" COPASIkey="Reaction_33"/>
-    <SBMLMap SBMLid="Death_of_M2" COPASIkey="Reaction_35"/>
-    <SBMLMap SBMLid="Death_of_T1" COPASIkey="Reaction_10"/>
+    <SBMLMap SBMLid="Death_of_M1" COPASIkey="Reaction_29"/>
+    <SBMLMap SBMLid="Death_of_M2" COPASIkey="Reaction_31"/>
+    <SBMLMap SBMLid="Death_of_T1" COPASIkey="Reaction_34"/>
     <SBMLMap SBMLid="Death_of_T17" COPASIkey="Reaction_36"/>
-    <SBMLMap SBMLid="Death_of_T2" COPASIkey="Reaction_11"/>
+    <SBMLMap SBMLid="Death_of_T2" COPASIkey="Reaction_35"/>
     <SBMLMap SBMLid="Death_of_Tr" COPASIkey="Reaction_37"/>
-    <SBMLMap SBMLid="Decay_of_I10" COPASIkey="Reaction_29"/>
-    <SBMLMap SBMLid="Decay_of_I12" COPASIkey="Reaction_30"/>
-    <SBMLMap SBMLid="Decay_of_I2" COPASIkey="Reaction_19"/>
-    <SBMLMap SBMLid="Decay_of_I21" COPASIkey="Reaction_22"/>
-    <SBMLMap SBMLid="Decay_of_I4" COPASIkey="Reaction_21"/>
-    <SBMLMap SBMLid="Decay_of_I6" COPASIkey="Reaction_23"/>
-    <SBMLMap SBMLid="Decay_of_Ia" COPASIkey="Reaction_25"/>
-    <SBMLMap SBMLid="Decay_of_Ib" COPASIkey="Reaction_27"/>
-    <SBMLMap SBMLid="Decay_of_Ig" COPASIkey="Reaction_18"/>
-    <SBMLMap SBMLid="Diff_of_M0_to_M1" COPASIkey="Reaction_9"/>
-    <SBMLMap SBMLid="Diff_of_M0_to_M2" COPASIkey="Reaction_15"/>
-    <SBMLMap SBMLid="Diff_of_M1_to_M2" COPASIkey="Reaction_31"/>
-    <SBMLMap SBMLid="Diff_of_M2_to_M1" COPASIkey="Reaction_32"/>
-    <SBMLMap SBMLid="I10_0" COPASIkey="Metabolite_16"/>
-    <SBMLMap SBMLid="I12_0" COPASIkey="Metabolite_18"/>
-    <SBMLMap SBMLid="I21_0" COPASIkey="Metabolite_10"/>
-    <SBMLMap SBMLid="I2_0" COPASIkey="Metabolite_7"/>
-    <SBMLMap SBMLid="I4_0" COPASIkey="Metabolite_8"/>
-    <SBMLMap SBMLid="I6_0" COPASIkey="Metabolite_12"/>
-    <SBMLMap SBMLid="Ia_0" COPASIkey="Metabolite_13"/>
-    <SBMLMap SBMLid="Ib_0" COPASIkey="Metabolite_14"/>
-    <SBMLMap SBMLid="Ig_0" COPASIkey="Metabolite_3"/>
-    <SBMLMap SBMLid="Induction_of_T17" COPASIkey="Reaction_13"/>
-    <SBMLMap SBMLid="Induction_of_T1_from_M" COPASIkey="Reaction_34"/>
-    <SBMLMap SBMLid="Induction_of_T2" COPASIkey="Reaction_12"/>
-    <SBMLMap SBMLid="Induction_of_Tr" COPASIkey="Reaction_14"/>
-    <SBMLMap SBMLid="M0" COPASIkey="Metabolite_2"/>
-    <SBMLMap SBMLid="M1_0" COPASIkey="Metabolite_4"/>
-    <SBMLMap SBMLid="M2_0" COPASIkey="Metabolite_9"/>
-    <SBMLMap SBMLid="M_0" COPASIkey="Metabolite_17"/>
-    <SBMLMap SBMLid="Prod_of_I10_from_M2" COPASIkey="Reaction_6"/>
-    <SBMLMap SBMLid="Prod_of_I10_from_Tr" COPASIkey="Reaction_28"/>
-    <SBMLMap SBMLid="Prod_of_I12_from_M1" COPASIkey="Reaction_7"/>
-    <SBMLMap SBMLid="Prod_of_I21_from_T17" COPASIkey="Reaction_2"/>
-    <SBMLMap SBMLid="Prod_of_I2_from_T1" COPASIkey="Reaction_0"/>
-    <SBMLMap SBMLid="Prod_of_I4_from_T2" COPASIkey="Reaction_20"/>
-    <SBMLMap SBMLid="Prod_of_I6_from_M1" COPASIkey="Reaction_3"/>
-    <SBMLMap SBMLid="Prod_of_Ia_from_M1" COPASIkey="Reaction_4"/>
-    <SBMLMap SBMLid="Prod_of_Ia_from_T1" COPASIkey="Reaction_24"/>
-    <SBMLMap SBMLid="Prod_of_Ib_from_M2" COPASIkey="Reaction_5"/>
-    <SBMLMap SBMLid="Prod_of_Ib_from_Tr" COPASIkey="Reaction_26"/>
-    <SBMLMap SBMLid="Prod_of_Ig_from_M1" COPASIkey="Reaction_16"/>
-    <SBMLMap SBMLid="Prod_of_Ig_from_T1" COPASIkey="Reaction_17"/>
-    <SBMLMap SBMLid="Prof_of_I4_from_M2" COPASIkey="Reaction_1"/>
-    <SBMLMap SBMLid="Proliferation_of_T1" COPASIkey="Reaction_8"/>
-    <SBMLMap SBMLid="Rate_Law_for_Differentiation" COPASIkey="Function_65"/>
-    <SBMLMap SBMLid="Rate_Law_for_Induction_of_T1_from_M" COPASIkey="Function_66"/>
-    <SBMLMap SBMLid="Rate_Law_for_Prod_of_I10_from_Tr" COPASIkey="Function_63"/>
-    <SBMLMap SBMLid="Rate_Law_for_Prod_of_I12_from_M1" COPASIkey="Function_64"/>
-    <SBMLMap SBMLid="Rate_Law_for_Proliferation_of_T1" COPASIkey="Function_67"/>
-    <SBMLMap SBMLid="Rate_Law_for_Th17_cells" COPASIkey="Function_47"/>
-    <SBMLMap SBMLid="Rate_Law_for_Th2_cells" COPASIkey="Function_46"/>
-    <SBMLMap SBMLid="Rate_Law_for_Thr_cells" COPASIkey="Function_48"/>
+    <SBMLMap SBMLid="Decay_of_I10" COPASIkey="Reaction_23"/>
+    <SBMLMap SBMLid="Decay_of_I12" COPASIkey="Reaction_25"/>
+    <SBMLMap SBMLid="Decay_of_I2" COPASIkey="Reaction_7"/>
+    <SBMLMap SBMLid="Decay_of_I21" COPASIkey="Reaction_12"/>
+    <SBMLMap SBMLid="Decay_of_I4" COPASIkey="Reaction_10"/>
+    <SBMLMap SBMLid="Decay_of_I6" COPASIkey="Reaction_14"/>
+    <SBMLMap SBMLid="Decay_of_Ia" COPASIkey="Reaction_17"/>
+    <SBMLMap SBMLid="Decay_of_Ib" COPASIkey="Reaction_20"/>
+    <SBMLMap SBMLid="Decay_of_Ig" COPASIkey="Reaction_5"/>
+    <SBMLMap SBMLid="Diff_of_M0_to_M1" COPASIkey="Reaction_26"/>
+    <SBMLMap SBMLid="Diff_of_M0_to_M2" COPASIkey="Reaction_30"/>
+    <SBMLMap SBMLid="Diff_of_M1_to_M2" COPASIkey="Reaction_27"/>
+    <SBMLMap SBMLid="Diff_of_M2_to_M1" COPASIkey="Reaction_28"/>
+    <SBMLMap SBMLid="I10_0" COPASIkey="Metabolite_14"/>
+    <SBMLMap SBMLid="I12_0" COPASIkey="Metabolite_15"/>
+    <SBMLMap SBMLid="I21_0" COPASIkey="Metabolite_7"/>
+    <SBMLMap SBMLid="I2_0" COPASIkey="Metabolite_2"/>
+    <SBMLMap SBMLid="I4_0" COPASIkey="Metabolite_4"/>
+    <SBMLMap SBMLid="I6_0" COPASIkey="Metabolite_9"/>
+    <SBMLMap SBMLid="Ia_0" COPASIkey="Metabolite_10"/>
+    <SBMLMap SBMLid="Ib_0" COPASIkey="Metabolite_13"/>
+    <SBMLMap SBMLid="Ig_0" COPASIkey="Metabolite_0"/>
+    <SBMLMap SBMLid="Induction_of_T17" COPASIkey="Reaction_2"/>
+    <SBMLMap SBMLid="Induction_of_T1_from_M" COPASIkey="Reaction_32"/>
+    <SBMLMap SBMLid="Induction_of_T2" COPASIkey="Reaction_1"/>
+    <SBMLMap SBMLid="Induction_of_Tr" COPASIkey="Reaction_0"/>
+    <SBMLMap SBMLid="M0" COPASIkey="Metabolite_16"/>
+    <SBMLMap SBMLid="M1_0" COPASIkey="Metabolite_1"/>
+    <SBMLMap SBMLid="M2_0" COPASIkey="Metabolite_6"/>
+    <SBMLMap SBMLid="M_0" COPASIkey="Metabolite_8"/>
+    <SBMLMap SBMLid="Prod_of_I10_from_M2" COPASIkey="Reaction_21"/>
+    <SBMLMap SBMLid="Prod_of_I10_from_Tr" COPASIkey="Reaction_22"/>
+    <SBMLMap SBMLid="Prod_of_I12_from_M1" COPASIkey="Reaction_24"/>
+    <SBMLMap SBMLid="Prod_of_I21_from_T17" COPASIkey="Reaction_11"/>
+    <SBMLMap SBMLid="Prod_of_I2_from_T1" COPASIkey="Reaction_6"/>
+    <SBMLMap SBMLid="Prod_of_I4_from_T2" COPASIkey="Reaction_9"/>
+    <SBMLMap SBMLid="Prod_of_I6_from_M1" COPASIkey="Reaction_13"/>
+    <SBMLMap SBMLid="Prod_of_Ia_from_M1" COPASIkey="Reaction_15"/>
+    <SBMLMap SBMLid="Prod_of_Ia_from_T1" COPASIkey="Reaction_16"/>
+    <SBMLMap SBMLid="Prod_of_Ib_from_M2" COPASIkey="Reaction_18"/>
+    <SBMLMap SBMLid="Prod_of_Ib_from_Tr" COPASIkey="Reaction_19"/>
+    <SBMLMap SBMLid="Prod_of_Ig_from_M1" COPASIkey="Reaction_3"/>
+    <SBMLMap SBMLid="Prod_of_Ig_from_T1" COPASIkey="Reaction_4"/>
+    <SBMLMap SBMLid="Prof_of_I4_from_M2" COPASIkey="Reaction_8"/>
+    <SBMLMap SBMLid="Proliferation_of_T1" COPASIkey="Reaction_33"/>
+    <SBMLMap SBMLid="Rate_Law_for_Differentiation" COPASIkey="Function_47"/>
+    <SBMLMap SBMLid="Rate_Law_for_Induction_of_T1_from_M" COPASIkey="Function_48"/>
+    <SBMLMap SBMLid="Rate_Law_for_Prod_of_I10_from_Tr" COPASIkey="Function_45"/>
+    <SBMLMap SBMLid="Rate_Law_for_Prod_of_I12_from_M1" COPASIkey="Function_46"/>
+    <SBMLMap SBMLid="Rate_Law_for_Proliferation_of_T1" COPASIkey="Function_49"/>
+    <SBMLMap SBMLid="Rate_Law_for_Th17_cells" COPASIkey="Function_42"/>
+    <SBMLMap SBMLid="Rate_Law_for_Th2_cells" COPASIkey="Function_41"/>
+    <SBMLMap SBMLid="Rate_Law_for_Thr_cells" COPASIkey="Function_43"/>
     <SBMLMap SBMLid="T17_0" COPASIkey="Metabolite_11"/>
-    <SBMLMap SBMLid="T1_0" COPASIkey="Metabolite_5"/>
-    <SBMLMap SBMLid="T2_0" COPASIkey="Metabolite_6"/>
-    <SBMLMap SBMLid="Tr_0" COPASIkey="Metabolite_15"/>
-    <SBMLMap SBMLid="activated_first_order_reaction" COPASIkey="Function_60"/>
+    <SBMLMap SBMLid="T1_0" COPASIkey="Metabolite_3"/>
+    <SBMLMap SBMLid="T2_0" COPASIkey="Metabolite_5"/>
+    <SBMLMap SBMLid="Tr_0" COPASIkey="Metabolite_12"/>
+    <SBMLMap SBMLid="activated_first_order_reaction" COPASIkey="Function_44"/>
     <SBMLMap SBMLid="compartment_0" COPASIkey="Compartment_0"/>
   </SBMLReference>
   <ListOfUnitDefinitions>
@@ -5242,17 +5818,12 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 <rdf:RDF
 xmlns:dcterms="http://purl.org/dc/terms/"
 xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#Unit_83">
+<rdf:Description rdf:about="#Unit_80">
 </rdf:Description>
 </rdf:RDF>
       </MiriamAnnotation>
       <Expression>
         
-      </Expression>
-    </UnitDefinition>
-    <UnitDefinition key="Unit_77" name="Lo_unit" symbol="symbol">
-      <Expression>
-        g/cm^3
       </Expression>
     </UnitDefinition>
   </ListOfUnitDefinitions>
