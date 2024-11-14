@@ -1,0 +1,11 @@
+key,Type1,Type2,Type3,Type4
+(Prod of Ig from T1).k1,-99.6,-90,194,-92
+(Prod of Ia from T1).k1,-50,4,-29,11
+(Prod of Ib from Tr).k1,35,-10,630,32
+(Prod of I10 from Tr).v10r,35,-10,630,32
+(Induction of T1 from M).s12,298,81,255,5
+(Induction of T2).s4,-32,25,122,-48
+(Induction of T17).s21,49,-13,298,-28
+(Induction of T17).s6,49,-13,298,-28
+(Induction of Tr).sb,-50,0,17,-18
+(Induction of Tr).s10,-50,0,17,-18

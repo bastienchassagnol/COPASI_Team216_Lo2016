@@ -7,7 +7,7 @@ library(ggplot2)
 # Reproduce Table 4, namely steady-state concentrations ----
 healthy_model <- loadModel("./models/team_2016_final_model_lo2016.cps")
 species <- getSpecies(model=  healthy_model)
-model_parameters <- getParameters(model = healthy_model,"(Proliferation of T1).s2")
+# model_parameters <- getParameters(model = healthy_model,"(Proliferation of T1).s2")
 
 
 healthy_model_steady_state <- runSteadyState(
@@ -15,5 +15,4 @@ healthy_model_steady_state <- runSteadyState(
   model = healthy_model
 )
 steady_state_concentrations <- healthy_model_steady_state$species
-getParameterReferences()
 

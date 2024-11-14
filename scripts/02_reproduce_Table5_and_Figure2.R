@@ -189,7 +189,8 @@ SS_plots <- ggplot(sensitivity_outputs_formatted, aes(y = y, x=x)) +
   theme_minimal() +
   theme(panel.grid.major = element_blank(), 
         panel.grid.minor = element_blank(),
-        strip.text.y = element_text(angle = 0)) 
+        strip.text.y = element_text(angle = 0)) +
+  
 
 ggsave(filename = "./figures/Fig2_PRCC.pdf", 
        plot = SS_plots, dpi = 600, width = 20, height = 10,
