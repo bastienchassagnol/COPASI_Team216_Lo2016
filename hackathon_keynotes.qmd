@@ -1,0 +1,128 @@
+---
+title: "BioModels Hackathon"
+author: "bastien"
+format: html
+---
+
+# Mathematical and Reproducible Models of Human Diseases (BioQuant)
+
+- Make models that can be interpreted, reused and standardised
+- conversion of models into useful *kinetic models*, using software Copasi
+
+## Kinetic model
+
+- Biochemical models at the origin. 
+  - Chemical substances converted into other substances, reactions illustrated by arrows. 
+  - *Compartments*: metabolites can be transported from one place to another. Have a volume.
+  - *Chemical species*: modelled as concentration, *concentrations* are the variables of interest. Can be extended to cell types, biological species, ... Anything that can be quantified as a number, at a certain pace. 
+  - Most complex thing is a *kinetic reaction*, with a given reaction *rate*.
+  
+## SBML format, as a computer and semantic representation
+
+- Graphical representation, or matrices of species/variables - reactions/processes. 
+- Objective of the workshop: convert existing models into the conventional SBML format. 
+- Model is then converted as a list of ODEs, with simulation:
+
+### General Principle:
+For a general reaction of the form,
+
+$$
+aA + bB \rightarrow P
+$$
+
+the rate law can be written as:
+
+$$
+\text{Rate} = k [A]^a [B]^b
+$$
+
+Where $a$ and $b$ are the *stoichiometric coefficients*.
+
+In summary, stoichiometric coefficients greater than 1 lead to higher powers in the rate law expression because they reflect the multiplicative nature of interactions between multiple reactant molecules.
+
+# Virtual Patient Engine (VPE)
+
+- A *foundational model* to predict drug targets
+
+- Drug cycle development:
+  1. Drug Discovery: Target identification, Lead discovery and Lead Optimisation
+- Build *biological twins*
+
+- group patients into *responders* and *non-responders* (even super responders, and super non-responders)
+- major challenge: multi-scale and multi-system levels
+
+# BioModels: a repository of FAIR and reproducible collection of models
+
+1. Many different modelling approaches: Boolean, ODEs, agent-based, FBA, ...
+2. Provide the format (such as SBML)
+3. Approve the model
+
+## Curation:
+
+biochemical network -> proper mathematical representation -> computer readable format -> ensure model simulations with Copasi match outputs and model annotation (ontologies)
+
+**BioModels** hosts more than 1,000 models, one of the most popular repository for storing models
+Five tabs: overview, files, history (versions), components (the SBML model itself) and curation (verify simulation of the model matches with the figures from the paper) + external links to other databases
+
+- Difference between *replicability(repeatability)* (same exact code) and *reproducibility* (just have the figure, and the inputs)
+- Can be considered reproducible if at least one simulation figure can be reproduced, minor deviations are acceptable if they do not change the scientific conclusions
+- Half of the models can be reproduced (requirement: equations are provided), 1/3 can not be reproduced at all, even with scientists' reports. Only 1/3 of the researchers could be contacted. Number of models is increasing, but the ratio of non-reproducible papers remains the same. 
+- reasons for non-reproducibility: missing parameters, initial conditions, structural inconsistency and even, in some cases, the reasons remain unclear. 
+- How to overcome this challenge? Comply with the reproducibility scorecard (models with score above 4 over 8 are usually reproducible)
+
+
+  
+# Hackathon Objective:
+
+- Pick up a model from the collection
+- Re-encode the model equations in COPASI, and reproduces at least one figure from the manuscript. Does not specifically need to use COPASI, but the one with the most support. 
+- Export SBML and curate it
+
+# Copasi tutorials
+
+- Depending on the screen size, may require to install it locally. 
+- constant influx: nothing -> A
+- all models are usually composed with some inputs and outputs. 
+
+# Code Ocean product demo platform (Youtube Channel in case)
+
+- environment: flex default or dedicated machines
+- straightforward deployment 
+- Jupyter Notebook
+- Pipeline is composed of several capsule, with drag and drop system, and custom data // Code is versionned
+- Papers are available on Data
+- Focused on COPASI, ok as long as the final output is SBML. 
+
+- = ->, respectively reversible and irreversible reactions, * to add the stochiometric coefficients
+- Output: `B + C ->`
+- add to set the quantity unit concentration, does not really change the modelling, but relevant for the curation. Includes as well unit times
+- Mathematical equations: 
+  - differential equations: Michaelis-Menten equation can be used to include further equations
+  -  
+- Jury evaluation: are we able to reproduce the models? Major objective: improve BioModels repository. Model annotation, from tomorrow, is also relevant. 
+
+# Annotation
+
+- additional metadata information provided in addition to the core of the model (structural, mathematical and quantitative elements)
+- standard guidelines for biochemical models are MIRIAM
+
+## Reasons
+
+- unambiguous identification of model components
+- add semantic layers (better biological understanding)
+
+## What do annotations look like?
+
+- model element (species, reaction or event he whole model)  -> qualified ontology (is, hasTaxon, ...) -> cross-reference to an article (CHEBI, Resource identifier)
+- types of qualifiers (report to [Identifiers](https://identifiers.org/)):
+  - bqbiol
+
+## Copasi model
+- [Ontology search](https://www.ebi.ac.uk/ols4)
+
+
+
+
+
+
+

@@ -13,3 +13,18 @@ get_legend_temp <- function(plot, legend_number = 1) {
     return(legends[[1]])
   }
 }
+
+colourer <- function (x, max_value = max(x)) {
+  # color_scale <- col_numeric(palette = custom_palette, domain = c(-5, 7))
+  positive_palette <- col_numeric(
+    palette = c("white",  "red"),
+    domain = c(0,  max_value)
+  )
+  negative_palette <- col_numeric(
+    palette = c("blue",  "white"),
+    domain = c(-100,  0))
+  
+  x_col <- x
+  x_col[x>=0] <- positive_palette(x[x>=0])
+  x_col[x<0] <- negative_palette(x[x<0])
+  return(x_col)}

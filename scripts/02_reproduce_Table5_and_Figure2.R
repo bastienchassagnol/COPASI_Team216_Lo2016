@@ -90,14 +90,13 @@ clusterExport(cl, varlist = c("parameters_healthy", "bootstrap_parameters"))
 cluster_environments <- clusterEvalQ(cl, {
   library(CoRC)
   library(dplyr, quietly = TRUE)
+  healthy_model <- loadModel("./models/team_2016_final_model_lo2016.cps")
 })
 sensitivity_outputs <- parLapply(cl = cl, 
                     X = 1:n_samples,
                     f = function (i) {
-                      if (i %% 100 == 0) {
-                        print(paste("Nous en sommes à l'iteration", i))
-                      }
-                      sensitivity_model <- suppressWarnings(loadModel("./models/team_2016_final_model_lo2016.cps"))
+                      # line required, as CoRC uses copying by reference
+                      sensitivity_model <- healthy_model |> saveModelToString() |>  loadModelFromString()
                       # modify model in place (no other option)
                       setParameters(model = sensitivity_model, 
                                     key = parameters_healthy$key, 
@@ -108,34 +107,67 @@ sensitivity_outputs <- parLapply(cl = cl,
                         model = sensitivity_model
                       )$species |> 
                         filter(name %in% c("T1","T2"))
-                      # export quantities of interest, T1,T2 and the respective sb s10 and s12 variations
+                      # export quantities of interest, T1,T2 and the free variable parameters
                       SS_concentrations <- setNames(sensitivity_model_steady_state$concentration,
                                                     sensitivity_model_steady_state$name) |> 
                         as.list() |> as.data.frame() |> 
-                        dplyr::bind_cols(bootstrap_parameters[i, c("sb", "s10", "s12"), drop=FALSE] |> 
+                        dplyr::bind_cols(bootstrap_parameters[i, ,drop=FALSE] |> 
                                            as.data.frame())
                       return(SS_concentrations)
                     }
                     , chunk.size = 50)
 # save output
-saveRDS(sensitivity_outputs, "./tables/sensitivity_outputs.rds")
-print("Sensitivity analysis is ended.")
+readr::write_csv(sensitivity_outputs |> 
+                   dplyr::bind_rows(), 
+                 "./results/sensitivity_outputs.csv")
 # close cluster
 stopCluster(cl)
 
 # reshape and rank-transform sensitivity outputs
 
-ranked_sensitivity <- sensitivity_outputs |> 
+sensitivity_outputs <- sensitivity_outputs |> 
   dplyr::bind_rows() |> 
   dplyr::mutate(across(everything(), rank)) 
 
-sensitivity_outputs_reshaped <- ranked_sensitivity |> 
-  tidyr::pivot_longer(cols = c("sb", "s10", "s12"), names_to = "parameters", values_to = "x") |> 
-  tidyr::pivot_longer(cols = c("T1", "T2"), names_to = "species", values_to = "y")
-
+## compute and display Table 5 (PRCC values)
 library(ppcor)
 # Calculate PRCC using partial correlations on ranked data
-prcc_sensitivity <- pcor(ranked_sensitivity)$estimate
+prcc_sensitivity <- pcor(sensitivity_outputs)
+prcc_estimate <- prcc_sensitivity$estimate |> 
+  tibble::as_tibble(mat, rownames = "species") |> 
+  dplyr::select (species, T1, T2) |> 
+  filter(!species %in% c("T1", "T2")) |> 
+  inner_join(prcc_sensitivity$p.value |> 
+               tibble::as_tibble(mat, rownames = "species") |> 
+               dplyr::select (species, T1, T2) |> 
+               filter(!species %in% c("T1", "T2")), by = "species",
+             suffix = c("", ".pval")) |> 
+  mutate(T1 = if_else(T1.pval <=0.01, sprintf("%.3f*", T1), sprintf("%.3f", T1)),
+         T2 = if_else(T2.pval <=0.01, sprintf("%.3f*", T2), sprintf("%.3f", T2))) |> 
+  dplyr::select(-T1.pval, -T2.pval)
+
+prcc_labels <- list(
+  species = "",
+  T1 = "PRCC for T1", 
+  T2 = "PRCC for T2")
+
+prcc_estimate_flextable <- flextable(prcc_estimate) |> 
+  add_footer_row(values = "* denotes significant PRCC with p-value below 0.01.", 
+                 colwidths = 3) |> 
+  compose(j = "species",
+          value = as_paragraph(as_equation(c("\\sigma_{M_{\\alpha}}", "\\sigma_{M_{10}}",
+                                             "\\sigma_{12}", "\\sigma_{2}", "\\sigma_{4}",
+                                             "\\sigma_{21}", "\\sigma_{6}", 
+                                             "\\sigma_{\\beta}", "\\sigma_{10}")))) |> 
+  set_header_labels(values = prcc_labels) |> 
+  align(align = "center", part = "all") |> 
+  set_caption("Table 5: Parameter variations in different types of diseases. 
+              In blue, disease subtype induces shrinkage of the coefficients, 
+              while red values correspond to increased parameter uptakes. ") 
+save_as_html(prcc_estimate_flextable,
+  path = "results/Table5.html",
+  title = "Table 5: PRCC analysis"
+)
 
 ## Plot rank-transformed datasets ----
 
@@ -153,29 +185,31 @@ prcc_sensitivity <- pcor(ranked_sensitivity)$estimate
 #                   as.character() |> 
 #                   TeX(output = "character"))
 
-sensitivity_outputs_formatted <- sensitivity_outputs_reshaped |> 
+sensitivity_outputs_formatted <- sensitivity_outputs |>
+  dplyr::select (c("T1", "T2", "sb", "s10", "s12")) |> 
+  tidyr::pivot_longer(cols = c("sb", "s10", "s12"), names_to = "parameters", values_to = "x") |>
+  tidyr::pivot_longer(cols = c("T1", "T2"), names_to = "species", values_to = "y") |> 
   dplyr::mutate(parameters = factor(parameters, 
                                     levels = c("sb", "s10", "s12"),
-                                    labels = c("sigma[b]", "sigma[10]", "sigma[12]")) |> 
-                  as.character(),
+                                    labels = c("sigma[b]", "sigma[10]", "sigma[12]"),
+                                    ordered = TRUE),
                 species = factor(species, 
                                  levels = c("T1", "T2"),
-                                 labels = c("T[1]","T[2]")) |>
-                  as.character())
+                                 labels = c("T[1]","T[2]")))
 
+prcc_values <- prcc_sensitivity$estimate
 prcc_sensitivity_annot <- data.frame(x=n_samples/2, y=Inf, 
-                                     lab=paste("PRCC =", c(prcc_sensitivity["T1", "s10"],
-                                                           prcc_sensitivity["T1", "s12"],
-                                                           prcc_sensitivity["T1", "sb"],
-                                                           prcc_sensitivity["T2", "s10"],
-                                                           prcc_sensitivity["T2", "s12"],
-                                                           prcc_sensitivity["T2", "sb"]) |> 
-                                                 round(digits = 4)), 
-                                     parameters=rep(c("sigma[10]", "sigma[12]", "sigma[b]"), 2),
-                                     species= c(rep("T[1]", 3), rep("T[2]", 3)))
-
-
-
+                                     lab=factor(paste("PRCC =", c(prcc_values["T1", "sb"],
+                                                           prcc_values["T1", "s10"],
+                                                           prcc_values["T1", "s12"],
+                                                           prcc_values["T2", "sb"],
+                                                           prcc_values["T2", "s10"],
+                                                           prcc_values["T2", "s12"]) |> 
+                                                 sprintf(fmt = '%.3f')), ordered = TRUE), 
+                                     parameters=factor(rep(c("sigma[b]", "sigma[10]", "sigma[12]"), 2), 
+                                                       ordered = TRUE),
+                                     species= factor(c(rep("T[1]", 3), rep("T[2]", 3)), 
+                                                     ordered = TRUE))
 
 ### Actual plot of the PRCC values along the scatter ranks ----
 
@@ -185,14 +219,14 @@ SS_plots <- ggplot(sensitivity_outputs_formatted, aes(y = y, x=x)) +
              labeller = labeller(.rows = label_parsed, .cols = label_parsed)) +
   geom_label(aes(x, y, label=lab),
             data=prcc_sensitivity_annot, vjust=0.8, size = 3) +
-  xlab("Cell species") + ylab("Sensitive parameters") +
+  xlab("Cell Species") + ylab("Free and Variable Parameters") +
   theme_minimal() +
   theme(panel.grid.major = element_blank(), 
         panel.grid.minor = element_blank(),
-        strip.text.y = element_text(angle = 0)) +
+        strip.text.y = element_text(angle = 0)) 
   
 
-ggsave(filename = "./figures/Fig2_PRCC.pdf", 
+ggsave(filename = "./results/Fig2_PRCC.pdf", 
        plot = SS_plots, dpi = 600, width = 20, height = 10,
        units = "cm")
 
