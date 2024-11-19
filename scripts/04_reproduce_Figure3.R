@@ -6,6 +6,10 @@ library(dplyr)
 ## Prepare parameter variations for each of the four patient subtypes ----
 healthy_model <- suppressWarnings(loadModel("./models/team_2016_final_model_lo2016.cps"))
 
+# retrieve free parameters at the steady state
+steady_parameters <- runSteadyState(model = healthy_model)$species |> 
+  dplyr::select(name, concentration)
+
 parameters_per_clusters <- getParameters(c("(Prod of Ig from T1).k1",
                           "(Prod of Ia from T1).k1",
                           "(Prod of Ib from Tr).k1",
@@ -16,44 +20,44 @@ parameters_per_clusters <- getParameters(c("(Prod of Ig from T1).k1",
                           "(Induction of T17).s6",
                           "(Induction of Tr).sb",
                           "(Induction of Tr).s10"), model = healthy_model)
-parameters_per_clusters_key <- parameters_per_clusters$key
-parameters_per_clusters_value <- parameters_per_clusters$value
+free_parameters_key <- parameters_per_clusters$key
 
-parameters_per_clusters <- parameters_per_clusters |> 
-  dplyr::inner_join(readr::read_csv("data/IBD subgroups.csv"), by = "key") |> 
-  rename(healthy = value) |> select(-mapping)
 
+
+# join parameter variations specific to each disease subtype ...
 patient_group <- c("Type1", "Type2", "Type3", "Type4")
-for (cluster in patient_group) {
-  parameters_per_clusters[, cluster] <- parameters_per_clusters_value * (1 + parameters_per_clusters[, cluster]/100)
-}
+parameters_per_clusters <- parameters_per_clusters |> 
+  dplyr::inner_join(readr::read_csv("data/IBD subgroups.csv", show_col_types = FALSE), by = "key") |> 
+  rename(healthy = value) |> 
+  dplyr::select(-mapping) |> 
+  # ... and convert relative ratios to absolute, considering the healthy standard reference
+  dplyr::mutate(across(all_of(patient_group), \(x) healthy *  (1 + x/100)))
+
+
+## Infer steady states for each patient subgroup, with and without anti-TNF-alpha treatment ----
 
 # for reference, run healthy steady state for the species of interest
 healthy_steaty_state <- runSteadyState(
   calculate_jacobian = FALSE,
   model = healthy_model)$species |> 
-  select(name, concentrationH = concentration) |> 
+  dplyr::select(name, concentrationH = concentration) |> 
   filter (name %in% c("I6", "I10", "Ia", "T1", "T2","T17", "Tr", "Ig", "Ib"))
-  
 
-## Infer steady states for each patient subgroup, with and without anti-TNF-alpha treatment ----
-
-# hard-copy is required since CoRC passes COPASI models by reference rather than by value
-# lobstr::obj_addr(healthy_model) // lobstr::obj_addr(disease_model_without_treatment)
-# unserialize(serialize(healthy_model, NULL))
 steady_states_per_cluster <- purrr::map(patient_group, function(cluster) {
+  # hard-copy is required since CoRC passes COPASI models by reference rather than by value
+  # lobstr::obj_addr(healthy_model) // lobstr::obj_addr(disease_model_without_treatment)
   disease_model_without_treatment <- healthy_model |> saveModelToString() |>  loadModelFromString() 
   setParameters(model = disease_model_without_treatment, 
-                key = parameters_per_clusters_key, 
+                key = free_parameters_key, 
                 value = parameters_per_clusters |> pull(cluster))
   # run the steady-state without treatment, for each patient subgroup
   without_treatment_steady_state <- runSteadyState(
     calculate_jacobian = FALSE,
     model = disease_model_without_treatment)$species |> 
-    select(name, concentration) |> 
+    dplyr::select(name, concentration) |> 
     inner_join(healthy_steaty_state, by = "name") |> 
     mutate (concentration = 100* (concentration - concentrationH) / concentrationH) |> 
-    select(-concentrationH) |> 
+    dplyr::select(-concentrationH) |> 
     mutate(cluster = cluster, category = "untreated") 
   
   
@@ -71,10 +75,10 @@ steady_states_per_cluster <- purrr::map(patient_group, function(cluster) {
   with_treatment_steady_state <- runSteadyState(
     calculate_jacobian = FALSE,
     model = disease_model_with_treatment)$species |> 
-    select(name, concentration) |> 
+    dplyr::select(name, concentration) |> 
     inner_join(healthy_steaty_state, by = "name") |> 
     mutate (concentration = 100* (concentration - concentrationH) / concentrationH) |> 
-    select(-concentrationH) |> 
+    dplyr::select(-concentrationH) |> 
     tibble::add_row(name = "Ia", concentration = 0) |> 
     mutate(cluster = cluster, category = "treated")
     
@@ -105,6 +109,7 @@ names(cluster_labels) <- c("Type1", "Type2", "Type3", "Type4")
 
 library(latex2exp)
 library(cowplot)
+## Retrieve global legend ----
 global_plot <- ggplot(data = steady_states_per_cluster_plot, 
                       mapping = aes(x = name, y = concentration, fill = category)) +
   geom_col(position = "dodge") +
@@ -112,10 +117,7 @@ global_plot <- ggplot(data = steady_states_per_cluster_plot,
   guides(color = guide_legend(nrow = 1)) +
   theme(legend.position = "bottom") 
 
-# add this code snippet as a temporary solution to issue https://github.com/wilkelab/cowplot/issues/202   
-source("scripts/utils.R")  
-legend_plot <- get_legend_temp(global_plot)
-
+## Generate a bar plot for each disease subtype ----
 list_plots <- purrr::imap(cluster_labels, ~ ggplot(data = steady_states_per_cluster_plot |> filter(cluster==.y), 
                                                    mapping = aes(x = name, y = concentration, fill = category)) +
                             geom_col(position = "dodge")+
@@ -125,7 +127,6 @@ list_plots <- purrr::imap(cluster_labels, ~ ggplot(data = steady_states_per_clus
                             theme(panel.grid.major = element_blank(),
                                   legend.position = "none", plot.title = element_text(hjust = 0.5)) +
                             ggtitle(TeX(.x)))
-paste (":", TeX("Type 1 Th1\\uparrow Th2\\downarrow"))
 # Arrange the four plots in a 2x2 grid
 plot_grid_combined <- cowplot::plot_grid(plotlist = list_plots, 
   ncol = 2, align = "hv", axis = "tblr") 
@@ -149,6 +150,9 @@ plot_grid_combined <- cowplot::plot_grid(plot_grid_combined,
 )
 
 # Add legend
+# add this code snippet as a temporary solution to issue https://github.com/wilkelab/cowplot/issues/202   
+source("scripts/utils.R")  
+legend_plot <- get_legend_temp(global_plot)
 plot_grid_combined <- cowplot::plot_grid(
   plot_grid_combined,
   legend_plot,
@@ -156,7 +160,7 @@ plot_grid_combined <- cowplot::plot_grid(
   rel_heights = c(1, 0.1)  # Adjust width for the legend
 )
 
-ggsave("figures/Fig3_Patient_clusters.pdf", plot = plot_grid_combined,
+ggsave("results/Fig3_Patient_clusters.pdf", plot = plot_grid_combined,
        width = 13, height = 8, dpi = 600)
 
 
