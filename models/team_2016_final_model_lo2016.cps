@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- generated with COPASI 4.44 (Build 295) (http://www.copasi.org) at 2024-11-19T20:51:29Z -->
+<!-- generated with COPASI 4.44 (Build 295) (http://www.copasi.org) at 2024-11-23T19:59:11Z -->
 <?oxygen RNGSchema="http://www.copasi.org/static/schema/CopasiML.rng" type="xml"?>
 <COPASI xmlns="http://www.copasi.org/static/schema" versionMajor="4" versionMinor="44" versionDevel="295" copasiSourcesModified="0">
   <ListOfFunctions>
@@ -217,14 +217,14 @@ Reaction scheme where the products are created from the reactants and the change
       </ListOfParameterDescriptions>
     </Function>
   </ListOfFunctions>
-  <Model key="Model_1" name="Lo 2016 Healthy" simulationType="time" timeUnit="d" volumeUnit="mm³" areaUnit="mm²" lengthUnit="mm" quantityUnit="g" type="deterministic" avogadroConstant="6.0221407599999999e+23">
+  <Model key="Model_0" name="Lo 2016 Healthy" simulationType="time" timeUnit="d" volumeUnit="mm³" areaUnit="mm²" lengthUnit="mm" quantityUnit="g" type="deterministic" avogadroConstant="6.0221407599999999e+23">
     <MiriamAnnotation>
 <rdf:RDF
    xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
    xmlns:dcterms="http://purl.org/dc/terms/"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#">
-  <rdf:Description rdf:about="#Model_1">
+  <rdf:Description rdf:about="#Model_0">
     <dcterms:bibliographicCitation>
       <rdf:Description>
         <CopasiMT:isDescribedBy rdf:resource="urn:miriam:doi:10.1371/journal.pone.0165782"/>
@@ -417,9 +417,7 @@ Reaction scheme where the products are created from the reactants and the change
       </Metabolite>
       <Metabolite key="Metabolite_13" name="Ib" simulationType="reactions" compartment="Compartment_0" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 <rdf:Description rdf:about="#Metabolite_13">
 </rdf:Description>
 </rdf:RDF>
@@ -427,10 +425,23 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       </Metabolite>
       <Metabolite key="Metabolite_14" name="I10" simulationType="reactions" compartment="Compartment_0" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#Metabolite_14">
-</rdf:Description>
+<rdf:RDF
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#">
+  <rdf:Description rdf:about="#Metabolite_14">
+    <dcterms:creator>
+      <rdf:Description>
+        <vCard:N>
+          <rdf:Description>
+            <vCard:Family>Banerjee-test</vCard:Family>
+          </rdf:Description>
+        </vCard:N>
+      </rdf:Description>
+    </dcterms:creator>
+  </rdf:Description>
 </rdf:RDF>
+
         </MiriamAnnotation>
       </Metabolite>
       <Metabolite key="Metabolite_15" name="I12" simulationType="reactions" compartment="Compartment_0" addNoise="false">
@@ -471,39 +482,39 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Modifier metabolite="Metabolite_11" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_5511" name="sb" value="14.02"/>
-          <Constant key="Parameter_5507" name="cb" value="6.77e-12"/>
-          <Constant key="Parameter_5510" name="s10" value="14.02"/>
-          <Constant key="Parameter_4676" name="c10" value="1.54e-06"/>
-          <Constant key="Parameter_4677" name="c2" value="6.86e-08"/>
-          <Constant key="Parameter_4680" name="ca" value="9.75e-06"/>
-          <Constant key="Parameter_4675" name="g17" value="0.337"/>
+          <Constant key="Parameter_201" name="sb" value="14.02"/>
+          <Constant key="Parameter_202" name="cb" value="6.77e-12"/>
+          <Constant key="Parameter_198" name="s10" value="14.02"/>
+          <Constant key="Parameter_200" name="c10" value="1.54e-06"/>
+          <Constant key="Parameter_197" name="c2" value="6.86e-08"/>
+          <Constant key="Parameter_196" name="ca" value="9.75e-06"/>
+          <Constant key="Parameter_192" name="g17" value="0.337"/>
         </ListOfConstants>
         <KineticLaw function="Function_43" unitType="Default" scalingCompartment="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_308">
-              <SourceParameter reference="Parameter_5511"/>
+              <SourceParameter reference="Parameter_201"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_307">
               <SourceParameter reference="Metabolite_13"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_306">
-              <SourceParameter reference="Parameter_5507"/>
+              <SourceParameter reference="Parameter_202"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_305">
-              <SourceParameter reference="Parameter_5510"/>
+              <SourceParameter reference="Parameter_198"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_304">
               <SourceParameter reference="Metabolite_14"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_303">
-              <SourceParameter reference="Parameter_4676"/>
+              <SourceParameter reference="Parameter_200"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_302">
               <SourceParameter reference="Metabolite_2"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_301">
-              <SourceParameter reference="Parameter_4677"/>
+              <SourceParameter reference="Parameter_197"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_300">
               <SourceParameter reference="Metabolite_8"/>
@@ -512,13 +523,13 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
               <SourceParameter reference="Metabolite_10"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_298">
-              <SourceParameter reference="Parameter_4680"/>
+              <SourceParameter reference="Parameter_196"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_297">
               <SourceParameter reference="Metabolite_11"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_296">
-              <SourceParameter reference="Parameter_4675"/>
+              <SourceParameter reference="Parameter_192"/>
             </CallParameter>
           </ListOfCallParameters>
         </KineticLaw>
@@ -540,15 +551,15 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Modifier metabolite="Metabolite_12" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_4679" name="s4" value="1.94"/>
-          <Constant key="Parameter_4678" name="c4" value="9.7e-09"/>
-          <Constant key="Parameter_6924" name="g1" value="0.183"/>
-          <Constant key="Parameter_6925" name="gr2" value="0.0606"/>
+          <Constant key="Parameter_190" name="s4" value="1.94"/>
+          <Constant key="Parameter_189" name="c4" value="9.7e-09"/>
+          <Constant key="Parameter_195" name="g1" value="0.183"/>
+          <Constant key="Parameter_193" name="gr2" value="0.0606"/>
         </ListOfConstants>
         <KineticLaw function="Function_41" unitType="Default" scalingCompartment="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_275">
-              <SourceParameter reference="Parameter_4679"/>
+              <SourceParameter reference="Parameter_190"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_274">
               <SourceParameter reference="Metabolite_4"/>
@@ -557,19 +568,19 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
               <SourceParameter reference="Metabolite_8"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_272">
-              <SourceParameter reference="Parameter_4678"/>
+              <SourceParameter reference="Parameter_189"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_266">
               <SourceParameter reference="Metabolite_3"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_276">
-              <SourceParameter reference="Parameter_6924"/>
+              <SourceParameter reference="Parameter_195"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_277">
               <SourceParameter reference="Metabolite_12"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_278">
-              <SourceParameter reference="Parameter_6925"/>
+              <SourceParameter reference="Parameter_193"/>
             </CallParameter>
           </ListOfCallParameters>
         </KineticLaw>
@@ -594,40 +605,40 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Modifier metabolite="Metabolite_12" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_6928" name="s21" value="156.17"/>
-          <Constant key="Parameter_6923" name="c21" value="4.25e-06"/>
-          <Constant key="Parameter_6927" name="s6" value="156.17"/>
-          <Constant key="Parameter_6926" name="c6" value="8e-06"/>
-          <Constant key="Parameter_4648" name="cb" value="6.77e-12"/>
-          <Constant key="Parameter_4649" name="cg" value="2.58e-06"/>
-          <Constant key="Parameter_4655" name="c4" value="9.7e-09"/>
-          <Constant key="Parameter_4647" name="gr17" value="0.0606"/>
+          <Constant key="Parameter_194" name="s21" value="156.17"/>
+          <Constant key="Parameter_191" name="c21" value="4.25e-06"/>
+          <Constant key="Parameter_188" name="s6" value="156.17"/>
+          <Constant key="Parameter_187" name="c6" value="8e-06"/>
+          <Constant key="Parameter_87" name="cb" value="6.77e-12"/>
+          <Constant key="Parameter_125" name="cg" value="2.58e-06"/>
+          <Constant key="Parameter_121" name="c4" value="9.7e-09"/>
+          <Constant key="Parameter_100" name="gr17" value="0.0606"/>
         </ListOfConstants>
         <KineticLaw function="Function_42" unitType="Default" scalingCompartment="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_286">
-              <SourceParameter reference="Parameter_6928"/>
+              <SourceParameter reference="Parameter_194"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_285">
               <SourceParameter reference="Metabolite_7"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_284">
-              <SourceParameter reference="Parameter_6923"/>
+              <SourceParameter reference="Parameter_191"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_283">
-              <SourceParameter reference="Parameter_6927"/>
+              <SourceParameter reference="Parameter_188"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_282">
               <SourceParameter reference="Metabolite_9"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_281">
-              <SourceParameter reference="Parameter_6926"/>
+              <SourceParameter reference="Parameter_187"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_280">
               <SourceParameter reference="Metabolite_13"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_279">
-              <SourceParameter reference="Parameter_4648"/>
+              <SourceParameter reference="Parameter_87"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_287">
               <SourceParameter reference="Metabolite_8"/>
@@ -636,19 +647,19 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
               <SourceParameter reference="Metabolite_0"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_289">
-              <SourceParameter reference="Parameter_4649"/>
+              <SourceParameter reference="Parameter_125"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_290">
               <SourceParameter reference="Metabolite_4"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_291">
-              <SourceParameter reference="Parameter_4655"/>
+              <SourceParameter reference="Parameter_121"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_292">
               <SourceParameter reference="Metabolite_12"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_293">
-              <SourceParameter reference="Parameter_4647"/>
+              <SourceParameter reference="Parameter_100"/>
             </CallParameter>
           </ListOfCallParameters>
         </KineticLaw>
@@ -668,12 +679,12 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Product metabolite="Metabolite_0" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfConstants>
-          <Constant key="Parameter_4654" name="k1" value="8.2e-06"/>
+          <Constant key="Parameter_98" name="k1" value="8.2e-06"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_4654"/>
+              <SourceParameter reference="Parameter_98"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_1"/>
@@ -696,12 +707,12 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Product metabolite="Metabolite_0" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfConstants>
-          <Constant key="Parameter_4651" name="k1" value="4.1e-05"/>
+          <Constant key="Parameter_123" name="k1" value="4.1e-05"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_4651"/>
+              <SourceParameter reference="Parameter_123"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_3"/>
@@ -720,12 +731,12 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Substrate metabolite="Metabolite_0" stoichiometry="1"/>
         </ListOfSubstrates>
         <ListOfConstants>
-          <Constant key="Parameter_4653" name="k1" value="29.12"/>
+          <Constant key="Parameter_124" name="k1" value="29.12"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_4653"/>
+              <SourceParameter reference="Parameter_124"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_0"/>
@@ -748,12 +759,12 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Product metabolite="Metabolite_2" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfConstants>
-          <Constant key="Parameter_4652" name="k1" value="4.1e-05"/>
+          <Constant key="Parameter_78" name="k1" value="4.1e-05"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_4652"/>
+              <SourceParameter reference="Parameter_78"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_3"/>
@@ -772,12 +783,12 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Substrate metabolite="Metabolite_2" stoichiometry="1"/>
         </ListOfSubstrates>
         <ListOfConstants>
-          <Constant key="Parameter_4650" name="k1" value="537.46"/>
+          <Constant key="Parameter_122" name="k1" value="537.46"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_4650"/>
+              <SourceParameter reference="Parameter_122"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_2"/>
@@ -800,12 +811,12 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Product metabolite="Metabolite_4" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfConstants>
-          <Constant key="Parameter_7508" name="k1" value="5.83e-05"/>
+          <Constant key="Parameter_120" name="k1" value="5.83e-05"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_7508"/>
+              <SourceParameter reference="Parameter_120"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_6"/>
@@ -828,12 +839,12 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Product metabolite="Metabolite_4" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfConstants>
-          <Constant key="Parameter_7509" name="k1" value="0.000175"/>
+          <Constant key="Parameter_108" name="k1" value="0.000175"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_7509"/>
+              <SourceParameter reference="Parameter_108"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_5"/>
@@ -852,12 +863,12 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Substrate metabolite="Metabolite_4" stoichiometry="1"/>
         </ListOfSubstrates>
         <ListOfConstants>
-          <Constant key="Parameter_7512" name="k1" value="349.37"/>
+          <Constant key="Parameter_94" name="k1" value="349.37"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_7512"/>
+              <SourceParameter reference="Parameter_94"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_4"/>
@@ -880,12 +891,12 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Product metabolite="Metabolite_7" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfConstants>
-          <Constant key="Parameter_7507" name="k1" value="0.000805"/>
+          <Constant key="Parameter_89" name="k1" value="0.000805"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_7507"/>
+              <SourceParameter reference="Parameter_89"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_11"/>
@@ -904,12 +915,12 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Substrate metabolite="Metabolite_7" stoichiometry="1"/>
         </ListOfSubstrates>
         <ListOfConstants>
-          <Constant key="Parameter_7511" name="k1" value="63.98"/>
+          <Constant key="Parameter_115" name="k1" value="63.98"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_7511"/>
+              <SourceParameter reference="Parameter_115"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_7"/>
@@ -932,12 +943,12 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Product metabolite="Metabolite_9" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfConstants>
-          <Constant key="Parameter_7510" name="k1" value="0.00363"/>
+          <Constant key="Parameter_107" name="k1" value="0.00363"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_7510"/>
+              <SourceParameter reference="Parameter_107"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_1"/>
@@ -956,12 +967,12 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Substrate metabolite="Metabolite_9" stoichiometry="1"/>
         </ListOfSubstrates>
         <ListOfConstants>
-          <Constant key="Parameter_6027" name="k1" value="29.11"/>
+          <Constant key="Parameter_117" name="k1" value="29.11"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_6027"/>
+              <SourceParameter reference="Parameter_117"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_9"/>
@@ -971,9 +982,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       </Reaction>
       <Reaction key="Reaction_15" name="Prod of Ia from M1" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 <rdf:Description rdf:about="#Reaction_15">
 </rdf:Description>
 </rdf:RDF>
@@ -986,12 +995,12 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Product metabolite="Metabolite_10" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfConstants>
-          <Constant key="Parameter_6028" name="k1" value="0.021"/>
+          <Constant key="Parameter_116" name="k1" value="0.021"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_6028"/>
+              <SourceParameter reference="Parameter_116"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_1"/>
@@ -1001,9 +1010,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       </Reaction>
       <Reaction key="Reaction_16" name="Prod of Ia from T1" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 <rdf:Description rdf:about="#Reaction_16">
 </rdf:Description>
 </rdf:RDF>
@@ -1016,12 +1023,12 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Product metabolite="Metabolite_10" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfConstants>
-          <Constant key="Parameter_6030" name="k1" value="0.0735"/>
+          <Constant key="Parameter_91" name="k1" value="0.0735"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_6030"/>
+              <SourceParameter reference="Parameter_91"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_3"/>
@@ -1040,12 +1047,12 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Substrate metabolite="Metabolite_10" stoichiometry="1"/>
         </ListOfSubstrates>
         <ListOfConstants>
-          <Constant key="Parameter_6026" name="k1" value="388.15"/>
+          <Constant key="Parameter_85" name="k1" value="388.15"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_6026"/>
+              <SourceParameter reference="Parameter_85"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_10"/>
@@ -1068,12 +1075,12 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Product metabolite="Metabolite_13" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfConstants>
-          <Constant key="Parameter_6029" name="k1" value="5.6e-09"/>
+          <Constant key="Parameter_105" name="k1" value="5.6e-09"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_6029"/>
+              <SourceParameter reference="Parameter_105"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_6"/>
@@ -1083,9 +1090,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       </Reaction>
       <Reaction key="Reaction_19" name="Prod of Ib from Tr" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 <rdf:Description rdf:about="#Reaction_19">
 </rdf:Description>
 </rdf:RDF>
@@ -1098,12 +1103,12 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Product metabolite="Metabolite_13" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfConstants>
-          <Constant key="Parameter_6511" name="k1" value="3.9e-08"/>
+          <Constant key="Parameter_104" name="k1" value="3.9e-08"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_6511"/>
+              <SourceParameter reference="Parameter_104"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_12"/>
@@ -1122,12 +1127,12 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Substrate metabolite="Metabolite_13" stoichiometry="1"/>
         </ListOfSubstrates>
         <ListOfConstants>
-          <Constant key="Parameter_6512" name="k1" value="349.37"/>
+          <Constant key="Parameter_99" name="k1" value="349.37"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_6512"/>
+              <SourceParameter reference="Parameter_99"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_13"/>
@@ -1150,12 +1155,12 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Product metabolite="Metabolite_14" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfConstants>
-          <Constant key="Parameter_6514" name="k1" value="0.000372"/>
+          <Constant key="Parameter_103" name="k1" value="0.000372"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_6514"/>
+              <SourceParameter reference="Parameter_103"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_6"/>
@@ -1182,23 +1187,23 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Modifier metabolite="Metabolite_12" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_6510" name="v10r" value="0.00112"/>
-          <Constant key="Parameter_6513" name="n2r" value="3"/>
-          <Constant key="Parameter_7346" name="c2" value="6.86e-08"/>
+          <Constant key="Parameter_93" name="v10r" value="0.00112"/>
+          <Constant key="Parameter_86" name="n2r" value="3"/>
+          <Constant key="Parameter_101" name="c2" value="6.86e-08"/>
         </ListOfConstants>
         <KineticLaw function="Function_45" unitType="Default" scalingCompartment="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_312">
-              <SourceParameter reference="Parameter_6510"/>
+              <SourceParameter reference="Parameter_93"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_313">
-              <SourceParameter reference="Parameter_6513"/>
+              <SourceParameter reference="Parameter_86"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_314">
               <SourceParameter reference="Metabolite_2"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_315">
-              <SourceParameter reference="Parameter_7346"/>
+              <SourceParameter reference="Parameter_101"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_311">
               <SourceParameter reference="Metabolite_12"/>
@@ -1217,12 +1222,12 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Substrate metabolite="Metabolite_14" stoichiometry="1"/>
         </ListOfSubstrates>
         <ListOfConstants>
-          <Constant key="Parameter_7347" name="k1" value="116.48"/>
+          <Constant key="Parameter_90" name="k1" value="116.48"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_7347"/>
+              <SourceParameter reference="Parameter_90"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_14"/>
@@ -1249,13 +1254,13 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Modifier metabolite="Metabolite_14" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_7349" name="v12m" value="0.000265"/>
-          <Constant key="Parameter_7345" name="c10" value="1.54e-06"/>
+          <Constant key="Parameter_88" name="v12m" value="0.000265"/>
+          <Constant key="Parameter_109" name="c10" value="1.54e-06"/>
         </ListOfConstants>
         <KineticLaw function="Function_46" unitType="Default" scalingCompartment="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_320">
-              <SourceParameter reference="Parameter_7349"/>
+              <SourceParameter reference="Parameter_88"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_295">
               <SourceParameter reference="Metabolite_1"/>
@@ -1264,7 +1269,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
               <SourceParameter reference="Metabolite_14"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_309">
-              <SourceParameter reference="Parameter_7345"/>
+              <SourceParameter reference="Parameter_109"/>
             </CallParameter>
           </ListOfCallParameters>
         </KineticLaw>
@@ -1280,12 +1285,12 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Substrate metabolite="Metabolite_15" stoichiometry="1"/>
         </ListOfSubstrates>
         <ListOfConstants>
-          <Constant key="Parameter_7348" name="k1" value="8.33"/>
+          <Constant key="Parameter_68" name="k1" value="8.33"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_7348"/>
+              <SourceParameter reference="Parameter_68"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_15"/>
@@ -1310,9 +1315,9 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Modifier metabolite="Metabolite_10" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_4927" name="f" value="1"/>
-          <Constant key="Parameter_4928" name="delta_m_cit" value="2.4"/>
-          <Constant key="Parameter_4930" name="zet_cit" value="9.75e-06"/>
+          <Constant key="Parameter_106" name="f" value="1"/>
+          <Constant key="Parameter_84" name="delta_m_cit" value="2.4"/>
+          <Constant key="Parameter_74" name="zet_cit" value="9.75e-06"/>
         </ListOfConstants>
         <KineticLaw function="Function_47" unitType="Default" scalingCompartment="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]">
           <ListOfCallParameters>
@@ -1320,16 +1325,16 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
               <SourceParameter reference="Metabolite_16"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_322">
-              <SourceParameter reference="Parameter_4927"/>
+              <SourceParameter reference="Parameter_106"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_321">
-              <SourceParameter reference="Parameter_4928"/>
+              <SourceParameter reference="Parameter_84"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_310">
               <SourceParameter reference="Metabolite_10"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_324">
-              <SourceParameter reference="Parameter_4930"/>
+              <SourceParameter reference="Parameter_74"/>
             </CallParameter>
           </ListOfCallParameters>
         </KineticLaw>
@@ -1351,19 +1356,19 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Modifier metabolite="Metabolite_13" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_4926" name="sigma" value="24"/>
-          <Constant key="Parameter_4929" name="zeta" value="6.77e-12"/>
+          <Constant key="Parameter_118" name="sigma" value="24"/>
+          <Constant key="Parameter_73" name="zeta" value="6.77e-12"/>
         </ListOfConstants>
         <KineticLaw function="Function_44" unitType="Default" scalingCompartment="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_319">
-              <SourceParameter reference="Parameter_4926"/>
+              <SourceParameter reference="Parameter_118"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_318">
               <SourceParameter reference="Metabolite_13"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_317">
-              <SourceParameter reference="Parameter_4929"/>
+              <SourceParameter reference="Parameter_73"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_316">
               <SourceParameter reference="Metabolite_1"/>
@@ -1388,19 +1393,19 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Modifier metabolite="Metabolite_0" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_6778" name="sigma" value="24"/>
-          <Constant key="Parameter_6779" name="zeta" value="2.58e-06"/>
+          <Constant key="Parameter_102" name="sigma" value="24"/>
+          <Constant key="Parameter_75" name="zeta" value="2.58e-06"/>
         </ListOfConstants>
         <KineticLaw function="Function_44" unitType="Default" scalingCompartment="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_319">
-              <SourceParameter reference="Parameter_6778"/>
+              <SourceParameter reference="Parameter_102"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_318">
               <SourceParameter reference="Metabolite_0"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_317">
-              <SourceParameter reference="Parameter_6779"/>
+              <SourceParameter reference="Parameter_75"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_316">
               <SourceParameter reference="Metabolite_6"/>
@@ -1419,12 +1424,12 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Substrate metabolite="Metabolite_1" stoichiometry="1"/>
         </ListOfSubstrates>
         <ListOfConstants>
-          <Constant key="Parameter_6781" name="k1" value="1"/>
+          <Constant key="Parameter_82" name="k1" value="1"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_6781"/>
+              <SourceParameter reference="Parameter_82"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_1"/>
@@ -1449,9 +1454,9 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Modifier metabolite="Metabolite_14" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_6777" name="f" value="10"/>
-          <Constant key="Parameter_6780" name="delta_m_cit" value="24"/>
-          <Constant key="Parameter_8033" name="zet_cit" value="1.54e-06"/>
+          <Constant key="Parameter_119" name="f" value="10"/>
+          <Constant key="Parameter_69" name="delta_m_cit" value="24"/>
+          <Constant key="Parameter_80" name="zet_cit" value="1.54e-06"/>
         </ListOfConstants>
         <KineticLaw function="Function_47" unitType="Default" scalingCompartment="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]">
           <ListOfCallParameters>
@@ -1459,16 +1464,16 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
               <SourceParameter reference="Metabolite_16"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_322">
-              <SourceParameter reference="Parameter_6777"/>
+              <SourceParameter reference="Parameter_119"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_321">
-              <SourceParameter reference="Parameter_6780"/>
+              <SourceParameter reference="Parameter_69"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_310">
               <SourceParameter reference="Metabolite_14"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_324">
-              <SourceParameter reference="Parameter_8033"/>
+              <SourceParameter reference="Parameter_80"/>
             </CallParameter>
           </ListOfCallParameters>
         </KineticLaw>
@@ -1484,12 +1489,12 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Substrate metabolite="Metabolite_6" stoichiometry="1"/>
         </ListOfSubstrates>
         <ListOfConstants>
-          <Constant key="Parameter_8034" name="k1" value="1"/>
+          <Constant key="Parameter_77" name="k1" value="1"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_8034"/>
+              <SourceParameter reference="Parameter_77"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_6"/>
@@ -1519,11 +1524,11 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Modifier metabolite="Metabolite_8" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_8036" name="g2" value="0.0535"/>
-          <Constant key="Parameter_8032" name="gr1" value="0.0606"/>
-          <Constant key="Parameter_8035" name="s12" value="10.93"/>
-          <Constant key="Parameter_8008" name="c12" value="4.9e-08"/>
-          <Constant key="Parameter_8009" name="c10" value="1.45e-06"/>
+          <Constant key="Parameter_81" name="g2" value="0.0535"/>
+          <Constant key="Parameter_92" name="gr1" value="0.0606"/>
+          <Constant key="Parameter_96" name="s12" value="10.93"/>
+          <Constant key="Parameter_95" name="c12" value="4.9e-08"/>
+          <Constant key="Parameter_83" name="c10" value="1.45e-06"/>
         </ListOfConstants>
         <KineticLaw function="Function_48" unitType="Default" scalingCompartment="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]">
           <ListOfCallParameters>
@@ -1531,28 +1536,28 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
               <SourceParameter reference="Metabolite_5"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_328">
-              <SourceParameter reference="Parameter_8036"/>
+              <SourceParameter reference="Parameter_81"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_327">
               <SourceParameter reference="Metabolite_12"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_326">
-              <SourceParameter reference="Parameter_8032"/>
+              <SourceParameter reference="Parameter_92"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_325">
-              <SourceParameter reference="Parameter_8035"/>
+              <SourceParameter reference="Parameter_96"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_330">
               <SourceParameter reference="Metabolite_15"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_331">
-              <SourceParameter reference="Parameter_8008"/>
+              <SourceParameter reference="Parameter_95"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_332">
               <SourceParameter reference="Metabolite_14"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_333">
-              <SourceParameter reference="Parameter_8009"/>
+              <SourceParameter reference="Parameter_83"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_334">
               <SourceParameter reference="Metabolite_8"/>
@@ -1576,15 +1581,15 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Modifier metabolite="Metabolite_12" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_8011" name="s2" value="1.23"/>
-          <Constant key="Parameter_8007" name="c2" value="6.86e-08"/>
-          <Constant key="Parameter_8010" name="g2" value="0.183"/>
-          <Constant key="Parameter_6839" name="gr1" value="0.0606"/>
+          <Constant key="Parameter_97" name="s2" value="1.23"/>
+          <Constant key="Parameter_112" name="c2" value="6.86e-08"/>
+          <Constant key="Parameter_65" name="g2" value="0.183"/>
+          <Constant key="Parameter_66" name="gr1" value="0.0606"/>
         </ListOfConstants>
         <KineticLaw function="Function_49" unitType="Default" scalingCompartment="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_344">
-              <SourceParameter reference="Parameter_8011"/>
+              <SourceParameter reference="Parameter_97"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_343">
               <SourceParameter reference="Metabolite_2"/>
@@ -1593,19 +1598,19 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
               <SourceParameter reference="Metabolite_3"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_341">
-              <SourceParameter reference="Parameter_8007"/>
+              <SourceParameter reference="Parameter_112"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_340">
               <SourceParameter reference="Metabolite_5"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_339">
-              <SourceParameter reference="Parameter_8010"/>
+              <SourceParameter reference="Parameter_65"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_338">
               <SourceParameter reference="Metabolite_12"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_337">
-              <SourceParameter reference="Parameter_6839"/>
+              <SourceParameter reference="Parameter_66"/>
             </CallParameter>
           </ListOfCallParameters>
         </KineticLaw>
@@ -1621,12 +1626,12 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Substrate metabolite="Metabolite_3" stoichiometry="1"/>
         </ListOfSubstrates>
         <ListOfConstants>
-          <Constant key="Parameter_6840" name="k1" value="1.4"/>
+          <Constant key="Parameter_113" name="k1" value="1.4"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_6840"/>
+              <SourceParameter reference="Parameter_113"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_3"/>
@@ -1645,12 +1650,12 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Substrate metabolite="Metabolite_5" stoichiometry="1"/>
         </ListOfSubstrates>
         <ListOfConstants>
-          <Constant key="Parameter_6842" name="k1" value="1.4"/>
+          <Constant key="Parameter_114" name="k1" value="1.4"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_6842"/>
+              <SourceParameter reference="Parameter_114"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_5"/>
@@ -1669,12 +1674,12 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Substrate metabolite="Metabolite_11" stoichiometry="1"/>
         </ListOfSubstrates>
         <ListOfConstants>
-          <Constant key="Parameter_6838" name="k1" value="1.4"/>
+          <Constant key="Parameter_76" name="k1" value="1.4"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_6838"/>
+              <SourceParameter reference="Parameter_76"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_11"/>
@@ -1693,12 +1698,12 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <Substrate metabolite="Metabolite_12" stoichiometry="1"/>
         </ListOfSubstrates>
         <ListOfConstants>
-          <Constant key="Parameter_6841" name="k1" value="1.4"/>
+          <Constant key="Parameter_58" name="k1" value="1.4"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_6841"/>
+              <SourceParameter reference="Parameter_58"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_12"/>
@@ -1707,13 +1712,13 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         </KineticLaw>
       </Reaction>
     </ListOfReactions>
-    <ListOfModelParameterSets activeSet="ModelParameterSet_1">
-      <ModelParameterSet key="ModelParameterSet_1" name="Initial State">
+    <ListOfModelParameterSets activeSet="ModelParameterSet_0">
+      <ModelParameterSet key="ModelParameterSet_0" name="Initial State">
         <MiriamAnnotation>
 <rdf:RDF
 xmlns:dcterms="http://purl.org/dc/terms/"
 xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#ModelParameterSet_1">
+<rdf:Description rdf:about="#ModelParameterSet_0">
 </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
@@ -1894,188 +1899,11 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         </ModelParameterGroup>
       </ModelParameterSet>
       <ModelParameterSet key="ModelParameterSet_3" name="initial">
-        <ModelParameterGroup cn="String=Initial Time" type="Group">
-          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy" value="0" type="Model" simulationType="time"/>
-        </ModelParameterGroup>
-        <ModelParameterGroup cn="String=Initial Compartment Sizes" type="Group">
-          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]" value="1" type="Compartment" simulationType="fixed"/>
-        </ModelParameterGroup>
-        <ModelParameterGroup cn="String=Initial Species Values" type="Group">
-          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[Ig]" value="2.5799999999999999e-06" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[M1]" value="0.023399999999999921" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[I2]" value="6.8599999999999304e-08" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[T1]" value="0.045799999999999993" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[I4]" value="9.6999999999999462e-09" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[T2]" value="0.0134" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[M2]" value="0.025000000000000001" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[I21]" value="4.25e-06" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[M]" value="0.048399999999999922" type="Species" simulationType="assignment"/>
-          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[I6]" value="7.9999999999999996e-06" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[Ia]" value="9.7499999999998948e-06" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[T17]" value="20" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[Tr]" value="0.060599999999999925" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[Ib]" value="6.7699999999999689e-12" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[I10]" value="1.5399999999999836e-06" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[I12]" value="4.8999999999999373e-08" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[M0]" value="0.0015" type="Species" simulationType="fixed"/>
-        </ModelParameterGroup>
-        <ModelParameterGroup cn="String=Initial Global Quantities" type="Group">
-        </ModelParameterGroup>
-        <ModelParameterGroup cn="String=Kinetic Parameters" type="Group">
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of Tr]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=sb" value="14.02" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=cb" value="6.7699999999999996e-12" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=s10" value="14.02" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=c10" value="1.5400000000000001e-06" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=c2" value="6.8600000000000005e-08" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=ca" value="9.7499999999999998e-06" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=g17" value="0.33700000000000002" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T2]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T2],ParameterGroup=Parameters,Parameter=s4" value="1.9399999999999999" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T2],ParameterGroup=Parameters,Parameter=c4" value="9.6999999999999992e-09" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T2],ParameterGroup=Parameters,Parameter=g1" value="0.183" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T2],ParameterGroup=Parameters,Parameter=gr2" value="0.060600000000000001" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=s21" value="156.16999999999999" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=c21" value="4.25e-06" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=s6" value="156.16999999999999" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=c6" value="7.9999999999999996e-06" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=cb" value="6.7699999999999996e-12" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=cg" value="2.5799999999999999e-06" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=c4" value="9.6999999999999992e-09" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=gr17" value="0.060600000000000001" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ig from M1]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ig from M1],ParameterGroup=Parameters,Parameter=k1" value="8.1999999999999994e-06" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ig from T1]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ig from T1],ParameterGroup=Parameters,Parameter=k1" value="4.1e-05" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of Ig]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of Ig],ParameterGroup=Parameters,Parameter=k1" value="29.120000000000001" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I2 from T1]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I2 from T1],ParameterGroup=Parameters,Parameter=k1" value="4.1e-05" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I2]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I2],ParameterGroup=Parameters,Parameter=k1" value="537.46000000000004" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prof of I4 from M2]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prof of I4 from M2],ParameterGroup=Parameters,Parameter=k1" value="5.8300000000000001e-05" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I4 from T2]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I4 from T2],ParameterGroup=Parameters,Parameter=k1" value="0.000175" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I4]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I4],ParameterGroup=Parameters,Parameter=k1" value="349.37" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I21 from T17]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I21 from T17],ParameterGroup=Parameters,Parameter=k1" value="0.00080500000000000005" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I21]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I21],ParameterGroup=Parameters,Parameter=k1" value="63.979999999999997" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I6 from M1]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I6 from M1],ParameterGroup=Parameters,Parameter=k1" value="0.00363" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I6]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I6],ParameterGroup=Parameters,Parameter=k1" value="29.109999999999999" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ia from M1]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ia from M1],ParameterGroup=Parameters,Parameter=k1" value="0.021000000000000001" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ia from T1]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ia from T1],ParameterGroup=Parameters,Parameter=k1" value="0.073499999999999996" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of Ia]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of Ia],ParameterGroup=Parameters,Parameter=k1" value="388.14999999999998" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ib from M2]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ib from M2],ParameterGroup=Parameters,Parameter=k1" value="5.5999999999999997e-09" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ib from Tr]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ib from Tr],ParameterGroup=Parameters,Parameter=k1" value="3.8999999999999998e-08" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of Ib]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of Ib],ParameterGroup=Parameters,Parameter=k1" value="349.37" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I10 from M2]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I10 from M2],ParameterGroup=Parameters,Parameter=k1" value="0.00037199999999999999" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I10 from Tr]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I10 from Tr],ParameterGroup=Parameters,Parameter=v10r" value="0.0011199999999999999" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I10 from Tr],ParameterGroup=Parameters,Parameter=n2r" value="3" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I10 from Tr],ParameterGroup=Parameters,Parameter=c2" value="6.8600000000000005e-08" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I10]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I10],ParameterGroup=Parameters,Parameter=k1" value="116.48" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I12 from M1]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I12 from M1],ParameterGroup=Parameters,Parameter=v12m" value="0.00026499999999999999" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I12 from M1],ParameterGroup=Parameters,Parameter=c10" value="1.5400000000000001e-06" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I12]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I12],ParameterGroup=Parameters,Parameter=k1" value="8.3300000000000001" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M0 to M1]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M0 to M1],ParameterGroup=Parameters,Parameter=f" value="1" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M0 to M1],ParameterGroup=Parameters,Parameter=delta_m_cit" value="2.3999999999999999" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M0 to M1],ParameterGroup=Parameters,Parameter=zet_cit" value="9.7499999999999998e-06" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M1 to M2]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M1 to M2],ParameterGroup=Parameters,Parameter=sigma" value="24" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M1 to M2],ParameterGroup=Parameters,Parameter=zeta" value="6.7699999999999996e-12" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M2 to M1]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M2 to M1],ParameterGroup=Parameters,Parameter=sigma" value="24" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M2 to M1],ParameterGroup=Parameters,Parameter=zeta" value="2.5799999999999999e-06" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of M1]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of M1],ParameterGroup=Parameters,Parameter=k1" value="1" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M0 to M2]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M0 to M2],ParameterGroup=Parameters,Parameter=f" value="10" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M0 to M2],ParameterGroup=Parameters,Parameter=delta_m_cit" value="24" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M0 to M2],ParameterGroup=Parameters,Parameter=zet_cit" value="1.5400000000000001e-06" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of M2]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of M2],ParameterGroup=Parameters,Parameter=k1" value="1" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T1 from M]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T1 from M],ParameterGroup=Parameters,Parameter=g2" value="0.053499999999999999" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T1 from M],ParameterGroup=Parameters,Parameter=gr1" value="0.060600000000000001" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T1 from M],ParameterGroup=Parameters,Parameter=s12" value="10.93" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T1 from M],ParameterGroup=Parameters,Parameter=c12" value="4.9000000000000002e-08" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T1 from M],ParameterGroup=Parameters,Parameter=c10" value="1.4500000000000001e-06" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Proliferation of T1]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Proliferation of T1],ParameterGroup=Parameters,Parameter=s2" value="1.23" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Proliferation of T1],ParameterGroup=Parameters,Parameter=c2" value="6.8600000000000005e-08" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Proliferation of T1],ParameterGroup=Parameters,Parameter=g2" value="0.183" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Proliferation of T1],ParameterGroup=Parameters,Parameter=gr1" value="0.060600000000000001" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of T1]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of T1],ParameterGroup=Parameters,Parameter=k1" value="1.3999999999999999" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of T2]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of T2],ParameterGroup=Parameters,Parameter=k1" value="1.3999999999999999" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of T17]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of T17],ParameterGroup=Parameters,Parameter=k1" value="1.3999999999999999" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of Tr]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of Tr],ParameterGroup=Parameters,Parameter=k1" value="1.3999999999999999" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-        </ModelParameterGroup>
-      </ModelParameterSet>
-      <ModelParameterSet key="ModelParameterSet_2" name="PE: 2024-11-19T10:13:43Z Exp: Original">
         <MiriamAnnotation>
 <rdf:RDF
 xmlns:dcterms="http://purl.org/dc/terms/"
 xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#ModelParameterSet_2">
+<rdf:Description rdf:about="#ModelParameterSet_3">
 </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
@@ -2255,11 +2083,9 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           </ModelParameterGroup>
         </ModelParameterGroup>
       </ModelParameterSet>
-      <ModelParameterSet key="ModelParameterSet_4" name="PE: 2024-11-19T10:13:43Z Exp: Experiment">
+      <ModelParameterSet key="ModelParameterSet_4" name="PE: 2024-11-19T10:13:43Z Exp: Original">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 <rdf:Description rdf:about="#ModelParameterSet_4">
 </rdf:Description>
 </rdf:RDF>
@@ -2321,7 +2147,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ig from M1],ParameterGroup=Parameters,Parameter=k1" value="8.1999999999999994e-06" type="ReactionParameter" simulationType="fixed"/>
           </ModelParameterGroup>
           <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ig from T1]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ig from T1],ParameterGroup=Parameters,Parameter=k1" value="4.1000004882980481e-05" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ig from T1],ParameterGroup=Parameters,Parameter=k1" value="4.1e-05" type="ReactionParameter" simulationType="fixed"/>
           </ModelParameterGroup>
           <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of Ig]" type="Reaction">
             <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of Ig],ParameterGroup=Parameters,Parameter=k1" value="29.120000000000001" type="ReactionParameter" simulationType="fixed"/>
@@ -2366,7 +2192,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ib from M2],ParameterGroup=Parameters,Parameter=k1" value="5.5999999999999997e-09" type="ReactionParameter" simulationType="fixed"/>
           </ModelParameterGroup>
           <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ib from Tr]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ib from Tr],ParameterGroup=Parameters,Parameter=k1" value="4.6070298445078641e-08" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ib from Tr],ParameterGroup=Parameters,Parameter=k1" value="3.8999999999999998e-08" type="ReactionParameter" simulationType="fixed"/>
           </ModelParameterGroup>
           <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of Ib]" type="Reaction">
             <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of Ib],ParameterGroup=Parameters,Parameter=k1" value="349.37" type="ReactionParameter" simulationType="fixed"/>
@@ -2375,7 +2201,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I10 from M2],ParameterGroup=Parameters,Parameter=k1" value="0.00037199999999999999" type="ReactionParameter" simulationType="fixed"/>
           </ModelParameterGroup>
           <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I10 from Tr]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I10 from Tr],ParameterGroup=Parameters,Parameter=v10r" value="0.0011200000000866571" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I10 from Tr],ParameterGroup=Parameters,Parameter=v10r" value="0.0011199999999999999" type="ReactionParameter" simulationType="fixed"/>
             <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I10 from Tr],ParameterGroup=Parameters,Parameter=n2r" value="3" type="ReactionParameter" simulationType="fixed"/>
             <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I10 from Tr],ParameterGroup=Parameters,Parameter=c2" value="6.8600000000000005e-08" type="ReactionParameter" simulationType="fixed"/>
           </ModelParameterGroup>
@@ -2440,11 +2266,9 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           </ModelParameterGroup>
         </ModelParameterGroup>
       </ModelParameterSet>
-      <ModelParameterSet key="ModelParameterSet_5" name="PE: 2024-11-19T10:14:52Z Exp: Original">
+      <ModelParameterSet key="ModelParameterSet_5" name="PE: 2024-11-19T10:13:43Z Exp: Experiment">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 <rdf:Description rdf:about="#ModelParameterSet_5">
 </rdf:Description>
 </rdf:RDF>
@@ -2506,6 +2330,189 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ig from M1],ParameterGroup=Parameters,Parameter=k1" value="8.1999999999999994e-06" type="ReactionParameter" simulationType="fixed"/>
           </ModelParameterGroup>
           <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ig from T1]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ig from T1],ParameterGroup=Parameters,Parameter=k1" value="4.1000004882980481e-05" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of Ig]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of Ig],ParameterGroup=Parameters,Parameter=k1" value="29.120000000000001" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I2 from T1]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I2 from T1],ParameterGroup=Parameters,Parameter=k1" value="4.1e-05" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I2]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I2],ParameterGroup=Parameters,Parameter=k1" value="537.46000000000004" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prof of I4 from M2]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prof of I4 from M2],ParameterGroup=Parameters,Parameter=k1" value="5.8300000000000001e-05" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I4 from T2]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I4 from T2],ParameterGroup=Parameters,Parameter=k1" value="0.000175" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I4]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I4],ParameterGroup=Parameters,Parameter=k1" value="349.37" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I21 from T17]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I21 from T17],ParameterGroup=Parameters,Parameter=k1" value="0.00080500000000000005" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I21]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I21],ParameterGroup=Parameters,Parameter=k1" value="63.979999999999997" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I6 from M1]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I6 from M1],ParameterGroup=Parameters,Parameter=k1" value="0.00363" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I6]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I6],ParameterGroup=Parameters,Parameter=k1" value="29.109999999999999" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ia from M1]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ia from M1],ParameterGroup=Parameters,Parameter=k1" value="0.021000000000000001" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ia from T1]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ia from T1],ParameterGroup=Parameters,Parameter=k1" value="0.073499999999999996" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of Ia]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of Ia],ParameterGroup=Parameters,Parameter=k1" value="388.14999999999998" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ib from M2]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ib from M2],ParameterGroup=Parameters,Parameter=k1" value="5.5999999999999997e-09" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ib from Tr]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ib from Tr],ParameterGroup=Parameters,Parameter=k1" value="4.6070298445078641e-08" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of Ib]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of Ib],ParameterGroup=Parameters,Parameter=k1" value="349.37" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I10 from M2]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I10 from M2],ParameterGroup=Parameters,Parameter=k1" value="0.00037199999999999999" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I10 from Tr]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I10 from Tr],ParameterGroup=Parameters,Parameter=v10r" value="0.0011200000000866571" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I10 from Tr],ParameterGroup=Parameters,Parameter=n2r" value="3" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I10 from Tr],ParameterGroup=Parameters,Parameter=c2" value="6.8600000000000005e-08" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I10]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I10],ParameterGroup=Parameters,Parameter=k1" value="116.48" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I12 from M1]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I12 from M1],ParameterGroup=Parameters,Parameter=v12m" value="0.00026499999999999999" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I12 from M1],ParameterGroup=Parameters,Parameter=c10" value="1.5400000000000001e-06" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I12]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I12],ParameterGroup=Parameters,Parameter=k1" value="8.3300000000000001" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M0 to M1]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M0 to M1],ParameterGroup=Parameters,Parameter=f" value="1" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M0 to M1],ParameterGroup=Parameters,Parameter=delta_m_cit" value="2.3999999999999999" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M0 to M1],ParameterGroup=Parameters,Parameter=zet_cit" value="9.7499999999999998e-06" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M1 to M2]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M1 to M2],ParameterGroup=Parameters,Parameter=sigma" value="24" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M1 to M2],ParameterGroup=Parameters,Parameter=zeta" value="6.7699999999999996e-12" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M2 to M1]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M2 to M1],ParameterGroup=Parameters,Parameter=sigma" value="24" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M2 to M1],ParameterGroup=Parameters,Parameter=zeta" value="2.5799999999999999e-06" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of M1]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of M1],ParameterGroup=Parameters,Parameter=k1" value="1" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M0 to M2]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M0 to M2],ParameterGroup=Parameters,Parameter=f" value="10" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M0 to M2],ParameterGroup=Parameters,Parameter=delta_m_cit" value="24" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M0 to M2],ParameterGroup=Parameters,Parameter=zet_cit" value="1.5400000000000001e-06" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of M2]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of M2],ParameterGroup=Parameters,Parameter=k1" value="1" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T1 from M]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T1 from M],ParameterGroup=Parameters,Parameter=g2" value="0.053499999999999999" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T1 from M],ParameterGroup=Parameters,Parameter=gr1" value="0.060600000000000001" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T1 from M],ParameterGroup=Parameters,Parameter=s12" value="10.93" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T1 from M],ParameterGroup=Parameters,Parameter=c12" value="4.9000000000000002e-08" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T1 from M],ParameterGroup=Parameters,Parameter=c10" value="1.4500000000000001e-06" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Proliferation of T1]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Proliferation of T1],ParameterGroup=Parameters,Parameter=s2" value="1.23" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Proliferation of T1],ParameterGroup=Parameters,Parameter=c2" value="6.8600000000000005e-08" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Proliferation of T1],ParameterGroup=Parameters,Parameter=g2" value="0.183" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Proliferation of T1],ParameterGroup=Parameters,Parameter=gr1" value="0.060600000000000001" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of T1]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of T1],ParameterGroup=Parameters,Parameter=k1" value="1.3999999999999999" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of T2]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of T2],ParameterGroup=Parameters,Parameter=k1" value="1.3999999999999999" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of T17]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of T17],ParameterGroup=Parameters,Parameter=k1" value="1.3999999999999999" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of Tr]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of Tr],ParameterGroup=Parameters,Parameter=k1" value="1.3999999999999999" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+        </ModelParameterGroup>
+      </ModelParameterSet>
+      <ModelParameterSet key="ModelParameterSet_6" name="PE: 2024-11-19T10:14:52Z Exp: Original">
+        <MiriamAnnotation>
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelParameterSet_6">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
+        <ModelParameterGroup cn="String=Initial Time" type="Group">
+          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy" value="0" type="Model" simulationType="time"/>
+        </ModelParameterGroup>
+        <ModelParameterGroup cn="String=Initial Compartment Sizes" type="Group">
+          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]" value="1" type="Compartment" simulationType="fixed"/>
+        </ModelParameterGroup>
+        <ModelParameterGroup cn="String=Initial Species Values" type="Group">
+          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[Ig]" value="2.5799999999999999e-06" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[M1]" value="0.023399999999999921" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[I2]" value="6.8599999999999304e-08" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[T1]" value="0.045799999999999993" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[I4]" value="9.6999999999999462e-09" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[T2]" value="0.0134" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[M2]" value="0.025000000000000001" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[I21]" value="4.25e-06" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[M]" value="0.048399999999999922" type="Species" simulationType="assignment"/>
+          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[I6]" value="7.9999999999999996e-06" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[Ia]" value="9.7499999999998948e-06" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[T17]" value="20" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[Tr]" value="0.060599999999999925" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[Ib]" value="6.7699999999999689e-12" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[I10]" value="1.5399999999999836e-06" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[I12]" value="4.8999999999999373e-08" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[M0]" value="0.0015" type="Species" simulationType="fixed"/>
+        </ModelParameterGroup>
+        <ModelParameterGroup cn="String=Initial Global Quantities" type="Group">
+        </ModelParameterGroup>
+        <ModelParameterGroup cn="String=Kinetic Parameters" type="Group">
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of Tr]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=sb" value="14.02" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=cb" value="6.7699999999999996e-12" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=s10" value="14.02" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=c10" value="1.5400000000000001e-06" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=c2" value="6.8600000000000005e-08" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=ca" value="9.7499999999999998e-06" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=g17" value="0.33700000000000002" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T2]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T2],ParameterGroup=Parameters,Parameter=s4" value="1.9399999999999999" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T2],ParameterGroup=Parameters,Parameter=c4" value="9.6999999999999992e-09" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T2],ParameterGroup=Parameters,Parameter=g1" value="0.183" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T2],ParameterGroup=Parameters,Parameter=gr2" value="0.060600000000000001" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=s21" value="156.16999999999999" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=c21" value="4.25e-06" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=s6" value="156.16999999999999" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=c6" value="7.9999999999999996e-06" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=cb" value="6.7699999999999996e-12" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=cg" value="2.5799999999999999e-06" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=c4" value="9.6999999999999992e-09" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=gr17" value="0.060600000000000001" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ig from M1]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ig from M1],ParameterGroup=Parameters,Parameter=k1" value="8.1999999999999994e-06" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ig from T1]" type="Reaction">
             <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ig from T1],ParameterGroup=Parameters,Parameter=k1" value="4.1e-05" type="ReactionParameter" simulationType="fixed"/>
           </ModelParameterGroup>
           <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of Ig]" type="Reaction">
@@ -2625,12 +2632,10 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           </ModelParameterGroup>
         </ModelParameterGroup>
       </ModelParameterSet>
-      <ModelParameterSet key="ModelParameterSet_6" name="PE: 2024-11-19T10:14:52Z Exp: Experiment">
+      <ModelParameterSet key="ModelParameterSet_7" name="PE: 2024-11-19T10:14:52Z Exp: Experiment">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#ModelParameterSet_6">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelParameterSet_7">
 </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
@@ -2810,196 +2815,9 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           </ModelParameterGroup>
         </ModelParameterGroup>
       </ModelParameterSet>
-      <ModelParameterSet key="ModelParameterSet_7" name="PE: 2024-11-19T10:56:32Z Exp: Original">
+      <ModelParameterSet key="ModelParameterSet_8" name="PE: 2024-11-19T10:56:32Z Exp: Original">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#ModelParameterSet_7">
-</rdf:Description>
-</rdf:RDF>
-        </MiriamAnnotation>
-        <ModelParameterGroup cn="String=Initial Time" type="Group">
-          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy" value="0" type="Model" simulationType="time"/>
-        </ModelParameterGroup>
-        <ModelParameterGroup cn="String=Initial Compartment Sizes" type="Group">
-          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]" value="1" type="Compartment" simulationType="fixed"/>
-        </ModelParameterGroup>
-        <ModelParameterGroup cn="String=Initial Species Values" type="Group">
-          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[Ig]" value="2.5799999999999999e-06" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[M1]" value="0.023399999999999921" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[I2]" value="6.8599999999999304e-08" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[T1]" value="0.045799999999999993" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[I4]" value="9.6999999999999462e-09" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[T2]" value="0.0134" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[M2]" value="0.025000000000000001" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[I21]" value="4.25e-06" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[M]" value="0.048399999999999922" type="Species" simulationType="assignment"/>
-          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[I6]" value="7.9999999999999996e-06" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[Ia]" value="9.7499999999998948e-06" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[T17]" value="20" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[Tr]" value="0.060599999999999925" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[Ib]" value="6.7699999999999689e-12" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[I10]" value="1.5399999999999836e-06" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[I12]" value="4.8999999999999373e-08" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[M0]" value="0.0015" type="Species" simulationType="fixed"/>
-        </ModelParameterGroup>
-        <ModelParameterGroup cn="String=Initial Global Quantities" type="Group">
-        </ModelParameterGroup>
-        <ModelParameterGroup cn="String=Kinetic Parameters" type="Group">
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of Tr]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=sb" value="14.02" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=cb" value="6.7699999999999996e-12" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=s10" value="14.02" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=c10" value="1.5400000000000001e-06" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=c2" value="6.8600000000000005e-08" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=ca" value="9.7499999999999998e-06" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=g17" value="0.33700000000000002" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T2]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T2],ParameterGroup=Parameters,Parameter=s4" value="1.9399999999999999" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T2],ParameterGroup=Parameters,Parameter=c4" value="9.6999999999999992e-09" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T2],ParameterGroup=Parameters,Parameter=g1" value="0.183" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T2],ParameterGroup=Parameters,Parameter=gr2" value="0.060600000000000001" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=s21" value="156.16999999999999" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=c21" value="4.25e-06" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=s6" value="156.16999999999999" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=c6" value="7.9999999999999996e-06" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=cb" value="6.7699999999999996e-12" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=cg" value="2.5799999999999999e-06" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=c4" value="9.6999999999999992e-09" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=gr17" value="0.060600000000000001" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ig from M1]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ig from M1],ParameterGroup=Parameters,Parameter=k1" value="8.1999999999999994e-06" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ig from T1]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ig from T1],ParameterGroup=Parameters,Parameter=k1" value="4.1e-05" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of Ig]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of Ig],ParameterGroup=Parameters,Parameter=k1" value="29.120000000000001" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I2 from T1]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I2 from T1],ParameterGroup=Parameters,Parameter=k1" value="4.1e-05" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I2]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I2],ParameterGroup=Parameters,Parameter=k1" value="537.46000000000004" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prof of I4 from M2]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prof of I4 from M2],ParameterGroup=Parameters,Parameter=k1" value="5.8300000000000001e-05" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I4 from T2]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I4 from T2],ParameterGroup=Parameters,Parameter=k1" value="0.000175" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I4]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I4],ParameterGroup=Parameters,Parameter=k1" value="349.37" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I21 from T17]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I21 from T17],ParameterGroup=Parameters,Parameter=k1" value="0.00080500000000000005" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I21]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I21],ParameterGroup=Parameters,Parameter=k1" value="63.979999999999997" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I6 from M1]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I6 from M1],ParameterGroup=Parameters,Parameter=k1" value="0.00363" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I6]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I6],ParameterGroup=Parameters,Parameter=k1" value="29.109999999999999" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ia from M1]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ia from M1],ParameterGroup=Parameters,Parameter=k1" value="0.021000000000000001" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ia from T1]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ia from T1],ParameterGroup=Parameters,Parameter=k1" value="0.073499999999999996" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of Ia]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of Ia],ParameterGroup=Parameters,Parameter=k1" value="388.14999999999998" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ib from M2]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ib from M2],ParameterGroup=Parameters,Parameter=k1" value="5.5999999999999997e-09" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ib from Tr]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ib from Tr],ParameterGroup=Parameters,Parameter=k1" value="3.8999999999999998e-08" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of Ib]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of Ib],ParameterGroup=Parameters,Parameter=k1" value="349.37" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I10 from M2]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I10 from M2],ParameterGroup=Parameters,Parameter=k1" value="0.00037199999999999999" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I10 from Tr]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I10 from Tr],ParameterGroup=Parameters,Parameter=v10r" value="0.0011199999999999999" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I10 from Tr],ParameterGroup=Parameters,Parameter=n2r" value="3" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I10 from Tr],ParameterGroup=Parameters,Parameter=c2" value="6.8600000000000005e-08" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I10]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I10],ParameterGroup=Parameters,Parameter=k1" value="116.48" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I12 from M1]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I12 from M1],ParameterGroup=Parameters,Parameter=v12m" value="0.00026499999999999999" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I12 from M1],ParameterGroup=Parameters,Parameter=c10" value="1.5400000000000001e-06" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I12]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I12],ParameterGroup=Parameters,Parameter=k1" value="8.3300000000000001" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M0 to M1]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M0 to M1],ParameterGroup=Parameters,Parameter=f" value="1" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M0 to M1],ParameterGroup=Parameters,Parameter=delta_m_cit" value="2.3999999999999999" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M0 to M1],ParameterGroup=Parameters,Parameter=zet_cit" value="9.7499999999999998e-06" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M1 to M2]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M1 to M2],ParameterGroup=Parameters,Parameter=sigma" value="24" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M1 to M2],ParameterGroup=Parameters,Parameter=zeta" value="6.7699999999999996e-12" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M2 to M1]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M2 to M1],ParameterGroup=Parameters,Parameter=sigma" value="24" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M2 to M1],ParameterGroup=Parameters,Parameter=zeta" value="2.5799999999999999e-06" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of M1]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of M1],ParameterGroup=Parameters,Parameter=k1" value="1" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M0 to M2]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M0 to M2],ParameterGroup=Parameters,Parameter=f" value="10" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M0 to M2],ParameterGroup=Parameters,Parameter=delta_m_cit" value="24" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M0 to M2],ParameterGroup=Parameters,Parameter=zet_cit" value="1.5400000000000001e-06" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of M2]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of M2],ParameterGroup=Parameters,Parameter=k1" value="1" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T1 from M]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T1 from M],ParameterGroup=Parameters,Parameter=g2" value="0.053499999999999999" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T1 from M],ParameterGroup=Parameters,Parameter=gr1" value="0.060600000000000001" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T1 from M],ParameterGroup=Parameters,Parameter=s12" value="10.93" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T1 from M],ParameterGroup=Parameters,Parameter=c12" value="4.9000000000000002e-08" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T1 from M],ParameterGroup=Parameters,Parameter=c10" value="1.4500000000000001e-06" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Proliferation of T1]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Proliferation of T1],ParameterGroup=Parameters,Parameter=s2" value="1.23" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Proliferation of T1],ParameterGroup=Parameters,Parameter=c2" value="6.8600000000000005e-08" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Proliferation of T1],ParameterGroup=Parameters,Parameter=g2" value="0.183" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Proliferation of T1],ParameterGroup=Parameters,Parameter=gr1" value="0.060600000000000001" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of T1]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of T1],ParameterGroup=Parameters,Parameter=k1" value="1.3999999999999999" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of T2]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of T2],ParameterGroup=Parameters,Parameter=k1" value="1.3999999999999999" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of T17]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of T17],ParameterGroup=Parameters,Parameter=k1" value="1.3999999999999999" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of Tr]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of Tr],ParameterGroup=Parameters,Parameter=k1" value="1.3999999999999999" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-        </ModelParameterGroup>
-      </ModelParameterSet>
-      <ModelParameterSet key="ModelParameterSet_8" name="PE: 2024-11-19T10:56:32Z Exp: Experiment">
-        <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 <rdf:Description rdf:about="#ModelParameterSet_8">
 </rdf:Description>
 </rdf:RDF>
@@ -3180,11 +2998,9 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           </ModelParameterGroup>
         </ModelParameterGroup>
       </ModelParameterSet>
-      <ModelParameterSet key="ModelParameterSet_9" name="PE: 2024-11-19T10:57:43Z Exp: Original">
+      <ModelParameterSet key="ModelParameterSet_9" name="PE: 2024-11-19T10:56:32Z Exp: Experiment">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 <rdf:Description rdf:about="#ModelParameterSet_9">
 </rdf:Description>
 </rdf:RDF>
@@ -3365,197 +3181,10 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           </ModelParameterGroup>
         </ModelParameterGroup>
       </ModelParameterSet>
-      <ModelParameterSet key="ModelParameterSet_10" name="PE: 2024-11-19T10:57:43Z Exp: Experiment">
+      <ModelParameterSet key="ModelParameterSet_10" name="PE: 2024-11-19T10:57:43Z Exp: Original">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 <rdf:Description rdf:about="#ModelParameterSet_10">
-</rdf:Description>
-</rdf:RDF>
-        </MiriamAnnotation>
-        <ModelParameterGroup cn="String=Initial Time" type="Group">
-          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy" value="0" type="Model" simulationType="time"/>
-        </ModelParameterGroup>
-        <ModelParameterGroup cn="String=Initial Compartment Sizes" type="Group">
-          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]" value="1" type="Compartment" simulationType="fixed"/>
-        </ModelParameterGroup>
-        <ModelParameterGroup cn="String=Initial Species Values" type="Group">
-          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[Ig]" value="2.5799999999999999e-06" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[M1]" value="0.023399999999999921" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[I2]" value="6.8599999999999304e-08" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[T1]" value="0.045799999999999993" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[I4]" value="9.6999999999999462e-09" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[T2]" value="0.0134" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[M2]" value="0.025000000000000001" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[I21]" value="4.25e-06" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[M]" value="0.048399999999999922" type="Species" simulationType="assignment"/>
-          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[I6]" value="7.9999999999999996e-06" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[Ia]" value="9.7499999999998948e-06" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[T17]" value="20" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[Tr]" value="0.060599999999999925" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[Ib]" value="6.7699999999999689e-12" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[I10]" value="1.5399999999999836e-06" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[I12]" value="4.8999999999999373e-08" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[M0]" value="0.0015" type="Species" simulationType="fixed"/>
-        </ModelParameterGroup>
-        <ModelParameterGroup cn="String=Initial Global Quantities" type="Group">
-        </ModelParameterGroup>
-        <ModelParameterGroup cn="String=Kinetic Parameters" type="Group">
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of Tr]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=sb" value="100000" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=cb" value="6.7699999999999996e-12" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=s10" value="100000" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=c10" value="1.5400000000000001e-06" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=c2" value="6.8600000000000005e-08" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=ca" value="9.7499999999999998e-06" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=g17" value="0.33700000000000002" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T2]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T2],ParameterGroup=Parameters,Parameter=s4" value="1.2204507915597904e-15" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T2],ParameterGroup=Parameters,Parameter=c4" value="9.6999999999999992e-09" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T2],ParameterGroup=Parameters,Parameter=g1" value="0.183" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T2],ParameterGroup=Parameters,Parameter=gr2" value="0.060600000000000001" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=s21" value="100000" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=c21" value="4.25e-06" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=s6" value="100000" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=c6" value="7.9999999999999996e-06" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=cb" value="6.7699999999999996e-12" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=cg" value="2.5799999999999999e-06" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=c4" value="9.6999999999999992e-09" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=gr17" value="0.060600000000000001" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ig from M1]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ig from M1],ParameterGroup=Parameters,Parameter=k1" value="8.1999999999999994e-06" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ig from T1]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ig from T1],ParameterGroup=Parameters,Parameter=k1" value="20.058726891377013" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of Ig]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of Ig],ParameterGroup=Parameters,Parameter=k1" value="29.120000000000001" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I2 from T1]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I2 from T1],ParameterGroup=Parameters,Parameter=k1" value="4.1e-05" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I2]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I2],ParameterGroup=Parameters,Parameter=k1" value="537.46000000000004" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prof of I4 from M2]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prof of I4 from M2],ParameterGroup=Parameters,Parameter=k1" value="5.8300000000000001e-05" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I4 from T2]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I4 from T2],ParameterGroup=Parameters,Parameter=k1" value="0.000175" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I4]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I4],ParameterGroup=Parameters,Parameter=k1" value="349.37" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I21 from T17]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I21 from T17],ParameterGroup=Parameters,Parameter=k1" value="0.00080500000000000005" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I21]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I21],ParameterGroup=Parameters,Parameter=k1" value="63.979999999999997" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I6 from M1]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I6 from M1],ParameterGroup=Parameters,Parameter=k1" value="0.00363" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I6]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I6],ParameterGroup=Parameters,Parameter=k1" value="29.109999999999999" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ia from M1]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ia from M1],ParameterGroup=Parameters,Parameter=k1" value="0.021000000000000001" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ia from T1]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ia from T1],ParameterGroup=Parameters,Parameter=k1" value="1.2220446049250314e-15" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of Ia]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of Ia],ParameterGroup=Parameters,Parameter=k1" value="388.14999999999998" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ib from M2]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ib from M2],ParameterGroup=Parameters,Parameter=k1" value="5.5999999999999997e-09" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ib from Tr]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ib from Tr],ParameterGroup=Parameters,Parameter=k1" value="0.014710799762080633" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of Ib]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of Ib],ParameterGroup=Parameters,Parameter=k1" value="349.37" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I10 from M2]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I10 from M2],ParameterGroup=Parameters,Parameter=k1" value="0.00037199999999999999" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I10 from Tr]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I10 from Tr],ParameterGroup=Parameters,Parameter=v10r" value="377.66616224021902" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I10 from Tr],ParameterGroup=Parameters,Parameter=n2r" value="3" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I10 from Tr],ParameterGroup=Parameters,Parameter=c2" value="6.8600000000000005e-08" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I10]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I10],ParameterGroup=Parameters,Parameter=k1" value="116.48" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I12 from M1]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I12 from M1],ParameterGroup=Parameters,Parameter=v12m" value="0.00026499999999999999" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I12 from M1],ParameterGroup=Parameters,Parameter=c10" value="1.5400000000000001e-06" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I12]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I12],ParameterGroup=Parameters,Parameter=k1" value="8.3300000000000001" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M0 to M1]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M0 to M1],ParameterGroup=Parameters,Parameter=f" value="1" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M0 to M1],ParameterGroup=Parameters,Parameter=delta_m_cit" value="2.3999999999999999" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M0 to M1],ParameterGroup=Parameters,Parameter=zet_cit" value="9.7499999999999998e-06" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M1 to M2]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M1 to M2],ParameterGroup=Parameters,Parameter=sigma" value="24" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M1 to M2],ParameterGroup=Parameters,Parameter=zeta" value="6.7699999999999996e-12" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M2 to M1]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M2 to M1],ParameterGroup=Parameters,Parameter=sigma" value="24" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M2 to M1],ParameterGroup=Parameters,Parameter=zeta" value="2.5799999999999999e-06" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of M1]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of M1],ParameterGroup=Parameters,Parameter=k1" value="1" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M0 to M2]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M0 to M2],ParameterGroup=Parameters,Parameter=f" value="10" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M0 to M2],ParameterGroup=Parameters,Parameter=delta_m_cit" value="24" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M0 to M2],ParameterGroup=Parameters,Parameter=zet_cit" value="1.5400000000000001e-06" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of M2]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of M2],ParameterGroup=Parameters,Parameter=k1" value="1" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T1 from M]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T1 from M],ParameterGroup=Parameters,Parameter=g2" value="0.053499999999999999" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T1 from M],ParameterGroup=Parameters,Parameter=gr1" value="0.060600000000000001" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T1 from M],ParameterGroup=Parameters,Parameter=s12" value="100000" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T1 from M],ParameterGroup=Parameters,Parameter=c12" value="4.9000000000000002e-08" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T1 from M],ParameterGroup=Parameters,Parameter=c10" value="1.4500000000000001e-06" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Proliferation of T1]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Proliferation of T1],ParameterGroup=Parameters,Parameter=s2" value="1.23" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Proliferation of T1],ParameterGroup=Parameters,Parameter=c2" value="6.8600000000000005e-08" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Proliferation of T1],ParameterGroup=Parameters,Parameter=g2" value="0.183" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Proliferation of T1],ParameterGroup=Parameters,Parameter=gr1" value="0.060600000000000001" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of T1]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of T1],ParameterGroup=Parameters,Parameter=k1" value="1.3999999999999999" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of T2]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of T2],ParameterGroup=Parameters,Parameter=k1" value="1.3999999999999999" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of T17]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of T17],ParameterGroup=Parameters,Parameter=k1" value="1.3999999999999999" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of Tr]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of Tr],ParameterGroup=Parameters,Parameter=k1" value="1.3999999999999999" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-        </ModelParameterGroup>
-      </ModelParameterSet>
-      <ModelParameterSet key="ModelParameterSet_11" name="PE: 2024-11-19T12:17:52Z Exp: Original">
-        <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#ModelParameterSet_11">
 </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
@@ -3735,12 +3364,10 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           </ModelParameterGroup>
         </ModelParameterGroup>
       </ModelParameterSet>
-      <ModelParameterSet key="ModelParameterSet_12" name="PE: 2024-11-19T12:17:52Z Exp: Type 1">
+      <ModelParameterSet key="ModelParameterSet_11" name="PE: 2024-11-19T10:57:43Z Exp: Experiment">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#ModelParameterSet_12">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelParameterSet_11">
 </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
@@ -3782,7 +3409,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=g17" value="0.33700000000000002" type="ReactionParameter" simulationType="fixed"/>
           </ModelParameterGroup>
           <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T2]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T2],ParameterGroup=Parameters,Parameter=s4" value="1528.2348900725692" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T2],ParameterGroup=Parameters,Parameter=s4" value="1.2204507915597904e-15" type="ReactionParameter" simulationType="fixed"/>
             <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T2],ParameterGroup=Parameters,Parameter=c4" value="9.6999999999999992e-09" type="ReactionParameter" simulationType="fixed"/>
             <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T2],ParameterGroup=Parameters,Parameter=g1" value="0.183" type="ReactionParameter" simulationType="fixed"/>
             <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T2],ParameterGroup=Parameters,Parameter=gr2" value="0.060600000000000001" type="ReactionParameter" simulationType="fixed"/>
@@ -3801,7 +3428,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ig from M1],ParameterGroup=Parameters,Parameter=k1" value="8.1999999999999994e-06" type="ReactionParameter" simulationType="fixed"/>
           </ModelParameterGroup>
           <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ig from T1]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ig from T1],ParameterGroup=Parameters,Parameter=k1" value="24.282468027762722" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ig from T1],ParameterGroup=Parameters,Parameter=k1" value="20.058726891377013" type="ReactionParameter" simulationType="fixed"/>
           </ModelParameterGroup>
           <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of Ig]" type="Reaction">
             <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of Ig],ParameterGroup=Parameters,Parameter=k1" value="29.120000000000001" type="ReactionParameter" simulationType="fixed"/>
@@ -3846,7 +3473,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ib from M2],ParameterGroup=Parameters,Parameter=k1" value="5.5999999999999997e-09" type="ReactionParameter" simulationType="fixed"/>
           </ModelParameterGroup>
           <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ib from Tr]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ib from Tr],ParameterGroup=Parameters,Parameter=k1" value="0.017767253988481446" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ib from Tr],ParameterGroup=Parameters,Parameter=k1" value="0.014710799762080633" type="ReactionParameter" simulationType="fixed"/>
           </ModelParameterGroup>
           <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of Ib]" type="Reaction">
             <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of Ib],ParameterGroup=Parameters,Parameter=k1" value="349.37" type="ReactionParameter" simulationType="fixed"/>
@@ -3855,7 +3482,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I10 from M2],ParameterGroup=Parameters,Parameter=k1" value="0.00037199999999999999" type="ReactionParameter" simulationType="fixed"/>
           </ModelParameterGroup>
           <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I10 from Tr]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I10 from Tr],ParameterGroup=Parameters,Parameter=v10r" value="455.28691868096485" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I10 from Tr],ParameterGroup=Parameters,Parameter=v10r" value="377.66616224021902" type="ReactionParameter" simulationType="fixed"/>
             <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I10 from Tr],ParameterGroup=Parameters,Parameter=n2r" value="3" type="ReactionParameter" simulationType="fixed"/>
             <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I10 from Tr],ParameterGroup=Parameters,Parameter=c2" value="6.8600000000000005e-08" type="ReactionParameter" simulationType="fixed"/>
           </ModelParameterGroup>
@@ -3920,11 +3547,192 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           </ModelParameterGroup>
         </ModelParameterGroup>
       </ModelParameterSet>
-      <ModelParameterSet key="ModelParameterSet_13" name="PE: 2024-11-19T12:17:52Z Exp: Type 2">
+      <ModelParameterSet key="ModelParameterSet_12" name="PE: 2024-11-19T12:17:52Z Exp: Original">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelParameterSet_12">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
+        <ModelParameterGroup cn="String=Initial Time" type="Group">
+          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy" value="0" type="Model" simulationType="time"/>
+        </ModelParameterGroup>
+        <ModelParameterGroup cn="String=Initial Compartment Sizes" type="Group">
+          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]" value="1" type="Compartment" simulationType="fixed"/>
+        </ModelParameterGroup>
+        <ModelParameterGroup cn="String=Initial Species Values" type="Group">
+          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[Ig]" value="2.5799999999999999e-06" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[M1]" value="0.023399999999999921" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[I2]" value="6.8599999999999304e-08" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[T1]" value="0.045799999999999993" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[I4]" value="9.6999999999999462e-09" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[T2]" value="0.0134" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[M2]" value="0.025000000000000001" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[I21]" value="4.25e-06" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[M]" value="0.048399999999999922" type="Species" simulationType="assignment"/>
+          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[I6]" value="7.9999999999999996e-06" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[Ia]" value="9.7499999999998948e-06" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[T17]" value="20" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[Tr]" value="0.060599999999999925" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[Ib]" value="6.7699999999999689e-12" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[I10]" value="1.5399999999999836e-06" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[I12]" value="4.8999999999999373e-08" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[M0]" value="0.0015" type="Species" simulationType="fixed"/>
+        </ModelParameterGroup>
+        <ModelParameterGroup cn="String=Initial Global Quantities" type="Group">
+        </ModelParameterGroup>
+        <ModelParameterGroup cn="String=Kinetic Parameters" type="Group">
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of Tr]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=sb" value="14.02" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=cb" value="6.7699999999999996e-12" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=s10" value="14.02" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=c10" value="1.5400000000000001e-06" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=c2" value="6.8600000000000005e-08" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=ca" value="9.7499999999999998e-06" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=g17" value="0.33700000000000002" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T2]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T2],ParameterGroup=Parameters,Parameter=s4" value="1.9399999999999999" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T2],ParameterGroup=Parameters,Parameter=c4" value="9.6999999999999992e-09" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T2],ParameterGroup=Parameters,Parameter=g1" value="0.183" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T2],ParameterGroup=Parameters,Parameter=gr2" value="0.060600000000000001" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=s21" value="156.16999999999999" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=c21" value="4.25e-06" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=s6" value="156.16999999999999" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=c6" value="7.9999999999999996e-06" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=cb" value="6.7699999999999996e-12" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=cg" value="2.5799999999999999e-06" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=c4" value="9.6999999999999992e-09" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=gr17" value="0.060600000000000001" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ig from M1]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ig from M1],ParameterGroup=Parameters,Parameter=k1" value="8.1999999999999994e-06" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ig from T1]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ig from T1],ParameterGroup=Parameters,Parameter=k1" value="4.1e-05" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of Ig]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of Ig],ParameterGroup=Parameters,Parameter=k1" value="29.120000000000001" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I2 from T1]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I2 from T1],ParameterGroup=Parameters,Parameter=k1" value="4.1e-05" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I2]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I2],ParameterGroup=Parameters,Parameter=k1" value="537.46000000000004" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prof of I4 from M2]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prof of I4 from M2],ParameterGroup=Parameters,Parameter=k1" value="5.8300000000000001e-05" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I4 from T2]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I4 from T2],ParameterGroup=Parameters,Parameter=k1" value="0.000175" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I4]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I4],ParameterGroup=Parameters,Parameter=k1" value="349.37" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I21 from T17]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I21 from T17],ParameterGroup=Parameters,Parameter=k1" value="0.00080500000000000005" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I21]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I21],ParameterGroup=Parameters,Parameter=k1" value="63.979999999999997" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I6 from M1]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I6 from M1],ParameterGroup=Parameters,Parameter=k1" value="0.00363" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I6]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I6],ParameterGroup=Parameters,Parameter=k1" value="29.109999999999999" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ia from M1]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ia from M1],ParameterGroup=Parameters,Parameter=k1" value="0.021000000000000001" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ia from T1]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ia from T1],ParameterGroup=Parameters,Parameter=k1" value="0.073499999999999996" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of Ia]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of Ia],ParameterGroup=Parameters,Parameter=k1" value="388.14999999999998" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ib from M2]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ib from M2],ParameterGroup=Parameters,Parameter=k1" value="5.5999999999999997e-09" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ib from Tr]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ib from Tr],ParameterGroup=Parameters,Parameter=k1" value="3.8999999999999998e-08" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of Ib]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of Ib],ParameterGroup=Parameters,Parameter=k1" value="349.37" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I10 from M2]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I10 from M2],ParameterGroup=Parameters,Parameter=k1" value="0.00037199999999999999" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I10 from Tr]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I10 from Tr],ParameterGroup=Parameters,Parameter=v10r" value="0.0011199999999999999" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I10 from Tr],ParameterGroup=Parameters,Parameter=n2r" value="3" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I10 from Tr],ParameterGroup=Parameters,Parameter=c2" value="6.8600000000000005e-08" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I10]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I10],ParameterGroup=Parameters,Parameter=k1" value="116.48" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I12 from M1]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I12 from M1],ParameterGroup=Parameters,Parameter=v12m" value="0.00026499999999999999" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I12 from M1],ParameterGroup=Parameters,Parameter=c10" value="1.5400000000000001e-06" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I12]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I12],ParameterGroup=Parameters,Parameter=k1" value="8.3300000000000001" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M0 to M1]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M0 to M1],ParameterGroup=Parameters,Parameter=f" value="1" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M0 to M1],ParameterGroup=Parameters,Parameter=delta_m_cit" value="2.3999999999999999" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M0 to M1],ParameterGroup=Parameters,Parameter=zet_cit" value="9.7499999999999998e-06" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M1 to M2]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M1 to M2],ParameterGroup=Parameters,Parameter=sigma" value="24" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M1 to M2],ParameterGroup=Parameters,Parameter=zeta" value="6.7699999999999996e-12" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M2 to M1]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M2 to M1],ParameterGroup=Parameters,Parameter=sigma" value="24" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M2 to M1],ParameterGroup=Parameters,Parameter=zeta" value="2.5799999999999999e-06" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of M1]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of M1],ParameterGroup=Parameters,Parameter=k1" value="1" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M0 to M2]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M0 to M2],ParameterGroup=Parameters,Parameter=f" value="10" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M0 to M2],ParameterGroup=Parameters,Parameter=delta_m_cit" value="24" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M0 to M2],ParameterGroup=Parameters,Parameter=zet_cit" value="1.5400000000000001e-06" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of M2]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of M2],ParameterGroup=Parameters,Parameter=k1" value="1" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T1 from M]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T1 from M],ParameterGroup=Parameters,Parameter=g2" value="0.053499999999999999" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T1 from M],ParameterGroup=Parameters,Parameter=gr1" value="0.060600000000000001" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T1 from M],ParameterGroup=Parameters,Parameter=s12" value="10.93" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T1 from M],ParameterGroup=Parameters,Parameter=c12" value="4.9000000000000002e-08" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T1 from M],ParameterGroup=Parameters,Parameter=c10" value="1.4500000000000001e-06" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Proliferation of T1]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Proliferation of T1],ParameterGroup=Parameters,Parameter=s2" value="1.23" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Proliferation of T1],ParameterGroup=Parameters,Parameter=c2" value="6.8600000000000005e-08" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Proliferation of T1],ParameterGroup=Parameters,Parameter=g2" value="0.183" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Proliferation of T1],ParameterGroup=Parameters,Parameter=gr1" value="0.060600000000000001" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of T1]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of T1],ParameterGroup=Parameters,Parameter=k1" value="1.3999999999999999" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of T2]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of T2],ParameterGroup=Parameters,Parameter=k1" value="1.3999999999999999" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of T17]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of T17],ParameterGroup=Parameters,Parameter=k1" value="1.3999999999999999" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of Tr]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of Tr],ParameterGroup=Parameters,Parameter=k1" value="1.3999999999999999" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+        </ModelParameterGroup>
+      </ModelParameterSet>
+      <ModelParameterSet key="ModelParameterSet_13" name="PE: 2024-11-19T12:17:52Z Exp: Type 1">
+        <MiriamAnnotation>
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 <rdf:Description rdf:about="#ModelParameterSet_13">
 </rdf:Description>
 </rdf:RDF>
@@ -4105,11 +3913,9 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           </ModelParameterGroup>
         </ModelParameterGroup>
       </ModelParameterSet>
-      <ModelParameterSet key="ModelParameterSet_14" name="PE: 2024-11-19T12:17:52Z Exp: Type 3">
+      <ModelParameterSet key="ModelParameterSet_14" name="PE: 2024-11-19T12:17:52Z Exp: Type 2">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 <rdf:Description rdf:about="#ModelParameterSet_14">
 </rdf:Description>
 </rdf:RDF>
@@ -4290,11 +4096,9 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           </ModelParameterGroup>
         </ModelParameterGroup>
       </ModelParameterSet>
-      <ModelParameterSet key="ModelParameterSet_15" name="PE: 2024-11-19T12:17:52Z Exp: Type 4">
+      <ModelParameterSet key="ModelParameterSet_15" name="PE: 2024-11-19T12:17:52Z Exp: Type 3">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 <rdf:Description rdf:about="#ModelParameterSet_15">
 </rdf:Description>
 </rdf:RDF>
@@ -4475,12 +4279,193 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           </ModelParameterGroup>
         </ModelParameterGroup>
       </ModelParameterSet>
-      <ModelParameterSet key="ModelParameterSet_16" name="PE: 2024-11-19T12:42:51Z Exp: Original">
+      <ModelParameterSet key="ModelParameterSet_16" name="PE: 2024-11-19T12:17:52Z Exp: Type 4">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 <rdf:Description rdf:about="#ModelParameterSet_16">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
+        <ModelParameterGroup cn="String=Initial Time" type="Group">
+          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy" value="0" type="Model" simulationType="time"/>
+        </ModelParameterGroup>
+        <ModelParameterGroup cn="String=Initial Compartment Sizes" type="Group">
+          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]" value="1" type="Compartment" simulationType="fixed"/>
+        </ModelParameterGroup>
+        <ModelParameterGroup cn="String=Initial Species Values" type="Group">
+          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[Ig]" value="2.5799999999999999e-06" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[M1]" value="0.023399999999999921" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[I2]" value="6.8599999999999304e-08" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[T1]" value="0.045799999999999993" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[I4]" value="9.6999999999999462e-09" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[T2]" value="0.0134" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[M2]" value="0.025000000000000001" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[I21]" value="4.25e-06" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[M]" value="0.048399999999999922" type="Species" simulationType="assignment"/>
+          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[I6]" value="7.9999999999999996e-06" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[Ia]" value="9.7499999999998948e-06" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[T17]" value="20" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[Tr]" value="0.060599999999999925" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[Ib]" value="6.7699999999999689e-12" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[I10]" value="1.5399999999999836e-06" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[I12]" value="4.8999999999999373e-08" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[M0]" value="0.0015" type="Species" simulationType="fixed"/>
+        </ModelParameterGroup>
+        <ModelParameterGroup cn="String=Initial Global Quantities" type="Group">
+        </ModelParameterGroup>
+        <ModelParameterGroup cn="String=Kinetic Parameters" type="Group">
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of Tr]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=sb" value="100000" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=cb" value="6.7699999999999996e-12" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=s10" value="100000" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=c10" value="1.5400000000000001e-06" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=c2" value="6.8600000000000005e-08" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=ca" value="9.7499999999999998e-06" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=g17" value="0.33700000000000002" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T2]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T2],ParameterGroup=Parameters,Parameter=s4" value="1528.2348900725692" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T2],ParameterGroup=Parameters,Parameter=c4" value="9.6999999999999992e-09" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T2],ParameterGroup=Parameters,Parameter=g1" value="0.183" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T2],ParameterGroup=Parameters,Parameter=gr2" value="0.060600000000000001" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=s21" value="100000" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=c21" value="4.25e-06" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=s6" value="100000" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=c6" value="7.9999999999999996e-06" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=cb" value="6.7699999999999996e-12" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=cg" value="2.5799999999999999e-06" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=c4" value="9.6999999999999992e-09" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=gr17" value="0.060600000000000001" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ig from M1]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ig from M1],ParameterGroup=Parameters,Parameter=k1" value="8.1999999999999994e-06" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ig from T1]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ig from T1],ParameterGroup=Parameters,Parameter=k1" value="24.282468027762722" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of Ig]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of Ig],ParameterGroup=Parameters,Parameter=k1" value="29.120000000000001" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I2 from T1]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I2 from T1],ParameterGroup=Parameters,Parameter=k1" value="4.1e-05" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I2]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I2],ParameterGroup=Parameters,Parameter=k1" value="537.46000000000004" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prof of I4 from M2]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prof of I4 from M2],ParameterGroup=Parameters,Parameter=k1" value="5.8300000000000001e-05" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I4 from T2]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I4 from T2],ParameterGroup=Parameters,Parameter=k1" value="0.000175" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I4]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I4],ParameterGroup=Parameters,Parameter=k1" value="349.37" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I21 from T17]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I21 from T17],ParameterGroup=Parameters,Parameter=k1" value="0.00080500000000000005" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I21]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I21],ParameterGroup=Parameters,Parameter=k1" value="63.979999999999997" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I6 from M1]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I6 from M1],ParameterGroup=Parameters,Parameter=k1" value="0.00363" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I6]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I6],ParameterGroup=Parameters,Parameter=k1" value="29.109999999999999" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ia from M1]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ia from M1],ParameterGroup=Parameters,Parameter=k1" value="0.021000000000000001" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ia from T1]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ia from T1],ParameterGroup=Parameters,Parameter=k1" value="1.2220446049250314e-15" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of Ia]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of Ia],ParameterGroup=Parameters,Parameter=k1" value="388.14999999999998" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ib from M2]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ib from M2],ParameterGroup=Parameters,Parameter=k1" value="5.5999999999999997e-09" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ib from Tr]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ib from Tr],ParameterGroup=Parameters,Parameter=k1" value="0.017767253988481446" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of Ib]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of Ib],ParameterGroup=Parameters,Parameter=k1" value="349.37" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I10 from M2]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I10 from M2],ParameterGroup=Parameters,Parameter=k1" value="0.00037199999999999999" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I10 from Tr]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I10 from Tr],ParameterGroup=Parameters,Parameter=v10r" value="455.28691868096485" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I10 from Tr],ParameterGroup=Parameters,Parameter=n2r" value="3" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I10 from Tr],ParameterGroup=Parameters,Parameter=c2" value="6.8600000000000005e-08" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I10]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I10],ParameterGroup=Parameters,Parameter=k1" value="116.48" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I12 from M1]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I12 from M1],ParameterGroup=Parameters,Parameter=v12m" value="0.00026499999999999999" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I12 from M1],ParameterGroup=Parameters,Parameter=c10" value="1.5400000000000001e-06" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I12]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I12],ParameterGroup=Parameters,Parameter=k1" value="8.3300000000000001" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M0 to M1]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M0 to M1],ParameterGroup=Parameters,Parameter=f" value="1" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M0 to M1],ParameterGroup=Parameters,Parameter=delta_m_cit" value="2.3999999999999999" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M0 to M1],ParameterGroup=Parameters,Parameter=zet_cit" value="9.7499999999999998e-06" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M1 to M2]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M1 to M2],ParameterGroup=Parameters,Parameter=sigma" value="24" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M1 to M2],ParameterGroup=Parameters,Parameter=zeta" value="6.7699999999999996e-12" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M2 to M1]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M2 to M1],ParameterGroup=Parameters,Parameter=sigma" value="24" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M2 to M1],ParameterGroup=Parameters,Parameter=zeta" value="2.5799999999999999e-06" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of M1]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of M1],ParameterGroup=Parameters,Parameter=k1" value="1" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M0 to M2]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M0 to M2],ParameterGroup=Parameters,Parameter=f" value="10" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M0 to M2],ParameterGroup=Parameters,Parameter=delta_m_cit" value="24" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M0 to M2],ParameterGroup=Parameters,Parameter=zet_cit" value="1.5400000000000001e-06" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of M2]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of M2],ParameterGroup=Parameters,Parameter=k1" value="1" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T1 from M]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T1 from M],ParameterGroup=Parameters,Parameter=g2" value="0.053499999999999999" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T1 from M],ParameterGroup=Parameters,Parameter=gr1" value="0.060600000000000001" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T1 from M],ParameterGroup=Parameters,Parameter=s12" value="100000" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T1 from M],ParameterGroup=Parameters,Parameter=c12" value="4.9000000000000002e-08" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T1 from M],ParameterGroup=Parameters,Parameter=c10" value="1.4500000000000001e-06" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Proliferation of T1]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Proliferation of T1],ParameterGroup=Parameters,Parameter=s2" value="1.23" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Proliferation of T1],ParameterGroup=Parameters,Parameter=c2" value="6.8600000000000005e-08" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Proliferation of T1],ParameterGroup=Parameters,Parameter=g2" value="0.183" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Proliferation of T1],ParameterGroup=Parameters,Parameter=gr1" value="0.060600000000000001" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of T1]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of T1],ParameterGroup=Parameters,Parameter=k1" value="1.3999999999999999" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of T2]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of T2],ParameterGroup=Parameters,Parameter=k1" value="1.3999999999999999" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of T17]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of T17],ParameterGroup=Parameters,Parameter=k1" value="1.3999999999999999" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of Tr]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of Tr],ParameterGroup=Parameters,Parameter=k1" value="1.3999999999999999" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+        </ModelParameterGroup>
+      </ModelParameterSet>
+      <ModelParameterSet key="ModelParameterSet_17" name="PE: 2024-11-19T12:42:51Z Exp: Original">
+        <MiriamAnnotation>
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelParameterSet_17">
 </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
@@ -4660,12 +4645,10 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           </ModelParameterGroup>
         </ModelParameterGroup>
       </ModelParameterSet>
-      <ModelParameterSet key="ModelParameterSet_17" name="PE: 2024-11-19T12:42:51Z Exp: Experiment">
+      <ModelParameterSet key="ModelParameterSet_18" name="PE: 2024-11-19T12:42:51Z Exp: Experiment">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#ModelParameterSet_17">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelParameterSet_18">
 </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
@@ -4845,196 +4828,9 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           </ModelParameterGroup>
         </ModelParameterGroup>
       </ModelParameterSet>
-      <ModelParameterSet key="ModelParameterSet_18" name="PE: 2024-11-19T12:43:59Z Exp: Original">
+      <ModelParameterSet key="ModelParameterSet_19" name="PE: 2024-11-19T12:43:59Z Exp: Original">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#ModelParameterSet_18">
-</rdf:Description>
-</rdf:RDF>
-        </MiriamAnnotation>
-        <ModelParameterGroup cn="String=Initial Time" type="Group">
-          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy" value="0" type="Model" simulationType="time"/>
-        </ModelParameterGroup>
-        <ModelParameterGroup cn="String=Initial Compartment Sizes" type="Group">
-          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]" value="1" type="Compartment" simulationType="fixed"/>
-        </ModelParameterGroup>
-        <ModelParameterGroup cn="String=Initial Species Values" type="Group">
-          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[Ig]" value="2.5799999999999999e-06" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[M1]" value="0.023399999999999921" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[I2]" value="6.8599999999999304e-08" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[T1]" value="0.045799999999999993" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[I4]" value="9.6999999999999462e-09" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[T2]" value="0.0134" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[M2]" value="0.025000000000000001" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[I21]" value="4.25e-06" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[M]" value="0.048399999999999922" type="Species" simulationType="assignment"/>
-          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[I6]" value="7.9999999999999996e-06" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[Ia]" value="9.7499999999998948e-06" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[T17]" value="20" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[Tr]" value="0.060599999999999925" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[Ib]" value="6.7699999999999689e-12" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[I10]" value="1.5399999999999836e-06" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[I12]" value="4.8999999999999373e-08" type="Species" simulationType="reactions"/>
-          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[M0]" value="0.0015" type="Species" simulationType="fixed"/>
-        </ModelParameterGroup>
-        <ModelParameterGroup cn="String=Initial Global Quantities" type="Group">
-        </ModelParameterGroup>
-        <ModelParameterGroup cn="String=Kinetic Parameters" type="Group">
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of Tr]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=sb" value="14.02" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=cb" value="6.7699999999999996e-12" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=s10" value="14.02" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=c10" value="1.5400000000000001e-06" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=c2" value="6.8600000000000005e-08" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=ca" value="9.7499999999999998e-06" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=g17" value="0.33700000000000002" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T2]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T2],ParameterGroup=Parameters,Parameter=s4" value="1.9399999999999999" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T2],ParameterGroup=Parameters,Parameter=c4" value="9.6999999999999992e-09" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T2],ParameterGroup=Parameters,Parameter=g1" value="0.183" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T2],ParameterGroup=Parameters,Parameter=gr2" value="0.060600000000000001" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=s21" value="156.16999999999999" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=c21" value="4.25e-06" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=s6" value="156.16999999999999" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=c6" value="7.9999999999999996e-06" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=cb" value="6.7699999999999996e-12" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=cg" value="2.5799999999999999e-06" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=c4" value="9.6999999999999992e-09" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=gr17" value="0.060600000000000001" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ig from M1]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ig from M1],ParameterGroup=Parameters,Parameter=k1" value="8.1999999999999994e-06" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ig from T1]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ig from T1],ParameterGroup=Parameters,Parameter=k1" value="4.1e-05" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of Ig]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of Ig],ParameterGroup=Parameters,Parameter=k1" value="29.120000000000001" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I2 from T1]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I2 from T1],ParameterGroup=Parameters,Parameter=k1" value="4.1e-05" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I2]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I2],ParameterGroup=Parameters,Parameter=k1" value="537.46000000000004" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prof of I4 from M2]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prof of I4 from M2],ParameterGroup=Parameters,Parameter=k1" value="5.8300000000000001e-05" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I4 from T2]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I4 from T2],ParameterGroup=Parameters,Parameter=k1" value="0.000175" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I4]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I4],ParameterGroup=Parameters,Parameter=k1" value="349.37" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I21 from T17]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I21 from T17],ParameterGroup=Parameters,Parameter=k1" value="0.00080500000000000005" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I21]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I21],ParameterGroup=Parameters,Parameter=k1" value="63.979999999999997" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I6 from M1]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I6 from M1],ParameterGroup=Parameters,Parameter=k1" value="0.00363" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I6]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I6],ParameterGroup=Parameters,Parameter=k1" value="29.109999999999999" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ia from M1]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ia from M1],ParameterGroup=Parameters,Parameter=k1" value="0.021000000000000001" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ia from T1]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ia from T1],ParameterGroup=Parameters,Parameter=k1" value="0.073499999999999996" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of Ia]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of Ia],ParameterGroup=Parameters,Parameter=k1" value="388.14999999999998" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ib from M2]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ib from M2],ParameterGroup=Parameters,Parameter=k1" value="5.5999999999999997e-09" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ib from Tr]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ib from Tr],ParameterGroup=Parameters,Parameter=k1" value="3.8999999999999998e-08" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of Ib]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of Ib],ParameterGroup=Parameters,Parameter=k1" value="349.37" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I10 from M2]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I10 from M2],ParameterGroup=Parameters,Parameter=k1" value="0.00037199999999999999" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I10 from Tr]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I10 from Tr],ParameterGroup=Parameters,Parameter=v10r" value="0.0011199999999999999" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I10 from Tr],ParameterGroup=Parameters,Parameter=n2r" value="3" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I10 from Tr],ParameterGroup=Parameters,Parameter=c2" value="6.8600000000000005e-08" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I10]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I10],ParameterGroup=Parameters,Parameter=k1" value="116.48" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I12 from M1]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I12 from M1],ParameterGroup=Parameters,Parameter=v12m" value="0.00026499999999999999" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I12 from M1],ParameterGroup=Parameters,Parameter=c10" value="1.5400000000000001e-06" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I12]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I12],ParameterGroup=Parameters,Parameter=k1" value="8.3300000000000001" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M0 to M1]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M0 to M1],ParameterGroup=Parameters,Parameter=f" value="1" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M0 to M1],ParameterGroup=Parameters,Parameter=delta_m_cit" value="2.3999999999999999" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M0 to M1],ParameterGroup=Parameters,Parameter=zet_cit" value="9.7499999999999998e-06" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M1 to M2]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M1 to M2],ParameterGroup=Parameters,Parameter=sigma" value="24" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M1 to M2],ParameterGroup=Parameters,Parameter=zeta" value="6.7699999999999996e-12" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M2 to M1]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M2 to M1],ParameterGroup=Parameters,Parameter=sigma" value="24" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M2 to M1],ParameterGroup=Parameters,Parameter=zeta" value="2.5799999999999999e-06" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of M1]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of M1],ParameterGroup=Parameters,Parameter=k1" value="1" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M0 to M2]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M0 to M2],ParameterGroup=Parameters,Parameter=f" value="10" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M0 to M2],ParameterGroup=Parameters,Parameter=delta_m_cit" value="24" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M0 to M2],ParameterGroup=Parameters,Parameter=zet_cit" value="1.5400000000000001e-06" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of M2]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of M2],ParameterGroup=Parameters,Parameter=k1" value="1" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T1 from M]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T1 from M],ParameterGroup=Parameters,Parameter=g2" value="0.053499999999999999" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T1 from M],ParameterGroup=Parameters,Parameter=gr1" value="0.060600000000000001" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T1 from M],ParameterGroup=Parameters,Parameter=s12" value="10.93" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T1 from M],ParameterGroup=Parameters,Parameter=c12" value="4.9000000000000002e-08" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T1 from M],ParameterGroup=Parameters,Parameter=c10" value="1.4500000000000001e-06" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Proliferation of T1]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Proliferation of T1],ParameterGroup=Parameters,Parameter=s2" value="1.23" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Proliferation of T1],ParameterGroup=Parameters,Parameter=c2" value="6.8600000000000005e-08" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Proliferation of T1],ParameterGroup=Parameters,Parameter=g2" value="0.183" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Proliferation of T1],ParameterGroup=Parameters,Parameter=gr1" value="0.060600000000000001" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of T1]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of T1],ParameterGroup=Parameters,Parameter=k1" value="1.3999999999999999" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of T2]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of T2],ParameterGroup=Parameters,Parameter=k1" value="1.3999999999999999" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of T17]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of T17],ParameterGroup=Parameters,Parameter=k1" value="1.3999999999999999" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of Tr]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of Tr],ParameterGroup=Parameters,Parameter=k1" value="1.3999999999999999" type="ReactionParameter" simulationType="fixed"/>
-          </ModelParameterGroup>
-        </ModelParameterGroup>
-      </ModelParameterSet>
-      <ModelParameterSet key="ModelParameterSet_19" name="PE: 2024-11-19T12:43:59Z Exp: Experiment">
-        <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 <rdf:Description rdf:about="#ModelParameterSet_19">
 </rdf:Description>
 </rdf:RDF>
@@ -5068,24 +4864,24 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         </ModelParameterGroup>
         <ModelParameterGroup cn="String=Kinetic Parameters" type="Group">
           <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of Tr]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=sb" value="40.707709023345004" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=sb" value="14.02" type="ReactionParameter" simulationType="fixed"/>
             <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=cb" value="6.7699999999999996e-12" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=s10" value="46.970608697387831" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=s10" value="14.02" type="ReactionParameter" simulationType="fixed"/>
             <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=c10" value="1.5400000000000001e-06" type="ReactionParameter" simulationType="fixed"/>
             <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=c2" value="6.8600000000000005e-08" type="ReactionParameter" simulationType="fixed"/>
             <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=ca" value="9.7499999999999998e-06" type="ReactionParameter" simulationType="fixed"/>
             <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=g17" value="0.33700000000000002" type="ReactionParameter" simulationType="fixed"/>
           </ModelParameterGroup>
           <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T2]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T2],ParameterGroup=Parameters,Parameter=s4" value="12.226247974603387" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T2],ParameterGroup=Parameters,Parameter=s4" value="1.9399999999999999" type="ReactionParameter" simulationType="fixed"/>
             <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T2],ParameterGroup=Parameters,Parameter=c4" value="9.6999999999999992e-09" type="ReactionParameter" simulationType="fixed"/>
             <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T2],ParameterGroup=Parameters,Parameter=g1" value="0.183" type="ReactionParameter" simulationType="fixed"/>
             <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T2],ParameterGroup=Parameters,Parameter=gr2" value="0.060600000000000001" type="ReactionParameter" simulationType="fixed"/>
           </ModelParameterGroup>
           <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=s21" value="1.2220446049250314e-15" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=s21" value="156.16999999999999" type="ReactionParameter" simulationType="fixed"/>
             <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=c21" value="4.25e-06" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=s6" value="0.0016313849113738662" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=s6" value="156.16999999999999" type="ReactionParameter" simulationType="fixed"/>
             <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=c6" value="7.9999999999999996e-06" type="ReactionParameter" simulationType="fixed"/>
             <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=cb" value="6.7699999999999996e-12" type="ReactionParameter" simulationType="fixed"/>
             <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=cg" value="2.5799999999999999e-06" type="ReactionParameter" simulationType="fixed"/>
@@ -5096,7 +4892,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ig from M1],ParameterGroup=Parameters,Parameter=k1" value="8.1999999999999994e-06" type="ReactionParameter" simulationType="fixed"/>
           </ModelParameterGroup>
           <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ig from T1]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ig from T1],ParameterGroup=Parameters,Parameter=k1" value="3.7285810314227894e-05" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ig from T1],ParameterGroup=Parameters,Parameter=k1" value="4.1e-05" type="ReactionParameter" simulationType="fixed"/>
           </ModelParameterGroup>
           <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of Ig]" type="Reaction">
             <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of Ig],ParameterGroup=Parameters,Parameter=k1" value="29.120000000000001" type="ReactionParameter" simulationType="fixed"/>
@@ -5132,7 +4928,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ia from M1],ParameterGroup=Parameters,Parameter=k1" value="0.021000000000000001" type="ReactionParameter" simulationType="fixed"/>
           </ModelParameterGroup>
           <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ia from T1]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ia from T1],ParameterGroup=Parameters,Parameter=k1" value="0.048195373342827953" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ia from T1],ParameterGroup=Parameters,Parameter=k1" value="0.073499999999999996" type="ReactionParameter" simulationType="fixed"/>
           </ModelParameterGroup>
           <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of Ia]" type="Reaction">
             <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of Ia],ParameterGroup=Parameters,Parameter=k1" value="388.14999999999998" type="ReactionParameter" simulationType="fixed"/>
@@ -5141,7 +4937,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ib from M2],ParameterGroup=Parameters,Parameter=k1" value="5.5999999999999997e-09" type="ReactionParameter" simulationType="fixed"/>
           </ModelParameterGroup>
           <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ib from Tr]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ib from Tr],ParameterGroup=Parameters,Parameter=k1" value="4.7594527048703086e-08" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ib from Tr],ParameterGroup=Parameters,Parameter=k1" value="3.8999999999999998e-08" type="ReactionParameter" simulationType="fixed"/>
           </ModelParameterGroup>
           <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of Ib]" type="Reaction">
             <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of Ib],ParameterGroup=Parameters,Parameter=k1" value="349.37" type="ReactionParameter" simulationType="fixed"/>
@@ -5150,7 +4946,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I10 from M2],ParameterGroup=Parameters,Parameter=k1" value="0.00037199999999999999" type="ReactionParameter" simulationType="fixed"/>
           </ModelParameterGroup>
           <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I10 from Tr]" type="Reaction">
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I10 from Tr],ParameterGroup=Parameters,Parameter=v10r" value="0.014716350012150985" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I10 from Tr],ParameterGroup=Parameters,Parameter=v10r" value="0.0011199999999999999" type="ReactionParameter" simulationType="fixed"/>
             <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I10 from Tr],ParameterGroup=Parameters,Parameter=n2r" value="3" type="ReactionParameter" simulationType="fixed"/>
             <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I10 from Tr],ParameterGroup=Parameters,Parameter=c2" value="6.8600000000000005e-08" type="ReactionParameter" simulationType="fixed"/>
           </ModelParameterGroup>
@@ -5191,7 +4987,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T1 from M]" type="Reaction">
             <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T1 from M],ParameterGroup=Parameters,Parameter=g2" value="0.053499999999999999" type="ReactionParameter" simulationType="fixed"/>
             <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T1 from M],ParameterGroup=Parameters,Parameter=gr1" value="0.060600000000000001" type="ReactionParameter" simulationType="fixed"/>
-            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T1 from M],ParameterGroup=Parameters,Parameter=s12" value="9.5711627037199527" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T1 from M],ParameterGroup=Parameters,Parameter=s12" value="10.93" type="ReactionParameter" simulationType="fixed"/>
             <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T1 from M],ParameterGroup=Parameters,Parameter=c12" value="4.9000000000000002e-08" type="ReactionParameter" simulationType="fixed"/>
             <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T1 from M],ParameterGroup=Parameters,Parameter=c10" value="1.4500000000000001e-06" type="ReactionParameter" simulationType="fixed"/>
           </ModelParameterGroup>
@@ -5215,11 +5011,9 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           </ModelParameterGroup>
         </ModelParameterGroup>
       </ModelParameterSet>
-      <ModelParameterSet key="ModelParameterSet_20" name="PE: 2024-11-19T12:56:24Z Exp: Original">
+      <ModelParameterSet key="ModelParameterSet_20" name="PE: 2024-11-19T12:43:59Z Exp: Experiment">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 <rdf:Description rdf:about="#ModelParameterSet_20">
 </rdf:Description>
 </rdf:RDF>
@@ -5253,6 +5047,189 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         </ModelParameterGroup>
         <ModelParameterGroup cn="String=Kinetic Parameters" type="Group">
           <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of Tr]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=sb" value="40.707709023345004" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=cb" value="6.7699999999999996e-12" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=s10" value="46.970608697387831" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=c10" value="1.5400000000000001e-06" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=c2" value="6.8600000000000005e-08" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=ca" value="9.7499999999999998e-06" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=g17" value="0.33700000000000002" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T2]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T2],ParameterGroup=Parameters,Parameter=s4" value="12.226247974603387" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T2],ParameterGroup=Parameters,Parameter=c4" value="9.6999999999999992e-09" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T2],ParameterGroup=Parameters,Parameter=g1" value="0.183" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T2],ParameterGroup=Parameters,Parameter=gr2" value="0.060600000000000001" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=s21" value="1.2220446049250314e-15" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=c21" value="4.25e-06" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=s6" value="0.0016313849113738662" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=c6" value="7.9999999999999996e-06" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=cb" value="6.7699999999999996e-12" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=cg" value="2.5799999999999999e-06" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=c4" value="9.6999999999999992e-09" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T17],ParameterGroup=Parameters,Parameter=gr17" value="0.060600000000000001" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ig from M1]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ig from M1],ParameterGroup=Parameters,Parameter=k1" value="8.1999999999999994e-06" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ig from T1]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ig from T1],ParameterGroup=Parameters,Parameter=k1" value="3.7285810314227894e-05" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of Ig]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of Ig],ParameterGroup=Parameters,Parameter=k1" value="29.120000000000001" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I2 from T1]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I2 from T1],ParameterGroup=Parameters,Parameter=k1" value="4.1e-05" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I2]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I2],ParameterGroup=Parameters,Parameter=k1" value="537.46000000000004" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prof of I4 from M2]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prof of I4 from M2],ParameterGroup=Parameters,Parameter=k1" value="5.8300000000000001e-05" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I4 from T2]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I4 from T2],ParameterGroup=Parameters,Parameter=k1" value="0.000175" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I4]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I4],ParameterGroup=Parameters,Parameter=k1" value="349.37" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I21 from T17]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I21 from T17],ParameterGroup=Parameters,Parameter=k1" value="0.00080500000000000005" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I21]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I21],ParameterGroup=Parameters,Parameter=k1" value="63.979999999999997" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I6 from M1]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I6 from M1],ParameterGroup=Parameters,Parameter=k1" value="0.00363" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I6]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I6],ParameterGroup=Parameters,Parameter=k1" value="29.109999999999999" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ia from M1]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ia from M1],ParameterGroup=Parameters,Parameter=k1" value="0.021000000000000001" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ia from T1]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ia from T1],ParameterGroup=Parameters,Parameter=k1" value="0.048195373342827953" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of Ia]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of Ia],ParameterGroup=Parameters,Parameter=k1" value="388.14999999999998" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ib from M2]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ib from M2],ParameterGroup=Parameters,Parameter=k1" value="5.5999999999999997e-09" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ib from Tr]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of Ib from Tr],ParameterGroup=Parameters,Parameter=k1" value="4.7594527048703086e-08" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of Ib]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of Ib],ParameterGroup=Parameters,Parameter=k1" value="349.37" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I10 from M2]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I10 from M2],ParameterGroup=Parameters,Parameter=k1" value="0.00037199999999999999" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I10 from Tr]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I10 from Tr],ParameterGroup=Parameters,Parameter=v10r" value="0.014716350012150985" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I10 from Tr],ParameterGroup=Parameters,Parameter=n2r" value="3" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I10 from Tr],ParameterGroup=Parameters,Parameter=c2" value="6.8600000000000005e-08" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I10]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I10],ParameterGroup=Parameters,Parameter=k1" value="116.48" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I12 from M1]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I12 from M1],ParameterGroup=Parameters,Parameter=v12m" value="0.00026499999999999999" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Prod of I12 from M1],ParameterGroup=Parameters,Parameter=c10" value="1.5400000000000001e-06" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I12]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Decay of I12],ParameterGroup=Parameters,Parameter=k1" value="8.3300000000000001" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M0 to M1]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M0 to M1],ParameterGroup=Parameters,Parameter=f" value="1" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M0 to M1],ParameterGroup=Parameters,Parameter=delta_m_cit" value="2.3999999999999999" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M0 to M1],ParameterGroup=Parameters,Parameter=zet_cit" value="9.7499999999999998e-06" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M1 to M2]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M1 to M2],ParameterGroup=Parameters,Parameter=sigma" value="24" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M1 to M2],ParameterGroup=Parameters,Parameter=zeta" value="6.7699999999999996e-12" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M2 to M1]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M2 to M1],ParameterGroup=Parameters,Parameter=sigma" value="24" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M2 to M1],ParameterGroup=Parameters,Parameter=zeta" value="2.5799999999999999e-06" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of M1]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of M1],ParameterGroup=Parameters,Parameter=k1" value="1" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M0 to M2]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M0 to M2],ParameterGroup=Parameters,Parameter=f" value="10" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M0 to M2],ParameterGroup=Parameters,Parameter=delta_m_cit" value="24" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Diff of M0 to M2],ParameterGroup=Parameters,Parameter=zet_cit" value="1.5400000000000001e-06" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of M2]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of M2],ParameterGroup=Parameters,Parameter=k1" value="1" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T1 from M]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T1 from M],ParameterGroup=Parameters,Parameter=g2" value="0.053499999999999999" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T1 from M],ParameterGroup=Parameters,Parameter=gr1" value="0.060600000000000001" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T1 from M],ParameterGroup=Parameters,Parameter=s12" value="9.5711627037199527" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T1 from M],ParameterGroup=Parameters,Parameter=c12" value="4.9000000000000002e-08" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of T1 from M],ParameterGroup=Parameters,Parameter=c10" value="1.4500000000000001e-06" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Proliferation of T1]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Proliferation of T1],ParameterGroup=Parameters,Parameter=s2" value="1.23" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Proliferation of T1],ParameterGroup=Parameters,Parameter=c2" value="6.8600000000000005e-08" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Proliferation of T1],ParameterGroup=Parameters,Parameter=g2" value="0.183" type="ReactionParameter" simulationType="fixed"/>
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Proliferation of T1],ParameterGroup=Parameters,Parameter=gr1" value="0.060600000000000001" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of T1]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of T1],ParameterGroup=Parameters,Parameter=k1" value="1.3999999999999999" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of T2]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of T2],ParameterGroup=Parameters,Parameter=k1" value="1.3999999999999999" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of T17]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of T17],ParameterGroup=Parameters,Parameter=k1" value="1.3999999999999999" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of Tr]" type="Reaction">
+            <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Death of Tr],ParameterGroup=Parameters,Parameter=k1" value="1.3999999999999999" type="ReactionParameter" simulationType="fixed"/>
+          </ModelParameterGroup>
+        </ModelParameterGroup>
+      </ModelParameterSet>
+      <ModelParameterSet key="ModelParameterSet_21" name="PE: 2024-11-19T12:56:24Z Exp: Original">
+        <MiriamAnnotation>
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelParameterSet_21">
+</rdf:Description>
+</rdf:RDF>
+        </MiriamAnnotation>
+        <ModelParameterGroup cn="String=Initial Time" type="Group">
+          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy" value="0" type="Model" simulationType="time"/>
+        </ModelParameterGroup>
+        <ModelParameterGroup cn="String=Initial Compartment Sizes" type="Group">
+          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]" value="1" type="Compartment" simulationType="fixed"/>
+        </ModelParameterGroup>
+        <ModelParameterGroup cn="String=Initial Species Values" type="Group">
+          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[Ig]" value="2.5799999999999999e-06" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[M1]" value="0.023399999999999921" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[I2]" value="6.8599999999999304e-08" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[T1]" value="0.045799999999999993" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[I4]" value="9.6999999999999462e-09" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[T2]" value="0.0134" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[M2]" value="0.025000000000000001" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[I21]" value="4.25e-06" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[M]" value="0.048399999999999922" type="Species" simulationType="assignment"/>
+          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[I6]" value="7.9999999999999996e-06" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[Ia]" value="9.7499999999998948e-06" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[T17]" value="20" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[Tr]" value="0.060599999999999925" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[Ib]" value="6.7699999999999689e-12" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[I10]" value="1.5399999999999836e-06" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[I12]" value="4.8999999999999373e-08" type="Species" simulationType="reactions"/>
+          <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[M0]" value="0.0015" type="Species" simulationType="fixed"/>
+        </ModelParameterGroup>
+        <ModelParameterGroup cn="String=Initial Global Quantities" type="Group">
+        </ModelParameterGroup>
+        <ModelParameterGroup cn="String=Kinetic Parameters" type="Group">
+          <ModelParameterGroup cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of Tr]" type="Reaction">
             <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=sb" value="14.02" type="ReactionParameter" simulationType="fixed"/>
             <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=cb" value="6.7699999999999996e-12" type="ReactionParameter" simulationType="fixed"/>
             <ModelParameter cn="CN=Root,Model=Lo 2016 Healthy,Vector=Reactions[Induction of Tr],ParameterGroup=Parameters,Parameter=s10" value="14.02" type="ReactionParameter" simulationType="fixed"/>
@@ -5400,12 +5377,10 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           </ModelParameterGroup>
         </ModelParameterGroup>
       </ModelParameterSet>
-      <ModelParameterSet key="ModelParameterSet_21" name="PE: 2024-11-19T12:56:24Z Exp: Experiment">
+      <ModelParameterSet key="ModelParameterSet_22" name="PE: 2024-11-19T12:56:24Z Exp: Experiment">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#ModelParameterSet_21">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelParameterSet_22">
 </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
@@ -5585,12 +5560,10 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           </ModelParameterGroup>
         </ModelParameterGroup>
       </ModelParameterSet>
-      <ModelParameterSet key="ModelParameterSet_22" name="PE: 2024-11-19T12:59:51Z Exp: Original">
+      <ModelParameterSet key="ModelParameterSet_23" name="PE: 2024-11-19T12:59:51Z Exp: Original">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#ModelParameterSet_22">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelParameterSet_23">
 </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
@@ -5770,12 +5743,10 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           </ModelParameterGroup>
         </ModelParameterGroup>
       </ModelParameterSet>
-      <ModelParameterSet key="ModelParameterSet_23" name="PE: 2024-11-19T12:59:51Z Exp: Experiment">
+      <ModelParameterSet key="ModelParameterSet_24" name="PE: 2024-11-19T12:59:51Z Exp: Experiment">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#ModelParameterSet_23">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelParameterSet_24">
 </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
@@ -5955,12 +5926,10 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           </ModelParameterGroup>
         </ModelParameterGroup>
       </ModelParameterSet>
-      <ModelParameterSet key="ModelParameterSet_24" name="PE: 2024-11-19T13:06:42Z Exp: Original">
+      <ModelParameterSet key="ModelParameterSet_25" name="PE: 2024-11-19T13:06:42Z Exp: Original">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#ModelParameterSet_24">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelParameterSet_25">
 </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
@@ -6140,12 +6109,10 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
           </ModelParameterGroup>
         </ModelParameterGroup>
       </ModelParameterSet>
-      <ModelParameterSet key="ModelParameterSet_25" name="PE: 2024-11-19T13:06:42Z Exp: Experiment">
+      <ModelParameterSet key="ModelParameterSet_26" name="PE: 2024-11-19T13:06:42Z Exp: Experiment">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#ModelParameterSet_25">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="#ModelParameterSet_26">
 </rdf:Description>
 </rdf:RDF>
         </MiriamAnnotation>
@@ -6327,7 +6294,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       </ModelParameterSet>
     </ListOfModelParameterSets>
     <StateTemplate>
-      <StateTemplateVariable objectReference="Model_1"/>
+      <StateTemplateVariable objectReference="Model_0"/>
       <StateTemplateVariable objectReference="Metabolite_1"/>
       <StateTemplateVariable objectReference="Metabolite_0"/>
       <StateTemplateVariable objectReference="Metabolite_3"/>
@@ -6352,8 +6319,8 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
     </InitialState>
   </Model>
   <ListOfTasks>
-    <Task key="Task_17" name="Steady-State" type="steadyState" scheduled="false" updateModel="false">
-      <Report reference="Report_11" target="steady_state_test1.txt" append="1" confirmOverwrite="1"/>
+    <Task key="Task_13" name="Steady-State" type="steadyState" scheduled="false" updateModel="false">
+      <Report reference="Report_10" target="steady_state_test1.txt" append="1" confirmOverwrite="1"/>
       <Problem>
         <Parameter name="JacobianRequested" type="bool" value="1"/>
         <Parameter name="StabilityAnalysisRequested" type="bool" value="1"/>
@@ -6371,7 +6338,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Parameter name="Target Criterion" type="string" value="Distance and Rate"/>
       </Method>
     </Task>
-    <Task key="Task_18" name="Time-Course" type="timeCourse" scheduled="false" updateModel="false">
+    <Task key="Task_12" name="Time-Course" type="timeCourse" scheduled="false" updateModel="false">
       <Report reference="Report_23" target="" append="1" confirmOverwrite="1"/>
       <Problem>
         <Parameter name="AutomaticStepSize" type="bool" value="0"/>
@@ -6393,7 +6360,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Parameter name="Max Internal Step Size" type="unsignedFloat" value="0"/>
       </Method>
     </Task>
-    <Task key="Task_19" name="Scan" type="scan" scheduled="false" updateModel="false">
+    <Task key="Task_11" name="Scan" type="scan" scheduled="false" updateModel="false">
       <Problem>
         <Parameter name="Subtask" type="unsignedInteger" value="1"/>
         <ParameterGroup name="ScanItems">
@@ -6405,15 +6372,15 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <Method name="Scan Framework" type="ScanFramework">
       </Method>
     </Task>
-    <Task key="Task_20" name="Elementary Flux Modes" type="fluxMode" scheduled="false" updateModel="false">
-      <Report reference="Report_13" target="" append="1" confirmOverwrite="1"/>
+    <Task key="Task_10" name="Elementary Flux Modes" type="fluxMode" scheduled="false" updateModel="false">
+      <Report reference="Report_8" target="" append="1" confirmOverwrite="1"/>
       <Problem>
       </Problem>
       <Method name="EFM Algorithm" type="EFMAlgorithm">
       </Method>
     </Task>
-    <Task key="Task_21" name="Optimization" type="optimization" scheduled="false" updateModel="false">
-      <Report reference="Report_14" target="" append="1" confirmOverwrite="1"/>
+    <Task key="Task_9" name="Optimization" type="optimization" scheduled="false" updateModel="false">
+      <Report reference="Report_7" target="" append="1" confirmOverwrite="1"/>
       <Problem>
         <Parameter name="Subtask" type="cn" value="CN=Root,Vector=TaskList[Steady-State]"/>
         <ParameterText name="ObjectiveExpression" type="expression">
@@ -6434,8 +6401,8 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Parameter name="Seed" type="unsignedInteger" value="0"/>
       </Method>
     </Task>
-    <Task key="Task_22" name="Parameter Estimation" type="parameterFitting" scheduled="false" updateModel="false">
-      <Report reference="Report_10" target="parameter_estimation_group1.txt" append="1" confirmOverwrite="1"/>
+    <Task key="Task_8" name="Parameter Estimation" type="parameterFitting" scheduled="false" updateModel="false">
+      <Report reference="Report_26" target="parameter_estimation_group1.txt" append="1" confirmOverwrite="1"/>
       <Problem>
         <Parameter name="Maximize" type="bool" value="0"/>
         <Parameter name="Randomize Start Values" type="bool" value="0"/>
@@ -6551,7 +6518,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Parameter name="Time-Sens" type="cn" value=""/>
         <ParameterGroup name="Experiment Set">
           <ParameterGroup name="Experiment">
-            <Parameter name="Key" type="key" value="Experiment_1"/>
+            <Parameter name="Key" type="key" value="Experiment_0"/>
             <Parameter name="File Name" type="file" value="../data/type1_species.csv"/>
             <Parameter name="First Row" type="unsignedInteger" value="1"/>
             <Parameter name="Last Row" type="unsignedInteger" value="2"/>
@@ -6615,10 +6582,10 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Parameter name="Lambda Increase" type="float" value="4"/>
       </Method>
     </Task>
-    <Task key="Task_23" name="Metabolic Control Analysis" type="metabolicControlAnalysis" scheduled="false" updateModel="false">
-      <Report reference="Report_16" target="" append="1" confirmOverwrite="1"/>
+    <Task key="Task_7" name="Metabolic Control Analysis" type="metabolicControlAnalysis" scheduled="false" updateModel="false">
+      <Report reference="Report_5" target="" append="1" confirmOverwrite="1"/>
       <Problem>
-        <Parameter name="Steady-State" type="key" value="Task_17"/>
+        <Parameter name="Steady-State" type="key" value="Task_13"/>
       </Problem>
       <Method name="MCA Method (Reder)" type="MCAMethod(Reder)">
         <Parameter name="Modulation Factor" type="unsignedFloat" value="1.0000000000000001e-09"/>
@@ -6626,8 +6593,8 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Parameter name="Use Smallbone" type="bool" value="1"/>
       </Method>
     </Task>
-    <Task key="Task_24" name="Lyapunov Exponents" type="lyapunovExponents" scheduled="false" updateModel="false">
-      <Report reference="Report_17" target="" append="1" confirmOverwrite="1"/>
+    <Task key="Task_6" name="Lyapunov Exponents" type="lyapunovExponents" scheduled="false" updateModel="false">
+      <Report reference="Report_4" target="" append="1" confirmOverwrite="1"/>
       <Problem>
         <Parameter name="ExponentNumber" type="unsignedInteger" value="3"/>
         <Parameter name="DivergenceRequested" type="bool" value="1"/>
@@ -6641,8 +6608,8 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Parameter name="Max Internal Steps" type="unsignedInteger" value="10000"/>
       </Method>
     </Task>
-    <Task key="Task_25" name="Time Scale Separation Analysis" type="timeScaleSeparationAnalysis" scheduled="false" updateModel="false">
-      <Report reference="Report_18" target="" append="1" confirmOverwrite="1"/>
+    <Task key="Task_5" name="Time Scale Separation Analysis" type="timeScaleSeparationAnalysis" scheduled="false" updateModel="false">
+      <Report reference="Report_3" target="" append="1" confirmOverwrite="1"/>
       <Problem>
         <Parameter name="StepNumber" type="unsignedInteger" value="100"/>
         <Parameter name="StepSize" type="float" value="0.01"/>
@@ -6654,8 +6621,8 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Parameter name="Deuflhard Tolerance" type="unsignedFloat" value="0.0001"/>
       </Method>
     </Task>
-    <Task key="Task_26" name="Sensitivities" type="sensitivities" scheduled="false" updateModel="false">
-      <Report reference="Report_19" target="" append="1" confirmOverwrite="1"/>
+    <Task key="Task_16" name="Sensitivities" type="sensitivities" scheduled="false" updateModel="false">
+      <Report reference="Report_2" target="" append="1" confirmOverwrite="1"/>
       <Problem>
         <Parameter name="SubtaskType" type="unsignedInteger" value="1"/>
         <ParameterGroup name="TargetFunctions">
@@ -6678,14 +6645,14 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Parameter name="Delta minimum" type="unsignedFloat" value="9.9999999999999998e-13"/>
       </Method>
     </Task>
-    <Task key="Task_27" name="Moieties" type="moieties" scheduled="false" updateModel="false">
+    <Task key="Task_15" name="Moieties" type="moieties" scheduled="false" updateModel="false">
       <Report reference="Report_25" target="" append="1" confirmOverwrite="1"/>
       <Problem>
       </Problem>
       <Method name="Householder Reduction" type="Householder">
       </Method>
     </Task>
-    <Task key="Task_28" name="Cross Section" type="crosssection" scheduled="false" updateModel="false">
+    <Task key="Task_4" name="Cross Section" type="crosssection" scheduled="false" updateModel="false">
       <Problem>
         <Parameter name="AutomaticStepSize" type="bool" value="0"/>
         <Parameter name="StepNumber" type="unsignedInteger" value="100"/>
@@ -6721,15 +6688,15 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Parameter name="Max Internal Step Size" type="unsignedFloat" value="0"/>
       </Method>
     </Task>
-    <Task key="Task_29" name="Linear Noise Approximation" type="linearNoiseApproximation" scheduled="false" updateModel="false">
-      <Report reference="Report_21" target="" append="1" confirmOverwrite="1"/>
+    <Task key="Task_3" name="Linear Noise Approximation" type="linearNoiseApproximation" scheduled="false" updateModel="false">
+      <Report reference="Report_0" target="" append="1" confirmOverwrite="1"/>
       <Problem>
-        <Parameter name="Steady-State" type="key" value="Task_17"/>
+        <Parameter name="Steady-State" type="key" value="Task_13"/>
       </Problem>
       <Method name="Linear Noise Approximation" type="LinearNoiseApproximation">
       </Method>
     </Task>
-    <Task key="Task_30" name="Time-Course Sensitivities" type="timeSensitivities" scheduled="false" updateModel="false">
+    <Task key="Task_2" name="Time-Course Sensitivities" type="timeSensitivities" scheduled="false" updateModel="false">
       <Problem>
         <Parameter name="AutomaticStepSize" type="bool" value="0"/>
         <Parameter name="StepNumber" type="unsignedInteger" value="100"/>
@@ -6756,7 +6723,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
     </Task>
   </ListOfTasks>
   <ListOfReports>
-    <Report key="Report_11" name="Steady-State" taskType="steadyState" separator="&#x09;" precision="6">
+    <Report key="Report_10" name="Steady-State" taskType="steadyState" separator="&#x09;" precision="6">
       <Comment>
         Automatically generated report.
       </Comment>
@@ -6764,7 +6731,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Object cn="CN=Root,Vector=TaskList[Steady-State]"/>
       </Footer>
     </Report>
-    <Report key="Report_12" name="Time-Course" taskType="timeCourse" separator="&#x09;" precision="6">
+    <Report key="Report_9" name="Time-Course" taskType="timeCourse" separator="&#x09;" precision="6">
       <Comment>
         Automatically generated report.
       </Comment>
@@ -6775,7 +6742,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Object cn="CN=Root,Vector=TaskList[Time-Course],Object=Result"/>
       </Footer>
     </Report>
-    <Report key="Report_13" name="Elementary Flux Modes" taskType="fluxMode" separator="&#x09;" precision="6">
+    <Report key="Report_8" name="Elementary Flux Modes" taskType="fluxMode" separator="&#x09;" precision="6">
       <Comment>
         Automatically generated report.
       </Comment>
@@ -6783,7 +6750,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Object cn="CN=Root,Vector=TaskList[Elementary Flux Modes],Object=Result"/>
       </Footer>
     </Report>
-    <Report key="Report_14" name="Optimization" taskType="optimization" separator="&#x09;" precision="6">
+    <Report key="Report_7" name="Optimization" taskType="optimization" separator="&#x09;" precision="6">
       <Comment>
         Automatically generated report.
       </Comment>
@@ -6807,7 +6774,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Object cn="CN=Root,Vector=TaskList[Optimization],Object=Result"/>
       </Footer>
     </Report>
-    <Report key="Report_15" name="Parameter Estimation" taskType="parameterFitting" separator="&#x09;" precision="6">
+    <Report key="Report_6" name="Parameter Estimation" taskType="parameterFitting" separator="&#x09;" precision="6">
       <Comment>
         Automatically generated report.
       </Comment>
@@ -6831,7 +6798,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Object cn="CN=Root,Vector=TaskList[Parameter Estimation],Object=Result"/>
       </Footer>
     </Report>
-    <Report key="Report_16" name="Metabolic Control Analysis" taskType="metabolicControlAnalysis" separator="&#x09;" precision="6">
+    <Report key="Report_5" name="Metabolic Control Analysis" taskType="metabolicControlAnalysis" separator="&#x09;" precision="6">
       <Comment>
         Automatically generated report.
       </Comment>
@@ -6843,7 +6810,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Object cn="CN=Root,Vector=TaskList[Metabolic Control Analysis],Object=Result"/>
       </Footer>
     </Report>
-    <Report key="Report_17" name="Lyapunov Exponents" taskType="lyapunovExponents" separator="&#x09;" precision="6">
+    <Report key="Report_4" name="Lyapunov Exponents" taskType="lyapunovExponents" separator="&#x09;" precision="6">
       <Comment>
         Automatically generated report.
       </Comment>
@@ -6855,7 +6822,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Object cn="CN=Root,Vector=TaskList[Lyapunov Exponents],Object=Result"/>
       </Footer>
     </Report>
-    <Report key="Report_18" name="Time Scale Separation Analysis" taskType="timeScaleSeparationAnalysis" separator="&#x09;" precision="6">
+    <Report key="Report_3" name="Time Scale Separation Analysis" taskType="timeScaleSeparationAnalysis" separator="&#x09;" precision="6">
       <Comment>
         Automatically generated report.
       </Comment>
@@ -6867,7 +6834,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Object cn="CN=Root,Vector=TaskList[Time Scale Separation Analysis],Object=Result"/>
       </Footer>
     </Report>
-    <Report key="Report_19" name="Sensitivities" taskType="sensitivities" separator="&#x09;" precision="6">
+    <Report key="Report_2" name="Sensitivities" taskType="sensitivities" separator="&#x09;" precision="6">
       <Comment>
         Automatically generated report.
       </Comment>
@@ -6879,7 +6846,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Object cn="CN=Root,Vector=TaskList[Sensitivities],Object=Result"/>
       </Footer>
     </Report>
-    <Report key="Report_20" name="Moieties" taskType="moieties" separator="&#x09;" precision="6">
+    <Report key="Report_1" name="Moieties" taskType="moieties" separator="&#x09;" precision="6">
       <Comment>
         Automatically generated report.
       </Comment>
@@ -6891,7 +6858,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Object cn="CN=Root,Vector=TaskList[Moieties],Object=Result"/>
       </Footer>
     </Report>
-    <Report key="Report_21" name="Linear Noise Approximation" taskType="linearNoiseApproximation" separator="&#x09;" precision="6">
+    <Report key="Report_0" name="Linear Noise Approximation" taskType="linearNoiseApproximation" separator="&#x09;" precision="6">
       <Comment>
         Automatically generated report.
       </Comment>
@@ -6954,7 +6921,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         <Object cn="CN=Root,Model=Lo 2016 Healthy,Reference=Time"/>
       </Table>
     </Report>
-    <Report key="Report_10" name="Create New 3" taskType="unset" separator="&#x09;" precision="6">
+    <Report key="Report_26" name="Create New 3" taskType="unset" separator="&#x09;" precision="6">
       <Comment>
         A table with nothing in it.
       </Comment>
