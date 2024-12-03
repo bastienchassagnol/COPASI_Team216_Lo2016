@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- generated with COPASI 4.44 (Build 295) (http://www.copasi.org) at 2024-11-23T19:59:11Z -->
+<!-- generated with COPASI 4.44 (Build 295) (http://www.copasi.org) at 2024-12-03T13:02:49Z -->
 <?oxygen RNGSchema="http://www.copasi.org/static/schema/CopasiML.rng" type="xml"?>
 <COPASI xmlns="http://www.copasi.org/static/schema" versionMajor="4" versionMinor="44" versionDevel="295" copasiSourcesModified="0">
   <ListOfFunctions>
@@ -305,10 +305,20 @@ Reaction scheme where the products are created from the reactants and the change
     <ListOfMetabolites>
       <Metabolite key="Metabolite_0" name="Ig" simulationType="reactions" compartment="Compartment_0" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#Metabolite_0">
-</rdf:Description>
+<rdf:RDF
+   xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:Description rdf:about="#Metabolite_0">
+    <dcterms:bibliographicCitation>
+      <rdf:Description>
+        <dcterms:description>http://purl.obolibrary.org/obo/PR_000050313</dcterms:description>
+        <CopasiMT:isDescribedBy rdf:resource="urn:miriam:unknown:PR:000050313"/>
+      </rdf:Description>
+    </dcterms:bibliographicCitation>
+  </rdf:Description>
 </rdf:RDF>
+
         </MiriamAnnotation>
       </Metabolite>
       <Metabolite key="Metabolite_1" name="M1" simulationType="reactions" compartment="Compartment_0" addNoise="false">
@@ -323,34 +333,74 @@ Reaction scheme where the products are created from the reactants and the change
       </Metabolite>
       <Metabolite key="Metabolite_2" name="I2" simulationType="reactions" compartment="Compartment_0" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#Metabolite_2">
-</rdf:Description>
+<rdf:RDF
+   xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:Description rdf:about="#Metabolite_2">
+    <dcterms:bibliographicCitation>
+      <rdf:Description>
+        <dcterms:description>http://purl.obolibrary.org/obo/PR_000014710</dcterms:description>
+        <CopasiMT:isDescribedBy rdf:resource="urn:miriam:unknown:PR:000014710"/>
+      </rdf:Description>
+    </dcterms:bibliographicCitation>
+  </rdf:Description>
 </rdf:RDF>
+
         </MiriamAnnotation>
       </Metabolite>
       <Metabolite key="Metabolite_3" name="T1" simulationType="reactions" compartment="Compartment_0" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#Metabolite_3">
-</rdf:Description>
+<rdf:RDF
+   xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:Description rdf:about="#Metabolite_3">
+    <dcterms:bibliographicCitation>
+      <rdf:Description>
+        <dcterms:description>http://purl.obolibrary.org/obo/BTO_0006566</dcterms:description>
+        <CopasiMT:isDescribedBy rdf:resource="urn:miriam:unknown:BTO:0006566"/>
+      </rdf:Description>
+    </dcterms:bibliographicCitation>
+  </rdf:Description>
 </rdf:RDF>
+
         </MiriamAnnotation>
       </Metabolite>
       <Metabolite key="Metabolite_4" name="I4" simulationType="reactions" compartment="Compartment_0" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#Metabolite_4">
-</rdf:Description>
+<rdf:RDF
+   xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:Description rdf:about="#Metabolite_4">
+    <dcterms:bibliographicCitation>
+      <rdf:Description>
+        <dcterms:description>http://purl.obolibrary.org/obo/PR_000037739</dcterms:description>
+        <CopasiMT:isDescribedBy rdf:resource="urn:miriam:unknown:PR:000037739"/>
+      </rdf:Description>
+    </dcterms:bibliographicCitation>
+  </rdf:Description>
 </rdf:RDF>
+
         </MiriamAnnotation>
       </Metabolite>
       <Metabolite key="Metabolite_5" name="T2" simulationType="reactions" compartment="Compartment_0" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#Metabolite_5">
-</rdf:Description>
+<rdf:RDF
+   xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:Description rdf:about="#Metabolite_5">
+    <dcterms:bibliographicCitation>
+      <rdf:Description>
+        <dcterms:description>http://purl.obolibrary.org/obo/NCBITaxon_2060721</dcterms:description>
+        <CopasiMT:isDescribedBy rdf:resource="urn:miriam:unknown:NCBITaxon:2060721"/>
+      </rdf:Description>
+    </dcterms:bibliographicCitation>
+  </rdf:Description>
 </rdf:RDF>
+
         </MiriamAnnotation>
       </Metabolite>
       <Metabolite key="Metabolite_6" name="M2" simulationType="reactions" compartment="Compartment_0" addNoise="false">
@@ -365,19 +415,32 @@ Reaction scheme where the products are created from the reactants and the change
       </Metabolite>
       <Metabolite key="Metabolite_7" name="I21" simulationType="reactions" compartment="Compartment_0" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#Metabolite_7">
-</rdf:Description>
+<rdf:RDF
+   xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:Description rdf:about="#Metabolite_7">
+    <dcterms:bibliographicCitation>
+      <rdf:Description>
+        <dcterms:description>http://purl.obolibrary.org/obo/PR_000044635</dcterms:description>
+        <CopasiMT:isDescribedBy rdf:resource="urn:miriam:unknown:PR:000044635"/>
+      </rdf:Description>
+    </dcterms:bibliographicCitation>
+  </rdf:Description>
 </rdf:RDF>
+
         </MiriamAnnotation>
       </Metabolite>
       <Metabolite key="Metabolite_8" name="M" simulationType="assignment" compartment="Compartment_0" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF
+   xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <rdf:Description rdf:about="#Metabolite_8">
-    <CopasiMT:is rdf:resource="urn:miriam:cl:CL:0000235" />
+    <CopasiMT:is rdf:resource="urn:miriam:cl:CL:0000235"/>
   </rdf:Description>
 </rdf:RDF>
+
         </MiriamAnnotation>
         <Expression>
           &lt;CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[M1],Reference=Concentration>+&lt;CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment],Vector=Metabolites[M2],Reference=Concentration>
@@ -385,56 +448,113 @@ Reaction scheme where the products are created from the reactants and the change
       </Metabolite>
       <Metabolite key="Metabolite_9" name="I6" simulationType="reactions" compartment="Compartment_0" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#Metabolite_9">
-</rdf:Description>
+<rdf:RDF
+   xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:Description rdf:about="#Metabolite_9">
+    <dcterms:bibliographicCitation>
+      <rdf:Description>
+        <dcterms:description>http://purl.obolibrary.org/obo/PR_000063690</dcterms:description>
+        <CopasiMT:isDescribedBy rdf:resource="urn:miriam:unknown:PR:000063690"/>
+      </rdf:Description>
+    </dcterms:bibliographicCitation>
+  </rdf:Description>
 </rdf:RDF>
+
         </MiriamAnnotation>
       </Metabolite>
       <Metabolite key="Metabolite_10" name="Ia" simulationType="reactions" compartment="Compartment_0" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#Metabolite_10">
-</rdf:Description>
+<rdf:RDF
+   xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:Description rdf:about="#Metabolite_10">
+    <dcterms:bibliographicCitation>
+      <rdf:Description>
+        <dcterms:description>http://purl.obolibrary.org/obo/PR_P54968</dcterms:description>
+        <CopasiMT:isDescribedBy rdf:resource="urn:miriam:unknown:PR:P54968"/>
+      </rdf:Description>
+    </dcterms:bibliographicCitation>
+  </rdf:Description>
 </rdf:RDF>
+
         </MiriamAnnotation>
       </Metabolite>
       <Metabolite key="Metabolite_11" name="T17" simulationType="reactions" compartment="Compartment_0" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#Metabolite_11">
-</rdf:Description>
+<rdf:RDF
+   xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:Description rdf:about="#Metabolite_11">
+    <dcterms:bibliographicCitation>
+      <rdf:Description>
+        <dcterms:description>http://purl.obolibrary.org/obo/NCBITaxon_537210</dcterms:description>
+        <CopasiMT:isDescribedBy rdf:resource="urn:miriam:unknown:NCBITaxon:537210"/>
+      </rdf:Description>
+    </dcterms:bibliographicCitation>
+  </rdf:Description>
 </rdf:RDF>
+
         </MiriamAnnotation>
       </Metabolite>
       <Metabolite key="Metabolite_12" name="Tr" simulationType="reactions" compartment="Compartment_0" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#Metabolite_12">
-</rdf:Description>
+<rdf:RDF
+   xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:Description rdf:about="#Metabolite_12">
+    <dcterms:bibliographicCitation>
+      <rdf:Description>
+        <dcterms:description>http://purl.obolibrary.org/obo/NCBITaxon_327765</dcterms:description>
+        <CopasiMT:isDescribedBy rdf:resource="urn:miriam:unknown:NCBITaxon:327765"/>
+      </rdf:Description>
+    </dcterms:bibliographicCitation>
+  </rdf:Description>
 </rdf:RDF>
+
         </MiriamAnnotation>
       </Metabolite>
       <Metabolite key="Metabolite_13" name="Ib" simulationType="reactions" compartment="Compartment_0" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#Metabolite_13">
-</rdf:Description>
+<rdf:RDF
+   xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:Description rdf:about="#Metabolite_13">
+    <dcterms:bibliographicCitation>
+      <rdf:Description>
+        <dcterms:description>http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=27302</dcterms:description>
+        <CopasiMT:isDescribedBy rdf:resource="urn:miriam:unknown:gene_symbol_report?hgnc_id=27302"/>
+      </rdf:Description>
+    </dcterms:bibliographicCitation>
+  </rdf:Description>
 </rdf:RDF>
+
         </MiriamAnnotation>
       </Metabolite>
       <Metabolite key="Metabolite_14" name="I10" simulationType="reactions" compartment="Compartment_0" addNoise="false">
         <MiriamAnnotation>
 <rdf:RDF
+   xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
    xmlns:dcterms="http://purl.org/dc/terms/"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#">
   <rdf:Description rdf:about="#Metabolite_14">
+    <dcterms:bibliographicCitation>
+      <rdf:Description>
+        <dcterms:description>protein</dcterms:description>
+        <CopasiMT:isDescribedBy rdf:resource="urn:miriam:unknown:http://purl.obolibrary.org/obo/PR_000001335"/>
+      </rdf:Description>
+    </dcterms:bibliographicCitation>
     <dcterms:creator>
       <rdf:Description>
         <vCard:N>
           <rdf:Description>
-            <vCard:Family>Banerjee-test</vCard:Family>
+            <vCard:Given>XX</vCard:Given>
           </rdf:Description>
         </vCard:N>
       </rdf:Description>
@@ -446,10 +566,20 @@ Reaction scheme where the products are created from the reactants and the change
       </Metabolite>
       <Metabolite key="Metabolite_15" name="I12" simulationType="reactions" compartment="Compartment_0" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#Metabolite_15">
-</rdf:Description>
+<rdf:RDF
+   xmlns:CopasiMT="http://www.copasi.org/RDF/MiriamTerms#"
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:Description rdf:about="#Metabolite_15">
+    <dcterms:bibliographicCitation>
+      <rdf:Description>
+        <dcterms:description>https://proconsortium.org/cgi-bin/entry_pro?id=PR:000061772</dcterms:description>
+        <CopasiMT:isDescribedBy rdf:resource="urn:miriam:unknown:PR:000061772"/>
+      </rdf:Description>
+    </dcterms:bibliographicCitation>
+  </rdf:Description>
 </rdf:RDF>
+
         </MiriamAnnotation>
       </Metabolite>
       <Metabolite key="Metabolite_16" name="M0" simulationType="fixed" compartment="Compartment_0" addNoise="false">
@@ -482,39 +612,39 @@ Reaction scheme where the products are created from the reactants and the change
           <Modifier metabolite="Metabolite_11" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_201" name="sb" value="14.02"/>
-          <Constant key="Parameter_202" name="cb" value="6.77e-12"/>
-          <Constant key="Parameter_198" name="s10" value="14.02"/>
-          <Constant key="Parameter_200" name="c10" value="1.54e-06"/>
-          <Constant key="Parameter_197" name="c2" value="6.86e-08"/>
-          <Constant key="Parameter_196" name="ca" value="9.75e-06"/>
-          <Constant key="Parameter_192" name="g17" value="0.337"/>
+          <Constant key="Parameter_202" name="sb" value="14.02"/>
+          <Constant key="Parameter_203" name="cb" value="6.77e-12"/>
+          <Constant key="Parameter_199" name="s10" value="14.02"/>
+          <Constant key="Parameter_201" name="c10" value="1.54e-06"/>
+          <Constant key="Parameter_198" name="c2" value="6.86e-08"/>
+          <Constant key="Parameter_197" name="ca" value="9.75e-06"/>
+          <Constant key="Parameter_193" name="g17" value="0.337"/>
         </ListOfConstants>
         <KineticLaw function="Function_43" unitType="Default" scalingCompartment="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_308">
-              <SourceParameter reference="Parameter_201"/>
+              <SourceParameter reference="Parameter_202"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_307">
               <SourceParameter reference="Metabolite_13"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_306">
-              <SourceParameter reference="Parameter_202"/>
+              <SourceParameter reference="Parameter_203"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_305">
-              <SourceParameter reference="Parameter_198"/>
+              <SourceParameter reference="Parameter_199"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_304">
               <SourceParameter reference="Metabolite_14"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_303">
-              <SourceParameter reference="Parameter_200"/>
+              <SourceParameter reference="Parameter_201"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_302">
               <SourceParameter reference="Metabolite_2"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_301">
-              <SourceParameter reference="Parameter_197"/>
+              <SourceParameter reference="Parameter_198"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_300">
               <SourceParameter reference="Metabolite_8"/>
@@ -523,13 +653,13 @@ Reaction scheme where the products are created from the reactants and the change
               <SourceParameter reference="Metabolite_10"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_298">
-              <SourceParameter reference="Parameter_196"/>
+              <SourceParameter reference="Parameter_197"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_297">
               <SourceParameter reference="Metabolite_11"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_296">
-              <SourceParameter reference="Parameter_192"/>
+              <SourceParameter reference="Parameter_193"/>
             </CallParameter>
           </ListOfCallParameters>
         </KineticLaw>
@@ -551,15 +681,15 @@ Reaction scheme where the products are created from the reactants and the change
           <Modifier metabolite="Metabolite_12" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_190" name="s4" value="1.94"/>
-          <Constant key="Parameter_189" name="c4" value="9.7e-09"/>
-          <Constant key="Parameter_195" name="g1" value="0.183"/>
-          <Constant key="Parameter_193" name="gr2" value="0.0606"/>
+          <Constant key="Parameter_191" name="s4" value="1.94"/>
+          <Constant key="Parameter_190" name="c4" value="9.7e-09"/>
+          <Constant key="Parameter_196" name="g1" value="0.183"/>
+          <Constant key="Parameter_194" name="gr2" value="0.0606"/>
         </ListOfConstants>
         <KineticLaw function="Function_41" unitType="Default" scalingCompartment="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_275">
-              <SourceParameter reference="Parameter_190"/>
+              <SourceParameter reference="Parameter_191"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_274">
               <SourceParameter reference="Metabolite_4"/>
@@ -568,19 +698,19 @@ Reaction scheme where the products are created from the reactants and the change
               <SourceParameter reference="Metabolite_8"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_272">
-              <SourceParameter reference="Parameter_189"/>
+              <SourceParameter reference="Parameter_190"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_266">
               <SourceParameter reference="Metabolite_3"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_276">
-              <SourceParameter reference="Parameter_195"/>
+              <SourceParameter reference="Parameter_196"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_277">
               <SourceParameter reference="Metabolite_12"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_278">
-              <SourceParameter reference="Parameter_193"/>
+              <SourceParameter reference="Parameter_194"/>
             </CallParameter>
           </ListOfCallParameters>
         </KineticLaw>
@@ -605,40 +735,40 @@ Reaction scheme where the products are created from the reactants and the change
           <Modifier metabolite="Metabolite_12" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_194" name="s21" value="156.17"/>
-          <Constant key="Parameter_191" name="c21" value="4.25e-06"/>
-          <Constant key="Parameter_188" name="s6" value="156.17"/>
-          <Constant key="Parameter_187" name="c6" value="8e-06"/>
-          <Constant key="Parameter_87" name="cb" value="6.77e-12"/>
-          <Constant key="Parameter_125" name="cg" value="2.58e-06"/>
-          <Constant key="Parameter_121" name="c4" value="9.7e-09"/>
-          <Constant key="Parameter_100" name="gr17" value="0.0606"/>
+          <Constant key="Parameter_195" name="s21" value="156.17"/>
+          <Constant key="Parameter_192" name="c21" value="4.25e-06"/>
+          <Constant key="Parameter_189" name="s6" value="156.17"/>
+          <Constant key="Parameter_79" name="c6" value="8e-06"/>
+          <Constant key="Parameter_101" name="cb" value="6.77e-12"/>
+          <Constant key="Parameter_99" name="cg" value="2.58e-06"/>
+          <Constant key="Parameter_126" name="c4" value="9.7e-09"/>
+          <Constant key="Parameter_86" name="gr17" value="0.0606"/>
         </ListOfConstants>
         <KineticLaw function="Function_42" unitType="Default" scalingCompartment="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_286">
-              <SourceParameter reference="Parameter_194"/>
+              <SourceParameter reference="Parameter_195"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_285">
               <SourceParameter reference="Metabolite_7"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_284">
-              <SourceParameter reference="Parameter_191"/>
+              <SourceParameter reference="Parameter_192"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_283">
-              <SourceParameter reference="Parameter_188"/>
+              <SourceParameter reference="Parameter_189"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_282">
               <SourceParameter reference="Metabolite_9"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_281">
-              <SourceParameter reference="Parameter_187"/>
+              <SourceParameter reference="Parameter_79"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_280">
               <SourceParameter reference="Metabolite_13"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_279">
-              <SourceParameter reference="Parameter_87"/>
+              <SourceParameter reference="Parameter_101"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_287">
               <SourceParameter reference="Metabolite_8"/>
@@ -647,19 +777,19 @@ Reaction scheme where the products are created from the reactants and the change
               <SourceParameter reference="Metabolite_0"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_289">
-              <SourceParameter reference="Parameter_125"/>
+              <SourceParameter reference="Parameter_99"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_290">
               <SourceParameter reference="Metabolite_4"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_291">
-              <SourceParameter reference="Parameter_121"/>
+              <SourceParameter reference="Parameter_126"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_292">
               <SourceParameter reference="Metabolite_12"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_293">
-              <SourceParameter reference="Parameter_100"/>
+              <SourceParameter reference="Parameter_86"/>
             </CallParameter>
           </ListOfCallParameters>
         </KineticLaw>
@@ -679,12 +809,12 @@ Reaction scheme where the products are created from the reactants and the change
           <Product metabolite="Metabolite_0" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfConstants>
-          <Constant key="Parameter_98" name="k1" value="8.2e-06"/>
+          <Constant key="Parameter_88" name="k1" value="8.2e-06"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_98"/>
+              <SourceParameter reference="Parameter_88"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_1"/>
@@ -731,12 +861,12 @@ Reaction scheme where the products are created from the reactants and the change
           <Substrate metabolite="Metabolite_0" stoichiometry="1"/>
         </ListOfSubstrates>
         <ListOfConstants>
-          <Constant key="Parameter_124" name="k1" value="29.12"/>
+          <Constant key="Parameter_121" name="k1" value="29.12"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_124"/>
+              <SourceParameter reference="Parameter_121"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_0"/>
@@ -759,12 +889,12 @@ Reaction scheme where the products are created from the reactants and the change
           <Product metabolite="Metabolite_2" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfConstants>
-          <Constant key="Parameter_78" name="k1" value="4.1e-05"/>
+          <Constant key="Parameter_125" name="k1" value="4.1e-05"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_78"/>
+              <SourceParameter reference="Parameter_125"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_3"/>
@@ -811,12 +941,12 @@ Reaction scheme where the products are created from the reactants and the change
           <Product metabolite="Metabolite_4" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfConstants>
-          <Constant key="Parameter_120" name="k1" value="5.83e-05"/>
+          <Constant key="Parameter_124" name="k1" value="5.83e-05"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_120"/>
+              <SourceParameter reference="Parameter_124"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_6"/>
@@ -839,12 +969,12 @@ Reaction scheme where the products are created from the reactants and the change
           <Product metabolite="Metabolite_4" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfConstants>
-          <Constant key="Parameter_108" name="k1" value="0.000175"/>
+          <Constant key="Parameter_95" name="k1" value="0.000175"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_108"/>
+              <SourceParameter reference="Parameter_95"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_5"/>
@@ -863,12 +993,12 @@ Reaction scheme where the products are created from the reactants and the change
           <Substrate metabolite="Metabolite_4" stoichiometry="1"/>
         </ListOfSubstrates>
         <ListOfConstants>
-          <Constant key="Parameter_94" name="k1" value="349.37"/>
+          <Constant key="Parameter_92" name="k1" value="349.37"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_94"/>
+              <SourceParameter reference="Parameter_92"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_4"/>
@@ -891,12 +1021,12 @@ Reaction scheme where the products are created from the reactants and the change
           <Product metabolite="Metabolite_7" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfConstants>
-          <Constant key="Parameter_89" name="k1" value="0.000805"/>
+          <Constant key="Parameter_100" name="k1" value="0.000805"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_89"/>
+              <SourceParameter reference="Parameter_100"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_11"/>
@@ -915,12 +1045,12 @@ Reaction scheme where the products are created from the reactants and the change
           <Substrate metabolite="Metabolite_7" stoichiometry="1"/>
         </ListOfSubstrates>
         <ListOfConstants>
-          <Constant key="Parameter_115" name="k1" value="63.98"/>
+          <Constant key="Parameter_114" name="k1" value="63.98"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_115"/>
+              <SourceParameter reference="Parameter_114"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_7"/>
@@ -943,12 +1073,12 @@ Reaction scheme where the products are created from the reactants and the change
           <Product metabolite="Metabolite_9" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfConstants>
-          <Constant key="Parameter_107" name="k1" value="0.00363"/>
+          <Constant key="Parameter_85" name="k1" value="0.00363"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_107"/>
+              <SourceParameter reference="Parameter_85"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_1"/>
@@ -995,12 +1125,12 @@ Reaction scheme where the products are created from the reactants and the change
           <Product metabolite="Metabolite_10" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfConstants>
-          <Constant key="Parameter_116" name="k1" value="0.021"/>
+          <Constant key="Parameter_70" name="k1" value="0.021"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_116"/>
+              <SourceParameter reference="Parameter_70"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_1"/>
@@ -1023,12 +1153,12 @@ Reaction scheme where the products are created from the reactants and the change
           <Product metabolite="Metabolite_10" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfConstants>
-          <Constant key="Parameter_91" name="k1" value="0.0735"/>
+          <Constant key="Parameter_104" name="k1" value="0.0735"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_91"/>
+              <SourceParameter reference="Parameter_104"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_3"/>
@@ -1047,12 +1177,12 @@ Reaction scheme where the products are created from the reactants and the change
           <Substrate metabolite="Metabolite_10" stoichiometry="1"/>
         </ListOfSubstrates>
         <ListOfConstants>
-          <Constant key="Parameter_85" name="k1" value="388.15"/>
+          <Constant key="Parameter_90" name="k1" value="388.15"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_85"/>
+              <SourceParameter reference="Parameter_90"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_10"/>
@@ -1075,12 +1205,12 @@ Reaction scheme where the products are created from the reactants and the change
           <Product metabolite="Metabolite_13" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfConstants>
-          <Constant key="Parameter_105" name="k1" value="5.6e-09"/>
+          <Constant key="Parameter_89" name="k1" value="5.6e-09"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_105"/>
+              <SourceParameter reference="Parameter_89"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_6"/>
@@ -1103,12 +1233,12 @@ Reaction scheme where the products are created from the reactants and the change
           <Product metabolite="Metabolite_13" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfConstants>
-          <Constant key="Parameter_104" name="k1" value="3.9e-08"/>
+          <Constant key="Parameter_96" name="k1" value="3.9e-08"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_104"/>
+              <SourceParameter reference="Parameter_96"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_12"/>
@@ -1127,12 +1257,12 @@ Reaction scheme where the products are created from the reactants and the change
           <Substrate metabolite="Metabolite_13" stoichiometry="1"/>
         </ListOfSubstrates>
         <ListOfConstants>
-          <Constant key="Parameter_99" name="k1" value="349.37"/>
+          <Constant key="Parameter_107" name="k1" value="349.37"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_99"/>
+              <SourceParameter reference="Parameter_107"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_13"/>
@@ -1155,12 +1285,12 @@ Reaction scheme where the products are created from the reactants and the change
           <Product metabolite="Metabolite_14" stoichiometry="1"/>
         </ListOfProducts>
         <ListOfConstants>
-          <Constant key="Parameter_103" name="k1" value="0.000372"/>
+          <Constant key="Parameter_105" name="k1" value="0.000372"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_103"/>
+              <SourceParameter reference="Parameter_105"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_6"/>
@@ -1187,23 +1317,23 @@ Reaction scheme where the products are created from the reactants and the change
           <Modifier metabolite="Metabolite_12" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_93" name="v10r" value="0.00112"/>
-          <Constant key="Parameter_86" name="n2r" value="3"/>
-          <Constant key="Parameter_101" name="c2" value="6.86e-08"/>
+          <Constant key="Parameter_106" name="v10r" value="0.00112"/>
+          <Constant key="Parameter_110" name="n2r" value="3"/>
+          <Constant key="Parameter_94" name="c2" value="6.86e-08"/>
         </ListOfConstants>
         <KineticLaw function="Function_45" unitType="Default" scalingCompartment="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_312">
-              <SourceParameter reference="Parameter_93"/>
+              <SourceParameter reference="Parameter_106"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_313">
-              <SourceParameter reference="Parameter_86"/>
+              <SourceParameter reference="Parameter_110"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_314">
               <SourceParameter reference="Metabolite_2"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_315">
-              <SourceParameter reference="Parameter_101"/>
+              <SourceParameter reference="Parameter_94"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_311">
               <SourceParameter reference="Metabolite_12"/>
@@ -1222,12 +1352,12 @@ Reaction scheme where the products are created from the reactants and the change
           <Substrate metabolite="Metabolite_14" stoichiometry="1"/>
         </ListOfSubstrates>
         <ListOfConstants>
-          <Constant key="Parameter_90" name="k1" value="116.48"/>
+          <Constant key="Parameter_87" name="k1" value="116.48"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_90"/>
+              <SourceParameter reference="Parameter_87"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_14"/>
@@ -1254,13 +1384,13 @@ Reaction scheme where the products are created from the reactants and the change
           <Modifier metabolite="Metabolite_14" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_88" name="v12m" value="0.000265"/>
+          <Constant key="Parameter_91" name="v12m" value="0.000265"/>
           <Constant key="Parameter_109" name="c10" value="1.54e-06"/>
         </ListOfConstants>
         <KineticLaw function="Function_46" unitType="Default" scalingCompartment="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_320">
-              <SourceParameter reference="Parameter_88"/>
+              <SourceParameter reference="Parameter_91"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_295">
               <SourceParameter reference="Metabolite_1"/>
@@ -1285,12 +1415,12 @@ Reaction scheme where the products are created from the reactants and the change
           <Substrate metabolite="Metabolite_15" stoichiometry="1"/>
         </ListOfSubstrates>
         <ListOfConstants>
-          <Constant key="Parameter_68" name="k1" value="8.33"/>
+          <Constant key="Parameter_74" name="k1" value="8.33"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_68"/>
+              <SourceParameter reference="Parameter_74"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_15"/>
@@ -1315,9 +1445,9 @@ Reaction scheme where the products are created from the reactants and the change
           <Modifier metabolite="Metabolite_10" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_106" name="f" value="1"/>
-          <Constant key="Parameter_84" name="delta_m_cit" value="2.4"/>
-          <Constant key="Parameter_74" name="zet_cit" value="9.75e-06"/>
+          <Constant key="Parameter_108" name="f" value="1"/>
+          <Constant key="Parameter_102" name="delta_m_cit" value="2.4"/>
+          <Constant key="Parameter_118" name="zet_cit" value="9.75e-06"/>
         </ListOfConstants>
         <KineticLaw function="Function_47" unitType="Default" scalingCompartment="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]">
           <ListOfCallParameters>
@@ -1325,16 +1455,16 @@ Reaction scheme where the products are created from the reactants and the change
               <SourceParameter reference="Metabolite_16"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_322">
-              <SourceParameter reference="Parameter_106"/>
+              <SourceParameter reference="Parameter_108"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_321">
-              <SourceParameter reference="Parameter_84"/>
+              <SourceParameter reference="Parameter_102"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_310">
               <SourceParameter reference="Metabolite_10"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_324">
-              <SourceParameter reference="Parameter_74"/>
+              <SourceParameter reference="Parameter_118"/>
             </CallParameter>
           </ListOfCallParameters>
         </KineticLaw>
@@ -1356,19 +1486,19 @@ Reaction scheme where the products are created from the reactants and the change
           <Modifier metabolite="Metabolite_13" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_118" name="sigma" value="24"/>
-          <Constant key="Parameter_73" name="zeta" value="6.77e-12"/>
+          <Constant key="Parameter_116" name="sigma" value="24"/>
+          <Constant key="Parameter_119" name="zeta" value="6.77e-12"/>
         </ListOfConstants>
         <KineticLaw function="Function_44" unitType="Default" scalingCompartment="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_319">
-              <SourceParameter reference="Parameter_118"/>
+              <SourceParameter reference="Parameter_116"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_318">
               <SourceParameter reference="Metabolite_13"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_317">
-              <SourceParameter reference="Parameter_73"/>
+              <SourceParameter reference="Parameter_119"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_316">
               <SourceParameter reference="Metabolite_1"/>
@@ -1393,19 +1523,19 @@ Reaction scheme where the products are created from the reactants and the change
           <Modifier metabolite="Metabolite_0" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_102" name="sigma" value="24"/>
-          <Constant key="Parameter_75" name="zeta" value="2.58e-06"/>
+          <Constant key="Parameter_83" name="sigma" value="24"/>
+          <Constant key="Parameter_78" name="zeta" value="2.58e-06"/>
         </ListOfConstants>
         <KineticLaw function="Function_44" unitType="Default" scalingCompartment="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_319">
-              <SourceParameter reference="Parameter_102"/>
+              <SourceParameter reference="Parameter_83"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_318">
               <SourceParameter reference="Metabolite_0"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_317">
-              <SourceParameter reference="Parameter_75"/>
+              <SourceParameter reference="Parameter_78"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_316">
               <SourceParameter reference="Metabolite_6"/>
@@ -1424,12 +1554,12 @@ Reaction scheme where the products are created from the reactants and the change
           <Substrate metabolite="Metabolite_1" stoichiometry="1"/>
         </ListOfSubstrates>
         <ListOfConstants>
-          <Constant key="Parameter_82" name="k1" value="1"/>
+          <Constant key="Parameter_81" name="k1" value="1"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_82"/>
+              <SourceParameter reference="Parameter_81"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_1"/>
@@ -1454,9 +1584,9 @@ Reaction scheme where the products are created from the reactants and the change
           <Modifier metabolite="Metabolite_14" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_119" name="f" value="10"/>
+          <Constant key="Parameter_75" name="f" value="10"/>
           <Constant key="Parameter_69" name="delta_m_cit" value="24"/>
-          <Constant key="Parameter_80" name="zet_cit" value="1.54e-06"/>
+          <Constant key="Parameter_82" name="zet_cit" value="1.54e-06"/>
         </ListOfConstants>
         <KineticLaw function="Function_47" unitType="Default" scalingCompartment="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]">
           <ListOfCallParameters>
@@ -1464,7 +1594,7 @@ Reaction scheme where the products are created from the reactants and the change
               <SourceParameter reference="Metabolite_16"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_322">
-              <SourceParameter reference="Parameter_119"/>
+              <SourceParameter reference="Parameter_75"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_321">
               <SourceParameter reference="Parameter_69"/>
@@ -1473,7 +1603,7 @@ Reaction scheme where the products are created from the reactants and the change
               <SourceParameter reference="Metabolite_14"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_324">
-              <SourceParameter reference="Parameter_80"/>
+              <SourceParameter reference="Parameter_82"/>
             </CallParameter>
           </ListOfCallParameters>
         </KineticLaw>
@@ -1489,12 +1619,12 @@ Reaction scheme where the products are created from the reactants and the change
           <Substrate metabolite="Metabolite_6" stoichiometry="1"/>
         </ListOfSubstrates>
         <ListOfConstants>
-          <Constant key="Parameter_77" name="k1" value="1"/>
+          <Constant key="Parameter_120" name="k1" value="1"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_77"/>
+              <SourceParameter reference="Parameter_120"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_6"/>
@@ -1524,11 +1654,11 @@ Reaction scheme where the products are created from the reactants and the change
           <Modifier metabolite="Metabolite_8" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_81" name="g2" value="0.0535"/>
-          <Constant key="Parameter_92" name="gr1" value="0.0606"/>
-          <Constant key="Parameter_96" name="s12" value="10.93"/>
-          <Constant key="Parameter_95" name="c12" value="4.9e-08"/>
-          <Constant key="Parameter_83" name="c10" value="1.45e-06"/>
+          <Constant key="Parameter_76" name="g2" value="0.0535"/>
+          <Constant key="Parameter_84" name="gr1" value="0.0606"/>
+          <Constant key="Parameter_98" name="s12" value="10.93"/>
+          <Constant key="Parameter_97" name="c12" value="4.9e-08"/>
+          <Constant key="Parameter_103" name="c10" value="1.45e-06"/>
         </ListOfConstants>
         <KineticLaw function="Function_48" unitType="Default" scalingCompartment="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]">
           <ListOfCallParameters>
@@ -1536,28 +1666,28 @@ Reaction scheme where the products are created from the reactants and the change
               <SourceParameter reference="Metabolite_5"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_328">
-              <SourceParameter reference="Parameter_81"/>
+              <SourceParameter reference="Parameter_76"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_327">
               <SourceParameter reference="Metabolite_12"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_326">
-              <SourceParameter reference="Parameter_92"/>
+              <SourceParameter reference="Parameter_84"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_325">
-              <SourceParameter reference="Parameter_96"/>
+              <SourceParameter reference="Parameter_98"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_330">
               <SourceParameter reference="Metabolite_15"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_331">
-              <SourceParameter reference="Parameter_95"/>
+              <SourceParameter reference="Parameter_97"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_332">
               <SourceParameter reference="Metabolite_14"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_333">
-              <SourceParameter reference="Parameter_83"/>
+              <SourceParameter reference="Parameter_103"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_334">
               <SourceParameter reference="Metabolite_8"/>
@@ -1581,15 +1711,15 @@ Reaction scheme where the products are created from the reactants and the change
           <Modifier metabolite="Metabolite_12" stoichiometry="1"/>
         </ListOfModifiers>
         <ListOfConstants>
-          <Constant key="Parameter_97" name="s2" value="1.23"/>
-          <Constant key="Parameter_112" name="c2" value="6.86e-08"/>
-          <Constant key="Parameter_65" name="g2" value="0.183"/>
-          <Constant key="Parameter_66" name="gr1" value="0.0606"/>
+          <Constant key="Parameter_93" name="s2" value="1.23"/>
+          <Constant key="Parameter_115" name="c2" value="6.86e-08"/>
+          <Constant key="Parameter_66" name="g2" value="0.183"/>
+          <Constant key="Parameter_67" name="gr1" value="0.0606"/>
         </ListOfConstants>
         <KineticLaw function="Function_49" unitType="Default" scalingCompartment="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_344">
-              <SourceParameter reference="Parameter_97"/>
+              <SourceParameter reference="Parameter_93"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_343">
               <SourceParameter reference="Metabolite_2"/>
@@ -1598,19 +1728,19 @@ Reaction scheme where the products are created from the reactants and the change
               <SourceParameter reference="Metabolite_3"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_341">
-              <SourceParameter reference="Parameter_112"/>
+              <SourceParameter reference="Parameter_115"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_340">
               <SourceParameter reference="Metabolite_5"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_339">
-              <SourceParameter reference="Parameter_65"/>
+              <SourceParameter reference="Parameter_66"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_338">
               <SourceParameter reference="Metabolite_12"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_337">
-              <SourceParameter reference="Parameter_66"/>
+              <SourceParameter reference="Parameter_67"/>
             </CallParameter>
           </ListOfCallParameters>
         </KineticLaw>
@@ -1650,12 +1780,12 @@ Reaction scheme where the products are created from the reactants and the change
           <Substrate metabolite="Metabolite_5" stoichiometry="1"/>
         </ListOfSubstrates>
         <ListOfConstants>
-          <Constant key="Parameter_114" name="k1" value="1.4"/>
+          <Constant key="Parameter_65" name="k1" value="1.4"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_114"/>
+              <SourceParameter reference="Parameter_65"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_5"/>
@@ -1674,12 +1804,12 @@ Reaction scheme where the products are created from the reactants and the change
           <Substrate metabolite="Metabolite_11" stoichiometry="1"/>
         </ListOfSubstrates>
         <ListOfConstants>
-          <Constant key="Parameter_76" name="k1" value="1.4"/>
+          <Constant key="Parameter_58" name="k1" value="1.4"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_76"/>
+              <SourceParameter reference="Parameter_58"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_11"/>
@@ -1698,12 +1828,12 @@ Reaction scheme where the products are created from the reactants and the change
           <Substrate metabolite="Metabolite_12" stoichiometry="1"/>
         </ListOfSubstrates>
         <ListOfConstants>
-          <Constant key="Parameter_58" name="k1" value="1.4"/>
+          <Constant key="Parameter_77" name="k1" value="1.4"/>
         </ListOfConstants>
         <KineticLaw function="Function_13" unitType="Default" scalingCompartment="CN=Root,Model=Lo 2016 Healthy,Vector=Compartments[compartment]">
           <ListOfCallParameters>
             <CallParameter functionParameter="FunctionParameter_80">
-              <SourceParameter reference="Parameter_58"/>
+              <SourceParameter reference="Parameter_77"/>
             </CallParameter>
             <CallParameter functionParameter="FunctionParameter_81">
               <SourceParameter reference="Metabolite_12"/>
@@ -1900,9 +2030,7 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       </ModelParameterSet>
       <ModelParameterSet key="ModelParameterSet_3" name="initial">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 <rdf:Description rdf:about="#ModelParameterSet_3">
 </rdf:Description>
 </rdf:RDF>
