@@ -20,15 +20,11 @@ Below, we described remaining steps before final publication to BioModels standa
 - Fig2: **Sensititvy analyses**: without the code and the random seed, may exhbit sensitive discrepancies
 - Fig3: **Dysregulated mechanisms**: infer back the variations of the parameters would require that the omics expression profiles are left avalaible, which is not the case
 
-## Annotation 
+## Authors' contacts and checkings
 
-Done: 
+- Original **code scripts**, or ODE parameter configurations, to reproduce the results
+- - Which random seed have they used for the PRCC analyses reported in Table 5 and Fig 2?
+- Raw transcriptomic profiles to reproduce DGEA summarised results reported in Table 7 (proper **parameter estimation** reported in Table 8 requires several observations and uncertainty, which is not currently feasible with only one summarised point reported).
+- Which parameter estimation optimisation algorithm have they used for Table 8 (between 'DifferentialEvolution', 'SRES', 'EvolutionaryProgram', 'GeneticAlgorithm', 'GeneticAlgorithmSR', 'HookeJeeves', 'LevenbergMarquardt', 'NL2SOL', 'NelderMead', 'ParticleSwarm', 'Praxis', 'RandomSearch', 'ScatterSearch', 'SimulatedAnnealing', 'SteepestDescent' and 'TruncatedNewton') + the hyper-parameters used (number of maximal iterations, tolerance threshold, ...)
 
-- Names, institutions and mails of the curators
-- Names of the macrophages
 
-ToDo:
-
-- Pair T cells and cytokines with their respective ontologies
-- Associate each reaction to its paper, when avalaible
-- Associate the fixed biological parameters with their paper references. 
