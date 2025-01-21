@@ -141,6 +141,11 @@ plot_grid_combined <- cowplot::plot_grid(y_label,
   rel_widths = c(0.1, 1)  # Adjust width for the legend
 )
 
+# Add legend
+# add this code snippet as a temporary solution to issue https://github.com/wilkelab/cowplot/issues/202   
+source("scripts/utils.R")  
+legend_plot <- get_legend_temp(global_plot)
+
 # Add global x label
 plot_grid_combined <- cowplot::plot_grid(plot_grid_combined, 
                    x_label,
@@ -149,10 +154,6 @@ plot_grid_combined <- cowplot::plot_grid(plot_grid_combined,
                    rel_heights = c(1, 0.1)  # Adjust width for the legend
 )
 
-# Add legend
-# add this code snippet as a temporary solution to issue https://github.com/wilkelab/cowplot/issues/202   
-source("scripts/utils.R")  
-legend_plot <- get_legend_temp(global_plot)
 plot_grid_combined <- cowplot::plot_grid(
   plot_grid_combined,
   legend_plot,

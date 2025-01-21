@@ -81,21 +81,28 @@ fit_experiments <- purrr::map(data_experiment, ~ defineExperiments(experiment_ty
 
 # run the Parameter Estimation analysis, allowing 10 degrees of freedom (unconstrained parameters) ----
 
-absolute_parameter_per_cluster <- purrr::map(fit_experiments, ~ runParameterEstimation(
-  parameters = fit_parameters,
-  experiments = .x,
-  method = list(
-    method = "LevenbergMarquardt",
-    log_verbosity = 0, 
-    iteration_limit = 2000,
-    tolerance = 1e-6
-  ),
-  update_model = FALSE, 
-  randomize_start_values = FALSE,
-  create_parameter_sets = TRUE,
-  calculate_statistics = FALSE,
-  model = healthy_model
-)$parameters)
+absolute_parameter_per_cluster <- purrr::map(fit_experiments, function(cluster) {
+  # CoRC update imposes to restart from a clean model for parameter estimation
+  CoRC::clearParameterEstimationParameters(model = healthy_model)
+  CoRC::clearExperiments(model = healthy_model)
+  
+  return(runParameterEstimation(
+    parameters = fit_parameters,
+    experiments = cluster,
+    method = list(
+      method = "LevenbergMarquardt",
+      log_verbosity = 0, 
+      iteration_limit = 500,
+      tolerance = 1e-6
+    ),
+    update_model = FALSE, 
+    randomize_start_values = FALSE,
+    create_parameter_sets = TRUE,
+    calculate_statistics = FALSE,
+    model = healthy_model
+  )$parameters)
+})
+
 
 # compare the results with Table 8 (table generation + correlation) ----
 relative_parameter_per_cluster <- absolute_parameter_per_cluster |> 

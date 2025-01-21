@@ -54,7 +54,8 @@ apply(bootstrap_parameters,2, mean)
 
 # `bootstrap_parameters` now contains the 5000 parameter configurations for the 9 parameters
 
-## compute the steady-state for each of the 5,000 models resulting from the sampled parameter space ----
+## Compute the steady-state for each of the 5,000 models resulting from the sampled parameter space ----
+
 ### Sequential steady-state computation ----
 # sensitivity_outputs <- purrr::map(1:10, function(i) {
 #   # load healthy model each time, as memory is donne in place
@@ -129,7 +130,9 @@ sensitivity_outputs <- sensitivity_outputs |>
   dplyr::bind_rows() |> 
   dplyr::mutate(across(everything(), rank)) 
 
-## compute and display Table 5 (PRCC values)
+## Compute Table 5 showing PRCC values ----
+
+### Compute partial correlations ----
 library(ppcor)
 # Calculate PRCC using partial correlations on ranked data
 prcc_sensitivity <- pcor(sensitivity_outputs)
@@ -146,6 +149,9 @@ prcc_estimate <- prcc_sensitivity$estimate |>
          T2 = if_else(T2.pval <=0.01, sprintf("%.3f*", T2), sprintf("%.3f", T2))) |> 
   dplyr::select(-T1.pval, -T2.pval)
 
+
+### Format PRCC table ----
+library(flextable)
 prcc_labels <- list(
   species = "",
   T1 = "PRCC for T1", 
@@ -161,9 +167,7 @@ prcc_estimate_flextable <- flextable(prcc_estimate) |>
                                              "\\sigma_{\\beta}", "\\sigma_{10}")))) |> 
   set_header_labels(values = prcc_labels) |> 
   align(align = "center", part = "all") |> 
-  set_caption("Table 5: Parameter variations in different types of diseases. 
-              In blue, disease subtype induces shrinkage of the coefficients, 
-              while red values correspond to increased parameter uptakes. ") 
+  set_caption("Table 5: PRCC values for key parameters playing on T1 and T2 variations.") 
 save_as_html(prcc_estimate_flextable,
   path = "results/Table5.html",
   title = "Table 5: PRCC analysis"
@@ -211,7 +215,7 @@ prcc_sensitivity_annot <- data.frame(x=n_samples/2, y=Inf,
                                      species= factor(c(rep("T[1]", 3), rep("T[2]", 3)), 
                                                      ordered = TRUE))
 
-### Actual plot of the PRCC values along the scatter ranks ----
+### PRCC scatter plot values after rank-transformation ----
 
 SS_plots <- ggplot(sensitivity_outputs_formatted, aes(y = y, x=x)) +
   geom_point(size = 0.1, col = "blue", shape = 20) +
