@@ -6,9 +6,11 @@ website:
   description: |
     This GitHub repository stores the R code and COPASI models for reproducing
     Lo2016's model on Inflammatory Bowel Disease.
-  site-url: "https://bastienchassagnol.github.io/bastien.chassagnol.io"
-  repo-url: "https://github.com/bastienchassagnol/bastienchassagnol"
-  repo-actions: [edit, issue]
+  reader-mode: true # Allow the reader to remove the TOC.
+  site-url: "https://bastienchassagnol.github.io/Lo2016_ODE_IBD"
+  repo-url: "https://github.com/bastienchassagnol//COPASI_Team216_Lo2016"
+  # GitHub Links
+  repo-actions: [edit, source, issue]
   back-to-top-navigation: true
   page-navigation: true
   # Website general layout
@@ -19,9 +21,9 @@ website:
       - icon: github
         menu:
           - text: Source Code
-            href:  https://code.com
+            href:  https://github.com/bastienchassagnol/COPASI_Team216_Lo2016
           - text: Report a Bug
-            href:  https://bugs.com
+            href:  https://github.com/bastienchassagnol/COPASI_Team216_Lo2016/issues
     left:
       - href: index.qmd
         text: "Overview"
@@ -31,29 +33,37 @@ website:
         text: "History"
       - href: vignettes/components.qmd 
         text: "Components"
-      - href: vignettes/curation.qmd
-        text: "Curation"
-        menu:
-          - text: "Steady State"
-            href: vignettes/codes/steady_state.qmd
-          - text: "PRCC"
-            href: vignettes/codes/prcc.qmd 
-          - text: "Patient Stratification"
-            href: vignettes/codes/patient_stratification.qmd         
+      - sidebar:curation
     right:
       - icon: folder-symlink
         href: https://bastienchassagnol.github.io/bastien.chassagnol.io/
+      - icon: linkedin
+        href: https://www.linkedin.com/posts/bastien-chassagnol-677b67140_identifiersorg-activity-7250082014123425793-jItc
       - icon: envelope
         aria-label: email
         href: "mailto:bastien_chassagnol@laposte.net"        
-    page-footer:
-      border: true
-      left: |
-        Powered by [{{< iconify simple-icons:quarto >}} Quarto](https://quarto.org).
-      center: |
-        &copy; []{#current-year} Bastien CHASSAGNOL.
-      right: |
-        License: [CC BY NC SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0).
+  # Sidebar navigation      
+  sidebar:
+    - id: curation
+      style: "docked"
+      title: "Curations"
+      href: vignettes/curation.qmd
+      contents: 
+        - text: "Steady State"
+          href: vignettes/codes/steady_state.qmd
+        - text: "PRCC"
+          href: vignettes/codes/prcc.qmd 
+        - text: "Patient Stratification"
+          href: vignettes/codes/patient_stratification.qmd    
+  # Footer navigation           
+  page-footer:
+    border: true
+    left: |
+      Powered by [{{< iconify simple-icons:quarto >}} Quarto](https://quarto.org).
+    center: |
+      &copy; []{#current-year} Bastien CHASSAGNOL.
+    right: |
+      License: [CC BY NC SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0).
         
 # not re-run computations if source files have not been modified
 execute:
