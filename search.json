@@ -18,14 +18,20 @@
     "href": "vignettes/codes/steady_state.html",
     "title": "steady_state",
     "section": "",
-    "text": "Back to top"
+    "text": "Back to top",
+    "crumbs": [
+      "Steady State"
+    ]
   },
   {
     "objectID": "vignettes/codes/patient_stratification.html",
     "href": "vignettes/codes/patient_stratification.html",
     "title": "patient_stratification",
     "section": "",
-    "text": "Back to top"
+    "text": "Back to top",
+    "crumbs": [
+      "Patient Stratification"
+    ]
   },
   {
     "objectID": "hackathon_keynotes.html",
@@ -88,7 +94,10 @@
     "href": "vignettes/codes/prcc.html",
     "title": "prcc",
     "section": "",
-    "text": "Back to top"
+    "text": "Back to top",
+    "crumbs": [
+      "PRCC"
+    ]
   },
   {
     "objectID": "vignettes/components.html",
