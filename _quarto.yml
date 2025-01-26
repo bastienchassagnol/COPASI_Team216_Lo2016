@@ -1,0 +1,97 @@
+project:
+  type: website
+
+website:
+  title: "ODE Model of Inflammatory Bowel Disease"
+  description: |
+    This GitHub repository stores the R code and COPASI models for reproducing
+    Lo2016's model on Inflammatory Bowel Disease.
+  site-url: "https://bastienchassagnol.github.io/bastien.chassagnol.io"
+  repo-url: "https://github.com/bastienchassagnol/bastienchassagnol"
+  repo-actions: [edit, issue]
+  back-to-top-navigation: true
+  page-navigation: true
+  # Website general layout
+  navbar:
+    pinned: true
+    logo: assets/img/IBD-disease.jpeg
+    tools:
+      - icon: github
+        menu:
+          - text: Source Code
+            href:  https://code.com
+          - text: Report a Bug
+            href:  https://bugs.com
+    left:
+      - href: index.qmd
+        text: "Overview"
+      - href: vignettes/files.qmd 
+        text: "Files"
+      - href: vignettes/history.qmd 
+        text: "History"
+      - href: vignettes/components.qmd 
+        text: "Components"
+      - href: vignettes/curation.qmd
+        text: "Curation"
+        menu:
+          - text: "Steady State"
+            href: vignettes/codes/steady_state.qmd
+          - text: "PRCC"
+            href: vignettes/codes/prcc.qmd 
+          - text: "Patient Stratification"
+            href: vignettes/codes/patient_stratification.qmd         
+    right:
+      - icon: folder-symlink
+        href: https://bastienchassagnol.github.io/bastien.chassagnol.io/
+      - icon: envelope
+        aria-label: email
+        href: "mailto:bastien_chassagnol@laposte.net"        
+    page-footer:
+      border: true
+      left: |
+        Powered by [{{< iconify simple-icons:quarto >}} Quarto](https://quarto.org).
+      center: |
+        &copy; []{#current-year} Bastien CHASSAGNOL.
+      right: |
+        License: [CC BY NC SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0).
+        
+# not re-run computations if source files have not been modified
+execute:
+  freeze: true
+        
+# General metadata
+author:
+  - name: Bastien CHASSAGNOL
+    affiliation: 
+      - Sorbonne University
+      - University Laval
+    email: bastien_chassagnol@laposte.net
+  - name: Atreyee Banerjee
+    affiliation: Mainz Universität
+    email: banerjeea@mpip-mainz.mpg.de
+  - name: Soria Gasparini
+    affiliation:  Heidelberg University
+    email: oria.gasparini@stud.uni-heidelberg.de
+date: last-modified
+# bibliography: references.bib
+
+# Shared HTML format for each page      
+format:
+  html:
+    theme: 
+      light: flatly
+    toc: true
+    toc-depth: 4
+    toc-expand: 2
+    lang: en
+    date-format: 'dddd[, the] Do [of] MMMM, YYYY'
+    # Code specific formatting
+    highlight-style: github
+    code-link: true
+    code-copy: true
+    code-fold: true
+    anchor-sections: true
+    footnotes-hover: true
+
+# When visualing original qmd file, which editor should be favoured? 
+editor: source
