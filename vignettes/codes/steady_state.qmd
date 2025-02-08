@@ -1,5 +1,143 @@
 ---
-title: "steady_state"
+title: "Steady-state computations"
 format: html
 ---
 
+## Run steady-state Analyses
+
+The call to `CoRC::runSteadyState()` function (see @lst-steady-state) retrieves the steady-states of an ODE model as defined in @nte-steady-state.   
+
+```{r setup2}
+
+# install and load R connector to COPASI software
+# remotes::install_github("jpahle/CoRC")
+library(CoRC)
+library(knitr)
+# load tidyverse packages
+library(ggplot2)
+library(dplyr)
+library(readr)
+library(testthat)
+
+# for Table reporting
+library(flextable)
+```
+
+```{r}
+#| lst-label: lst-import
+#| lst-cap: Import pyplot
+
+library(flextable)
+```
+
+@lst-import
+
+
+```{r}
+#| lst-label: lst-steady-state
+#| lst-cap: Compute steady-state conditions. 
+
+healthy_model <- loadModel("../../models/team_2016_final_model_lo2016.cps")  # <1>
+
+# Which methods are used in Lo2016 paper for running this SteadyState condition?
+healthy_model_steady_state <- runSteadyState(                            # <2>
+  model = healthy_model,                                                 # <2>  
+  calculate_jacobian = TRUE,                                             # <2>
+  perform_stability_analysis = TRUE,                                     # <2>  
+  method = list("use_newton"=TRUE, accept_negative_concentrations = FALSE) # <3>
+)
+```
+
+1. Run `CoRC::loadModel()` function to load the COPASI model in R^[Note that models are loaded **by reference** with the CoRC package, meaning that you modify the object **in place**. Note that his behaviour is rather uncommon in R, the default being the **Copy-on-Modify Behavior** (aka by **value**).]. 
+2. We ue the `CoRC::runSteadyState` function to run the steady-states...
+3. ... and for this this, several algorithms can be chosen. We used in our framework the well-known **root-finding** [Newton-Raphson algorithm](https://en.wikipedia.org/wiki/Newton%27s_method).
+
+::: {#nte-steady-state .callout-note title="Derive Steady-States Conditions of an ODE model"}
+
+Computing the **steady-state conditions** for an ordinary differential equation (ODE) means finding the system's *equilibrium points*, where the variables (also named the **species**) remain **constant** over time. In other words, this means finding the concentrations for which all the derivatives cancel:
+
+Given a system of $n=15$ ODEs (number of varying species in the simulated model),   
+
+$$
+\begin{cases}
+\frac{dx_1}{dt} &= f_1(x_1, x_2, \dots, x_{15}) \\
+\frac{dx_2}{dt} &= f_2(x_1, x_2, \dots, x_{15}) \\
+&\vdots \\
+\frac{dx_{15}}{dt} &= f_n(x_1, x_2, \dots, x_{15})
+\end{cases}
+$$
+
+the steady-state conditions are obtained by solving system @eq-steady-states:  
+
+$$
+\begin{cases}
+f_1(x_1^*, x_2^*, \dots, x_{15}^*)& = 0 \\ 
+f_2(x_1^*, x_2^*, \dots, x_{15}^*) &= 0 \\
+& \vdots \\
+f_n(x_1^*, x_2^*, \dots, x_{15}^*) &= 0.
+\end{cases}
+$$ {#eq-steady-states}
+
+
+:::
+
+To ensure that the model converged, we assert in @lst-steady-state-convergence that the outcome of the stability analysis is `found`. Other outcomes include `notFound` and `foundNegative` (which is irrealistic in our setting, since concentrations of species can either be positive or null).
+
+```{r}
+#| lst-label: lst-steady-state-convergence
+#| lst-cap: Check that the model converged with a testthat equal. If not, returns an error. 
+
+testthat::expect_equal(healthy_model_steady_state$result, "found")
+```
+
+## Report steady-state analyses
+
+In @tbl-steady-state, we report the concentrations of the 15 varying species included in the @lo2016po ODE model describing the dynamic relations among pools of immune cells (macrophages and T-cells) and the secreted cytokines, using the `flextable` package [@flextable].
+
+```{r}
+#| label: tbl-steady-state
+#| tbl-cap: Steady-state concentrations of cytokines, macrophages and T cells in healthy individuals, see also **Table 4** reported in [@lo2016po, pp. 10]. 
+#| collapse: true
+
+## Format table for reporting.
+steady_state_concentrations <- healthy_model_steady_state$species |> 
+  select(name, concentration) |> 
+  mutate(name = factor(name, 
+                          levels = c("M1", "M2", 
+                                     "T1", "T2",
+                                     "T17", "Tr",
+                                     "Ig", "I2", "I4", "I21", "I6",
+                                     "Ia", "I10", "Ib", "I12"),
+                          labels = c("M1 macrophage", "M2 macrophage", 
+                                     "Th1 cell", "Th2 cell",
+                                     "Th17 cell", "Treg cell", 
+                                     "IFN-g", "IL-2", "IL-4", "IL-21", "IL-6", 
+                                     "TNF-a", "IL-10", "TFG-b", "IL-12"),
+                       ordered = TRUE)) |> 
+  arrange(name)
+
+## Format steady-state analysis report for Table 4 ----
+steady_state_labels <- list(
+  name = "Species",
+  concentration = "Value(g/cm^3)")
+
+steady_state_table <- flextable(steady_state_concentrations) |> 
+  # format to scientific notation, allowing max 2 significant digits
+  colformat_double(j = "concentration", digits = 3) |> 
+  set_formatter(concentration = function(x) {
+    formatC(x, format = "e", digits = 2)
+  }) |> 
+  add_footer_row(values = "doi:10.1371/journal.pone.0165782.t004", 
+                 colwidths = 2) |> 
+  compose(j = "name", 
+          i = ~ name %in% c("IFN-g", "TNF-a", "TFG-b"),
+          value = as_paragraph(as_equation(c("\\text{IFN}_{\\gamma}",
+                                             "\\text{TNF}_{\\alpha}",
+                                             "\\text{TGF}_{\\beta}")))) |> 
+  set_header_labels(values = steady_state_labels) |> 
+  bold(part = "header") |> 
+  set_caption("Table 4: Steady-state concentrations of cytokines,
+              macrophages and T cells in a healthy individual.") 
+
+steady_state_table
+```

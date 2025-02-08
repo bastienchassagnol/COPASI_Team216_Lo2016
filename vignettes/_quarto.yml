@@ -27,11 +27,11 @@ website:
     left:
       - href: index.qmd
         text: "Overview"
-      - href: vignettes/files.qmd 
+      - href: files.qmd 
         text: "Files"
-      - href: vignettes/history.qmd 
+      - href: history.qmd 
         text: "History"
-      - href: vignettes/components.qmd 
+      - href: components.qmd 
         text: "Components"
       - sidebar:curation
     right:
@@ -47,14 +47,14 @@ website:
     - id: curation
       style: "docked"
       title: "Curations"
-      href: vignettes/curation.qmd
+      href: curation.qmd
       contents: 
         - text: "Steady State"
-          href: vignettes/codes/steady_state.qmd
+          href: codes/steady_state.qmd
         - text: "PRCC"
-          href: vignettes/codes/prcc.qmd 
+          href: codes/prcc.qmd 
         - text: "Patient Stratification"
-          href: vignettes/codes/patient_stratification.qmd    
+          href: codes/patient_stratification.qmd    
   # Footer navigation           
   page-footer:
     border: true
@@ -67,8 +67,22 @@ website:
         
 # not re-run computations if source files have not been modified
 execute:
-  freeze: true
-        
+  echo: true
+  warning: false
+  message: false
+  error: false
+  include: false
+  collapse: true
+#   freeze: true
+# Table and bibliographic options
+tbl-cap-location: bottom
+bibliography:
+  - assets/packages.bib
+  - assets/papers.bib
+toc: true
+toc-depth: 4
+toc-expand: 2
+
 # General metadata
 author:
   - name: Bastien CHASSAGNOL
@@ -83,23 +97,21 @@ author:
     affiliation:  Heidelberg University
     email: oria.gasparini@stud.uni-heidelberg.de
 date: last-modified
-# bibliography: references.bib
+
 
 # Shared HTML format for each page      
 format:
   html:
     theme: 
       light: flatly
-    toc: true
-    toc-depth: 4
-    toc-expand: 2
     lang: en
     date-format: 'dddd[, the] Do [of] MMMM, YYYY'
     # Code specific formatting
     highlight-style: github
-    code-link: true
+    code-link: false
     code-copy: true
     code-fold: true
+    code-annotations: hover
     anchor-sections: true
     footnotes-hover: true
 

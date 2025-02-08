@@ -1,6 +1,11 @@
 # COPASI_Team216_Lo2016
 Reproduce the figures derived from the ODE model described in "Inflammatory Bowel Disease: How Effective Is TNF-α Suppression?" article, published in PLoS One, in 2016, and submit the resulting curated and annotated model to the BioModels database, adhering to their stringent standards.
 
+## Further improvements to code linking.
+
+Since code annotations are present, **code-linking** has been disabled. 
+Indeed, this warning and error has been reported in [Quarto Code Linking documentation](https://quarto.org/docs/output-formats/html-code.html#code-linking) 
+
 Below, we described remaining steps before final publication to BioModels standards. 
 
 ## Build models
