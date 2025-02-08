@@ -23,6 +23,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 /* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
@@ -337,8 +371,57 @@ window.Quarto = {
 
 <section id="run-steady-state-analyses" class="level2">
 <h2 class="anchored" data-anchor-id="run-steady-state-analyses">Run steady-state Analyses</h2>
-<p>The call to <code>CoRC::runSteadyState()</code> function (see <strong>?@lst-steady-state</strong>) retrieves the steady-states of an ODE model as defined in <a href="#nte-steady-state" class="quarto-xref">Note&nbsp;1</a>.</p>
-<p><strong>?@lst-import</strong></p>
+<p>The call to <code>CoRC::runSteadyState()</code> function (see <a href="#lst-steady-state" class="quarto-xref">Listing&nbsp;2</a>) retrieves the steady-states of an ODE model as defined in <a href="#nte-steady-state" class="quarto-xref">Note&nbsp;1</a>.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install and load R connector to COPASI software</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># remotes::install_github("jpahle/CoRC")</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(CoRC)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># load tidyverse packages</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(testthat)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co"># for Table reporting</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(flextable)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell">
+<div id="lst-import" class="r cell-code listing quarto-float quarto-figure quarto-figure-left anchored">
+<figure class="quarto-float quarto-float-lst figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-lst" id="lst-import-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Listing&nbsp;1: Import pyplot
+</figcaption>
+<div aria-describedby="lst-import-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="sourceCode cell-code" id="lst-import"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="lst-import-1"><a href="#lst-import-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(flextable)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</figure>
+</div>
+</div>
+<p><a href="#lst-import" class="quarto-xref">Listing&nbsp;1</a></p>
+<div class="cell">
+<div id="lst-steady-state" class="r cell-code listing quarto-float quarto-figure quarto-figure-left anchored">
+<figure class="quarto-float quarto-float-lst figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-lst" id="lst-steady-state-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Listing&nbsp;2: Compute steady-state conditions.
+</figcaption>
+<div aria-describedby="lst-steady-state-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="sourceCode cell-code" id="lst-steady-state"><pre class="sourceCode code-annotation-code r code-with-copy"><code class="sourceCode r"><span id="lst-steady-state-1"><a href="#lst-steady-state-1" aria-hidden="true" tabindex="-1"></a>healthy_model <span class="ot">&lt;-</span> <span class="fu">loadModel</span>(<span class="st">"../../models/team_2016_final_model_lo2016.cps"</span>)</span>
+<span id="lst-steady-state-2"><a href="#lst-steady-state-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst-steady-state-3"><a href="#lst-steady-state-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Which methods are used in Lo2016 paper for running this SteadyState condition?</span></span>
+<span id="lst-steady-state-4"><a href="#lst-steady-state-4" aria-hidden="true" tabindex="-1"></a>healthy_model_steady_state <span class="ot">&lt;-</span> <span class="fu">runSteadyState</span>(</span>
+<span id="lst-steady-state-5"><a href="#lst-steady-state-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">model =</span> healthy_model,</span>
+<span id="lst-steady-state-6"><a href="#lst-steady-state-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">calculate_jacobian =</span> <span class="cn">TRUE</span>,</span>
+<span id="lst-steady-state-7"><a href="#lst-steady-state-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">perform_stability_analysis =</span> <span class="cn">TRUE</span>,</span>
+<span id="lst-steady-state-8"><a href="#lst-steady-state-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">method =</span> <span class="fu">list</span>(<span class="st">"use_newton"</span><span class="ot">=</span><span class="cn">TRUE</span>, <span class="at">accept_negative_concentrations =</span> <span class="cn">FALSE</span>)</span>
+<span id="lst-steady-state-9"><a href="#lst-steady-state-9" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</figure>
+</div>
+</div>
 <ol type="1">
 <li>Run <code>CoRC::loadModel()</code> function to load the COPASI model in R<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</li>
 <li>We ue the <code>CoRC::runSteadyState</code> function to run the steady-states…</li>
@@ -375,11 +458,84 @@ f_n(x_1^*, x_2^*, \dots, x_{15}^*) &amp;= 0.
 \tag{1}\]</span></span></p>
 </div>
 </div>
-<p>To ensure that the model converged, we assert in <strong>?@lst-steady-state-convergence</strong> that the outcome of the stability analysis is <code>found</code>. Other outcomes include <code>notFound</code> and <code>foundNegative</code> (which is irrealistic in our setting, since concentrations of species can either be positive or null).</p>
+<p>To ensure that the model converged, we assert in <a href="#lst-steady-state-convergence" class="quarto-xref">Listing&nbsp;3</a> that the outcome of the stability analysis is <code>found</code>. Other outcomes include <code>notFound</code> and <code>foundNegative</code> (which is irrealistic in our setting, since concentrations of species can either be positive or null).</p>
+<div class="cell">
+<div id="lst-steady-state-convergence" class="r cell-code listing quarto-float quarto-figure quarto-figure-left anchored">
+<figure class="quarto-float quarto-float-lst figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-lst" id="lst-steady-state-convergence-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Listing&nbsp;3: Check that the model converged with a testthat equal. If not, returns an error.
+</figcaption>
+<div aria-describedby="lst-steady-state-convergence-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="sourceCode cell-code" id="lst-steady-state-convergence"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="lst-steady-state-convergence-1"><a href="#lst-steady-state-convergence-1" aria-hidden="true" tabindex="-1"></a>testthat<span class="sc">::</span><span class="fu">expect_equal</span>(healthy_model_steady_state<span class="sc">$</span>result, <span class="st">"found"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</figure>
+</div>
+</div>
 </section>
 <section id="report-steady-state-analyses" class="level2">
 <h2 class="anchored" data-anchor-id="report-steady-state-analyses">Report steady-state analyses</h2>
-<p>In <strong>?@tbl-steady-state</strong>, we report the concentrations of the 15 varying species included in the <span class="citation" data-cites="lo2016po">Lo et al. (<a href="#ref-lo2016po" role="doc-biblioref">2016</a>)</span> ODE model describing the dynamic relations among pools of immune cells (macrophages and T-cells) and the secreted cytokines, using the <code>flextable</code> package <span class="citation" data-cites="flextable">(<a href="#ref-flextable" role="doc-biblioref">Gohel and Skintzos 2024</a>)</span>.</p>
+<p>In <a href="#tbl-steady-state" class="quarto-xref">Table&nbsp;1</a>, we report the concentrations of the 15 varying species included in the <span class="citation" data-cites="lo2016po">Lo et al. (<a href="#ref-lo2016po" role="doc-biblioref">2016</a>)</span> ODE model describing the dynamic relations among pools of immune cells (macrophages and T-cells) and the secreted cytokines, using the <code>flextable</code> package <span class="citation" data-cites="flextable">(<a href="#ref-flextable" role="doc-biblioref">Gohel and Skintzos 2024</a>)</span>.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Format table for reporting.</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>steady_state_concentrations <span class="ot">&lt;-</span> healthy_model_steady_state<span class="sc">$</span>species <span class="sc">|&gt;</span> </span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(name, concentration) <span class="sc">|&gt;</span> </span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">name =</span> <span class="fu">factor</span>(name, </span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>                          <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"M1"</span>, <span class="st">"M2"</span>, </span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>                                     <span class="st">"T1"</span>, <span class="st">"T2"</span>,</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>                                     <span class="st">"T17"</span>, <span class="st">"Tr"</span>,</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>                                     <span class="st">"Ig"</span>, <span class="st">"I2"</span>, <span class="st">"I4"</span>, <span class="st">"I21"</span>, <span class="st">"I6"</span>,</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>                                     <span class="st">"Ia"</span>, <span class="st">"I10"</span>, <span class="st">"Ib"</span>, <span class="st">"I12"</span>),</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>                          <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"M1 macrophage"</span>, <span class="st">"M2 macrophage"</span>, </span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>                                     <span class="st">"Th1 cell"</span>, <span class="st">"Th2 cell"</span>,</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>                                     <span class="st">"Th17 cell"</span>, <span class="st">"Treg cell"</span>, </span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>                                     <span class="st">"IFN-g"</span>, <span class="st">"IL-2"</span>, <span class="st">"IL-4"</span>, <span class="st">"IL-21"</span>, <span class="st">"IL-6"</span>, </span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>                                     <span class="st">"TNF-a"</span>, <span class="st">"IL-10"</span>, <span class="st">"TFG-b"</span>, <span class="st">"IL-12"</span>),</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>                       <span class="at">ordered =</span> <span class="cn">TRUE</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(name)</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="do">## Format steady-state analysis report for Table 4 ----</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>steady_state_labels <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>  <span class="at">name =</span> <span class="st">"Species"</span>,</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>  <span class="at">concentration =</span> <span class="st">"Value(g/cm^3)"</span>)</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>steady_state_table <span class="ot">&lt;-</span> <span class="fu">flextable</span>(steady_state_concentrations) <span class="sc">|&gt;</span> </span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>  <span class="co"># format to scientific notation, allowing max 2 significant digits</span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">colformat_double</span>(<span class="at">j =</span> <span class="st">"concentration"</span>, <span class="at">digits =</span> <span class="dv">3</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set_formatter</span>(<span class="at">concentration =</span> <span class="cf">function</span>(x) {</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>    <span class="fu">formatC</span>(x, <span class="at">format =</span> <span class="st">"e"</span>, <span class="at">digits =</span> <span class="dv">2</span>)</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>  }) <span class="sc">|&gt;</span> </span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_footer_row</span>(<span class="at">values =</span> <span class="st">"doi:10.1371/journal.pone.0165782.t004"</span>, </span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>                 <span class="at">colwidths =</span> <span class="dv">2</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">compose</span>(<span class="at">j =</span> <span class="st">"name"</span>, </span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>          <span class="at">i =</span> <span class="sc">~</span> name <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"IFN-g"</span>, <span class="st">"TNF-a"</span>, <span class="st">"TFG-b"</span>),</span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>          <span class="at">value =</span> <span class="fu">as_paragraph</span>(<span class="fu">as_equation</span>(<span class="fu">c</span>(<span class="st">"</span><span class="sc">\\</span><span class="st">text{IFN}_{</span><span class="sc">\\</span><span class="st">gamma}"</span>,</span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>                                             <span class="st">"</span><span class="sc">\\</span><span class="st">text{TNF}_{</span><span class="sc">\\</span><span class="st">alpha}"</span>,</span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>                                             <span class="st">"</span><span class="sc">\\</span><span class="st">text{TGF}_{</span><span class="sc">\\</span><span class="st">beta}"</span>)))) <span class="sc">|&gt;</span> </span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set_header_labels</span>(<span class="at">values =</span> steady_state_labels) <span class="sc">|&gt;</span> </span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>  <span class="fu">bold</span>(<span class="at">part =</span> <span class="st">"header"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set_caption</span>(<span class="st">"Table 4: Steady-state concentrations of cytokines,</span></span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a><span class="st">              macrophages and T cells in a healthy individual."</span>) </span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>steady_state_table</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div id="tbl-steady-state" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<div aria-describedby="tbl-steady-state-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<div class="tabwid"><style>.cl-d90230e8{}.cl-d8d9e296{font-family:'Arial';font-size:11pt;font-weight:bold;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-d8d9e2b4{font-family:'Arial';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-d8fa6764{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-d8fa676e{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-d8fa9838{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-d8fa9842{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-d8fa9843{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-d8fa984c{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-d8fa984d{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-d8fa984e{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-d8fa9856{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table data-quarto-disable-processing="true" class="cl-d90230e8"><thead><tr style="overflow-wrap:break-word;"><th class="cl-d8fa9838"><p class="cl-d8fa6764"><span class="cl-d8d9e296">Species</span></p></th><th class="cl-d8fa9842"><p class="cl-d8fa676e"><span class="cl-d8d9e296">Value(g/cm^3)</span></p></th></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-d8fa9843"><p class="cl-d8fa6764"><span class="cl-d8d9e2b4">M1 macrophage</span></p></td><td class="cl-d8fa984c"><p class="cl-d8fa676e"><span class="cl-d8d9e2b4">1.17e-02</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-d8fa9843"><p class="cl-d8fa6764"><span class="cl-d8d9e2b4">M2 macrophage</span></p></td><td class="cl-d8fa984c"><p class="cl-d8fa676e"><span class="cl-d8d9e2b4">8.17e-03</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-d8fa9843"><p class="cl-d8fa6764"><span class="cl-d8d9e2b4">Th1 cell</span></p></td><td class="cl-d8fa984c"><p class="cl-d8fa676e"><span class="cl-d8d9e2b4">1.40e-01</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-d8fa9843"><p class="cl-d8fa6764"><span class="cl-d8d9e2b4">Th2 cell</span></p></td><td class="cl-d8fa984c"><p class="cl-d8fa676e"><span class="cl-d8d9e2b4">3.99e-03</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-d8fa9843"><p class="cl-d8fa6764"><span class="cl-d8d9e2b4">Th17 cell</span></p></td><td class="cl-d8fa984c"><p class="cl-d8fa676e"><span class="cl-d8d9e2b4">6.18e-03</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-d8fa9843"><p class="cl-d8fa6764"><span class="cl-d8d9e2b4">Treg cell</span></p></td><td class="cl-d8fa984c"><p class="cl-d8fa676e"><span class="cl-d8d9e2b4">2.98e-04</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-d8fa9843"><p class="cl-d8fa6764"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" data-external="1"><span class="cl-d8d9e2b4"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" data-external="1">
+<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mtext>IFN</mtext><mi>γ</mi></msub></mrow><annotation encoding="application/x-tex">\text{IFN}_{\gamma}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9694em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord text"><span class="mord">IFN</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.05556em;">γ</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span></span></span></span></span></p></td><td class="cl-d8fa984c"><p class="cl-d8fa676e"><span class="cl-d8d9e2b4">2.01e-07</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-d8fa9843"><p class="cl-d8fa6764"><span class="cl-d8d9e2b4">IL-2</span></p></td><td class="cl-d8fa984c"><p class="cl-d8fa676e"><span class="cl-d8d9e2b4">1.07e-08</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-d8fa9843"><p class="cl-d8fa6764"><span class="cl-d8d9e2b4">IL-4</span></p></td><td class="cl-d8fa984c"><p class="cl-d8fa676e"><span class="cl-d8d9e2b4">3.36e-09</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-d8fa9843"><p class="cl-d8fa6764"><span class="cl-d8d9e2b4">IL-21</span></p></td><td class="cl-d8fa984c"><p class="cl-d8fa676e"><span class="cl-d8d9e2b4">7.77e-08</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-d8fa9843"><p class="cl-d8fa6764"><span class="cl-d8d9e2b4">IL-6</span></p></td><td class="cl-d8fa984c"><p class="cl-d8fa676e"><span class="cl-d8d9e2b4">1.46e-06</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-d8fa9843"><p class="cl-d8fa6764"><span class="cl-d8d9e2b4"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" data-external="1">
+<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mtext>TNF</mtext><mi>α</mi></msub></mrow><annotation encoding="application/x-tex">\text{TNF}_{\alpha}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord text"><span class="mord">TNF</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.0037em;">α</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span></p></td><td class="cl-d8fa984c"><p class="cl-d8fa676e"><span class="cl-d8d9e2b4">2.72e-05</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-d8fa9843"><p class="cl-d8fa6764"><span class="cl-d8d9e2b4">IL-10</span></p></td><td class="cl-d8fa984c"><p class="cl-d8fa676e"><span class="cl-d8d9e2b4">3.01e-08</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-d8fa9843"><p class="cl-d8fa6764"><span class="cl-d8d9e2b4"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" data-external="1">
+<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mtext>TGF</mtext><mi>β</mi></msub></mrow><annotation encoding="application/x-tex">\text{TGF}_{\beta}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9694em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord text"><span class="mord">TGF</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.05278em;">β</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span></span></span></span></span></p></td><td class="cl-d8fa984c"><p class="cl-d8fa676e"><span class="cl-d8d9e2b4">1.64e-13</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-d8fa984d"><p class="cl-d8fa6764"><span class="cl-d8d9e2b4">IL-12</span></p></td><td class="cl-d8fa984e"><p class="cl-d8fa676e"><span class="cl-d8d9e2b4">3.64e-07</span></p></td></tr></tbody><tfoot><tr style="overflow-wrap:break-word;"><td colspan="2" class="cl-d8fa9856"><p class="cl-d8fa6764"><span class="cl-d8d9e2b4">doi:10.1371/journal.pone.0165782.t004</span></p></td></tr></tfoot></table></div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-tbl" id="tbl-steady-state-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Steady-state concentrations of cytokines, macrophages and T cells in healthy individuals, see also <strong>Table 4</strong> reported in <span class="citation" data-cites="lo2016po">(<a href="#ref-lo2016po" role="doc-biblioref">Lo et al. 2016, 10</a>)</span>.
+</figcaption>
+</figure>
+</div>
+</div>
 
 
 
