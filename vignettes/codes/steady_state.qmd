@@ -23,21 +23,26 @@ library(testthat)
 library(flextable)
 ```
 
-```{r}
-#| lst-label: lst-import
-#| lst-cap: Import pyplot
 
-library(flextable)
+```r
+library(tidyverse)
+library(palmerpenguins)
+penguins |>                                      # <1>
+  mutate(                                        # <2>
+    bill_ratio = bill_depth_mm / bill_length_mm, # <2>
+    bill_area  = bill_depth_mm * bill_length_mm  # <2>
+  )                                              # <2>
 ```
+1. Take `penguins`, and then,
+2. add new columns for the bill ratio and bill area.
 
-@lst-import
 
 
 ```{r}
 #| lst-label: lst-steady-state
 #| lst-cap: Compute steady-state conditions. 
 
-healthy_model <- loadModel("../../models/team_2016_final_model_lo2016.cps")  # <1>
+healthy_model <- loadModel("../../models/team_2016_final_model_lo2016.cps") # <1>
 
 # Which methods are used in Lo2016 paper for running this SteadyState condition?
 healthy_model_steady_state <- runSteadyState(                            # <2>
@@ -47,7 +52,6 @@ healthy_model_steady_state <- runSteadyState(                            # <2>
   method = list("use_newton"=TRUE, accept_negative_concentrations = FALSE) # <3>
 )
 ```
-
 1. Run `CoRC::loadModel()` function to load the COPASI model in R^[Note that models are loaded **by reference** with the CoRC package, meaning that you modify the object **in place**. Note that his behaviour is rather uncommon in R, the default being the **Copy-on-Modify Behavior** (aka by **value**).]. 
 2. We ue the `CoRC::runSteadyState` function to run the steady-states...
 3. ... and for this this, several algorithms can be chosen. We used in our framework the well-known **root-finding** [Newton-Raphson algorithm](https://en.wikipedia.org/wiki/Newton%27s_method).
