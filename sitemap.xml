@@ -1,39 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://bastienchassagnol.github.io/Lo2016_ODE_IBD/vignettes/history.html</loc>
-    <lastmod>2025-01-26T18:46:07.478Z</lastmod>
-  </url>
-  <url>
-    <loc>https://bastienchassagnol.github.io/Lo2016_ODE_IBD/vignettes/curation.html</loc>
-    <lastmod>2025-01-26T18:46:07.478Z</lastmod>
-  </url>
-  <url>
-    <loc>https://bastienchassagnol.github.io/Lo2016_ODE_IBD/vignettes/codes/steady_state.html</loc>
-    <lastmod>2025-01-26T18:46:43.257Z</lastmod>
-  </url>
-  <url>
-    <loc>https://bastienchassagnol.github.io/Lo2016_ODE_IBD/vignettes/codes/patient_stratification.html</loc>
-    <lastmod>2025-01-26T18:47:23.359Z</lastmod>
-  </url>
-  <url>
-    <loc>https://bastienchassagnol.github.io/Lo2016_ODE_IBD/hackathon_keynotes.html</loc>
-    <lastmod>2024-11-20T08:58:53.351Z</lastmod>
-  </url>
-  <url>
     <loc>https://bastienchassagnol.github.io/Lo2016_ODE_IBD/index.html</loc>
-    <lastmod>2025-01-26T20:22:07.160Z</lastmod>
+    <lastmod>2025-02-08T21:33:21.672Z</lastmod>
   </url>
   <url>
-    <loc>https://bastienchassagnol.github.io/Lo2016_ODE_IBD/vignettes/codes/prcc.html</loc>
+    <loc>https://bastienchassagnol.github.io/Lo2016_ODE_IBD/files.html</loc>
+    <lastmod>2025-01-26T18:45:08.298Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bastienchassagnol.github.io/Lo2016_ODE_IBD/components.html</loc>
+    <lastmod>2025-02-08T20:14:52.516Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bastienchassagnol.github.io/Lo2016_ODE_IBD/codes/prcc.html</loc>
     <lastmod>2025-01-26T18:47:11.007Z</lastmod>
   </url>
   <url>
-    <loc>https://bastienchassagnol.github.io/Lo2016_ODE_IBD/vignettes/components.html</loc>
-    <lastmod>2025-01-26T21:22:23.537Z</lastmod>
+    <loc>https://bastienchassagnol.github.io/Lo2016_ODE_IBD/codes/patient_stratification.html</loc>
+    <lastmod>2025-01-26T18:47:23.359Z</lastmod>
   </url>
   <url>
-    <loc>https://bastienchassagnol.github.io/Lo2016_ODE_IBD/vignettes/files.html</loc>
-    <lastmod>2025-01-26T18:45:08.298Z</lastmod>
+    <loc>https://bastienchassagnol.github.io/Lo2016_ODE_IBD/codes/steady_state.html</loc>
+    <lastmod>2025-02-08T22:07:17.917Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bastienchassagnol.github.io/Lo2016_ODE_IBD/curation.html</loc>
+    <lastmod>2025-01-26T18:46:07.478Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bastienchassagnol.github.io/Lo2016_ODE_IBD/history.html</loc>
+    <lastmod>2025-01-26T18:46:07.478Z</lastmod>
   </url>
 </urlset>

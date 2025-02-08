@@ -1,97 +1,42 @@
 [
   {
-    "objectID": "vignettes/history.html",
-    "href": "vignettes/history.html",
-    "title": "Curation",
-    "section": "",
-    "text": "Back to top"
-  },
-  {
-    "objectID": "vignettes/curation.html",
-    "href": "vignettes/curation.html",
-    "title": "Curation",
-    "section": "",
-    "text": "Back to top"
-  },
-  {
-    "objectID": "vignettes/codes/steady_state.html",
-    "href": "vignettes/codes/steady_state.html",
-    "title": "steady_state",
-    "section": "",
-    "text": "Back to top",
-    "crumbs": [
-      "Steady State"
-    ]
-  },
-  {
-    "objectID": "vignettes/codes/patient_stratification.html",
-    "href": "vignettes/codes/patient_stratification.html",
-    "title": "patient_stratification",
-    "section": "",
-    "text": "Back to top",
-    "crumbs": [
-      "Patient Stratification"
-    ]
-  },
-  {
-    "objectID": "hackathon_keynotes.html",
-    "href": "hackathon_keynotes.html",
-    "title": "BioModels Hackathon",
-    "section": "",
-    "text": "Make models that can be interpreted, reused and standardised\nconversion of models into useful kinetic models, using software Copasi\n\n\n\n\nBiochemical models at the origin.\n\nChemical substances converted into other substances, reactions illustrated by arrows.\nCompartments: metabolites can be transported from one place to another. Have a volume.\nChemical species: modelled as concentration, concentrations are the variables of interest. Can be extended to cell types, biological species, … Anything that can be quantified as a number, at a certain pace.\nMost complex thing is a kinetic reaction, with a given reaction rate.\n\n\n\n\n\n\nGraphical representation, or matrices of species/variables - reactions/processes.\nObjective of the workshop: convert existing models into the conventional SBML format.\nModel is then converted as a list of ODEs, with simulation:\n\n\n\nFor a general reaction of the form,\n\\[\naA + bB \\rightarrow P\n\\]\nthe rate law can be written as:\n\\[\n\\text{Rate} = k [A]^a [B]^b\n\\]\nWhere \\(a\\) and \\(b\\) are the stoichiometric coefficients.\nIn summary, stoichiometric coefficients greater than 1 lead to higher powers in the rate law expression because they reflect the multiplicative nature of interactions between multiple reactant molecules."
-  },
-  {
-    "objectID": "hackathon_keynotes.html#kinetic-model",
-    "href": "hackathon_keynotes.html#kinetic-model",
-    "title": "BioModels Hackathon",
-    "section": "",
-    "text": "Biochemical models at the origin.\n\nChemical substances converted into other substances, reactions illustrated by arrows.\nCompartments: metabolites can be transported from one place to another. Have a volume.\nChemical species: modelled as concentration, concentrations are the variables of interest. Can be extended to cell types, biological species, … Anything that can be quantified as a number, at a certain pace.\nMost complex thing is a kinetic reaction, with a given reaction rate."
-  },
-  {
-    "objectID": "hackathon_keynotes.html#sbml-format-as-a-computer-and-semantic-representation",
-    "href": "hackathon_keynotes.html#sbml-format-as-a-computer-and-semantic-representation",
-    "title": "BioModels Hackathon",
-    "section": "",
-    "text": "Graphical representation, or matrices of species/variables - reactions/processes.\nObjective of the workshop: convert existing models into the conventional SBML format.\nModel is then converted as a list of ODEs, with simulation:\n\n\n\nFor a general reaction of the form,\n\\[\naA + bB \\rightarrow P\n\\]\nthe rate law can be written as:\n\\[\n\\text{Rate} = k [A]^a [B]^b\n\\]\nWhere \\(a\\) and \\(b\\) are the stoichiometric coefficients.\nIn summary, stoichiometric coefficients greater than 1 lead to higher powers in the rate law expression because they reflect the multiplicative nature of interactions between multiple reactant molecules."
-  },
-  {
-    "objectID": "hackathon_keynotes.html#curation",
-    "href": "hackathon_keynotes.html#curation",
-    "title": "BioModels Hackathon",
-    "section": "Curation:",
-    "text": "Curation:\nbiochemical network -&gt; proper mathematical representation -&gt; computer readable format -&gt; ensure model simulations with Copasi match outputs and model annotation (ontologies)\nBioModels hosts more than 1,000 models, one of the most popular repository for storing models Five tabs: overview, files, history (versions), components (the SBML model itself) and curation (verify simulation of the model matches with the figures from the paper) + external links to other databases\n\nDifference between replicability(repeatability) (same exact code) and reproducibility (just have the figure, and the inputs)\nCan be considered reproducible if at least one simulation figure can be reproduced, minor deviations are acceptable if they do not change the scientific conclusions\nHalf of the models can be reproduced (requirement: equations are provided), 1/3 can not be reproduced at all, even with scientists’ reports. Only 1/3 of the researchers could be contacted. Number of models is increasing, but the ratio of non-reproducible papers remains the same.\nreasons for non-reproducibility: missing parameters, initial conditions, structural inconsistency and even, in some cases, the reasons remain unclear.\nHow to overcome this challenge? Comply with the reproducibility scorecard (models with score above 4 over 8 are usually reproducible)"
-  },
-  {
-    "objectID": "hackathon_keynotes.html#reasons",
-    "href": "hackathon_keynotes.html#reasons",
-    "title": "BioModels Hackathon",
-    "section": "Reasons",
-    "text": "Reasons\n\nunambiguous identification of model components\nadd semantic layers (better biological understanding)"
-  },
-  {
-    "objectID": "hackathon_keynotes.html#what-do-annotations-look-like",
-    "href": "hackathon_keynotes.html#what-do-annotations-look-like",
-    "title": "BioModels Hackathon",
-    "section": "What do annotations look like?",
-    "text": "What do annotations look like?\n\nmodel element (species, reaction or event he whole model) -&gt; qualified ontology (is, hasTaxon, …) -&gt; cross-reference to an article (CHEBI, Resource identifier)\ntypes of qualifiers (report to Identifiers):\n\nbqbiol"
-  },
-  {
-    "objectID": "hackathon_keynotes.html#copasi-model",
-    "href": "hackathon_keynotes.html#copasi-model",
-    "title": "BioModels Hackathon",
-    "section": "Copasi model",
-    "text": "Copasi model\n\nOntology search"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Overview",
     "section": "",
-    "text": "About section.\n\n\n\n Back to top"
+    "text": "Nous chargeons ici les packages utiles:\n\n\n\n Back to top"
   },
   {
-    "objectID": "vignettes/codes/prcc.html",
-    "href": "vignettes/codes/prcc.html",
+    "objectID": "files.html",
+    "href": "files.html",
+    "title": "Files",
+    "section": "",
+    "text": "Back to top"
+  },
+  {
+    "objectID": "components.html",
+    "href": "components.html",
+    "title": "ODE Model of Inflammatory Bowel Disease",
+    "section": "",
+    "text": "Figure 1\n\n\n\nDownload PDF file.\n\n\nFigure 1"
+  },
+  {
+    "objectID": "components.html#original-paper",
+    "href": "components.html#original-paper",
+    "title": "ODE Model of Inflammatory Bowel Disease",
+    "section": "",
+    "text": "Figure 1\n\n\n\nDownload PDF file.\n\n\nFigure 1"
+  },
+  {
+    "objectID": "components.html#species",
+    "href": "components.html#species",
+    "title": "ODE Model of Inflammatory Bowel Disease",
+    "section": "Species",
+    "text": "Species"
+  },
+  {
+    "objectID": "codes/prcc.html",
+    "href": "codes/prcc.html",
     "title": "prcc",
     "section": "",
     "text": "Back to top",
@@ -100,16 +45,66 @@
     ]
   },
   {
-    "objectID": "vignettes/components.html",
-    "href": "vignettes/components.html",
-    "title": "Original Paper",
+    "objectID": "codes/patient_stratification.html",
+    "href": "codes/patient_stratification.html",
+    "title": "patient_stratification",
     "section": "",
-    "text": "Download original paper\n  \n\n\n  \n\n\n\n\n Back to top"
+    "text": "Back to top",
+    "crumbs": [
+      "Patient Stratification"
+    ]
   },
   {
-    "objectID": "vignettes/files.html",
-    "href": "vignettes/files.html",
-    "title": "Files",
+    "objectID": "codes/steady_state.html",
+    "href": "codes/steady_state.html",
+    "title": "Steady-state computations",
+    "section": "",
+    "text": "The call to CoRC::runSteadyState() function (see ?@lst-steady-state) retrieves the steady-states of an ODE model as defined in Note 1.\n?@lst-import\n\nRun CoRC::loadModel() function to load the COPASI model in R1.\nWe ue the CoRC::runSteadyState function to run the steady-states…\n… and for this this, several algorithms can be chosen. We used in our framework the well-known root-finding Newton-Raphson algorithm.\n\n\n\n\n\n\n\nNote 1: Derive Steady-States Conditions of an ODE model\n\n\n\nComputing the steady-state conditions for an ordinary differential equation (ODE) means finding the system’s equilibrium points, where the variables (also named the species) remain constant over time. In other words, this means finding the concentrations for which all the derivatives cancel:\nGiven a system of \\(n=15\\) ODEs (number of varying species in the simulated model),\n\\[\n\\begin{cases}\n\\frac{dx_1}{dt} &= f_1(x_1, x_2, \\dots, x_{15}) \\\\\n\\frac{dx_2}{dt} &= f_2(x_1, x_2, \\dots, x_{15}) \\\\\n&\\vdots \\\\\n\\frac{dx_{15}}{dt} &= f_n(x_1, x_2, \\dots, x_{15})\n\\end{cases}\n\\]\nthe steady-state conditions are obtained by solving system Equation 1:\n\\[\n\\begin{cases}\nf_1(x_1^*, x_2^*, \\dots, x_{15}^*)& = 0 \\\\\nf_2(x_1^*, x_2^*, \\dots, x_{15}^*) &= 0 \\\\\n& \\vdots \\\\\nf_n(x_1^*, x_2^*, \\dots, x_{15}^*) &= 0.\n\\end{cases}\n\\tag{1}\\]\n\n\nTo ensure that the model converged, we assert in ?@lst-steady-state-convergence that the outcome of the stability analysis is found. Other outcomes include notFound and foundNegative (which is irrealistic in our setting, since concentrations of species can either be positive or null).",
+    "crumbs": [
+      "Steady State"
+    ]
+  },
+  {
+    "objectID": "codes/steady_state.html#run-steady-state-analyses",
+    "href": "codes/steady_state.html#run-steady-state-analyses",
+    "title": "Steady-state computations",
+    "section": "",
+    "text": "The call to CoRC::runSteadyState() function (see ?@lst-steady-state) retrieves the steady-states of an ODE model as defined in Note 1.\n?@lst-import\n\nRun CoRC::loadModel() function to load the COPASI model in R1.\nWe ue the CoRC::runSteadyState function to run the steady-states…\n… and for this this, several algorithms can be chosen. We used in our framework the well-known root-finding Newton-Raphson algorithm.\n\n\n\n\n\n\n\nNote 1: Derive Steady-States Conditions of an ODE model\n\n\n\nComputing the steady-state conditions for an ordinary differential equation (ODE) means finding the system’s equilibrium points, where the variables (also named the species) remain constant over time. In other words, this means finding the concentrations for which all the derivatives cancel:\nGiven a system of \\(n=15\\) ODEs (number of varying species in the simulated model),\n\\[\n\\begin{cases}\n\\frac{dx_1}{dt} &= f_1(x_1, x_2, \\dots, x_{15}) \\\\\n\\frac{dx_2}{dt} &= f_2(x_1, x_2, \\dots, x_{15}) \\\\\n&\\vdots \\\\\n\\frac{dx_{15}}{dt} &= f_n(x_1, x_2, \\dots, x_{15})\n\\end{cases}\n\\]\nthe steady-state conditions are obtained by solving system Equation 1:\n\\[\n\\begin{cases}\nf_1(x_1^*, x_2^*, \\dots, x_{15}^*)& = 0 \\\\\nf_2(x_1^*, x_2^*, \\dots, x_{15}^*) &= 0 \\\\\n& \\vdots \\\\\nf_n(x_1^*, x_2^*, \\dots, x_{15}^*) &= 0.\n\\end{cases}\n\\tag{1}\\]\n\n\nTo ensure that the model converged, we assert in ?@lst-steady-state-convergence that the outcome of the stability analysis is found. Other outcomes include notFound and foundNegative (which is irrealistic in our setting, since concentrations of species can either be positive or null).",
+    "crumbs": [
+      "Steady State"
+    ]
+  },
+  {
+    "objectID": "codes/steady_state.html#report-steady-state-analyses",
+    "href": "codes/steady_state.html#report-steady-state-analyses",
+    "title": "Steady-state computations",
+    "section": "Report steady-state analyses",
+    "text": "Report steady-state analyses\nIn ?@tbl-steady-state, we report the concentrations of the 15 varying species included in the Lo et al. (2016) ODE model describing the dynamic relations among pools of immune cells (macrophages and T-cells) and the secreted cytokines, using the flextable package (Gohel and Skintzos 2024).",
+    "crumbs": [
+      "Steady State"
+    ]
+  },
+  {
+    "objectID": "codes/steady_state.html#footnotes",
+    "href": "codes/steady_state.html#footnotes",
+    "title": "Steady-state computations",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nNote that models are loaded by reference with the CoRC package, meaning that you modify the object in place. Note that his behaviour is rather uncommon in R, the default being the Copy-on-Modify Behavior (aka by value).↩︎",
+    "crumbs": [
+      "Steady State"
+    ]
+  },
+  {
+    "objectID": "curation.html",
+    "href": "curation.html",
+    "title": "Curation",
+    "section": "",
+    "text": "Back to top"
+  },
+  {
+    "objectID": "history.html",
+    "href": "history.html",
+    "title": "Curation",
     "section": "",
     "text": "Back to top"
   }
