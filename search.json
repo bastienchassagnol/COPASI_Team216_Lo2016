@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Overview",
     "section": "",
-    "text": "Nous chargeons ici les packages utiles:\n\n\nCode\n# install and load R connector to COPASI software\n# remotes::install_github(\"jpahle/CoRC\")\nlibrary(CoRC)\nlibrary(knitr)\n# load tidyverse packages\nlibrary(ggplot2)\nlibrary(dplyr)\nlibrary(readr)\nlibrary(testthat)\n\n# for Table reporting\nlibrary(flextable)\n\nknitr::opts_chunk$set(\n  comment = \"#&gt;\",\n  out.width = \"90%\")\n\n\n\n\n\n Back to top"
+    "text": "Back to top"
   },
   {
     "objectID": "files.html",
@@ -16,21 +16,21 @@
   {
     "objectID": "components.html",
     "href": "components.html",
-    "title": "ODE Model of Inflammatory Bowel Disease",
+    "title": "",
     "section": "",
-    "text": "Figure 1\n\n\n\nDownload PDF file.\n\n\nFigure 1"
+    "text": "Code"
   },
   {
     "objectID": "components.html#original-paper",
     "href": "components.html#original-paper",
-    "title": "ODE Model of Inflammatory Bowel Disease",
-    "section": "",
-    "text": "Figure 1\n\n\n\nDownload PDF file.\n\n\nFigure 1"
+    "title": "",
+    "section": "Original paper",
+    "text": "Original paper\nFigure 1\n\n\n\nDownload PDF file.\n\n\nFigure 1"
   },
   {
     "objectID": "components.html#species",
     "href": "components.html#species",
-    "title": "ODE Model of Inflammatory Bowel Disease",
+    "title": "",
     "section": "Species",
     "text": "Species"
   },
@@ -59,7 +59,7 @@
     "href": "codes/steady_state.html",
     "title": "Steady-state computations",
     "section": "",
-    "text": "The call to CoRC::runSteadyState() function (see Listing 2) retrieves the steady-states of an ODE model as defined in Note 1.\n\n\nCode\n# install and load R connector to COPASI software\n# remotes::install_github(\"jpahle/CoRC\")\nlibrary(CoRC)\nlibrary(knitr)\n# load tidyverse packages\nlibrary(ggplot2)\nlibrary(dplyr)\nlibrary(readr)\nlibrary(testthat)\n\n# for Table reporting\nlibrary(flextable)\n\n\n\n\n\n\nListing 1: Import pyplot\n\n\nlibrary(flextable)\n\n\n\n\nListing 1\n\n\n\n\nListing 2: Compute steady-state conditions.\n\n\nhealthy_model &lt;- loadModel(\"../../models/team_2016_final_model_lo2016.cps\")\n\n# Which methods are used in Lo2016 paper for running this SteadyState condition?\nhealthy_model_steady_state &lt;- runSteadyState(\n  model = healthy_model,\n  calculate_jacobian = TRUE,\n  perform_stability_analysis = TRUE,\n  method = list(\"use_newton\"=TRUE, accept_negative_concentrations = FALSE)\n)\n\n\n\n\n\nRun CoRC::loadModel() function to load the COPASI model in R1.\nWe ue the CoRC::runSteadyState function to run the steady-states…\n… and for this this, several algorithms can be chosen. We used in our framework the well-known root-finding Newton-Raphson algorithm.\n\n\n\n\n\n\n\nNote 1: Derive Steady-States Conditions of an ODE model\n\n\n\nComputing the steady-state conditions for an ordinary differential equation (ODE) means finding the system’s equilibrium points, where the variables (also named the species) remain constant over time. In other words, this means finding the concentrations for which all the derivatives cancel:\nGiven a system of \\(n=15\\) ODEs (number of varying species in the simulated model),\n\\[\n\\begin{cases}\n\\frac{dx_1}{dt} &= f_1(x_1, x_2, \\dots, x_{15}) \\\\\n\\frac{dx_2}{dt} &= f_2(x_1, x_2, \\dots, x_{15}) \\\\\n&\\vdots \\\\\n\\frac{dx_{15}}{dt} &= f_n(x_1, x_2, \\dots, x_{15})\n\\end{cases}\n\\]\nthe steady-state conditions are obtained by solving system Equation 1:\n\\[\n\\begin{cases}\nf_1(x_1^*, x_2^*, \\dots, x_{15}^*)& = 0 \\\\\nf_2(x_1^*, x_2^*, \\dots, x_{15}^*) &= 0 \\\\\n& \\vdots \\\\\nf_n(x_1^*, x_2^*, \\dots, x_{15}^*) &= 0.\n\\end{cases}\n\\tag{1}\\]\n\n\nTo ensure that the model converged, we assert in Listing 3 that the outcome of the stability analysis is found. Other outcomes include notFound and foundNegative (which is irrealistic in our setting, since concentrations of species can either be positive or null).\n\n\n\n\nListing 3: Check that the model converged with a testthat equal. If not, returns an error.\n\n\ntestthat::expect_equal(healthy_model_steady_state$result, \"found\")",
+    "text": "The list of packages required for reproducing the analyses on this script are listed below:\nCode\n# install and load R connector to COPASI software\n# remotes::install_github(\"jpahle/CoRC\")\nlibrary(CoRC)\nlibrary(testthat)\n\n# tidyverse packages\nlibrary(dplyr)\n\n# Table reporting\nlibrary(flextable)",
     "crumbs": [
       "Steady State"
     ]
@@ -68,8 +68,8 @@
     "objectID": "codes/steady_state.html#run-steady-state-analyses",
     "href": "codes/steady_state.html#run-steady-state-analyses",
     "title": "Steady-state computations",
-    "section": "",
-    "text": "The call to CoRC::runSteadyState() function (see Listing 2) retrieves the steady-states of an ODE model as defined in Note 1.\n\n\nCode\n# install and load R connector to COPASI software\n# remotes::install_github(\"jpahle/CoRC\")\nlibrary(CoRC)\nlibrary(knitr)\n# load tidyverse packages\nlibrary(ggplot2)\nlibrary(dplyr)\nlibrary(readr)\nlibrary(testthat)\n\n# for Table reporting\nlibrary(flextable)\n\n\n\n\n\n\nListing 1: Import pyplot\n\n\nlibrary(flextable)\n\n\n\n\nListing 1\n\n\n\n\nListing 2: Compute steady-state conditions.\n\n\nhealthy_model &lt;- loadModel(\"../../models/team_2016_final_model_lo2016.cps\")\n\n# Which methods are used in Lo2016 paper for running this SteadyState condition?\nhealthy_model_steady_state &lt;- runSteadyState(\n  model = healthy_model,\n  calculate_jacobian = TRUE,\n  perform_stability_analysis = TRUE,\n  method = list(\"use_newton\"=TRUE, accept_negative_concentrations = FALSE)\n)\n\n\n\n\n\nRun CoRC::loadModel() function to load the COPASI model in R1.\nWe ue the CoRC::runSteadyState function to run the steady-states…\n… and for this this, several algorithms can be chosen. We used in our framework the well-known root-finding Newton-Raphson algorithm.\n\n\n\n\n\n\n\nNote 1: Derive Steady-States Conditions of an ODE model\n\n\n\nComputing the steady-state conditions for an ordinary differential equation (ODE) means finding the system’s equilibrium points, where the variables (also named the species) remain constant over time. In other words, this means finding the concentrations for which all the derivatives cancel:\nGiven a system of \\(n=15\\) ODEs (number of varying species in the simulated model),\n\\[\n\\begin{cases}\n\\frac{dx_1}{dt} &= f_1(x_1, x_2, \\dots, x_{15}) \\\\\n\\frac{dx_2}{dt} &= f_2(x_1, x_2, \\dots, x_{15}) \\\\\n&\\vdots \\\\\n\\frac{dx_{15}}{dt} &= f_n(x_1, x_2, \\dots, x_{15})\n\\end{cases}\n\\]\nthe steady-state conditions are obtained by solving system Equation 1:\n\\[\n\\begin{cases}\nf_1(x_1^*, x_2^*, \\dots, x_{15}^*)& = 0 \\\\\nf_2(x_1^*, x_2^*, \\dots, x_{15}^*) &= 0 \\\\\n& \\vdots \\\\\nf_n(x_1^*, x_2^*, \\dots, x_{15}^*) &= 0.\n\\end{cases}\n\\tag{1}\\]\n\n\nTo ensure that the model converged, we assert in Listing 3 that the outcome of the stability analysis is found. Other outcomes include notFound and foundNegative (which is irrealistic in our setting, since concentrations of species can either be positive or null).\n\n\n\n\nListing 3: Check that the model converged with a testthat equal. If not, returns an error.\n\n\ntestthat::expect_equal(healthy_model_steady_state$result, \"found\")",
+    "section": "Run steady-state Analyses",
+    "text": "Run steady-state Analyses\nThe call to CoRC::runSteadyState() function retrieves the steady-state of the ODE model (see Note 1 for the mathematical definition of steady states).\n1healthy_model &lt;- loadModel(\"../../models/team_2016_final_model_lo2016.cps\")\n2healthy_model_steady_state &lt;- runSteadyState(\n  model = healthy_model,\n  calculate_jacobian = TRUE,\n  perform_stability_analysis = TRUE,\n3  method = list(\"use_newton\"=TRUE, accept_negative_concentrations = FALSE)\n)\n\n1\n\nRun CoRC::loadModel() function to load the COPASI model in R1.\n\n2\n\nWe ue the CoRC::runSteadyState function to run the steady-states…\n\n3\n\n… and for this this, several algorithms can be chosen. We used in our framework the well-known root-finding Newton-Raphson algorithm.\n\n\n\n\n\n\n\n\nNote 1: Derive Steady-States Conditions of an ODE model\n\n\n\nComputing the steady-state conditions for an ordinary differential equation (ODE) means finding the system’s equilibrium points, where the variables (also named the species) remain constant over time. In other words, this means finding the concentrations for which all the derivatives cancel:\nGiven a system of \\(n=15\\) ODEs (number of varying species in the simulated model),\n\\[\n\\begin{cases}\n\\frac{dx_1}{dt} &= f_1(x_1, x_2, \\dots, x_{15}) \\\\\n\\frac{dx_2}{dt} &= f_2(x_1, x_2, \\dots, x_{15}) \\\\\n&\\vdots \\\\\n\\frac{dx_{15}}{dt} &= f_n(x_1, x_2, \\dots, x_{15})\n\\end{cases}\n\\]\nthe steady-state conditions are obtained by solving system Equation 1:\n\\[\n\\begin{cases}\nf_1(x_1^*, x_2^*, \\dots, x_{15}^*)& = 0 \\\\\nf_2(x_1^*, x_2^*, \\dots, x_{15}^*) &= 0 \\\\\n& \\vdots \\\\\nf_n(x_1^*, x_2^*, \\dots, x_{15}^*) &= 0.\n\\end{cases}\n\\tag{1}\\]\n\n\nTo ensure that the model converged, we assert in Listing 1 that the outcome of the stability analysis is found. Other outcomes include notFound and foundNegative (which is irrealistic in our setting, since concentrations of species can either be positive or null).\n\n\n\n\nListing 1: Check that the model converged with a testthat equal. If not, returns an error.\n\n\ntestthat::expect_equal(healthy_model_steady_state$result, \"found\")",
     "crumbs": [
       "Steady State"
     ]
@@ -99,7 +99,7 @@
     "href": "curation.html",
     "title": "Curation",
     "section": "",
-    "text": "Back to top"
+    "text": "The list of packages required for reproducing the tutorials are listed in Table 1:\n\n\nFinding R package dependencies ... [25/42] \b\b\b\b\b\b\b\b[26/42] \b\b\b\b\b\b\b\b[27/42] \b\b\b\b\b\b\b\b[28/42] \b\b\b\b\b\b\b\b[29/42] \b\b\b\b\b\b\b\b[30/42] \b\b\b\b\b\b\b\b[31/42] \b\b\b\b\b\b\b\b[32/42] \b\b\b\b\b\b\b\b[33/42] \b\b\b\b\b\b\b\b[34/42] \b\b\b\b\b\b\b\b[35/42] \b\b\b\b\b\b\b\b[36/42] \b\b\b\b\b\b\b\b[37/42] \b\b\b\b\b\b\b\b[38/42] \b\b\b\b\b\b\b\b[39/42] \b\b\b\b\b\b\b\b[40/42] \b\b\b\b\b\b\b\b[41/42] \b\b\b\b\b\b\b\b[42/42] Done!\n\n\n\n\n\nPackageSourceCoRCsteady_statedplyrsteady_stateflextablesteady_statetestthatsteady_statedplyrcurationflextablecurationrenvcurationtoolscurationdplyrcurationflextablecurationrenvcurationtoolscuration\n\n\n\nTable 1: List of dependencies, per file.\n\n\n\n\n\n\n\n\n\n Back to top"
   },
   {
     "objectID": "history.html",

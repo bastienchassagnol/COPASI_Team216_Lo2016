@@ -314,7 +314,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Steady-state computations</h1>
+<div class="quarto-title-block"><div><h1 class="title">Steady-state computations</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">View Source</a></li></ul></div></div>
 </div>
 
 
@@ -369,64 +369,46 @@ window.Quarto = {
 </header>
 
 
-<section id="run-steady-state-analyses" class="level2">
-<h2 class="anchored" data-anchor-id="run-steady-state-analyses">Run steady-state Analyses</h2>
-<p>The call to <code>CoRC::runSteadyState()</code> function (see <a href="#lst-steady-state" class="quarto-xref">Listing&nbsp;2</a>) retrieves the steady-states of an ODE model as defined in <a href="#nte-steady-state" class="quarto-xref">Note&nbsp;1</a>.</p>
+<p>The list of packages required for reproducing the analyses on this script are listed below:</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install and load R connector to COPASI software</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># remotes::install_github("jpahle/CoRC")</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(CoRC)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># load tidyverse packages</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(testthat)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># tidyverse packages</span></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(testthat)</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co"># for Table reporting</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(flextable)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Table reporting</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(flextable)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<div class="cell">
-<div id="lst-import" class="r cell-code listing quarto-float quarto-figure quarto-figure-left anchored">
-<figure class="quarto-float quarto-float-lst figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-lst" id="lst-import-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Listing&nbsp;1: Import pyplot
-</figcaption>
-<div aria-describedby="lst-import-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="sourceCode cell-code" id="lst-import"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="lst-import-1"><a href="#lst-import-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(flextable)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</figure>
-</div>
-</div>
-<p><a href="#lst-import" class="quarto-xref">Listing&nbsp;1</a></p>
-<div class="cell">
-<div id="lst-steady-state" class="r cell-code listing quarto-float quarto-figure quarto-figure-left anchored">
-<figure class="quarto-float quarto-float-lst figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-lst" id="lst-steady-state-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Listing&nbsp;2: Compute steady-state conditions.
-</figcaption>
-<div aria-describedby="lst-steady-state-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="sourceCode cell-code" id="lst-steady-state"><pre class="sourceCode code-annotation-code r code-with-copy"><code class="sourceCode r"><span id="lst-steady-state-1"><a href="#lst-steady-state-1" aria-hidden="true" tabindex="-1"></a>healthy_model <span class="ot">&lt;-</span> <span class="fu">loadModel</span>(<span class="st">"../../models/team_2016_final_model_lo2016.cps"</span>)</span>
-<span id="lst-steady-state-2"><a href="#lst-steady-state-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="lst-steady-state-3"><a href="#lst-steady-state-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Which methods are used in Lo2016 paper for running this SteadyState condition?</span></span>
-<span id="lst-steady-state-4"><a href="#lst-steady-state-4" aria-hidden="true" tabindex="-1"></a>healthy_model_steady_state <span class="ot">&lt;-</span> <span class="fu">runSteadyState</span>(</span>
-<span id="lst-steady-state-5"><a href="#lst-steady-state-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">model =</span> healthy_model,</span>
-<span id="lst-steady-state-6"><a href="#lst-steady-state-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">calculate_jacobian =</span> <span class="cn">TRUE</span>,</span>
-<span id="lst-steady-state-7"><a href="#lst-steady-state-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">perform_stability_analysis =</span> <span class="cn">TRUE</span>,</span>
-<span id="lst-steady-state-8"><a href="#lst-steady-state-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">method =</span> <span class="fu">list</span>(<span class="st">"use_newton"</span><span class="ot">=</span><span class="cn">TRUE</span>, <span class="at">accept_negative_concentrations =</span> <span class="cn">FALSE</span>)</span>
-<span id="lst-steady-state-9"><a href="#lst-steady-state-9" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</figure>
-</div>
-</div>
-<ol type="1">
-<li>Run <code>CoRC::loadModel()</code> function to load the COPASI model in R<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</li>
-<li>We ue the <code>CoRC::runSteadyState</code> function to run the steady-states…</li>
-<li>… and for this this, several algorithms can be chosen. We used in our framework the well-known <strong>root-finding</strong> <a href="https://en.wikipedia.org/wiki/Newton%27s_method">Newton-Raphson algorithm</a>.</li>
-</ol>
+<section id="run-steady-state-analyses" class="level2">
+<h2 class="anchored" data-anchor-id="run-steady-state-analyses">Run steady-state Analyses</h2>
+<p>The call to <code>CoRC::runSteadyState()</code> function retrieves the steady-state of the ODE model (see <a href="#nte-steady-state" class="quarto-xref">Note&nbsp;1</a> for the mathematical definition of steady states).</p>
+<div class="sourceCode" id="annotated-cell-2"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-2" data-target-annotation="1">1</button><span id="annotated-cell-2-1" class="code-annotation-target"><a href="#annotated-cell-2-1" aria-hidden="true" tabindex="-1"></a>healthy_model <span class="ot">&lt;-</span> <span class="fu">loadModel</span>(<span class="st">"../../models/team_2016_final_model_lo2016.cps"</span>)</span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-2" data-target-annotation="2">2</button><span id="annotated-cell-2-2" class="code-annotation-target"><a href="#annotated-cell-2-2" aria-hidden="true" tabindex="-1"></a>healthy_model_steady_state <span class="ot">&lt;-</span> <span class="fu">runSteadyState</span>(</span>
+<span id="annotated-cell-2-3"><a href="#annotated-cell-2-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">model =</span> healthy_model,</span>
+<span id="annotated-cell-2-4"><a href="#annotated-cell-2-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">calculate_jacobian =</span> <span class="cn">TRUE</span>,</span>
+<span id="annotated-cell-2-5"><a href="#annotated-cell-2-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">perform_stability_analysis =</span> <span class="cn">TRUE</span>,</span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-2" data-target-annotation="3">3</button><span id="annotated-cell-2-6" class="code-annotation-target"><a href="#annotated-cell-2-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">method =</span> <span class="fu">list</span>(<span class="st">"use_newton"</span><span class="ot">=</span><span class="cn">TRUE</span>, <span class="at">accept_negative_concentrations =</span> <span class="cn">FALSE</span>)</span>
+<span id="annotated-cell-2-7"><a href="#annotated-cell-2-7" aria-hidden="true" tabindex="-1"></a>)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-2" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-2" data-code-lines="1" data-code-annotation="1">Run <code>CoRC::loadModel()</code> function to load the COPASI model in R<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</span>
+</dd>
+<dt data-target-cell="annotated-cell-2" data-target-annotation="2">2</dt>
+<dd>
+<span data-code-cell="annotated-cell-2" data-code-lines="2,3,4,5" data-code-annotation="2">We ue the <code>CoRC::runSteadyState</code> function to run the steady-states…</span>
+</dd>
+<dt data-target-cell="annotated-cell-2" data-target-annotation="3">3</dt>
+<dd>
+<span data-code-cell="annotated-cell-2" data-code-lines="6" data-code-annotation="3">… and for this this, several algorithms can be chosen. We used in our framework the well-known <strong>root-finding</strong> <a href="https://en.wikipedia.org/wiki/Newton%27s_method">Newton-Raphson algorithm</a>.</span>
+</dd>
+</dl>
 <div id="nte-steady-state" class="callout callout-style-default callout-note callout-titled" title="Derive Steady-States Conditions of an ODE model">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -458,12 +440,12 @@ f_n(x_1^*, x_2^*, \dots, x_{15}^*) &amp;= 0.
 \tag{1}\]</span></span></p>
 </div>
 </div>
-<p>To ensure that the model converged, we assert in <a href="#lst-steady-state-convergence" class="quarto-xref">Listing&nbsp;3</a> that the outcome of the stability analysis is <code>found</code>. Other outcomes include <code>notFound</code> and <code>foundNegative</code> (which is irrealistic in our setting, since concentrations of species can either be positive or null).</p>
+<p>To ensure that the model converged, we assert in <a href="#lst-steady-state-convergence" class="quarto-xref">Listing&nbsp;1</a> that the outcome of the stability analysis is <code>found</code>. Other outcomes include <code>notFound</code> and <code>foundNegative</code> (which is irrealistic in our setting, since concentrations of species can either be positive or null).</p>
 <div class="cell">
 <div id="lst-steady-state-convergence" class="r cell-code listing quarto-float quarto-figure quarto-figure-left anchored">
 <figure class="quarto-float quarto-float-lst figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-lst" id="lst-steady-state-convergence-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Listing&nbsp;3: Check that the model converged with a testthat equal. If not, returns an error.
+Listing&nbsp;1: Check that the model converged with a testthat equal. If not, returns an error.
 </figcaption>
 <div aria-describedby="lst-steady-state-convergence-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="sourceCode cell-code" id="lst-steady-state-convergence"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="lst-steady-state-convergence-1"><a href="#lst-steady-state-convergence-1" aria-hidden="true" tabindex="-1"></a>testthat<span class="sc">::</span><span class="fu">expect_equal</span>(healthy_model_steady_state<span class="sc">$</span>result, <span class="st">"found"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -524,10 +506,10 @@ Listing&nbsp;3: Check that the model converged with a testthat equal. If not, re
 <figure class="quarto-float quarto-float-tbl figure">
 <div aria-describedby="tbl-steady-state-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<div class="tabwid"><style>.cl-d90230e8{}.cl-d8d9e296{font-family:'Arial';font-size:11pt;font-weight:bold;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-d8d9e2b4{font-family:'Arial';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-d8fa6764{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-d8fa676e{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-d8fa9838{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-d8fa9842{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-d8fa9843{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-d8fa984c{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-d8fa984d{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-d8fa984e{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-d8fa9856{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table data-quarto-disable-processing="true" class="cl-d90230e8"><thead><tr style="overflow-wrap:break-word;"><th class="cl-d8fa9838"><p class="cl-d8fa6764"><span class="cl-d8d9e296">Species</span></p></th><th class="cl-d8fa9842"><p class="cl-d8fa676e"><span class="cl-d8d9e296">Value(g/cm^3)</span></p></th></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-d8fa9843"><p class="cl-d8fa6764"><span class="cl-d8d9e2b4">M1 macrophage</span></p></td><td class="cl-d8fa984c"><p class="cl-d8fa676e"><span class="cl-d8d9e2b4">1.17e-02</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-d8fa9843"><p class="cl-d8fa6764"><span class="cl-d8d9e2b4">M2 macrophage</span></p></td><td class="cl-d8fa984c"><p class="cl-d8fa676e"><span class="cl-d8d9e2b4">8.17e-03</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-d8fa9843"><p class="cl-d8fa6764"><span class="cl-d8d9e2b4">Th1 cell</span></p></td><td class="cl-d8fa984c"><p class="cl-d8fa676e"><span class="cl-d8d9e2b4">1.40e-01</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-d8fa9843"><p class="cl-d8fa6764"><span class="cl-d8d9e2b4">Th2 cell</span></p></td><td class="cl-d8fa984c"><p class="cl-d8fa676e"><span class="cl-d8d9e2b4">3.99e-03</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-d8fa9843"><p class="cl-d8fa6764"><span class="cl-d8d9e2b4">Th17 cell</span></p></td><td class="cl-d8fa984c"><p class="cl-d8fa676e"><span class="cl-d8d9e2b4">6.18e-03</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-d8fa9843"><p class="cl-d8fa6764"><span class="cl-d8d9e2b4">Treg cell</span></p></td><td class="cl-d8fa984c"><p class="cl-d8fa676e"><span class="cl-d8d9e2b4">2.98e-04</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-d8fa9843"><p class="cl-d8fa6764"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" data-external="1"><span class="cl-d8d9e2b4"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" data-external="1">
-<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mtext>IFN</mtext><mi>γ</mi></msub></mrow><annotation encoding="application/x-tex">\text{IFN}_{\gamma}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9694em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord text"><span class="mord">IFN</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.05556em;">γ</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span></span></span></span></span></p></td><td class="cl-d8fa984c"><p class="cl-d8fa676e"><span class="cl-d8d9e2b4">2.01e-07</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-d8fa9843"><p class="cl-d8fa6764"><span class="cl-d8d9e2b4">IL-2</span></p></td><td class="cl-d8fa984c"><p class="cl-d8fa676e"><span class="cl-d8d9e2b4">1.07e-08</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-d8fa9843"><p class="cl-d8fa6764"><span class="cl-d8d9e2b4">IL-4</span></p></td><td class="cl-d8fa984c"><p class="cl-d8fa676e"><span class="cl-d8d9e2b4">3.36e-09</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-d8fa9843"><p class="cl-d8fa6764"><span class="cl-d8d9e2b4">IL-21</span></p></td><td class="cl-d8fa984c"><p class="cl-d8fa676e"><span class="cl-d8d9e2b4">7.77e-08</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-d8fa9843"><p class="cl-d8fa6764"><span class="cl-d8d9e2b4">IL-6</span></p></td><td class="cl-d8fa984c"><p class="cl-d8fa676e"><span class="cl-d8d9e2b4">1.46e-06</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-d8fa9843"><p class="cl-d8fa6764"><span class="cl-d8d9e2b4"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" data-external="1">
-<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mtext>TNF</mtext><mi>α</mi></msub></mrow><annotation encoding="application/x-tex">\text{TNF}_{\alpha}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord text"><span class="mord">TNF</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.0037em;">α</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span></p></td><td class="cl-d8fa984c"><p class="cl-d8fa676e"><span class="cl-d8d9e2b4">2.72e-05</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-d8fa9843"><p class="cl-d8fa6764"><span class="cl-d8d9e2b4">IL-10</span></p></td><td class="cl-d8fa984c"><p class="cl-d8fa676e"><span class="cl-d8d9e2b4">3.01e-08</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-d8fa9843"><p class="cl-d8fa6764"><span class="cl-d8d9e2b4"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" data-external="1">
-<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mtext>TGF</mtext><mi>β</mi></msub></mrow><annotation encoding="application/x-tex">\text{TGF}_{\beta}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9694em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord text"><span class="mord">TGF</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.05278em;">β</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span></span></span></span></span></p></td><td class="cl-d8fa984c"><p class="cl-d8fa676e"><span class="cl-d8d9e2b4">1.64e-13</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-d8fa984d"><p class="cl-d8fa6764"><span class="cl-d8d9e2b4">IL-12</span></p></td><td class="cl-d8fa984e"><p class="cl-d8fa676e"><span class="cl-d8d9e2b4">3.64e-07</span></p></td></tr></tbody><tfoot><tr style="overflow-wrap:break-word;"><td colspan="2" class="cl-d8fa9856"><p class="cl-d8fa6764"><span class="cl-d8d9e2b4">doi:10.1371/journal.pone.0165782.t004</span></p></td></tr></tfoot></table></div>
+<div class="tabwid"><style>.cl-80d545a8{}.cl-806143d8{font-family:'Arial';font-size:11pt;font-weight:bold;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-8061440a{font-family:'Arial';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-80b3e0a2{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-80b3e0b6{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-80b51030{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-80b5104e{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-80b51058{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-80b51062{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-80b5106c{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-80b51076{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-80b51080{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table data-quarto-disable-processing="true" class="cl-80d545a8"><thead><tr style="overflow-wrap:break-word;"><th class="cl-80b51030"><p class="cl-80b3e0a2"><span class="cl-806143d8">Species</span></p></th><th class="cl-80b5104e"><p class="cl-80b3e0b6"><span class="cl-806143d8">Value(g/cm^3)</span></p></th></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-80b51058"><p class="cl-80b3e0a2"><span class="cl-8061440a">M1 macrophage</span></p></td><td class="cl-80b51062"><p class="cl-80b3e0b6"><span class="cl-8061440a">1.17e-02</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-80b51058"><p class="cl-80b3e0a2"><span class="cl-8061440a">M2 macrophage</span></p></td><td class="cl-80b51062"><p class="cl-80b3e0b6"><span class="cl-8061440a">8.17e-03</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-80b51058"><p class="cl-80b3e0a2"><span class="cl-8061440a">Th1 cell</span></p></td><td class="cl-80b51062"><p class="cl-80b3e0b6"><span class="cl-8061440a">1.40e-01</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-80b51058"><p class="cl-80b3e0a2"><span class="cl-8061440a">Th2 cell</span></p></td><td class="cl-80b51062"><p class="cl-80b3e0b6"><span class="cl-8061440a">3.99e-03</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-80b51058"><p class="cl-80b3e0a2"><span class="cl-8061440a">Th17 cell</span></p></td><td class="cl-80b51062"><p class="cl-80b3e0b6"><span class="cl-8061440a">6.18e-03</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-80b51058"><p class="cl-80b3e0a2"><span class="cl-8061440a">Treg cell</span></p></td><td class="cl-80b51062"><p class="cl-80b3e0b6"><span class="cl-8061440a">2.98e-04</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-80b51058"><p class="cl-80b3e0a2"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" data-external="1"><span class="cl-8061440a"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" data-external="1">
+<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mtext>IFN</mtext><mi>γ</mi></msub></mrow><annotation encoding="application/x-tex">\text{IFN}_{\gamma}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9694em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord text"><span class="mord">IFN</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.05556em;">γ</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span></span></span></span></span></p></td><td class="cl-80b51062"><p class="cl-80b3e0b6"><span class="cl-8061440a">2.01e-07</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-80b51058"><p class="cl-80b3e0a2"><span class="cl-8061440a">IL-2</span></p></td><td class="cl-80b51062"><p class="cl-80b3e0b6"><span class="cl-8061440a">1.07e-08</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-80b51058"><p class="cl-80b3e0a2"><span class="cl-8061440a">IL-4</span></p></td><td class="cl-80b51062"><p class="cl-80b3e0b6"><span class="cl-8061440a">3.36e-09</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-80b51058"><p class="cl-80b3e0a2"><span class="cl-8061440a">IL-21</span></p></td><td class="cl-80b51062"><p class="cl-80b3e0b6"><span class="cl-8061440a">7.77e-08</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-80b51058"><p class="cl-80b3e0a2"><span class="cl-8061440a">IL-6</span></p></td><td class="cl-80b51062"><p class="cl-80b3e0b6"><span class="cl-8061440a">1.46e-06</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-80b51058"><p class="cl-80b3e0a2"><span class="cl-8061440a"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" data-external="1">
+<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mtext>TNF</mtext><mi>α</mi></msub></mrow><annotation encoding="application/x-tex">\text{TNF}_{\alpha}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord text"><span class="mord">TNF</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.0037em;">α</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span></p></td><td class="cl-80b51062"><p class="cl-80b3e0b6"><span class="cl-8061440a">2.72e-05</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-80b51058"><p class="cl-80b3e0a2"><span class="cl-8061440a">IL-10</span></p></td><td class="cl-80b51062"><p class="cl-80b3e0b6"><span class="cl-8061440a">3.01e-08</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-80b51058"><p class="cl-80b3e0a2"><span class="cl-8061440a"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" data-external="1">
+<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mtext>TGF</mtext><mi>β</mi></msub></mrow><annotation encoding="application/x-tex">\text{TGF}_{\beta}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9694em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord text"><span class="mord">TGF</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.05278em;">β</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span></span></span></span></span></p></td><td class="cl-80b51062"><p class="cl-80b3e0b6"><span class="cl-8061440a">1.64e-13</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-80b5106c"><p class="cl-80b3e0a2"><span class="cl-8061440a">IL-12</span></p></td><td class="cl-80b51076"><p class="cl-80b3e0b6"><span class="cl-8061440a">3.64e-07</span></p></td></tr></tbody><tfoot><tr style="overflow-wrap:break-word;"><td colspan="2" class="cl-80b51080"><p class="cl-80b3e0a2"><span class="cl-8061440a">doi:10.1371/journal.pone.0165782.t004</span></p></td></tr></tfoot></table></div>
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-tbl" id="tbl-steady-state-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -537,6 +519,8 @@ Table&nbsp;1: Steady-state concentrations of cytokines, macrophages and T cells 
 </div>
 </div>
 
+
+<!-- -->
 
 
 </section>
@@ -642,6 +626,57 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       container: window.document.getElementById('quarto-embedded-source-code-modal')
     });
     clipboardModal.on('success', onCopySuccess);
+  }
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
@@ -1019,7 +1054,148 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         <span class="nav-page-text">PRCC</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
-</nav>
+</nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="sourceCode" id="cb3" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Steady-state computations"</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span><span class="co"> html</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>The list of packages required for reproducing the analyses on this script are listed below: </span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="in">```{r setup2}</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="in"># install and load R connector to COPASI software</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="in"># remotes::install_github("jpahle/CoRC")</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="in">library(CoRC)</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="in">library(testthat)</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="in"># tidyverse packages</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="in">library(dplyr)</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="in"># Table reporting</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="in">library(flextable)</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="fu">## Run steady-state Analyses</span></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>The call to <span class="in">`CoRC::runSteadyState()`</span> function retrieves the steady-state of the ODE model (see @nte-steady-state for the mathematical definition of steady states).   </span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a><span class="co">#| include: false</span></span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>healthy_model <span class="ot">&lt;-</span> <span class="fu">loadModel</span>(<span class="st">"../../models/team_2016_final_model_lo2016.cps"</span>) </span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>healthy_model_steady_state <span class="ot">&lt;-</span> <span class="fu">runSteadyState</span>(                               </span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>  <span class="at">model =</span> healthy_model,                                                      </span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>  <span class="at">calculate_jacobian =</span> <span class="cn">TRUE</span>,                                                </span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>  <span class="at">perform_stability_analysis =</span> <span class="cn">TRUE</span>,                                          </span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>  <span class="at">method =</span> <span class="fu">list</span>(<span class="st">"use_newton"</span><span class="ot">=</span><span class="cn">TRUE</span>, <span class="at">accept_negative_concentrations =</span> <span class="cn">FALSE</span>)  </span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a><span class="in">```r</span></span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>healthy_model <span class="ot">&lt;-</span> <span class="fu">loadModel</span>(<span class="st">"../../models/team_2016_final_model_lo2016.cps"</span>) <span class="co"># &lt;1&gt;</span></span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>healthy_model_steady_state <span class="ot">&lt;-</span> <span class="fu">runSteadyState</span>(                               <span class="co"># &lt;2&gt;</span></span>
+<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a>  <span class="at">model =</span> healthy_model,                                                    <span class="co"># &lt;2&gt;  </span></span>
+<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a>  <span class="at">calculate_jacobian =</span> <span class="cn">TRUE</span>,                                            <span class="co"># &lt;2&gt;</span></span>
+<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a>  <span class="at">perform_stability_analysis =</span> <span class="cn">TRUE</span>,                                        <span class="co"># &lt;2&gt;  </span></span>
+<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a>  <span class="at">method =</span> <span class="fu">list</span>(<span class="st">"use_newton"</span><span class="ot">=</span><span class="cn">TRUE</span>, <span class="at">accept_negative_concentrations =</span> <span class="cn">FALSE</span>)  <span class="co"># &lt;3&gt;</span></span>
+<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Run <span class="in">`CoRC::loadModel()`</span> function to load the COPASI model in R^<span class="co">[</span><span class="ot">Note that models are loaded **by reference** with the CoRC package, meaning that you modify the object **in place**. Note that his behaviour is rather uncommon in R, the default being the **Copy-on-Modify Behavior** (aka by **value**).</span><span class="co">]</span>. </span>
+<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>We ue the <span class="in">`CoRC::runSteadyState`</span> function to run the steady-states...</span>
+<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>... and for this this, several algorithms can be chosen. We used in our framework the well-known **root-finding** <span class="co">[</span><span class="ot">Newton-Raphson algorithm</span><span class="co">](https://en.wikipedia.org/wiki/Newton%27s_method)</span>.</span>
+<span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a>::: {#nte-steady-state .callout-note title="Derive Steady-States Conditions of an ODE model"}</span>
+<span id="cb3-54"><a href="#cb3-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-55"><a href="#cb3-55" aria-hidden="true" tabindex="-1"></a>Computing the **steady-state conditions** for an ordinary differential equation (ODE) means finding the system's *equilibrium points*, where the variables (also named the **species**) remain **constant** over time. In other words, this means finding the concentrations for which all the derivatives cancel:</span>
+<span id="cb3-56"><a href="#cb3-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-57"><a href="#cb3-57" aria-hidden="true" tabindex="-1"></a>Given a system of $n=15$ ODEs (number of varying species in the simulated model),   </span>
+<span id="cb3-58"><a href="#cb3-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-59"><a href="#cb3-59" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb3-60"><a href="#cb3-60" aria-hidden="true" tabindex="-1"></a>\begin{cases}</span>
+<span id="cb3-61"><a href="#cb3-61" aria-hidden="true" tabindex="-1"></a>\frac{dx_1}{dt} &amp;= f_1(x_1, x_2, \dots, x_{15}) <span class="sc">\\</span></span>
+<span id="cb3-62"><a href="#cb3-62" aria-hidden="true" tabindex="-1"></a>\frac{dx_2}{dt} &amp;= f_2(x_1, x_2, \dots, x_{15}) <span class="sc">\\</span></span>
+<span id="cb3-63"><a href="#cb3-63" aria-hidden="true" tabindex="-1"></a>&amp;\vdots <span class="sc">\\</span></span>
+<span id="cb3-64"><a href="#cb3-64" aria-hidden="true" tabindex="-1"></a>\frac{dx_{15}}{dt} &amp;= f_n(x_1, x_2, \dots, x_{15})</span>
+<span id="cb3-65"><a href="#cb3-65" aria-hidden="true" tabindex="-1"></a>\end{cases}</span>
+<span id="cb3-66"><a href="#cb3-66" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb3-67"><a href="#cb3-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-68"><a href="#cb3-68" aria-hidden="true" tabindex="-1"></a>the steady-state conditions are obtained by solving system @eq-steady-states:  </span>
+<span id="cb3-69"><a href="#cb3-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-70"><a href="#cb3-70" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb3-71"><a href="#cb3-71" aria-hidden="true" tabindex="-1"></a>\begin{cases}</span>
+<span id="cb3-72"><a href="#cb3-72" aria-hidden="true" tabindex="-1"></a>f_1(x_1^*, x_2^*, \dots, x_{15}^*)&amp; = 0 <span class="sc">\\</span> </span>
+<span id="cb3-73"><a href="#cb3-73" aria-hidden="true" tabindex="-1"></a>f_2(x_1^*, x_2^*, \dots, x_{15}^*) &amp;= 0 <span class="sc">\\</span></span>
+<span id="cb3-74"><a href="#cb3-74" aria-hidden="true" tabindex="-1"></a>&amp; \vdots <span class="sc">\\</span></span>
+<span id="cb3-75"><a href="#cb3-75" aria-hidden="true" tabindex="-1"></a>f_n(x_1^*, x_2^*, \dots, x_{15}^*) &amp;= 0.</span>
+<span id="cb3-76"><a href="#cb3-76" aria-hidden="true" tabindex="-1"></a>\end{cases}</span>
+<span id="cb3-77"><a href="#cb3-77" aria-hidden="true" tabindex="-1"></a>$$ {#eq-steady-states}</span>
+<span id="cb3-78"><a href="#cb3-78" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-79"><a href="#cb3-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-80"><a href="#cb3-80" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-81"><a href="#cb3-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-82"><a href="#cb3-82" aria-hidden="true" tabindex="-1"></a>To ensure that the model converged, we assert in @lst-steady-state-convergence that the outcome of the stability analysis is <span class="in">`found`</span>. Other outcomes include <span class="in">`notFound`</span> and <span class="in">`foundNegative`</span> (which is irrealistic in our setting, since concentrations of species can either be positive or null).</span>
+<span id="cb3-83"><a href="#cb3-83" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-86"><a href="#cb3-86" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb3-87"><a href="#cb3-87" aria-hidden="true" tabindex="-1"></a><span class="co">#| lst-label: lst-steady-state-convergence</span></span>
+<span id="cb3-88"><a href="#cb3-88" aria-hidden="true" tabindex="-1"></a><span class="co">#| lst-cap: Check that the model converged with a testthat equal. If not, returns an error. </span></span>
+<span id="cb3-89"><a href="#cb3-89" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-90"><a href="#cb3-90" aria-hidden="true" tabindex="-1"></a>testthat<span class="sc">::</span><span class="fu">expect_equal</span>(healthy_model_steady_state<span class="sc">$</span>result, <span class="st">"found"</span>)</span>
+<span id="cb3-91"><a href="#cb3-91" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb3-92"><a href="#cb3-92" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-93"><a href="#cb3-93" aria-hidden="true" tabindex="-1"></a><span class="fu">## Report steady-state analyses</span></span>
+<span id="cb3-94"><a href="#cb3-94" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-95"><a href="#cb3-95" aria-hidden="true" tabindex="-1"></a>In @tbl-steady-state, we report the concentrations of the 15 varying species included in the @lo2016po ODE model describing the dynamic relations among pools of immune cells (macrophages and T-cells) and the secreted cytokines, using the <span class="in">`flextable`</span> package <span class="co">[</span><span class="ot">@flextable</span><span class="co">]</span>.</span>
+<span id="cb3-96"><a href="#cb3-96" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-99"><a href="#cb3-99" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb3-100"><a href="#cb3-100" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: tbl-steady-state</span></span>
+<span id="cb3-101"><a href="#cb3-101" aria-hidden="true" tabindex="-1"></a><span class="co">#| tbl-cap: Steady-state concentrations of cytokines, macrophages and T cells in healthy individuals, see also **Table 4** reported in [@lo2016po, pp. 10]. </span></span>
+<span id="cb3-102"><a href="#cb3-102" aria-hidden="true" tabindex="-1"></a><span class="co">#| collapse: true</span></span>
+<span id="cb3-103"><a href="#cb3-103" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-104"><a href="#cb3-104" aria-hidden="true" tabindex="-1"></a><span class="do">## Format table for reporting.</span></span>
+<span id="cb3-105"><a href="#cb3-105" aria-hidden="true" tabindex="-1"></a>steady_state_concentrations <span class="ot">&lt;-</span> healthy_model_steady_state<span class="sc">$</span>species <span class="sc">|&gt;</span> </span>
+<span id="cb3-106"><a href="#cb3-106" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(name, concentration) <span class="sc">|&gt;</span> </span>
+<span id="cb3-107"><a href="#cb3-107" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">name =</span> <span class="fu">factor</span>(name, </span>
+<span id="cb3-108"><a href="#cb3-108" aria-hidden="true" tabindex="-1"></a>                          <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"M1"</span>, <span class="st">"M2"</span>, </span>
+<span id="cb3-109"><a href="#cb3-109" aria-hidden="true" tabindex="-1"></a>                                     <span class="st">"T1"</span>, <span class="st">"T2"</span>,</span>
+<span id="cb3-110"><a href="#cb3-110" aria-hidden="true" tabindex="-1"></a>                                     <span class="st">"T17"</span>, <span class="st">"Tr"</span>,</span>
+<span id="cb3-111"><a href="#cb3-111" aria-hidden="true" tabindex="-1"></a>                                     <span class="st">"Ig"</span>, <span class="st">"I2"</span>, <span class="st">"I4"</span>, <span class="st">"I21"</span>, <span class="st">"I6"</span>,</span>
+<span id="cb3-112"><a href="#cb3-112" aria-hidden="true" tabindex="-1"></a>                                     <span class="st">"Ia"</span>, <span class="st">"I10"</span>, <span class="st">"Ib"</span>, <span class="st">"I12"</span>),</span>
+<span id="cb3-113"><a href="#cb3-113" aria-hidden="true" tabindex="-1"></a>                          <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"M1 macrophage"</span>, <span class="st">"M2 macrophage"</span>, </span>
+<span id="cb3-114"><a href="#cb3-114" aria-hidden="true" tabindex="-1"></a>                                     <span class="st">"Th1 cell"</span>, <span class="st">"Th2 cell"</span>,</span>
+<span id="cb3-115"><a href="#cb3-115" aria-hidden="true" tabindex="-1"></a>                                     <span class="st">"Th17 cell"</span>, <span class="st">"Treg cell"</span>, </span>
+<span id="cb3-116"><a href="#cb3-116" aria-hidden="true" tabindex="-1"></a>                                     <span class="st">"IFN-g"</span>, <span class="st">"IL-2"</span>, <span class="st">"IL-4"</span>, <span class="st">"IL-21"</span>, <span class="st">"IL-6"</span>, </span>
+<span id="cb3-117"><a href="#cb3-117" aria-hidden="true" tabindex="-1"></a>                                     <span class="st">"TNF-a"</span>, <span class="st">"IL-10"</span>, <span class="st">"TFG-b"</span>, <span class="st">"IL-12"</span>),</span>
+<span id="cb3-118"><a href="#cb3-118" aria-hidden="true" tabindex="-1"></a>                       <span class="at">ordered =</span> <span class="cn">TRUE</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb3-119"><a href="#cb3-119" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(name)</span>
+<span id="cb3-120"><a href="#cb3-120" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-121"><a href="#cb3-121" aria-hidden="true" tabindex="-1"></a><span class="do">## Format steady-state analysis report for Table 4 ----</span></span>
+<span id="cb3-122"><a href="#cb3-122" aria-hidden="true" tabindex="-1"></a>steady_state_labels <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb3-123"><a href="#cb3-123" aria-hidden="true" tabindex="-1"></a>  <span class="at">name =</span> <span class="st">"Species"</span>,</span>
+<span id="cb3-124"><a href="#cb3-124" aria-hidden="true" tabindex="-1"></a>  <span class="at">concentration =</span> <span class="st">"Value(g/cm^3)"</span>)</span>
+<span id="cb3-125"><a href="#cb3-125" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-126"><a href="#cb3-126" aria-hidden="true" tabindex="-1"></a>steady_state_table <span class="ot">&lt;-</span> <span class="fu">flextable</span>(steady_state_concentrations) <span class="sc">|&gt;</span> </span>
+<span id="cb3-127"><a href="#cb3-127" aria-hidden="true" tabindex="-1"></a>  <span class="co"># format to scientific notation, allowing max 2 significant digits</span></span>
+<span id="cb3-128"><a href="#cb3-128" aria-hidden="true" tabindex="-1"></a>  <span class="fu">colformat_double</span>(<span class="at">j =</span> <span class="st">"concentration"</span>, <span class="at">digits =</span> <span class="dv">3</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb3-129"><a href="#cb3-129" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set_formatter</span>(<span class="at">concentration =</span> <span class="cf">function</span>(x) {</span>
+<span id="cb3-130"><a href="#cb3-130" aria-hidden="true" tabindex="-1"></a>    <span class="fu">formatC</span>(x, <span class="at">format =</span> <span class="st">"e"</span>, <span class="at">digits =</span> <span class="dv">2</span>)</span>
+<span id="cb3-131"><a href="#cb3-131" aria-hidden="true" tabindex="-1"></a>  }) <span class="sc">|&gt;</span> </span>
+<span id="cb3-132"><a href="#cb3-132" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_footer_row</span>(<span class="at">values =</span> <span class="st">"doi:10.1371/journal.pone.0165782.t004"</span>, </span>
+<span id="cb3-133"><a href="#cb3-133" aria-hidden="true" tabindex="-1"></a>                 <span class="at">colwidths =</span> <span class="dv">2</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb3-134"><a href="#cb3-134" aria-hidden="true" tabindex="-1"></a>  <span class="fu">compose</span>(<span class="at">j =</span> <span class="st">"name"</span>, </span>
+<span id="cb3-135"><a href="#cb3-135" aria-hidden="true" tabindex="-1"></a>          <span class="at">i =</span> <span class="sc">~</span> name <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"IFN-g"</span>, <span class="st">"TNF-a"</span>, <span class="st">"TFG-b"</span>),</span>
+<span id="cb3-136"><a href="#cb3-136" aria-hidden="true" tabindex="-1"></a>          <span class="at">value =</span> <span class="fu">as_paragraph</span>(<span class="fu">as_equation</span>(<span class="fu">c</span>(<span class="st">"</span><span class="sc">\\</span><span class="st">text{IFN}_{</span><span class="sc">\\</span><span class="st">gamma}"</span>,</span>
+<span id="cb3-137"><a href="#cb3-137" aria-hidden="true" tabindex="-1"></a>                                             <span class="st">"</span><span class="sc">\\</span><span class="st">text{TNF}_{</span><span class="sc">\\</span><span class="st">alpha}"</span>,</span>
+<span id="cb3-138"><a href="#cb3-138" aria-hidden="true" tabindex="-1"></a>                                             <span class="st">"</span><span class="sc">\\</span><span class="st">text{TGF}_{</span><span class="sc">\\</span><span class="st">beta}"</span>)))) <span class="sc">|&gt;</span> </span>
+<span id="cb3-139"><a href="#cb3-139" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set_header_labels</span>(<span class="at">values =</span> steady_state_labels) <span class="sc">|&gt;</span> </span>
+<span id="cb3-140"><a href="#cb3-140" aria-hidden="true" tabindex="-1"></a>  <span class="fu">bold</span>(<span class="at">part =</span> <span class="st">"header"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb3-141"><a href="#cb3-141" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set_caption</span>(<span class="st">"Table 4: Steady-state concentrations of cytokines,</span></span>
+<span id="cb3-142"><a href="#cb3-142" aria-hidden="true" tabindex="-1"></a><span class="st">              macrophages and T cells in a healthy individual."</span>) </span>
+<span id="cb3-143"><a href="#cb3-143" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-144"><a href="#cb3-144" aria-hidden="true" tabindex="-1"></a>steady_state_table</span>
+<span id="cb3-145"><a href="#cb3-145" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+</code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+</div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">

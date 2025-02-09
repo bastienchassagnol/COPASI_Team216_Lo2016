@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://bastienchassagnol.github.io/Lo2016_ODE_IBD/index.html</loc>
-    <lastmod>2025-02-08T21:33:21.672Z</lastmod>
-  </url>
-  <url>
     <loc>https://bastienchassagnol.github.io/Lo2016_ODE_IBD/files.html</loc>
     <lastmod>2025-01-26T18:45:08.298Z</lastmod>
   </url>
@@ -22,11 +18,11 @@
   </url>
   <url>
     <loc>https://bastienchassagnol.github.io/Lo2016_ODE_IBD/codes/steady_state.html</loc>
-    <lastmod>2025-02-08T22:07:17.917Z</lastmod>
+    <lastmod>2025-02-09T01:22:13.664Z</lastmod>
   </url>
   <url>
     <loc>https://bastienchassagnol.github.io/Lo2016_ODE_IBD/curation.html</loc>
-    <lastmod>2025-01-26T18:46:07.478Z</lastmod>
+    <lastmod>2025-02-09T01:16:01.222Z</lastmod>
   </url>
   <url>
     <loc>https://bastienchassagnol.github.io/Lo2016_ODE_IBD/history.html</loc>
