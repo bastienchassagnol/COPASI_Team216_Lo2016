@@ -3,53 +3,45 @@ title: "Steady-state computations"
 format: html
 ---
 
-## Run steady-state Analyses
-
-The call to `CoRC::runSteadyState()` function (see @lst-steady-state) retrieves the steady-states of an ODE model as defined in @nte-steady-state.   
+The list of packages required for reproducing the analyses on this script are listed below: 
 
 ```{r setup2}
-
 # install and load R connector to COPASI software
 # remotes::install_github("jpahle/CoRC")
 library(CoRC)
-library(knitr)
-# load tidyverse packages
-library(ggplot2)
-library(dplyr)
-library(readr)
 library(testthat)
 
-# for Table reporting
+# tidyverse packages
+library(dplyr)
+
+# Table reporting
 library(flextable)
+```
+
+## Run steady-state Analyses
+
+The call to `CoRC::runSteadyState()` function retrieves the steady-state of the ODE model (see @nte-steady-state for the mathematical definition of steady states).   
+
+```{r}
+#| echo: false
+#| include: false
+healthy_model <- loadModel("../../models/team_2016_final_model_lo2016.cps") 
+healthy_model_steady_state <- runSteadyState(                               
+  model = healthy_model,                                                      
+  calculate_jacobian = TRUE,                                                
+  perform_stability_analysis = TRUE,                                          
+  method = list("use_newton"=TRUE, accept_negative_concentrations = FALSE)  
+)
 ```
 
 
 ```r
-library(tidyverse)
-library(palmerpenguins)
-penguins |>                                      # <1>
-  mutate(                                        # <2>
-    bill_ratio = bill_depth_mm / bill_length_mm, # <2>
-    bill_area  = bill_depth_mm * bill_length_mm  # <2>
-  )                                              # <2>
-```
-1. Take `penguins`, and then,
-2. add new columns for the bill ratio and bill area.
-
-
-
-```{r}
-#| lst-label: lst-steady-state
-#| lst-cap: Compute steady-state conditions. 
-
 healthy_model <- loadModel("../../models/team_2016_final_model_lo2016.cps") # <1>
-
-# Which methods are used in Lo2016 paper for running this SteadyState condition?
-healthy_model_steady_state <- runSteadyState(                            # <2>
-  model = healthy_model,                                                 # <2>  
-  calculate_jacobian = TRUE,                                             # <2>
-  perform_stability_analysis = TRUE,                                     # <2>  
-  method = list("use_newton"=TRUE, accept_negative_concentrations = FALSE) # <3>
+healthy_model_steady_state <- runSteadyState(                               # <2>
+  model = healthy_model,                                                    # <2>  
+  calculate_jacobian = TRUE,                                            # <2>
+  perform_stability_analysis = TRUE,                                        # <2>  
+  method = list("use_newton"=TRUE, accept_negative_concentrations = FALSE)  # <3>
 )
 ```
 1. Run `CoRC::loadModel()` function to load the COPASI model in R^[Note that models are loaded **by reference** with the CoRC package, meaning that you modify the object **in place**. Note that his behaviour is rather uncommon in R, the default being the **Copy-on-Modify Behavior** (aka by **value**).]. 
