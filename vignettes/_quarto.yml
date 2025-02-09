@@ -110,6 +110,7 @@ format:
     code-link: false
     code-copy: true
     code-fold: true
+    code-tools: true # enables to view the source code
     code-annotations: hover
     anchor-sections: true
     footnotes-hover: true

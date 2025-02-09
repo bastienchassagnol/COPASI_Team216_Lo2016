@@ -2,26 +2,7 @@
 title: "Overview"
 ---
 
-Nous chargeons ici les packages utiles: 
 
-```{r setup}
-
-# install and load R connector to COPASI software
-# remotes::install_github("jpahle/CoRC")
-library(CoRC)
-library(knitr)
-# load tidyverse packages
-library(ggplot2)
-library(dplyr)
-library(readr)
-library(testthat)
-
-# for Table reporting
-library(flextable)
-
-knitr::opts_chunk$set(
-  out.width = "90%")
-```
 
 
 
