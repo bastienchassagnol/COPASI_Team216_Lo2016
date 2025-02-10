@@ -1,5 +1,9 @@
 ---
-title: "Curation"
+title: "Tutorials for reproducing the main Figures and Tables of the IBD model"
+listing:
+  contents: reproducibility
+  sort: false
+  type: default
 ---
 
 
@@ -29,3 +33,5 @@ flextable(liste_packages) |>
   set_caption("List of dependencies, per Tutorial.") |> 
   font(j = "Package", fontname = "mono", part = "body")
 ```
+
+

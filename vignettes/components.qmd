@@ -1,15 +1,11 @@
----
-layout: page
----
-
-
 ## Original paper
 
-@fig-lo2016-paper 
+
+The original pdf source of @lo2016po is embedded in @fig-lo2016-paper.
 
 ::: {#fig-lo2016-paper}
 
-{{< pdf biblio/9_Day4_CellCellCommuniation_YvanSaeys_2025.pdf width=90% height=800 >}}
+{{< pdf assets/Lo2016.pdf width=90% height=800 >}}
 
 :::
 

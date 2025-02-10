@@ -3,9 +3,11 @@ title: "Steady-state computations"
 format: html
 ---
 
-The list of packages required for reproducing the analyses on this script are listed below: 
+The list of packages required for reproducing the analyses on this script are listed in @lst-setup-steady-states: 
 
-```{r setup2}
+```{r}
+#| lst-label: lst-setup-steady-states
+#| lst-cap: Packages required for computing and displaying steady-state conditions. 
 # install and load R connector to COPASI software
 # remotes::install_github("jpahle/CoRC")
 library(CoRC)

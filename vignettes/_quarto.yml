@@ -45,16 +45,17 @@ website:
   # Sidebar navigation      
   sidebar:
     - id: curation
-      style: "docked"
+      style: "floating"
       title: "Curations"
-      href: curation.qmd
       contents: 
+        - text: "A list of tutorials"
+          href: curation.qmd
         - text: "Steady State"
-          href: codes/steady_state.qmd
+          href: reproducibility/steady_state.qmd
         - text: "PRCC"
-          href: codes/prcc.qmd 
+          href: reproducibility/prcc.qmd 
         - text: "Patient Stratification"
-          href: codes/patient_stratification.qmd    
+          href: reproducibility/patient_stratification.qmd    
   # Footer navigation           
   page-footer:
     border: true
@@ -103,6 +104,9 @@ format:
   html:
     theme: 
       light: flatly
+    # enable to add personalised comments on html pages.
+    comments: 
+      hypothesis: true
     lang: en
     date-format: 'dddd[, the] Do [of] MMMM, YYYY'
     # Code specific formatting
