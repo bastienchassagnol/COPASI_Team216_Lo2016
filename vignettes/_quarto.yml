@@ -73,7 +73,7 @@ execute:
   message: false
   error: false
   collapse: true
-#   freeze: true
+  freeze: auto
 # Table and bibliographic options
 tbl-cap-location: bottom
 bibliography:
