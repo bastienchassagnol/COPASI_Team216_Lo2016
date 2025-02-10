@@ -1,0 +1,10 @@
+[
+  {
+    "listing": "/curation.html",
+    "items": [
+      "/reproducibility/steady_state.html",
+      "/reproducibility/patient_stratification.html",
+      "/reproducibility/prcc.html"
+    ]
+  }
+]

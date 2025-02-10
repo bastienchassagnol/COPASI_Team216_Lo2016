@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://bastienchassagnol.github.io/Lo2016_ODE_IBD/curation.html</loc>
+    <lastmod>2025-02-10T05:52:06.394Z</lastmod>
+  </url>
+  <url>
     <loc>https://bastienchassagnol.github.io/Lo2016_ODE_IBD/files.html</loc>
-    <lastmod>2025-01-26T18:45:08.298Z</lastmod>
+    <lastmod>2025-02-10T05:52:06.394Z</lastmod>
   </url>
   <url>
     <loc>https://bastienchassagnol.github.io/Lo2016_ODE_IBD/components.html</loc>
-    <lastmod>2025-02-08T20:14:52.516Z</lastmod>
+    <lastmod>2025-02-10T05:52:06.394Z</lastmod>
   </url>
   <url>
-    <loc>https://bastienchassagnol.github.io/Lo2016_ODE_IBD/codes/prcc.html</loc>
-    <lastmod>2025-01-26T18:47:11.007Z</lastmod>
+    <loc>https://bastienchassagnol.github.io/Lo2016_ODE_IBD/reproducibility/patient_stratification.html</loc>
+    <lastmod>2025-02-10T05:52:06.394Z</lastmod>
   </url>
   <url>
-    <loc>https://bastienchassagnol.github.io/Lo2016_ODE_IBD/codes/patient_stratification.html</loc>
-    <lastmod>2025-01-26T18:47:23.359Z</lastmod>
+    <loc>https://bastienchassagnol.github.io/Lo2016_ODE_IBD/reproducibility/steady_state.html</loc>
+    <lastmod>2025-02-10T05:52:06.394Z</lastmod>
   </url>
   <url>
-    <loc>https://bastienchassagnol.github.io/Lo2016_ODE_IBD/codes/steady_state.html</loc>
-    <lastmod>2025-02-09T01:22:13.664Z</lastmod>
-  </url>
-  <url>
-    <loc>https://bastienchassagnol.github.io/Lo2016_ODE_IBD/curation.html</loc>
-    <lastmod>2025-02-09T01:16:01.222Z</lastmod>
+    <loc>https://bastienchassagnol.github.io/Lo2016_ODE_IBD/reproducibility/prcc.html</loc>
+    <lastmod>2025-02-10T05:52:06.394Z</lastmod>
   </url>
   <url>
     <loc>https://bastienchassagnol.github.io/Lo2016_ODE_IBD/history.html</loc>
-    <lastmod>2025-01-26T18:46:07.478Z</lastmod>
+    <lastmod>2025-02-10T05:52:06.394Z</lastmod>
   </url>
 </urlset>
