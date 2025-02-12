@@ -2,14 +2,10 @@ library(CoRC)
 library(ggplot2)
 library(dplyr)
 
-# Reproduce Table 4, namely steady-state concentrations ----
 ## Prepare parameter variations for each of the four patient subtypes ----
 healthy_model <- suppressWarnings(loadModel("./models/team_2016_final_model_lo2016.cps"))
 
-# retrieve free parameters at the steady state
-steady_parameters <- runSteadyState(model = healthy_model)$species |> 
-  dplyr::select(name, concentration)
-
+# retrieve parameter mapping
 parameters_per_clusters <- getParameters(c("(Prod of Ig from T1).k1",
                           "(Prod of Ia from T1).k1",
                           "(Prod of Ib from Tr).k1",
@@ -20,9 +16,6 @@ parameters_per_clusters <- getParameters(c("(Prod of Ig from T1).k1",
                           "(Induction of T17).s6",
                           "(Induction of Tr).sb",
                           "(Induction of Tr).s10"), model = healthy_model)
-free_parameters_key <- parameters_per_clusters$key
-
-
 
 # join parameter variations specific to each disease subtype ...
 patient_group <- c("Type1", "Type2", "Type3", "Type4")
@@ -33,23 +26,21 @@ parameters_per_clusters <- parameters_per_clusters |>
   # ... and convert relative ratios to absolute, considering the healthy standard reference
   dplyr::mutate(across(all_of(patient_group), \(x) healthy *  (1 + x/100)))
 
-
-## Infer steady states for each patient subgroup, with and without anti-TNF-alpha treatment ----
-
-# for reference, run healthy steady state for the species of interest
+# run healthy steady state
 healthy_steaty_state <- runSteadyState(
   calculate_jacobian = FALSE,
   model = healthy_model)$species |> 
   dplyr::select(name, concentrationH = concentration) |> 
   filter (name %in% c("I6", "I10", "Ia", "T1", "T2","T17", "Tr", "Ig", "Ib"))
 
+
+# Infer steady states for each patient subgroup, with and without anti-TNF-alpha treatment ----
+
 steady_states_per_cluster <- purrr::map(patient_group, function(cluster) {
-  # hard-copy is required since CoRC passes COPASI models by reference rather than by value
-  # lobstr::obj_addr(healthy_model) // lobstr::obj_addr(disease_model_without_treatment)
   disease_model_without_treatment <- healthy_model |> saveModelToString() |>  loadModelFromString() 
   setParameters(model = disease_model_without_treatment, 
-                key = free_parameters_key, 
-                value = parameters_per_clusters |> pull(cluster))
+                key = parameters_per_clusters$key, 
+                value = parameters_per_clusters$cluster)
   # run the steady-state without treatment, for each patient subgroup
   without_treatment_steady_state <- runSteadyState(
     calculate_jacobian = FALSE,
@@ -87,8 +78,10 @@ steady_states_per_cluster <- purrr::map(patient_group, function(cluster) {
 }) |> 
   purrr::list_rbind()
 
-## reproduce boxplots of Figure 3, pre and post-treatment ----
+# Reproduce boxplots of Figure 3, pre and post-treatment ----
 library(ggplot2)
+library(latex2exp)
+library(cowplot)
 
 # format dataset for plotting
 steady_states_per_cluster_plot <- steady_states_per_cluster |> 
@@ -107,9 +100,8 @@ cluster_labels <- c("Type 1: Th1\\uparrow Th2\\downarrow",
                     "Type 4: Th1\\downarrow Th2\\downarrow") 
 names(cluster_labels) <- c("Type1", "Type2", "Type3", "Type4")
 
-library(latex2exp)
-library(cowplot)
-## Retrieve global legend ----
+
+### Retrieve legend ----
 global_plot <- ggplot(data = steady_states_per_cluster_plot, 
                       mapping = aes(x = name, y = concentration, fill = category)) +
   geom_col(position = "dodge") +
@@ -117,7 +109,7 @@ global_plot <- ggplot(data = steady_states_per_cluster_plot,
   guides(color = guide_legend(nrow = 1)) +
   theme(legend.position = "bottom") 
 
-## Generate a bar plot for each disease subtype ----
+### Generate bar plot for each disease subtype ----
 list_plots <- purrr::imap(cluster_labels, ~ ggplot(data = steady_states_per_cluster_plot |> filter(cluster==.y), 
                                                    mapping = aes(x = name, y = concentration, fill = category)) +
                             geom_col(position = "dodge")+
@@ -127,7 +119,8 @@ list_plots <- purrr::imap(cluster_labels, ~ ggplot(data = steady_states_per_clus
                             theme(panel.grid.major = element_blank(),
                                   legend.position = "none", plot.title = element_text(hjust = 0.5)) +
                             ggtitle(TeX(.x)))
-# Arrange the four plots in a 2x2 grid
+
+### Combine barplots into a 2x2 grid ----
 plot_grid_combined <- cowplot::plot_grid(plotlist = list_plots, 
   ncol = 2, align = "hv", axis = "tblr") 
 
