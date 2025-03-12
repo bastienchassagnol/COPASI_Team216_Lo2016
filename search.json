@@ -1,22 +1,5 @@
 [
   {
-    "objectID": "curation.html",
-    "href": "curation.html",
-    "title": "Tutorials for reproducing the main Figures and Tables of the IBD model",
-    "section": "",
-    "text": "The list of packages required for reproducing the tutorials are listed in Table 1:\n\n\nFinding R package dependencies ... Done!\n\n\n\n\n\nPackageSourcedplyrcurationflextablecurationrenvcurationtoolscurationdplyrcurationflextablecurationrenvcurationtoolscurationCoRCprccdplyrprccflextableprccggplot2prcclhsprccparallelprccppcorprcctibbleprccreadrprcctidyrprccCoRCsteady_statedplyrsteady_stateflextablesteady_statetestthatsteady_state\n\n\n\nTable 1: List of dependencies, per file.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSteady-state computations\n\n\n\n\n\n\n\n\n\n\n\nWednesday, the 12th of February, 2025\n\n\nBastien CHASSAGNOL, Atreyee Banerjee, Soria Gasparini\n\n\n\n\n\n\n\n\n\n\n\n\nPatient stratification\n\n\n\n\n\n\n\n\n\n\n\nWednesday, the 12th of February, 2025\n\n\nBastien CHASSAGNOL, Atreyee Banerjee, Soria Gasparini\n\n\n\n\n\n\n\n\n\n\n\n\nSensitivity analyses\n\n\n\n\n\n\n\n\n\n\n\nWednesday, the 12th of February, 2025\n\n\nBastien CHASSAGNOL, Atreyee Banerjee, Soria Gasparini\n\n\n\n\n\n\nNo matching items\n\n Back to top",
-    "crumbs": [
-      "A list of tutorials"
-    ]
-  },
-  {
-    "objectID": "files.html",
-    "href": "files.html",
-    "title": "Files",
-    "section": "",
-    "text": "Back to top"
-  },
-  {
     "objectID": "components.html",
     "href": "components.html",
     "title": "",
@@ -43,6 +26,23 @@
     "title": "",
     "section": "ODE model",
     "text": "ODE model\nWe report in Figure 2 the biological network model underlying the intertwined interactions between immune cell subtypes (T-cells and Macrophaes) and realeased cytokines.\n\n\n\n\n\n\nFigure 2: Bi-Directed diagram describing the interactions between immune cells in the inflammatory bowel disease IBD, from Lo et al. (2016), pp. 3"
+  },
+  {
+    "objectID": "curation.html",
+    "href": "curation.html",
+    "title": "Tutorials for reproducing the main Figures and Tables of the IBD model",
+    "section": "",
+    "text": "The list of packages required for reproducing the tutorials are listed in Table 1:\n\n\nFinding R package dependencies ... Done!\n\n\n\n\n\nPackageSourcedplyrcurationflextablecurationrenvcurationtoolscurationdplyrcurationflextablecurationrenvcurationtoolscurationCoRCprccdplyrprccflextableprccggplot2prcclhsprccparallelprccppcorprcctibbleprccreadrprcctidyrprccCoRCsteady_statedplyrsteady_stateflextablesteady_statetestthatsteady_state\n\n\n\nTable 1: List of dependencies, per file.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSteady-state computations\n\n\n\n\n\n\n\n\n\n\n\nWednesday, the 12th of March, 2025\n\n\nBastien CHASSAGNOL, Atreyee Banerjee, Soria Gasparini\n\n\n\n\n\n\n\n\n\n\n\n\nPatient stratification\n\n\n\n\n\n\n\n\n\n\n\nWednesday, the 12th of March, 2025\n\n\nBastien CHASSAGNOL, Atreyee Banerjee, Soria Gasparini\n\n\n\n\n\n\n\n\n\n\n\n\nSensitivity analyses\n\n\n\n\n\n\n\n\n\n\n\nWednesday, the 12th of March, 2025\n\n\nBastien CHASSAGNOL, Atreyee Banerjee, Soria Gasparini\n\n\n\n\n\n\nNo matching items\n\n Back to top",
+    "crumbs": [
+      "A list of tutorials"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Overview",
+    "section": "",
+    "text": "Back to top"
   },
   {
     "objectID": "reproducibility/patient_stratification.html",
@@ -155,16 +155,16 @@
     ]
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Overview",
+    "objectID": "history.html",
+    "href": "history.html",
+    "title": "Curation",
     "section": "",
     "text": "Back to top"
   },
   {
-    "objectID": "history.html",
-    "href": "history.html",
-    "title": "Curation",
+    "objectID": "files.html",
+    "href": "files.html",
+    "title": "Files",
     "section": "",
     "text": "Back to top"
   }
