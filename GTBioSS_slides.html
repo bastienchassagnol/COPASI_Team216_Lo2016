@@ -10,7 +10,7 @@
 <meta name="author" content="Atreyee Banerjee">
 <meta name="author" content="Soria Gasparini">
 
-<title>Overview – ODE Model of Inflammatory Bowel Disease</title>
+<title>GT Bioss presentation – ODE Model of Inflammatory Bowel Disease</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -58,27 +58,7 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -88,8 +68,6 @@ div.csl-indent {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./assets/img/IBD-disease.jpeg" rel="icon" type="image/jpeg">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -132,80 +110,17 @@ div.csl-indent {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <script async="" src="https://hypothes.is/embed.js"></script>
 <script>
   window.document.addEventListener("DOMContentLoaded", function (_event) {
     document.body.classList.add('hypothesis-enabled');
   });
 </script>
-<link href="site_libs/tabwid-1.1.3/tabwid.css" rel="stylesheet">
-<script src="site_libs/tabwid-1.1.3/tabwid.js"></script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<meta property="og:title" content="Overview – ODE Model of Inflammatory Bowel Disease">
+<meta property="og:title" content="GT Bioss presentation – ODE Model of Inflammatory Bowel Disease">
 <meta property="og:description" content="This GitHub repository stores the R code and COPASI models for reproducing Lo2016’s model on Inflammatory Bowel Disease.">
-<meta property="og:image" content="https://bastienchassagnol.github.io/Lo2016_ODE_IBD/assets/img/ODE_network.png">
 <meta property="og:site_name" content="ODE Model of Inflammatory Bowel Disease">
-<meta property="og:image:height" content="4083">
-<meta property="og:image:width" content="3894">
 </head>
 
 <body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -391,7 +306,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Overview</span></a>
   </li>  
   <li class="nav-item">
@@ -399,7 +314,7 @@ window.Quarto = {
 <span class="menu-text">Files</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./GTBioSS_slides.html"> 
+    <a class="nav-link active" href="./GTBioSS_slides.html" aria-current="page"> 
 <span class="menu-text">GT BioSS slides</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -465,7 +380,7 @@ window.Quarto = {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <div class="quarto-title-block"><div><h1 class="title">Overview</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+      <div class="quarto-title-block"><div><h1 class="title">GT Bioss presentation</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
                       </div>
   </div>
     
@@ -519,16 +434,8 @@ window.Quarto = {
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="2">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#original-paper" id="toc-original-paper" class="nav-link active" data-scroll-target="#original-paper"><span class="header-section-number">1</span> Original paper</a></li>
-  <li><a href="#ode-model-and-network" id="toc-ode-model-and-network" class="nav-link" data-scroll-target="#ode-model-and-network"><span class="header-section-number">2</span> ODE model and network</a></li>
-  <li><a href="#reproducibility" id="toc-reproducibility" class="nav-link" data-scroll-target="#reproducibility"><span class="header-section-number">3</span> Reproducibility</a></li>
-  </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/bastienchassagnol//COPASI_Team216_Lo2016/edit/master/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/bastienchassagnol//COPASI_Team216_Lo2016/blob/master/index.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/bastienchassagnol//COPASI_Team216_Lo2016/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -538,144 +445,14 @@ window.Quarto = {
 
 
 
-<section id="original-paper" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="original-paper"><span class="header-section-number">1</span> Original paper</h2>
-<p>The original pdf source of <span class="citation" data-cites="lo2016po">Lo et al. (<a href="#ref-lo2016po" role="doc-biblioref">2016</a>)</span> is embedded in <a href="#fig-lo2016-paper" class="quarto-xref">Figure&nbsp;1</a>.</p>
-<div id="fig-lo2016-paper" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-lo2016-paper-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<p><object data="assets/Lo2016.pdf" type="application/pdf" width="90%" height="800"><a href="assets/Lo2016.pdf" download="">Download PDF file.</a></object></p>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-lo2016-paper-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1
-</figcaption>
-</figure>
-</div>
-</section>
-<section id="ode-model-and-network" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="ode-model-and-network"><span class="header-section-number">2</span> ODE model and network</h2>
-<p>We report in <a href="#fig-ODE-network" class="quarto-xref">Figure&nbsp;2</a> the biological <strong>network model</strong> underlying the intertwined interactions between immune cell subtypes (T-cells and Macrophaes) and realeased cytokines.</p>
-<div id="fig-ODE-network" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-ODE-network-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="assets/img/ODE_network.png" class="img-fluid figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ODE-network-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: Bi-Directed diagram describing the interactions between immune cells in the inflammatory bowel disease IBD, from <a href="https://journals.plos.org/plosone/article/figure?id=10.1371/journal.pone.0170865.g001"><span class="citation" data-cites="lo2016po">Lo et al. (<span>2016</span>)</span>, pp.&nbsp;3</a>
-</figcaption>
-</figure>
-</div>
-</section>
-<section id="reproducibility" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="reproducibility"><span class="header-section-number">3</span> Reproducibility</h2>
-<p>The list of packages required for reproducing the tutorials are listed in <a href="#tbl-packages" class="quarto-xref">Table&nbsp;1</a>:</p>
-<div class="cell" data-layout-align="center">
-<pre><code>##  Finding R package dependencies ... [88/88] Done!</code></pre>
-<div id="tbl-packages" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-layout-align="center">
-<figure class="quarto-float quarto-float-tbl figure">
-<div aria-describedby="tbl-packages-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="cell-output-display">
-<div class="tabwid"><style>.cl-5e762d48{}.cl-5e6832e2{font-family:'Arial';font-size:11pt;font-weight:bold;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-5e68331e{font-family:'Arial';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-5e68331f{font-family:'mono';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-5e6e2666{margin:0;text-align:center;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-5e6e654a{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-5e6e655e{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-5e6e6568{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table data-quarto-disable-processing="true" class="cl-5e762d48"><thead><tr style="overflow-wrap:break-word;"><th class="cl-5e6e654a"><p class="cl-5e6e2666"><span class="cl-5e6832e2">Source</span></p></th><th class="cl-5e6e654a"><p class="cl-5e6e2666"><span class="cl-5e6832e2">Package</span></p></th></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td rowspan="11" class="cl-5e6e655e"><p class="cl-5e6e2666"><span class="cl-5e68331e">patient_stratification</span></p></td><td class="cl-5e6e655e"><p class="cl-5e6e2666"><span class="cl-5e68331f">CoRC</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-5e6e655e"><p class="cl-5e6e2666"><span class="cl-5e68331f">cowplot</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-5e6e655e"><p class="cl-5e6e2666"><span class="cl-5e68331f">dplyr</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-5e6e655e"><p class="cl-5e6e2666"><span class="cl-5e68331f">flextable</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-5e6e655e"><p class="cl-5e6e2666"><span class="cl-5e68331f">ggplot2</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-5e6e655e"><p class="cl-5e6e2666"><span class="cl-5e68331f">latex2exp</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-5e6e655e"><p class="cl-5e6e2666"><span class="cl-5e68331f">readr</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-5e6e655e"><p class="cl-5e6e2666"><span class="cl-5e68331f">scales</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-5e6e655e"><p class="cl-5e6e2666"><span class="cl-5e68331f">tidyr</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-5e6e655e"><p class="cl-5e6e2666"><span class="cl-5e68331f">purrr</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-5e6e655e"><p class="cl-5e6e2666"><span class="cl-5e68331f">tibble</span></p></td></tr><tr style="overflow-wrap:break-word;"><td rowspan="10" class="cl-5e6e655e"><p class="cl-5e6e2666"><span class="cl-5e68331e">prcc</span></p></td><td class="cl-5e6e655e"><p class="cl-5e6e2666"><span class="cl-5e68331f">CoRC</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-5e6e655e"><p class="cl-5e6e2666"><span class="cl-5e68331f">dplyr</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-5e6e655e"><p class="cl-5e6e2666"><span class="cl-5e68331f">flextable</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-5e6e655e"><p class="cl-5e6e2666"><span class="cl-5e68331f">ggplot2</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-5e6e655e"><p class="cl-5e6e2666"><span class="cl-5e68331f">lhs</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-5e6e655e"><p class="cl-5e6e2666"><span class="cl-5e68331f">parallel</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-5e6e655e"><p class="cl-5e6e2666"><span class="cl-5e68331f">ppcor</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-5e6e655e"><p class="cl-5e6e2666"><span class="cl-5e68331f">tibble</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-5e6e655e"><p class="cl-5e6e2666"><span class="cl-5e68331f">readr</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-5e6e655e"><p class="cl-5e6e2666"><span class="cl-5e68331f">tidyr</span></p></td></tr><tr style="overflow-wrap:break-word;"><td rowspan="4" class="cl-5e6e6568"><p class="cl-5e6e2666"><span class="cl-5e68331e">steady_state</span></p></td><td class="cl-5e6e655e"><p class="cl-5e6e2666"><span class="cl-5e68331f">CoRC</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-5e6e655e"><p class="cl-5e6e2666"><span class="cl-5e68331f">dplyr</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-5e6e655e"><p class="cl-5e6e2666"><span class="cl-5e68331f">flextable</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-5e6e6568"><p class="cl-5e6e2666"><span class="cl-5e68331f">testthat</span></p></td></tr></tbody></table></div>
-</div>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-tbl" id="tbl-packages-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;1: List of dependencies, per file.
-</figcaption>
-</figure>
-</div>
-</div>
-
+<p><a href="../slides/index.html#/title-slide">View raw material in full screen</a>.</p>
+<iframe class="slides" src="../slides/index.html"></iframe>
 
 
 <!-- -->
 
 
-</section>
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1747194279000" data-listing-file-modified-sort="1747194279732" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1472">
-<div class="thumbnail"><a href="./reproducibility/steady_state.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./reproducibility/steady_state.html" class="no-external">Steady-state computations</a>
-</h3>
-<div class="delink listing-description"><a href="./reproducibility/steady_state.html" class="no-external">
-The list of packages required for reproducing the analyses on this script are listed in Listing&nbsp;1:
-</a></div>
-</div>
-<div class="metadata">
-<a href="./reproducibility/steady_state.html" class="no-external">
-<div class="listing-date">
-Wednesday, the 14th of May, 2025
-</div>
-<div class="listing-author">
-Bastien CHASSAGNOL, Atreyee Banerjee, Soria Gasparini
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1747194279000" data-listing-file-modified-sort="1747194279732" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="26" data-listing-word-count-sort="5173">
-<div class="thumbnail"><a href="./reproducibility/prcc.html" class="no-external">
-
-<p class="card-img-top"><img src="assets/img/Randomly-sampled-variables-vs-Latin-hypercube-samples.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./reproducibility/prcc.html" class="no-external">Sensitivity analyses</a>
-</h3>
-<div class="delink listing-description"><a href="./reproducibility/prcc.html" class="no-external">
-The list of packages required for reproducing the analyses on this script are listed in Listing&nbsp;1:
-</a></div>
-</div>
-<div class="metadata">
-<a href="./reproducibility/prcc.html" class="no-external">
-<div class="listing-date">
-Wednesday, the 14th of May, 2025
-</div>
-<div class="listing-author">
-Bastien CHASSAGNOL, Atreyee Banerjee, Soria Gasparini
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-listing-date-sort="1747194279000" data-listing-file-modified-sort="1747194279732" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="30" data-listing-word-count-sort="5955">
-<div class="thumbnail"><a href="./reproducibility/patient_stratification.html" class="no-external">
-
-<p class="card-img-top"><img src="reproducibility/patient_stratification_files/figure-html/fig-treatment-blockade-1.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./reproducibility/patient_stratification.html" class="no-external">Patient stratification</a>
-</h3>
-<div class="delink listing-description"><a href="./reproducibility/patient_stratification.html" class="no-external">
-The list of packages required for reproducing the analyses on this script are listed in Listing&nbsp;1. Besides, the downloadable R script file <code>utils</code> stores two helper functions:
-</a></div>
-</div>
-<div class="metadata">
-<a href="./reproducibility/patient_stratification.html" class="no-external">
-<div class="listing-date">
-Wednesday, the 14th of May, 2025
-</div>
-<div class="listing-author">
-Bastien CHASSAGNOL, Atreyee Banerjee, Soria Gasparini
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div><a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
-<div id="ref-lo2016po" class="csl-entry" role="listitem">
-Lo, Wing-Cheong, Violeta Arsenescu, Razvan I. Arsenescu, and Avner Friedman. 2016. <span>“Inflammatory <span>Bowel Disease</span>: <span class="nocase">How Effective Is TNF-α Suppression</span>?”</span> <em>PloS One</em> 11 (11): e0165782. <a href="https://doi.org/10.1371/journal.pone.0165782">https://doi.org/10.1371/journal.pone.0165782</a>.
-</div>
-</div></section></div></main> <!-- /main -->
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -1178,62 +955,15 @@ Lo, Wing-Cheong, Violeta Arsenescu, Razvan I. Arsenescu, and Avner Friedman. 201
     }
   });
   </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb2" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Overview"</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="an">listing:</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">  contents: reproducibility</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co">  sort: false</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co">  type: default</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="fu">## Original paper</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>The original pdf source of @lo2016po is embedded in @fig-lo2016-paper.</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>::: {#fig-lo2016-paper}</span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>{{&lt; pdf assets/Lo2016.pdf width=90% height=800 &gt;}}</span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="fu">## ODE model and network</span></span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>We report in @fig-ODE-network the biological **network model** underlying the intertwined interactions between immune cell subtypes (T-cells and Macrophaes) and realeased cytokines. </span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>!<span class="co">[</span><span class="ot">Bi-Directed diagram describing the interactions between immune cells in the inflammatory bowel disease IBD, from [@lo2016po, pp. 3](https://journals.plos.org/plosone/article/figure?id=10.1371/journal.pone.0170865.g001)</span><span class="co">](assets/img/ODE_network.png)</span>{#fig-ODE-network}</span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="fu">## Reproducibility </span></span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>The list of packages required for reproducing the tutorials are listed in @tbl-packages:</span>
-<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a><span class="in">```{r setup}</span></span>
-<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: tbl-packages</span></span>
-<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a><span class="co">#| tbl-cap: List of dependencies, per file.</span></span>
-<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
-<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(flextable)</span>
-<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>liste_packages <span class="ot">&lt;-</span> renv<span class="sc">::</span><span class="fu">dependencies</span>(<span class="at">path=</span><span class="fu">getwd</span>(), <span class="at">errors =</span> <span class="st">"ignored"</span>) </span>
-<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>liste_packages <span class="ot">&lt;-</span> liste_packages <span class="sc">|&gt;</span> </span>
-<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(Source, Package) <span class="sc">|&gt;</span> </span>
-<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span>Package <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"rmarkdown"</span>, <span class="st">"knitr"</span>)) <span class="sc">|&gt;</span> </span>
-<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Source =</span> tools<span class="sc">::</span><span class="fu">file_path_sans_ext</span>(<span class="fu">basename</span>(Source))) <span class="sc">|&gt;</span> </span>
-<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span>Source <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"index"</span>)) <span class="sc">|&gt;</span> </span>
-<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">distinct</span>()</span>
-<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a><span class="fu">flextable</span>(liste_packages) <span class="sc">|&gt;</span> </span>
-<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>  <span class="fu">bold</span>(<span class="at">part =</span> <span class="st">"header"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>  <span class="fu">align</span>(<span class="at">align =</span> <span class="st">"center"</span>, <span class="at">part =</span> <span class="st">"all"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set_caption</span>(<span class="st">"List of dependencies, per Tutorial."</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a>  <span class="fu">merge_v</span>(<span class="at">part =</span> <span class="st">"body"</span>, <span class="at">j =</span> <span class="st">"Source"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>  <span class="fu">font</span>(<span class="at">j =</span> <span class="st">"Package"</span>, <span class="at">fontname =</span> <span class="st">"mono"</span>, <span class="at">part =</span> <span class="st">"body"</span>)</span>
-<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "GT Bioss presentation"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">View raw material in full screen</span><span class="co">](../slides/index.html#/title-slide)</span>.</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="in">```{=html}</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;iframe class="slides" src="../slides/index.html"&gt;&lt;/iframe&gt;</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">
@@ -1243,7 +973,7 @@ Lo, Wing-Cheong, Violeta Arsenescu, Razvan I. Arsenescu, and Avner Friedman. 201
 </div>   
     <div class="nav-footer-center">
 <p>© <span id="current-year"></span> Bastien CHASSAGNOL.</p>
-<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/bastienchassagnol//COPASI_Team216_Lo2016/edit/master/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/bastienchassagnol//COPASI_Team216_Lo2016/blob/master/index.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/bastienchassagnol//COPASI_Team216_Lo2016/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+<div class="toc-actions"><ul><li><a href="https://github.com/bastienchassagnol//COPASI_Team216_Lo2016/edit/master/GTBioSS_slides.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/bastienchassagnol//COPASI_Team216_Lo2016/blob/master/GTBioSS_slides.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/bastienchassagnol//COPASI_Team216_Lo2016/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>License: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0">CC BY NC SA 4.0</a>.</p>
 </div>
