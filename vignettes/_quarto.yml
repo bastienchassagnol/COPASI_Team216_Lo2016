@@ -57,12 +57,10 @@ website:
       contents:
         - text: "Steady State"
           href: reproducibility/steady_state.qmd
-        # - text: "Bibliographic references"
-        #   href: reproducibility/references.qmd
-        # - text: "PRCC"
-        #   href: reproducibility/prcc.qmd 
-        # - text: "Patient Stratification"
-        #   href: reproducibility/patient_stratification.qmd
+        - text: "PRCC"
+          href: reproducibility/prcc.qmd
+        - text: "Patient Stratification"
+          href: reproducibility/patient_stratification.qmd
   page-footer:
     border: true
     left: |

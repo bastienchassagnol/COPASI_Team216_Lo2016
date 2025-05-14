@@ -1,4 +1,0 @@
-## Bibliographic References {.appendix .unnumbered}
-
-::: {#refs}
-:::
