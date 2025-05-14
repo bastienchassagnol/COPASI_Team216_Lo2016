@@ -87,6 +87,7 @@ div.csl-indent {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../reproducibility/prcc.html" rel="prev">
 <link href="../assets/img/IBD-disease.jpeg" rel="icon" type="image/jpeg">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -177,7 +178,7 @@ window.Quarto = {
 <meta property="og:image:width" content="1344">
 </head>
 
-<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-sidebar floating nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -380,6 +381,14 @@ window.Quarto = {
     <a class="dropdown-item" href="../reproducibility/steady_state.html">
  <span class="dropdown-text">Steady State</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="../reproducibility/prcc.html">
+ <span class="dropdown-text">PRCC</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../reproducibility/patient_stratification.html">
+ <span class="dropdown-text">Patient Stratification</span></a>
+  </li>  
     </ul>
   </li>
 </ul>
@@ -426,6 +435,19 @@ window.Quarto = {
 </div>
       </div> <!-- /container-fluid -->
     </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../reproducibility/patient_stratification.html">Patient Stratification</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
   <div id="quarto-announcement" data-announcement-id="2449c185770fef7e9639b4d1485f586c" class="alert alert-warning hidden"><i class="bi bi-cone-striped quarto-announcement-icon"></i><div class="quarto-announcement-content">
 <p>Website under active development</p>
 </div><i class="bi bi-x-lg quarto-announcement-action"></i></div>
@@ -487,6 +509,36 @@ window.Quarto = {
   
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../reproducibility/steady_state.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Steady State</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../reproducibility/prcc.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PRCC</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../reproducibility/patient_stratification.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Patient Stratification</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="2">
@@ -1652,7 +1704,16 @@ Lo, Wing-Cheong, Violeta Arsenescu, Razvan I. Arsenescu, and Avner Friedman. 201
       }
     }
   });
-  </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../reproducibility/prcc.html" class="pagination-link" aria-label="PRCC">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">PRCC</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
 <div class="sourceCode" id="cb9" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Patient stratification"</span></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
