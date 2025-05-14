@@ -52,6 +52,17 @@ filters:
 
 ###  {#title-slide data-menu-title="Title Slide" background="#053660"}
 
+```{r}
+#| label: setup 
+#| echo: false
+#| eval: true
+#| include: false
+
+library(xml2)
+library(downlit)
+```
+
+
 [Benchmarking state-of-the-art CCC tools.]{.custom-title}
 
 [*Acknowledging the vast diversity of CCC tools, we focused on algorithms integrating both spatially resolved transcriptomics and intracellular information*]{.custom-subtitle3}
@@ -92,9 +103,9 @@ Slides & source code available on [GitHub {{< fa brands github title="GitHub Oct
 - Review of CCC tools :arrow_down:
 :::
 
-<!-- {{< include sections/0-CCC-tools-applications.qmd >}} -->
+{{< include sections/0-CCC-tools-applications.qmd >}}
 
-<!-- {{< include sections/1-review.qmd >}} -->
+{{< include sections/1-review.qmd >}}
 
 
 # Conclusion {.section data-menu-title="Conclusion"}
