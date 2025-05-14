@@ -6,6 +6,12 @@ listing:
   type: default
 ---
 
+This is a Quarto book project: you can download a Web, HTML and pdf version.
+
+```{=html}
+<a class="github-button" href="https://github.com/bastienchassagnol/COPASI_Team216_Lo2016/" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star this website on Github">Star this website on Github</a><script async defer src="https://buttons.github.io/buttons.js"></script>
+```
+
 ## Original paper
 
 

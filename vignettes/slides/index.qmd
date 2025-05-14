@@ -9,7 +9,7 @@ slide-number: true
 slide-level: 3
 from: markdown+emoji 
 pagetitle: "IBD ODE Disease Model"
-footer: "Towards a reconciliation of programming languages and point-and-click software // [Open-Source Website of IBD Model](https://bastienchassagnol.github.io/COPASI_Team216_Lo2016/)"
+footer: "Digital Twins and Reproducibility // [Open-Source Website of IBD Model](https://bastienchassagnol.github.io/COPASI_Team216_Lo2016/)"
 footer-logo-link: "https://www.lpsm.paris/"
 sc-sb-title: true
 header: Made by Quarto Presentations RevealJs
@@ -63,9 +63,9 @@ library(downlit)
 ```
 
 
-[Benchmarking state-of-the-art CCC tools.]{.custom-title}
+[Digital Twins and Reproducibility]{.custom-title}
 
-[*Acknowledging the vast diversity of CCC tools, we focused on algorithms integrating both spatially resolved transcriptomics and intracellular information*]{.custom-subtitle3}
+[*Bridging Point-and-Click COPASI Software with Open-Source and Flexible R Programming language*]{..custom-subtitle2}
 
 ::::: columns
 ::: {.column width="50%"}
@@ -80,18 +80,33 @@ library(downlit)
 <hr class="hr-teal">
 
 ::::: columns
-::: {.column width="50%"}
-[Bastien CHASSAGNOL \|]{.custom-subtitle2}<br> [Lecturer & Professional Researcher]{.custom-subtitle2}<br> [*LPSM*]{.custom-subtitle3}
+
+::: {.column width="20%"}
+[Bastien CHASSAGNOL \|]{.custom-subtitle3}<br> [Post-Doc]{.custom-subtitle3}<br> [*LPSM and Laval*]{.body-text-xs}
 :::
 
-::: {.column width="50%"}
-[Marie-Pier Scott \|]{.custom-subtitle2}<br> [Lecturer & Professional Researcher]{.custom-subtitle2}<br> [*Laval University*]{.custom-subtitle3}
+::: {.column width="20%"}
+[Lilija Wehling \|]{.custom-subtitle3}<br> [Ph.D.]{.custom-subtitle3}<br> [*VPE BioMed X Institute*]{.body-text-xs}
 :::
+
+::: {.column width="20%"}
+[Atreyee Banerjee \|]{.custom-subtitle3}<br> [Ph.D.]{.custom-subtitle3}<br> [*Mainz Universität*]{.body-text-xs}
+:::
+
+::: {.column width="20%"}
+[Soria Gasparini \|]{.custom-subtitle3}<br> [Ph.D.]{.custom-subtitle3}<br> [*Heidelberg University*]{.body-text-xs}
+:::
+
+::: {.column width="20%"}
+[Sanjana Balaji Kuttae \|]{.custom-subtitle3}<br> [Ph.D.]{.custom-subtitle3}<br> [*VPE BioMed X Institute*]{.body-text-xs}
+:::
+
 :::::
+
 
 <br>
 
-Slides & source code available on [GitHub {{< fa brands github title="GitHub Octocat logo" >}}](https://github.com/bastienchassagnol/COPASI_Team216_Lo2016/tree/master/vignettes/slides)
+Slides available on [GitHub {{< fa brands github title="GitHub Octocat logo" >}}](https://github.com/bastienchassagnol/COPASI_Team216_Lo2016/tree/master/vignettes/slides)
 
 ---
 

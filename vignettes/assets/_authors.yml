@@ -4,9 +4,16 @@ author:
       - Sorbonne University
       - University Laval
     email: bastien_chassagnol@laposte.net
+  - name: Lilija Wehling
+    affiliation:  Virtual Patient Engine BioMed X Institute
+    email: Wehling@bmedx.com
   - name: Atreyee Banerjee
     affiliation: Mainz Universität
     email: banerjeea@mpip-mainz.mpg.de
   - name: Soria Gasparini
     affiliation:  Heidelberg University
-    email: oria.gasparini@stud.uni-heidelberg.de
+    email: soria.gasparini@stud.uni-heidelberg.de
+  - name: Sanjana Balaji Kuttae
+    affiliation:  Virtual Patient Engine BioMed X Institute
+    email: balaji-kuttae@bmedx.com
+  

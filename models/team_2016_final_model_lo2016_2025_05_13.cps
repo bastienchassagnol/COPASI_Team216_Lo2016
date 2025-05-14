@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- generated with COPASI 4.45 (Build 298) (http://www.copasi.org) at 2025-05-14T02:57:14Z -->
+<!-- generated with COPASI 4.45 (Build 298) (http://www.copasi.org) at 2025-05-14T13:48:32Z -->
 <?oxygen RNGSchema="http://www.copasi.org/static/schema/CopasiML.rng" type="xml"?>
 <COPASI xmlns="http://www.copasi.org/static/schema" versionMajor="4" versionMinor="45" versionDevel="298" copasiSourcesModified="0">
   <ListOfFunctions>
@@ -245,22 +245,6 @@ Reaction scheme where the products are created from the reactants and the change
     </dcterms:created>
     <dcterms:creator>
       <rdf:Description>
-        <vCard:EMAIL>banerjeea@mpip-mainz.mpg.de</vCard:EMAIL>
-        <vCard:N>
-          <rdf:Description>
-            <vCard:Family>Banerjee</vCard:Family>
-            <vCard:Given>Atreyee</vCard:Given>
-          </rdf:Description>
-        </vCard:N>
-        <vCard:ORG>
-          <rdf:Description>
-            <vCard:Orgname>Mainz Universität</vCard:Orgname>
-          </rdf:Description>
-        </vCard:ORG>
-      </rdf:Description>
-    </dcterms:creator>
-    <dcterms:creator>
-      <rdf:Description>
         <vCard:EMAIL>wehling@bmedx.com</vCard:EMAIL>
         <vCard:N>
           <rdf:Description>
@@ -295,16 +279,17 @@ BioMed X Institute</vCard:Orgname>
     </dcterms:creator>
     <dcterms:creator>
       <rdf:Description>
-        <vCard:EMAIL>bastien_chassagnol@laposte.net</vCard:EMAIL>
+        <vCard:EMAIL>Wehling@bmedx.com</vCard:EMAIL>
         <vCard:N>
           <rdf:Description>
-            <vCard:Family>chassagnol</vCard:Family>
-            <vCard:Given>bastien</vCard:Given>
+            <vCard:Family>Wehling</vCard:Family>
+            <vCard:Given>Lilija</vCard:Given>
           </rdf:Description>
         </vCard:N>
         <vCard:ORG>
           <rdf:Description>
-            <vCard:Orgname>Sorbonne Université</vCard:Orgname>
+            <vCard:Orgname>Virtual Patient Engine
+BioMed X Institute</vCard:Orgname>
           </rdf:Description>
         </vCard:ORG>
       </rdf:Description>
@@ -321,6 +306,22 @@ BioMed X Institute</vCard:Orgname>
         <vCard:ORG>
           <rdf:Description>
             <vCard:Orgname>Heidelberg Universität</vCard:Orgname>
+          </rdf:Description>
+        </vCard:ORG>
+      </rdf:Description>
+    </dcterms:creator>
+    <dcterms:creator>
+      <rdf:Description>
+        <vCard:EMAIL>banerjeea@mpip-mainz.mpg.de</vCard:EMAIL>
+        <vCard:N>
+          <rdf:Description>
+            <vCard:Family>Banerjee</vCard:Family>
+            <vCard:Given>Atreyee</vCard:Given>
+          </rdf:Description>
+        </vCard:N>
+        <vCard:ORG>
+          <rdf:Description>
+            <vCard:Orgname>Mainz Universität</vCard:Orgname>
           </rdf:Description>
         </vCard:ORG>
       </rdf:Description>
@@ -507,9 +508,7 @@ BioMed X Institute</vCard:Orgname>
     <ListOfReactions>
       <Reaction key="Reaction_0" name="Induction of Tr" reversible="false" fast="false" addNoise="false">
         <MiriamAnnotation>
-<rdf:RDF
-xmlns:dcterms="http://purl.org/dc/terms/"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 <rdf:Description rdf:about="#Reaction_0">
 </rdf:Description>
 </rdf:RDF>
@@ -5078,12 +5077,12 @@ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
         86400*s
       </Expression>
     </UnitDefinition>
-    <UnitDefinition key="Unit_85" name="unit" symbol="symbol">
+    <UnitDefinition key="Unit_81" name="unit" symbol="symbol">
       <MiriamAnnotation>
 <rdf:RDF
 xmlns:dcterms="http://purl.org/dc/terms/"
 xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<rdf:Description rdf:about="#Unit_84">
+<rdf:Description rdf:about="#Unit_80">
 </rdf:Description>
 </rdf:RDF>
       </MiriamAnnotation>
