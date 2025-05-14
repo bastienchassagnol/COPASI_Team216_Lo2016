@@ -2,8 +2,8 @@
 title: "GT Bioss presentation"
 ---
 
-[View raw material in full screen](../slides/index.html#/title-slide).
+[View raw material in full screen](slides/index.html#/title-slide).
 
 ```{=html}
-<iframe class="slides" src="../slides/index.html"></iframe>
+<iframe class="slides" src="slides/index.html"></iframe>
 ```

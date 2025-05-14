@@ -1,4 +1,0 @@
-### Bibliographic References {#biblio .scrollable .slide-title2}
-
-::: {#refs}
-:::

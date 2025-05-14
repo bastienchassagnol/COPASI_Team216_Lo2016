@@ -1,6 +1,14 @@
 project:
   type: website
   output-dir: ../docs
+  render:
+    - index.qmd
+    - files.qmd
+    - GTBioSS_slides.qmd 
+    - reproducibility/steady_state.qmd
+    - reproducibility/prcc.qmd
+    - reproducibility/patient_stratification.qmd
+    - "!slides/"
   
   
 website:
@@ -59,10 +67,10 @@ website:
       contents:
         - text: "Steady State"
           href: reproducibility/steady_state.qmd
-        # - text: "PRCC"
-        #   href: reproducibility/prcc.qmd
-        # - text: "Patient Stratification"
-        #   href: reproducibility/patient_stratification.qmd
+        - text: "PRCC"
+          href: reproducibility/prcc.qmd
+        - text: "Patient Stratification"
+          href: reproducibility/patient_stratification.qmd
   page-footer:
     border: true
     left: |
