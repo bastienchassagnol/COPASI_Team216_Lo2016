@@ -2,6 +2,8 @@ on:
   workflow_dispatch:
   push:
     branches: [main, master]
+  pull_request:
+    branches: [main, master]
 
 name: Quarto Publish
 
@@ -26,6 +28,11 @@ jobs:
 
       - name: Install LOCAL Renv R Dependencies
         uses: r-lib/actions/setup-renv@v2
+
+      - name: Install R packages
+        run: |
+          Rscript -e "install.packages('xml2')"  
+          Rscript -e "install.packages('downlit')" 
         
       - name: Render Quarto Slides only
         uses: quarto-dev/quarto-actions/render@v2

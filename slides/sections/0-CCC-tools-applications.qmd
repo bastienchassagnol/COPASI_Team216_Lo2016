@@ -4,16 +4,6 @@
 
 [Cell-cell Categories]{.slide-title}
 
-```{r}
-#| label: setup
-#| echo: true
-#| eval: false
-
-library(downlit)
-library(xml2)
-```
-
-
 <hr>
 
 ::: {.body-text-l}
