@@ -91,14 +91,14 @@
     "href": "index.html",
     "title": "Overview",
     "section": "",
-    "text": "The original pdf source of Lo et al. (2016) is embedded in Figure 1.\n\n\n\nDownload PDF file.\n\n\nFigure 1"
+    "text": "This is a Quarto book project: you can download a Web, HTML and pdf version."
   },
   {
     "objectID": "index.html#original-paper",
     "href": "index.html#original-paper",
     "title": "Overview",
-    "section": "",
-    "text": "The original pdf source of Lo et al. (2016) is embedded in Figure 1.\n\n\n\nDownload PDF file.\n\n\nFigure 1"
+    "section": "1 Original paper",
+    "text": "1 Original paper\nThe original pdf source of Lo et al. (2016) is embedded in Figure 1.\n\n\n\nDownload PDF file.\n\n\nFigure 1"
   },
   {
     "objectID": "index.html#ode-model-and-network",
@@ -112,7 +112,7 @@
     "href": "index.html#reproducibility",
     "title": "Overview",
     "section": "3 Reproducibility",
-    "text": "3 Reproducibility\nThe list of packages required for reproducing the tutorials are listed in Table 1:\n\n##  Finding R package dependencies ... [88/88] Done!\n\n\n\n\nSourcePackagepatient_stratificationCoRCcowplotdplyrflextableggplot2latex2expreadrscalestidyrpurrrtibbleprccCoRCdplyrflextableggplot2lhsparallelppcortibblereadrtidyrsteady_stateCoRCdplyrflextabletestthat\n\n\n\nTable 1: List of dependencies, per file."
+    "text": "3 Reproducibility\nThe list of packages required for reproducing the tutorials are listed in Table 1:\n\n##  Finding R package dependencies ... Done!\n\n\n\n\nSourcePackagepatient_stratificationCoRCcowplotdplyrflextableggplot2latex2expreadrscalestidyrpurrrtibbleprccCoRCdplyrflextableggplot2lhsparallelppcortibblereadrtidyrsteady_stateCoRCdplyrflextabletestthat\n\n\n\nTable 1: List of dependencies, per file."
   },
   {
     "objectID": "GTBioSS_slides.html",
