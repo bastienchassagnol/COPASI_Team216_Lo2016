@@ -38,9 +38,16 @@ jobs:
         uses: quarto-dev/quarto-actions/render@v2
         with:
           to: revealjs
-          path: slides/index.qmd
+          path: vignettes/slides/index.qmd
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: Upload the Resulting Slides as Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: slides-generation
+          path: vignettes/slides/index.html
+          if-no-files-found: 'error'
 
       - name: Render and Publish global website
         uses: quarto-dev/quarto-actions/publish@v2
