@@ -91,6 +91,7 @@ number-sections: true
 toc: true
 toc-depth: 4
 lang: en-GB
+toc-expand: 2
 date: last-modified
 link-citations: true
 highlight-style: github
@@ -98,7 +99,7 @@ title-block-banner: true # Listing styles
 filters:
   - highlight-text
 
-# Metadata, such as authors information
+
 metadata-files:
   - assets/_format.yml
   - assets/_knitr.yml
