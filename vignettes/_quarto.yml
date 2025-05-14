@@ -1,19 +1,29 @@
 project:
   type: website
-
+  output-dir: ../docs
+  
+  
 website:
   title: "ODE Model of Inflammatory Bowel Disease"
   description: |
     This GitHub repository stores the R code and COPASI models for reproducing
     Lo2016's model on Inflammatory Bowel Disease.
-  reader-mode: true # Allow the reader to remove the TOC.
+  reader-mode: true 
   site-url: "https://bastienchassagnol.github.io/Lo2016_ODE_IBD"
   repo-url: "https://github.com/bastienchassagnol//COPASI_Team216_Lo2016"
-  # GitHub Links
   repo-actions: [edit, source, issue]
+  repo-branch: master
+  open-graph: true
   back-to-top-navigation: true
   page-navigation: true
   # Website general layout
+  favicon: assets/img/IBD-disease.jpeg
+  announcement: 
+    icon: cone-striped
+    dismissable: true
+    content: "Website under active development"
+    type: warning
+    position: below-navbar
   navbar:
     pinned: true
     logo: assets/img/IBD-disease.jpeg
@@ -29,10 +39,6 @@ website:
         text: "Overview"
       - href: files.qmd 
         text: "Files"
-      - href: history.qmd 
-        text: "History"
-      - href: components.qmd 
-        text: "Components"
       - sidebar:curation
     right:
       - icon: folder-symlink
@@ -45,18 +51,18 @@ website:
   # Sidebar navigation      
   sidebar:
     - id: curation
+      search: true 
       style: "floating"
-      title: "Curations"
-      contents: 
-        - text: "A list of tutorials"
-          href: curation.qmd
+      title: "Curation"
+      contents:
         - text: "Steady State"
           href: reproducibility/steady_state.qmd
-        - text: "PRCC"
-          href: reproducibility/prcc.qmd 
-        - text: "Patient Stratification"
-          href: reproducibility/patient_stratification.qmd    
-  # Footer navigation           
+        # - text: "Bibliographic references"
+        #   href: reproducibility/references.qmd
+        # - text: "PRCC"
+        #   href: reproducibility/prcc.qmd 
+        # - text: "Patient Stratification"
+        #   href: reproducibility/patient_stratification.qmd
   page-footer:
     border: true
     left: |
@@ -65,10 +71,11 @@ website:
       &copy; []{#current-year} Bastien CHASSAGNOL.
     right: |
       License: [CC BY NC SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0).
-        
-# not re-run computations if source files have not been modified
+
+# Execution options        
 execute:
   echo: true
+  eval: true
   warning: false
   message: false
   error: false
@@ -79,45 +86,22 @@ tbl-cap-location: bottom
 bibliography:
   - assets/packages.bib
   - assets/papers.bib
+
+engine: knitr
+editor: source
+number-sections: true
 toc: true
 toc-depth: 4
-toc-expand: 2
-
-# General metadata
-author:
-  - name: Bastien CHASSAGNOL
-    affiliation: 
-      - Sorbonne University
-      - University Laval
-    email: bastien_chassagnol@laposte.net
-  - name: Atreyee Banerjee
-    affiliation: Mainz Universität
-    email: banerjeea@mpip-mainz.mpg.de
-  - name: Soria Gasparini
-    affiliation:  Heidelberg University
-    email: oria.gasparini@stud.uni-heidelberg.de
+lang: en-GB
 date: last-modified
+link-citations: true
+highlight-style: github
+title-block-banner: true # Listing styles
+filters:
+  - highlight-text
 
-
-# Shared HTML format for each page      
-format:
-  html:
-    theme: 
-      light: flatly
-    # enable to add personalised comments on html pages.
-    comments: 
-      hypothesis: true
-    lang: en
-    date-format: 'dddd[, the] Do [of] MMMM, YYYY'
-    # Code specific formatting
-    highlight-style: github
-    code-link: false
-    code-copy: true
-    code-fold: true
-    code-tools: true # enables to view the source code
-    code-annotations: hover
-    anchor-sections: true
-    footnotes-hover: true
-
-# When visualing original qmd file, which editor should be favoured? 
-editor: source
+# Metadata, such as authors information
+metadata-files:
+  - assets/_format.yml
+  - assets/_knitr.yml
+  - assets/_authors.yml

@@ -1,0 +1,16 @@
+format:
+  html:
+    theme: 
+      light: flatly
+    comments: 
+      hypothesis: true
+    lang: en
+    date-format: 'dddd[, the] Do [of] MMMM, YYYY'
+    highlight-style: github
+    code-link: false
+    code-copy: true
+    code-fold: true
+    code-tools: true 
+    code-annotations: hover
+    anchor-sections: true
+    footnotes-hover: true

@@ -1,8 +1,56 @@
 ---
 title: "Overview"
+listing:
+  contents: reproducibility
+  sort: false
+  type: default
 ---
 
+## Original paper
 
+
+The original pdf source of @lo2016po is embedded in @fig-lo2016-paper.
+
+::: {#fig-lo2016-paper}
+
+{{< pdf assets/Lo2016.pdf width=90% height=800 >}}
+
+:::
+
+
+## ODE model and network
+
+We report in @fig-ODE-network the biological **network model** underlying the intertwined interactions between immune cell subtypes (T-cells and Macrophaes) and realeased cytokines. 
+
+![Bi-Directed diagram describing the interactions between immune cells in the inflammatory bowel disease IBD, from [@lo2016po, pp. 3](https://journals.plos.org/plosone/article/figure?id=10.1371/journal.pone.0170865.g001)](assets/img/ODE_network.png){#fig-ODE-network}
+
+## Reproducibility 
+
+The list of packages required for reproducing the tutorials are listed in @tbl-packages:
+
+```{r setup}
+#| label: tbl-packages
+#| tbl-cap: List of dependencies, per file.
+#| echo: false
+
+library(dplyr)
+library(flextable)
+
+liste_packages <- renv::dependencies(path=getwd(), errors = "ignored") 
+liste_packages <- liste_packages |> 
+  dplyr::select(Source, Package) |> 
+  filter(!Package %in% c("rmarkdown", "knitr")) |> 
+  mutate(Source = tools::file_path_sans_ext(basename(Source))) |> 
+  filter(!Source %in% c("index")) |> 
+  dplyr::distinct()
+
+flextable(liste_packages) |> 
+  bold(part = "header") |> 
+  align(align = "center", part = "all") |> 
+  set_caption("List of dependencies, per Tutorial.") |> 
+  merge_v(part = "body", j = "Source") |> 
+  font(j = "Package", fontname = "mono", part = "body")
+```
 
 
 

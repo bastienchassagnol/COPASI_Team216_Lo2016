@@ -82,11 +82,11 @@ LHS then guarantees a more evenly distributed coverage.
 To conclude, LHS provides a **better Coverage of the Input Space**(notably reduces the probability of clustering or missing critical regions), **Improved Convergence and Efficiency** by achieving a more accurate representation of the underlying distribution and leading to lower variance in estimated statistics with fewer number of avalaible observations (see @fig-LHS for further illustration). Yet, only standard random sampling is completely independent and unbiased. 
 
 
-![Randomly sampled variables vs. Latin hypercube samples, from [@Rustell2016](https://www.researchgate.net/figure/Randomly-sampled-variables-vs-Latin-hypercube-samples_fig3_322386503). With a low number of observations, the **clustering pattern** inherent to standard random sampling is clearly showcased.](../assets/img/Randomly-sampled-variables-vs-Latin-hypercube-samples.png){#fig-LHS}
+![Randomly sampled variables vs. Latin hypercube samples, from [@rustell](https://www.researchgate.net/figure/Randomly-sampled-variables-vs-Latin-hypercube-samples_fig3_322386503). With a low number of observations, the **clustering pattern** inherent to standard random sampling is clearly showcased.](../assets/img/Randomly-sampled-variables-vs-Latin-hypercube-samples.png){#fig-LHS}
 
 :::
 
-The code snippet below generates the $N=5000$ bootstrap distribution of the 9 evaluated parameters for robustness, using **Latin Hypercube sampling**. LHS indeed guarantees better coverage of the *sampling space*.^[Note however that both standard random sampling and LHS assume independence between the parameters values, a strong and quite unlikely biological premise.].
+The code snippet below generates the $N=5000$ bootstrap distribution of the 9 evaluated parameters for robustness, using **Latin Hypercube Sampling**. LHS indeed guarantees better coverage of the *sampling space*.^[Note however that both standard random sampling and LHS assume independence between the parameters values, a strong and quite unlikely biological premise.].
 
 ```{r}
 #| label: lhs-generation
