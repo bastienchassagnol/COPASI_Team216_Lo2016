@@ -39,6 +39,8 @@ website:
         text: "Overview"
       - href: files.qmd 
         text: "Files"
+      - href: GTBioSS_slides.qmd 
+        text: "GT BioSS slides"
       - sidebar:curation
     right:
       - icon: folder-symlink
@@ -57,10 +59,10 @@ website:
       contents:
         - text: "Steady State"
           href: reproducibility/steady_state.qmd
-        - text: "PRCC"
-          href: reproducibility/prcc.qmd
-        - text: "Patient Stratification"
-          href: reproducibility/patient_stratification.qmd
+        # - text: "PRCC"
+        #   href: reproducibility/prcc.qmd
+        # - text: "Patient Stratification"
+        #   href: reproducibility/patient_stratification.qmd
   page-footer:
     border: true
     left: |
@@ -95,6 +97,7 @@ toc-expand: 2
 date: last-modified
 link-citations: true
 highlight-style: github
+from: markdown+emoji 
 title-block-banner: true # Listing styles
 filters:
   - highlight-text

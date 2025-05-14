@@ -1,0 +1,23 @@
+/*-- scss:defaults --*/
+
+$code-bg: white;
+$code-color: #4c8c8c ;
+
+// The left hand sidebar
+$grid-sidebar-width: 200px !default;
+
+// The main body
+$grid-body-width: 900px !default;
+
+// The right hand margin bar
+$grid-margin-width: 200px !default;
+
+/*-- scss:rules --*/
+
+.slides {
+  width: 90%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  display: block;
+  margin: 0 auto;
+}

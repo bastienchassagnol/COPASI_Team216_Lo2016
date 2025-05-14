@@ -34,7 +34,7 @@ We begin to extract the original constants of the 9 parameters assumed to have t
 #| label: tbl-healthy-parameters
 #| tbl-cap: The 9 reaction parameters evaluated for **sensitivity analyses**. 
 ## Retrieve parameters we want to evaluate the versatility ----
-healthy_model <- loadModel("../../models/team_2016_final_model_lo2016.cps")
+healthy_model <- loadModel("../../models/team_2016_final_model_lo2016_2025_05_13.cps")
 # S2 to be changed
 parameters_healthy <- getParameters(model = healthy_model,
                                   key = c("(Diff of M0 to M1).delta_m_cit",

@@ -1,0 +1,253 @@
+/*-- scss:defaults --*/
+
+// Import fonts
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+// fonts
+$font-family-sans-serif: 'Didact Gothic', sans-serif;
+$font-family-serif: 'Didact Gothic', serif;
+$font-family-monospace: 'Didact Gothic', monospace;
+
+// colors
+$baby-blue: #d2e3f3;
+$teal: #047C90;
+$dark-blue: #003660;
+$white: #FFFFFF;
+$green: #7CFC00;
+$magenta: #900C3F;
+$white: #FFFFFF;
+$off-white: #F7F7F7;
+$gray: #ADADAD;
+$dark-gray: #373A3E;
+$peach: #DF8073;
+$orange-light:#e9dfd9;
+$orange-dark: #6a2d0a;
+
+// scss variables
+$body-bg: $white;
+
+// links
+$link-color: $green;
+$linkColorHover: darken( $link-color, 20% );
+.reveal a:not([role="tab"]) {
+  text-decoration: underline !important;
+} // underline all external links, except navigation tabs
+
+// Code chunks formatting
+$code-color: $magenta;
+$code-bg: $off-white;
+$code-block-font-size: 0.8em;
+$code-block-bg: $off-white;
+$presentation-font-size-root: 23px;
+
+// Text selection
+$selectionBackgroundColor: $teal;
+$selectionColor: $dark-gray;
+
+// Header customisation
+$heading1Size: 3.00em;
+$heading2Size: 2.11em;
+$heading3Size: 1.55em;
+
+/*-- scss:rules --*/
+
+body {
+  line-height: 2em;
+}
+
+// bold styling
+strong, b {
+  font-weight: 900;
+}
+
+// table header font size
+th {
+font-size: 25px;
+}
+
+// table text font size
+td {
+  font-size: 20px;
+}
+
+// horizontal line (default dark blue)
+hr {
+  border: 4px solid $dark-blue;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+// teal horizontal line
+.hr-teal {
+  border: 4px solid $teal;
+}
+
+// teal horizontal line
+.hr-dark-blue {
+  border: 4px solid $dark-blue;
+}
+
+
+
+// custom slide title
+.custom-title {
+  font-family: $font-family-serif;
+  color: $baby-blue;
+  font-size: 2.7em; //1.7em;
+  //position: absolute;
+  left: 20px;
+}
+
+// cover slide subtitle (large)
+.custom-subtitle {
+  font-family: $font-family-sans-serif;
+  color: $baby-blue;
+  font-size: 2.2em;
+  left: 20px;
+}
+
+// cover slide subtitle (medium)
+.custom-subtitle2 {
+  font-family: $font-family-sans-serif;
+  color: $baby-blue;
+  font-size: 1.7em;
+  left: 20px;
+}
+
+// cover slide subtitle (small)
+.custom-subtitle3 {
+  font-family: $font-family-sans-serif;
+  color: $baby-blue;
+  font-size: 1.1em;
+  left: 20px;
+}
+
+
+// slide title (large)
+.slide-title {
+  font-family: $font-family-serif;
+  color: $teal;
+  font-size: 2em;
+  font-weight: 700;
+}
+
+// slide title (medium)
+.slide-title2 {
+  font-family: $font-family-serif;
+  color: $teal;
+  font-size: 1.7em;
+  font-weight: 700;
+}
+
+// slide title (small)
+.slide-title3 {
+  font-family: $font-family-serif;
+  color: $teal;
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+.sectionhead {
+  font-size: 1em;
+  text-align: center;
+  color: $magenta;
+  font-family: $font-family-serif;
+  background-color: $body-bg;
+  margin: 1px;
+  padding: 2px 2px 2px 2px;
+  width: 120px;
+  border-left: 10px solid;
+}
+
+// modify reveal js default behaviour
+/*
+.reveal .footer {
+  font-size: 0.35em !important;
+  text-align: right !important;
+}
+*/
+
+// size texts
+
+// XL body text
+.body-text-xl {
+  font-family: $font-family-sans-serif;
+  font-size: 2em;
+}
+
+// L body text
+.body-text-l {
+  font-size: 1.5em;
+	line-height: 1.9em;
+	margin-bottom: 1em;
+}
+
+// M body text
+.body-text-m {
+	font-size: 1.3em;
+	line-height: 1.3em;
+	margin-bottom: 1em;
+}
+
+// S body text
+.body-text-s {
+  font-size: 20px;
+	line-height: 0.5em;
+}
+
+// XS body text
+.body-text-xs {
+  font-size: 0.5em;
+	line-height: 1.8em;
+}
+
+//colour texts
+
+// baby blue text
+.baby-blue-text {
+  color: $baby-blue;
+}
+
+// dark blue text
+.dark-blue-text {
+  color: $dark-blue;
+}
+
+// white text
+.white-text {
+  color: $white;
+}
+
+// teal text
+.teal-text {
+  color: $teal;
+}
+
+// gray text
+.gray-text {
+  color: $gray;
+}
+
+// magenta text
+.magenta-text {
+  color: $magenta;
+}
+
+// Background full slides per section
+.section {
+  &:is(.slide-background) {
+  background: $dark-blue;
+  }
+}
+
+.demo {
+  &:is(.slide-background) {
+  background: $magenta;
+  }
+}
+
+.exercise {
+  &:is(.slide-background) {
+  background: $magenta;
+  }
+}

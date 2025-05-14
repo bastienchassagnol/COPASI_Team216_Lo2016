@@ -6,6 +6,7 @@ format: html
 The list of packages required for reproducing the analyses on this script are listed in @lst-setup-steady-states: 
 
 ```{r}
+#| label: setup
 #| lst-label: lst-setup-steady-states
 #| lst-cap: Packages required for computing and displaying steady-state conditions. 
 # install and load R connector to COPASI software
@@ -26,8 +27,9 @@ The call to `CoRC::runSteadyState()` function retrieves the steady-state of the 
 
 ```{r}
 #| echo: false
+#| label: load-healthy
 #| include: false
-healthy_model <- loadModel("../../models/team_2016_final_model_lo2016.cps") 
+healthy_model <- loadModel("../../models/team_2016_final_model_lo2016_2025_05_13.cps") 
 healthy_model_steady_state <- runSteadyState(                               
   model = healthy_model,                                                      
   calculate_jacobian = TRUE,                                                
@@ -38,7 +40,7 @@ healthy_model_steady_state <- runSteadyState(
 
 
 ```r
-healthy_model <- loadModel("../../models/team_2016_final_model_lo2016.cps") # <1>
+healthy_model <- loadModel("../../models/team_2016_final_model_lo2016_2025_05_13.cps") # <1>
 healthy_model_steady_state <- runSteadyState(                               # <2>
   model = healthy_model,                                                    # <2>  
   calculate_jacobian = TRUE,                                            # <2>
@@ -82,6 +84,7 @@ $$ {#eq-steady-states}
 To ensure that the model converged, we assert in @lst-steady-state-convergence that the outcome of the stability analysis is `found`. Other outcomes include `notFound` and `foundNegative` (which is irrealistic in our setting, since concentrations of species can either be positive or null).
 
 ```{r}
+#| label: assert-convergence
 #| lst-label: lst-steady-state-convergence
 #| lst-cap: Check that the model converged with a testthat equal. If not, returns an error. 
 

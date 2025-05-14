@@ -48,7 +48,7 @@ To run an experimental design, we need:
 #| label: load-healthy
 #| lst-cap: Code snippet not run, used for illustration example. 
 # Load Healthy ODE model along with the parameter constants
-healthy_model <- suppressWarnings(loadModel("../../models/team_2016_final_model_lo2016.cps"))
+healthy_model <- loadModel("../../models/team_2016_final_model_lo2016_2025_05_13.cps")
 healthy_steaty_state <- runSteadyState(
   calculate_jacobian = FALSE,
   model = healthy_model
@@ -196,7 +196,7 @@ Finally, once the experimental design and optimisation criterias have been confi
 ```{r}
 #| label: runParameterEstimation
 #| collapse: true
-#| cache: true
+#| cache: false
 absolute_parameter_per_cluster <- purrr::map(fit_experiments, function(cluster) {
   # CoRC update imposes to restart from a clean model for parameter estimation
   CoRC::clearParameterEstimationParameters(model = healthy_model)
@@ -412,7 +412,7 @@ Second objective is to determine the efficiency of the treatment conditionned to
 #| collapse: true
 
 ## Prepare parameter variations for each of the four patient subtypes ----
-healthy_model <- suppressWarnings(loadModel("../../models/team_2016_final_model_lo2016.cps"))
+healthy_model <- suppressWarnings(loadModel("../../models/team_2016_final_model_lo2016_2025_05_13.cps"))
 
 # retrieve parameter mapping
 parameters_per_clusters <- getParameters(c("(Prod of Ig from T1).k1",

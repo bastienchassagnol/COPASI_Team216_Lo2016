@@ -1,7 +1,8 @@
 format:
   html:
-    theme: 
-      light: flatly
+    theme:
+      light: [flatly, assets/css/styles.scss]
+      dark:  [darkly, assets/css/styles.scss]
     comments: 
       hypothesis: true
     lang: en

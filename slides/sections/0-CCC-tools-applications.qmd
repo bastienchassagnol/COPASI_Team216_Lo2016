@@ -1,0 +1,53 @@
+# Types of Cell-Cell Communication {.section #intro-ccc data-menu-title="Introduction CCC"}
+
+### {#ccc-categories data-menu-title="CCC Categories" .scrollable}
+
+[Cell-cell Categories]{.slide-title}
+
+```{r}
+#| label: setup
+#| echo: true
+#| eval: false
+
+library(downlit)
+library(xml2)
+```
+
+
+<hr>
+
+::: {.body-text-l}
+Classes of cell-cell communications cover:
+:::
+
+::: columns
+
+:::: {.column width="50%"}
+
+![**Main categories of cell communication**. Reproduced from [Fig1, *Deciphering cell–cell interactions and communication from gene expression*](https://pmc.ncbi.nlm.nih.gov/articles/PMC7649713/figure/Fig1/), from @armingol2021nrg.](images/types-CCC.png){width=95% fig-alt="CCC tools." style="border-radius:1em;margin-top:auto"}
+
+<br>
+
+::::
+
+:::: {.column width="40%"}
+
+:::: {.body-text-s .vertical-center}
+
+- **Autocrine signalling**: induce a cellular response within the same cell. 
+
+- **Paracrine signalling**: diffusion of signalling, secreted molecules in the external medium.
+
+- **Juxtacrine signalling**: contact-dependant, through gap junctions or membrane nanotubes.
+
+- **Endocrine signalling**: long-range intercellular communication enabled by blood-circulating hormones.
+
+::::
+
+::::
+
+:::
+
+
+
+

@@ -1,0 +1,15 @@
+{
+  "hash": "424e3a1e842a6e9223702c6cebb2883a",
+  "result": {
+    "engine": "knitr",
+    "markdown": "# Types of Cell-Cell Communication {.section #intro-ccc data-menu-title=\"Introduction CCC\"}\n\n### {#ccc-categories data-menu-title=\"CCC Categories\" .scrollable}\n\n[Cell-cell Categories]{.slide-title}\n\n\n::: {.cell layout-align=\"center\"}\n\n```{.r .cell-code}\nlibrary(downlit)\nlibrary(xml2)\n```\n:::\n\n\n\n<hr>\n\n::: {.body-text-l}\nClasses of cell-cell communications cover:\n:::\n\n::: columns\n\n:::: {.column width=\"50%\"}\n\n![**Main categories of cell communication**. Reproduced from [Fig1, *Deciphering cell–cell interactions and communication from gene expression*](https://pmc.ncbi.nlm.nih.gov/articles/PMC7649713/figure/Fig1/), from @armingol2021nrg.](images/types-CCC.png){width=95% fig-alt=\"CCC tools.\" style=\"border-radius:1em;margin-top:auto\"}\n\n<br>\n\n::::\n\n:::: {.column width=\"40%\"}\n\n:::: {.body-text-s .vertical-center}\n\n- **Autocrine signalling**: induce a cellular response within the same cell. \n\n- **Paracrine signalling**: diffusion of signalling, secreted molecules in the external medium.\n\n- **Juxtacrine signalling**: contact-dependant, through gap junctions or membrane nanotubes.\n\n- **Endocrine signalling**: long-range intercellular communication enabled by blood-circulating hormones.\n\n::::\n\n::::\n\n:::\n\n\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

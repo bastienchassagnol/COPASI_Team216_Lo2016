@@ -26,8 +26,16 @@ jobs:
 
       - name: Install LOCAL Renv R Dependencies
         uses: r-lib/actions/setup-renv@v2
+        
+      - name: Render Quarto Slides only
+        uses: quarto-dev/quarto-actions/render@v2
+        with:
+          to: revealjs
+          path: slides/index.qmd
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Render and Publish
+      - name: Render and Publish global website
         uses: quarto-dev/quarto-actions/publish@v2
         with:
           target: gh-pages
