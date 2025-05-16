@@ -65,7 +65,7 @@ library(downlit)
 
 [Digital Twins and Reproducibility]{.custom-title}
 
-[*Bridging Point-and-Click `COPASI` Software with Open-Source and Flexible R Programming language*]{.custom-subtitle2}
+[Bridging Point-and-Click `COPASI` Software with Open-Source and Flexible R Programming language]{.custom-subtitle2}
 
 ::::: columns
 ::: {.column width="50%"}
@@ -98,7 +98,7 @@ library(downlit)
 :::
 
 ::: {.column width="20%"}
-[Sanjana Balaji Kuttae \|]{.custom-subtitle3}<br> [Ph.D.]{.custom-subtitle3}<br> [*VPE BioMed X Institute*]{.body-text-xs}
+[Sanjana Balaji Kuttae \|]{.custom-subtitle3}<br> [Computational Biologist (Research Assistant)]{.custom-subtitle3}<br> [*VPE BioMed X Institute*]{.body-text-xs}
 :::
 
 :::::
