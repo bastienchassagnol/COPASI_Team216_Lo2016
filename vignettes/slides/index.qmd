@@ -5,13 +5,13 @@ link-citations: true
 highlight-style: github
 date: last-modified
 date-format: "DD MMM, YYYY"
-slide-number: true
-slide-level: 3
 from: markdown+emoji 
 pagetitle: "IBD ODE Disease Model"
 footer: "Digital Twins and Reproducibility // [Open-Source Website of IBD Model](https://bastienchassagnol.github.io/COPASI_Team216_Lo2016/)"
 footer-logo-link: "https://www.lpsm.paris/"
-sc-sb-title: true
+sc-sb-title: false
+slide-number: true
+slide-level: 3
 header: Made by Quarto Presentations RevealJs
 header-logo: logos/logo_biomedx.svg
 header-logo-link: "https://bmedx.com/research-teams/artificial-intelligence/team-vpe/"
@@ -65,7 +65,7 @@ library(downlit)
 
 [Digital Twins and Reproducibility]{.custom-title}
 
-[*Bridging Point-and-Click COPASI Software with Open-Source and Flexible R Programming language*]{..custom-subtitle2}
+[*Bridging Point-and-Click `COPASI` Software with Open-Source and Flexible R Programming language*]{.custom-subtitle2}
 
 ::::: columns
 ::: {.column width="50%"}
@@ -113,22 +113,42 @@ Slides available on [GitHub {{< fa brands github title="GitHub Octocat logo" >}}
 ### Talks' Layout {.slide-title}
 
 ::: {.incremental}
-- Types and applications of cell–cell tools. :wave:
-- CCC tools pipeline :clock9:
-- Review of CCC tools :arrow_down:
+- Reproducibility Crisis. :wave:
+- IBD ODE Model :clock9:
+- IBD Numerical Simulations :clock9:
+- `BioModels` database :arrow_down:
 :::
 
-{{< include sections/0-CCC-tools-applications.qmd >}}
+# Reproducibility Crisis {.section #repro-crisis data-menu-title="Reproducibility Crisis"}
 
-{{< include sections/1-review.qmd >}}
+{{< include sections/0-reproducibility-crisis.qmd >}}
+
+# An ODE of the Immune System {.section #ibd-ode data-menu-title="An ODE of the Immune System"}
+
+{{< include sections/1-IBD-Model.qmd >}}
+
+# Personalised medecine applied to Inflammatory Bowel Disease {.section #ibd-models data-menu-title="Simulations of IBD endotypes"}
+
+{{< include sections/2-IBD-simulations.qmd >}}
+
+# `BioModels`: a repository of biological models {.section #biomodels data-menu-title="`BioModels`: a repository of biological models"}
+
+{{< include sections/3-BioModels.qmd >}}
 
 
-# Conclusion {.section data-menu-title="Conclusion"}
+# Conclusion {.section #conclusion data-menu-title="Conclusion"}
 
-###  {#TheEnd data-menu-title="Open Discussion"}
+###  {#TheEnd data-menu-title="Take-Aways"}
 
 ::: {.slide-title .center-text}
 Take-Aways:
+:::
+
+::: {.incremental}
+- `BioModels`, a data platform for storing curated biological models. 
+- However, no automated running of code snippets, nor mandatory access to original data
+- Hard-coded tools, such as COPASI, enable quick analyses for non-expert audience
+- But they're limited in terms of functionalities and flexibility, to be used with caution.
 :::
 
 
@@ -139,14 +159,14 @@ This is a Quarto `RevealJS` Presentation. To learn more, visit <https://quarto.o
 <br>
 
 ::: {.footer .body-text-s .gray-text}
-*If you see mistakes, please raise an [GitHub issue](https://github.com/bastienchassagnol/CCCSTBench-Book/issues).*
+*If you see mistakes, please raise a [GitHub issue](https://github.com/bastienchassagnol/CCCSTBench-Book/issues).*
 :::
 
 {{< include references.qmd >}}
 
-{{< include sections/_about.qmd >}}
+{{< include _about.qmd >}}
 
-{{< include sections/license.qmd >}}
+{{< include license.qmd >}}
 
 
 

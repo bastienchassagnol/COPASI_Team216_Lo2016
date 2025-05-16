@@ -1,0 +1,12 @@
+### {data-menu-title="CCC Tools Overview"}
+
+[Main categories of cell-cell tools]{.slide-title2}
+
+
+### {data-menu-title="CCC Tools Tree"}
+
+[Phylogenetic tree of cell-cell tools]{.slide-title2}
+
+![Phylogenetic tree of computational tools for inferring cell–cell interactions, from [@armingol2024nrg](https://www.nature.com/articles/s41576-023-00685-8/figures/2). Tools published as a **preprint** are marked with an asterisk.](images/phylogenetic_tree_CCC.webp){width=60% data-id="box1"}
+
+

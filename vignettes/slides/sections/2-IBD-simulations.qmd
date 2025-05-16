@@ -1,0 +1,7 @@
+### {data-menu-title="Steady-states conditions"}
+
+[Steady-state equations]{.slide-title2}
+
+### {data-menu-title="Steady-states results"}
+
+[Steady-state results]{.slide-title2}

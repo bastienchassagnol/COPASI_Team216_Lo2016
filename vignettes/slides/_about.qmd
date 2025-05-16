@@ -1,0 +1,10 @@
+### About {.slide-title2}
+
+::: {layout="[0.38, -0.02, 0.60]" layout-valign="center"}
+![](https://github.com/bastienchassagnol.png){style="border-radius: 50%;"}
+
+- [{{< iconify fa6-solid house-chimney-user >}} bastienchassagnol.github.io](https://bastienchassagnol.github.io/bastienchassagnol/){style="text-decoration: none;"}
+- [{{< iconify fa6-solid envelope >}} bastien_chassagnol@laposte.net](mailto:bastien_chassagnol@laposte.net){style="text-decoration: none;"}
+- [{{< iconify fa6-brands linkedin >}} bastienchassagnol](https://www.linkedin.com/in/bastien-chassagnol-677b67140/){style="text-decoration: none;"}
+- [{{< iconify fa6-brands github >}} \@bastienchassagnol](https://github.com/bastienchassagnol/){style="text-decoration: none;"}
+:::
