@@ -55,7 +55,7 @@ flextable(parameters_healthy) |>
 ```
 
 
-In @lo2016po, they chose to perform **Latin Hypercube Sampling (LHS)** against **Standard Random Sampling**. The differences between these two randomisation approaches are further detailled in @tip-LHS, but briefly, the major advantage of LHS lies in its better coverage of the whole parameter sampling space, especially with a low number of observations (which is usually the case in boostrap simulations due to their high computing cost). 
+In @lo2016po, they chose to perform **Latin Hypercube Sampling (LHS)** against **Standard Random Sampling**. The differences between these two randomisation approaches are further detailed in @tip-LHS, but briefly, the major advantage of LHS lies in its better coverage of the whole parameter sampling space, especially with a low number of observations (which is usually the case in bootstrap simulations due to their high computing cost). 
 
 ::: {#tip-LHS .callout-tip collapse="true" title="Standard versus Latin Hypercube Sampling (LHS)"}
 
@@ -63,13 +63,13 @@ Random sampling and Latin Hypercube Sampling differ in how they distribute the s
 
 ---
 
-In **Standard Random Sampling**, for a $d-$ random vector, the random samples are drawn independently within each dimension (or variable): 
+**Random Sampling** for a $d-$ random vector in : 
 
 $$
-x_i^{(j)} \sim p_j(x), \quad j = 1, 2, \dots, d, \quad i = 1, 2, \dots, N
-$$
+x_i^{(j)} \sim \mathcal{U}\left(x_{\min_j}^{(j)}, x_{\max_j}^{(j)}\right), \quad j = 1, 2, \dots, d, \quad i = 1, 2, \dots, N
+$$ {#eq-random-sampling}
 
-where $x_i^{(j)}$ is the $i$-th sample drawn for the $j$-th dimension, $d=9$ (number of parameters evaluated for sensitivity), $N=5000$ the total number of parameter distributions simulated, and $p_j$ the probability distribution^[Only the uniform sampling, $U_i \sim \mathcal{U}(0,1)$, is provided with the `LHS`package. We detailed in @tip-ITST how to simulate any kind of probability distribution from the standard uniform distribution.].
+where $x_i^{(j)}$ is the $i$-th sample drawn for the $j$-th dimension, $d=9$ (number of parameters evaluated for sensitivity), $N=5000$ the total number of parameter distributions simulated, and $p_j$ the probability distribution^[Only the uniform sampling, $U_j \sim \mathcal{U}(0,1)$, is provided with the `LHS`package. We detailed in @tip-ITST how to simulate any kind of probability distribution from the standard uniform distribution.].
 Since each sample is drawn completely at random, it's quite likely that some regions might be over-sampled while others may have gaps, with a low number of observations drawn (good coverage of the whole sampling space is only guaranteed asymptotically).
 
 --- 
@@ -79,7 +79,7 @@ LHS then guarantees a more evenly distributed coverage.
 
 ---
 
-To conclude, LHS provides a **better Coverage of the Input Space**(notably reduces the probability of clustering or missing critical regions), **Improved Convergence and Efficiency** by achieving a more accurate representation of the underlying distribution and leading to lower variance in estimated statistics with fewer number of avalaible observations (see @fig-LHS for further illustration). Yet, only standard random sampling is completely independent and unbiased. 
+To conclude, LHS provides a **better Coverage of the Input Space**(notably reduces the probability of clustering or missing critical regions), **Improved Convergence and Efficiency** by achieving a more accurate representation of the underlying distribution and leading to lower variance in estimated statistics with fewer number of available observations (see @fig-LHS for further illustration). Yet, only standard random sampling is completely independent and unbiased. 
 
 
 ![Randomly sampled variables vs. Latin hypercube samples, from [@rustell](https://www.researchgate.net/figure/Randomly-sampled-variables-vs-Latin-hypercube-samples_fig3_322386503). With a low number of observations, the **clustering pattern** inherent to standard random sampling is clearly showcased.](../assets/img/Randomly-sampled-variables-vs-Latin-hypercube-samples.png){#fig-LHS}
@@ -131,10 +131,10 @@ colnames(bootstrap_parameters) <- parameters_healthy$name
 apply(bootstrap_parameters,2, quantile)                       # <6>
 ```
 1. Determine the number of observations, equivalently the number of generated bootstrap distributions (here, $N=5000$).
-2. Lower and upper bounds are computed within a $\pm 20\%$ range, centered around the parameter constant.
-3. We fix the **random seed** to ensure reproducibibility of the sensitivity analyses.
+2. Lower and upper bounds are computed within a $\pm 20\%$ range, centred around the parameter constant.
+3. We fix the **random seed** to ensure reproducibility of the sensitivity analyses.
 4. The core function of the `lhs` package, `lhs::randomLHS()`, is only able to perform standard uniform sampling. Two parameters must be provided: the number of observations to derive (here, 5000), and the dimension of the random vector (here, $9$ parameters are considered).
-5. How to generate the uniform distribution for a given parameter $X_j \sim \mathcal{U}(0.8 \times X_j^0, 1.2 \times  X_j^0)$, with $X_j^0$ the constant value estimated in a healthy individual, from the standard uniform distribution $U \sim \mathcal{U}(0, 1)$^[Note that we assume independence between the parameters, and that the *quantile call* is performed independenly for each of the dimensions.]. By appling the **Inverse Transform Sampling Theorem** (see @tip-ITST), which implies applying the reciprocal of the CDF, in other words, the *quantile function* which is given in R by the `stats::qunif` function. Alternatively, we could have reproduced this result by applying the following affine transformation: `bootstrap_parameters[,i] * (param_ranges$UB[i] -param_ranges$LB[i]) +  param_ranges$LB[i]` on the observations simulated wiht a standard uniform. 
+5. How to generate the uniform distribution for a given parameter $X_j \sim \mathcal{U}(0.8 \times X_j^0, 1.2 \times  X_j^0)$, with $X_j^0$ the constant value estimated in a healthy individual, from the standard uniform distribution $U \sim \mathcal{U}(0, 1)$^[Note that we assume independence between the parameters, and that the *quantile call* is performed independently for each of the dimensions.]. By applying the **Inverse Transform Sampling Theorem** (see @tip-ITST), which implies applying the reciprocal of the CDF, in other words, the *quantile function* which is given in R by the `stats::qunif` function. Alternatively, we could have reproduced this result by applying the following affine transformation: `bootstrap_parameters[,i] * (param_ranges$UB[i] -param_ranges$LB[i]) +  param_ranges$LB[i]` on the observations simulated with a standard uniform. 
 6. By applying the `quantile` function, and since the distribution is supposed evenly distributed on the sampling space, we expect the quantiles to be rather close from their theoretical values (for example, both the median and the mean should be close to the real constant parameter values).
 
 
@@ -153,7 +153,7 @@ follows the same distribution as $X$.
 In particular, for a uniform distribution $X \sim \mathcal{U}(a, b)$, $a$ and $b$ being respectively the lower and upper bounds, whose CDF is given by: $F(x) = \frac{x - a}{b - a}, \quad a \leq x \leq b$, then the *quantile* function is given by $F^{-1}(u) = a + u(b - a)$. 
 
 
-In other terms, if $U$ follows the standard uniform distirbution, then, by applying the **affine** transformation $X=a + (b - a) U$, $X$ will follow the $X \sim \mathcal{U}(a,b)$ distribution. 
+In other terms, if $U$ follows the standard uniform distribution, then, by applying the **affine** transformation $X=a + (b - a) U$, $X$ will follow the $X \sim \mathcal{U}(a,b)$ distribution. 
 
 
 Generally speaking, the **Inverse Transform Sampling** allows generating any probability distribution from a uniform $[0,1]$ applying this formula: $X = F^{-1}(U)$.

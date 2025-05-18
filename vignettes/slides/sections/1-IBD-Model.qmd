@@ -1,12 +1,48 @@
-### {data-menu-title="CCC Tools Overview"}
+### {data-menu-title="IBD Network"}
 
-[Main categories of cell-cell tools]{.slide-title2}
+[Inflammatory Bowel Disease: an ODE model]{.slide-title2}
+
+IBD ODE network is depicted in @fig-ODE-network.
+
+::: {#fig-ODE-network}
+
+```{mermaid}
+ flowchart LR
+      A["$$x^2$$"] -->|"$$\sqrt{x+3}$$"| B("$$\frac{1}{2}$$")
+      A -->|"$$\overbrace{a+b+c}^{\text{note}}$$"| C("$$\pi r^2$$")
+      B --> D("$$x = \begin{cases} a &\text{if } b \\ c &\text{if } d \end{cases}$$")
+      C --> E("$$x(t)=c_1\begin{bmatrix}-\cos{t}+\sin{t}\\ 2\cos{t} \end{bmatrix}e^{2t}$$")
+```
+
+This is a simple `mermaid` graph.
+:::
 
 
-### {data-menu-title="CCC Tools Tree"}
+::: aside
+Note the recently published `SBMLNetwork` framework that automates the standardisation visualization of biochemical models, spanning from SBGN Pathways to Metabolic Models and Flux-diffusion processes. Available as an open-source Python package on [Github](https://github.com/sys-bio/SBMLNetwork).
+:::
 
-[Phylogenetic tree of cell-cell tools]{.slide-title2}
 
-![Phylogenetic tree of computational tools for inferring cell–cell interactions, from [@armingol2024nrg](https://www.nature.com/articles/s41576-023-00685-8/figures/2). Tools published as a **preprint** are marked with an asterisk.](images/phylogenetic_tree_CCC.webp){width=60% data-id="box1"}
+### {data-menu-title="IBD ODEs"}
+
+[Main classes of ODE models, ordered by increasing complexity]{.slide-title2}
+
+- First order equations: 
+
+- Michaelis-Menten equations
+
+- Auto-catalytic and Feedback Models
+
+  - Positive activation
+  - negative activation
+
+- Complex combination of several processes, pairing together multiple variables
+
+
+::: aside
+- 80 pre-defined functions in COPASI, from standard Henri-Michaelis-Menten and mass-actions equations, to complex Bi-Uni competitive enzymatic reaction mechanisms 
+- Feature for providing user-defined function
+- Critical choice of the nature of the reaction either *reversible* or *irreversible* (uni-directional)
+:::
 
 

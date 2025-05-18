@@ -21,11 +21,11 @@ fig-align: "center"
 repo-actions: [source, edit, issue]
 execute:
   echo: true
-  eval: false
+  eval: true # necessary for rendering mermaid figures
   message: false
   warning: false
   error: false
-  freeze: auto
+  freeze: false
 # table options
 tbl-cap-location: bottom
 # document metadata
@@ -39,6 +39,7 @@ format:
     lightbox: true
     preview-links: true
     code-link: true
+    code-line-numbers: false
     embed-resources: true
     mainfont: "Didact Gothic"
     css: styles.css
@@ -119,7 +120,7 @@ Slides available on [GitHub {{< fa brands github title="GitHub Octocat logo" >}}
 - `BioModels` database :arrow_down:
 :::
 
-# Reproducibility Crisis {.section #repro-crisis data-menu-title="Reproducibility Crisis"}
+# Reproducibility Crisis {.section #reproducibility data-menu-title="Reproducibility Crisis"}
 
 {{< include sections/0-reproducibility-crisis.qmd >}}
 

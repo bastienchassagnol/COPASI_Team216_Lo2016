@@ -1,3 +1,33 @@
+### {data-menu-title="BioModels features"}
+
+[`BioModels`: Metadata description]{.slide-title}
+
+::: {#fig-BioModels-feature layout="[[1,1], [1]]"} 
+
+![Around half of the publicly avalaible models are tagged **manually-curated**, a ratio slightly increasing over time.](images/biomodels_features.png){width=95% style="border-radius:1em;margin-top:auto"}
+
+![Main reasons underlying failure of reproducing models.](images/biomodels_curated.png){width=95% style="border-radius:1em;margin-top:auto"}
+
+`BioModels` key features.
+:::
+
+::: aside
+On the 17th of May, 2025, 1,096 models were reported as **curated** against 1,643 as **non-curated**.
+:::
+
+
 ### {data-menu-title="BioModels submission flowchart"}
 
-[`BioModels` submission flowchart]{.slide-title2}
+[`BioModels` submission flowchart]{.slide-title}
+
+::: {#fig-BioModels-flowchart layout-ncol=2}
+
+![From submission to publication of a model in BioModels. Reproduced from [Fig4]( https://academic.oup.com/view-large/figure/191000472/gkz1055fig4.jpg), from @malik-sheriff2020nar](images/biomodels_flowchart_1.jpeg){width=95% style="border-radius:1em;margin-top:auto"}
+
+![From raw `SBML` format to curated status. Reproduced from [Fig2.A](https://academic.oup.com/view-large/figure/191000465/gkz1055fig2.jpg), from @malik-sheriff2020nar.](images/biomodels_flowchart_2.png){width=95% style="border-radius:1em;margin-top:auto"}
+
+:::
+
+
+
+

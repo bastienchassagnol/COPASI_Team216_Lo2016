@@ -1,7 +1,274 @@
 ### {data-menu-title="Steady-states conditions"}
 
-[Steady-state equations]{.slide-title2}
+```{r}
+#| label: setup-steady-states
+#| echo: false
+#| include: false
+#| eval: true
+library(flextable)
+library(dplyr)
+library(CoRC)
+
+healthy_model <- loadModel("../../models/team_2016_final_model_lo2016_2025_05_13.cps") 
+healthy_model_steady_state <- runSteadyState(                               
+  model = healthy_model,                                                      
+  calculate_jacobian = TRUE,                                                
+  perform_stability_analysis = TRUE,                                          
+  method = list("use_newton"=TRUE, accept_negative_concentrations = FALSE))
+```
+
+
+[1) Steady-state conditions]{.slide-title2}
+
+::: {#nte-steady-state .callout-note title="Derive Steady-States Conditions of an ODE model"}
+
+Computing the **steady-state conditions** for an ordinary differential equation (ODE) means finding the system's *equilibrium points*, where the variables remain **constant** over time. Given a system of $n=15$ ODEs (number of varying species in our model):  
+
+$$
+\begin{cases}
+\frac{dx_1}{dt} &= f_1(x_1, x_2, \dots, x_{15}) \\
+&\vdots \\
+\frac{dx_{15}}{dt} &= f_n(x_1, x_2, \dots, x_{15})
+\end{cases}
+$$
+
+the steady-state conditions are obtained by solving system @eq-steady-states:  
+
+$$
+\begin{cases}
+f_1(x_1^*, x_2^*, \dots, x_{15}^*)& = 0 \\ 
+& \vdots \\
+f_n(x_1^*, x_2^*, \dots, x_{15}^*) &= 0.
+\end{cases}
+$$ {#eq-steady-states}
+
+
+:::
+
+### {data-menu-title="Steady-states implementation"}
+
+[1) Steady-state implementation]{.slide-title2}
+
+
+```r
+healthy_model <- loadModel("../../models/team_2016_final_model_lo2016_2025_05_13.cps") # <1>
+healthy_model_steady_state <- runSteadyState(                               # <2>
+  model = healthy_model,                                                    # <2>  
+  calculate_jacobian = TRUE,                                            # <2>
+  perform_stability_analysis = TRUE,                                        # <2>  
+  method = list("use_newton"=TRUE, accept_negative_concentrations = FALSE)  # <3>
+)
+```
+1. Run `CoRC::loadModel()` function to load the COPASI model in R. 
+2. We use the `CoRC::runSteadyState` function to run the steady-states...
+3. ... and for this task, several algorithms can be chosen, when no explicit solution can be derived directly. We used in our framework the well-known **root-finding** [Newton-Raphson algorithm](https://en.wikipedia.org/wiki/Newton%27s_method).
+
+::: aside
+All models are loaded **by reference** with the `CoRC` package, meaning that you modify the object **in place**. Note that this behaviour is rather uncommon in R, the default being the **Copy-on-Modify Behaviour** (aka by **value**).
+:::
 
 ### {data-menu-title="Steady-states results"}
 
-[Steady-state results]{.slide-title2}
+[1) Steady-state results]{.slide-title2}
+
+::: columns
+
+:::: {.column width="50%"}
+
+```{r}
+#| label: tbl-steady-state
+#| echo: false
+#| eval: true
+#| tbl-cap: |
+#|   Steady-state concentrations of cytokines and immune cells,
+#|   in healthy individuals in our model.
+
+## Format table for reporting.
+steady_state_concentrations <- healthy_model_steady_state$species |> 
+  select(name, concentration) |> 
+  mutate(name = factor(name, 
+                          levels = c("M1", "M2", 
+                                     "T1", "T2",
+                                     "T17", "Tr",
+                                     "Ig", "I2", "I4", "I21", "I6",
+                                     "Ia", "I10", "Ib", "I12"),
+                          labels = c("M1 macrophage", "M2 macrophage", 
+                                     "Th1 cell", "Th2 cell",
+                                     "Th17 cell", "Treg cell", 
+                                     "IFN-g", "IL-2", "IL-4", "IL-21", "IL-6", 
+                                     "TNF-a", "IL-10", "TFG-b", "IL-12"),
+                       ordered = TRUE)) |> 
+  arrange(name)
+
+## Format steady-state analysis report for Table 4 ----
+steady_state_labels <- list(
+  name = "Species",
+  concentration = "Value(g/cm^3)")
+
+steady_state_table <- flextable(steady_state_concentrations) |> 
+  # format to scientific notation, allowing max 2 significant digits
+  colformat_double(j = "concentration", digits = 3) |> 
+  set_formatter(concentration = function(x) {
+    formatC(x, format = "e", digits = 2)
+  }) |> 
+  add_footer_row(values = "doi:10.1371/journal.pone.0165782.t004", 
+                 colwidths = 2) |> 
+  compose(j = "name", 
+          i = ~ name %in% c("IFN-g", "TNF-a", "TFG-b"),
+          value = as_paragraph(as_equation(c("\\text{IFN}_{\\gamma}",
+                                             "\\text{TNF}_{\\alpha}",
+                                             "\\text{TGF}_{\\beta}")))) |> 
+  set_header_labels(values = steady_state_labels) |> 
+  bold(part = "header")
+
+steady_state_table
+```
+
+::::
+
+:::: {.column width="50%"}
+
+![Original SS reported in **Table 4**, [@lo2016po, pp. 10].](images/steady_states_original.png){width=80% style="border-radius:1em;margin-top:auto"}
+
+::::
+
+:::
+
+
+### {data-menu-title="Sensitivity analyses"}
+
+[2) Sensitivity analyses]{.slide-title2}
+
+<hr>
+
+[i) **Sensitivity analysis** Objectives]{.slide-title3}
+
+**Sensitivity analysis** aims to identify how changes in parameters affect model behaviour, identifying the most influential parameters on the outcome. Besides, these simulation studies contribute to prioritise where uncertainty matters most, and early capture bad representations of the model.
+
+<br>
+
+9 parameters were assumed in @lo2016po to have the strongest impact on the concentrations of T cell subsets. We retrieve their values, inferred from healthy individuals, using the `CoRC::getParameters` function (see @tbl-healthy-parameters):  
+
+```{r}
+#| label: tbl-healthy-parameters
+#| tbl-cap: The 9 reaction parameters evaluated for **sensitivity analyses**. 
+parameters_healthy <- getParameters(model = healthy_model,
+                                  key = c("(Diff of M0 to M1).delta_m_cit",
+                                          "(Diff of M1 to M2).sigma",
+                                          "(Induction of T1 from M).s12",
+                                          "(Proliferation of T1).s2",
+                                          "(Induction of T2).s4",
+                                          "(Induction of T17).s21",
+                                          "(Induction of T17).s6",
+                                          "(Induction of Tr).sb",
+                                          "(Induction of Tr).s10")) |> 
+  dplyr::select(-mapping)
+
+flextable(parameters_healthy) |> 
+  add_footer_row(values = "key is direct ID of the parameter in the model, reaction describes the biological mechanism associated with the value of the parameter, and value returns the constant value assumed for healthy individuals.", 
+                 colwidths = 4) |> 
+  bold(part = "header") 
+```
+
+
+### {.scrollable data-menu-title="Latin Hypercube Sampling"}
+
+[2) Sensitivity analyses]{.slide-title2}
+
+<hr>
+
+[ii) Latin HyperCube Sampling, step I]{.slide-title3}
+
+::: columns
+
+:::: {.column width="50%"}
+
+**Random Sampling** for a $d-$ random vector is performed as @eq-random-sampling: 
+
+$$
+x_i^{(j)} \sim \mathcal{U}\left(x_{\min_j}^{(j)}, x_{\max_j}^{(j)}\right), \quad j = 1, 2, \dots, d, \quad i = 1, 2, \dots, N
+$$ {#eq-random-sampling}
+
+![**Random sampling**, from [@rustell](https://www.researchgate.net/figure/Randomly-sampled-variables-vs-Latin-hypercube-samples_fig3_322386503). With a low number of observations, the **clustering pattern** inherent to standard random sampling is clearly showcased.](images/Randomly-sampled-variables.png){#fig-random-sampling}
+
+[Out of pure randomness, as shown in @fig-random-sampling, some regions of the bi-dimensional parameter space remain unsampled, while others are oversampled, as evidenced by visible **clustering** of points.]{.body-text-m .magenta-text} 
+
+::::
+
+:::: {.column width="50%"}
+
+In **Latin Hypercube Sampling (LHS)**:
+
+1. Sampling space is stratified into $N$ equally-binned intervals for each dimension $j$
+2. Permutation is applied across all dimensions to avoid sampling correlation. 
+3. Each sample is drawn from a distinct $N-$ defined $d-$sized interval.
+
+![**Latin hypercube sample**, from Fig.3 [@rustell](https://www.researchgate.net/figure/Randomly-sampled-variables-vs-Latin-hypercube-samples_fig3_322386503).](images/Latin-hypercube-samples.png){#fig-LHS}
+
+[LHS provides a **better Coverage of the Input Space** and **Improved Convergence**, especially when the sampling size is large with respect to the number of draws, see @fig-LHS.]{.body-text-m .magenta-text} 
+
+::::
+
+
+:::
+
+**Main parameters**:
+
+- $x_i^{(j)}$ is the $i$-th sample drawn for the $j$-th dimension
+
+- $d=9$ (number of parameters included in the sensitivity analysis)
+
+- $N=5000$ the number of parameter distributions simulated
+
+- $\mathcal{U}(x_{\min_j}^{(j)}, x_{\max_j}^{(j)})$ is the **Uniform distribution**, with bounds defined independently per dimension.
+
+
+### {.scrollable  data-menu-title="Latin Hypercube Sampling 2"}
+
+[2) Sensitivity analyses]{.slide-title2}
+
+<hr>
+
+[ii) Latin HyperCube Sampling, step II]{.slide-title3}
+
+```r
+n_samples <- 5000 # <1>
+
+parameters_sensitivity <- parameters_healthy$value
+param_ranges <- tibble::tibble(parameters_name = parameters_healthy$key, # <1>
+                               LB= parameters_sensitivity *0.8,          # <1>
+                               UB = parameters_sensitivity *1.2)         # <1>
+
+
+set.seed(20) # <2>
+bootstrap_parameters <- lhs::randomLHS(n_samples, length(parameters_sensitivity)) # <3>
+for (i in seq_along(parameters_sensitivity)) { # <4>
+  bootstrap_parameters[,i] <- qunif(bootstrap_parameters[,i], # <4>
+                                    param_ranges$LB[i],       # <4>
+                                    param_ranges$UB[i])       # <4>
+}                                                             # <4>
+apply(bootstrap_parameters,2, quantile)                       # <5>
+```
+1. Determine hyper-parameters of sensitivity analysis, such as the number of simulations $N$, and lower and upper bounds within a $\pm 20\%$ range.
+2. We fix the **random seed** to ensure reproducibility of the sensitivity analyses.
+3. The core function of the `lhs` package, `lhs::randomLHS()`, is only able to perform **standard uniform sampling**.
+4. Apply the **Inverse Transform Sampling Theorem** (see @tip-ITST-short) to switch from a standard uniform distribution ($U \sim \mathcal{U}(0, 1)$) modelling to any bounded uniform distribution^[Reproduce this result by applying this affine transformation: `bootstrap_parameters[,i] * (param_ranges$UB[i] -param_ranges$LB[i]) +  param_ranges$LB[i]`.] 
+5. Apply the `quantile` function to verify the quantiles are rather close from their expected theoretical values from uniform sampling.
+
+
+::: {#tip-ITST-short .callout-tip collapse="true" title="The Inverse Transform Sampling Theorem"}
+
+The **Inverse Transform Sampling Theorem** allows generating any probability distribution from the **standard uniform distribution**, $U \sim \mathcal{U}(0,1)$. Let $X$ be a continuous random variable with *cumulative distribution function* (CDF) $F(x)$ and $F^{-1}$ its reciprocal (the quantile function), then:
+
+$$
+X = F^{-1}(U)
+$$
+
+follows the same distribution as $X$.
+
+---
+
+Specifically, by applying the following **affine** transformation $X=a + (b - a) U$ on a standard uniformly distributed variable $u$, $X$ will follow this distribution: $\mathcal{U}(a,b)$ 
+
+:::
+

@@ -48,9 +48,9 @@ healthy_model_steady_state <- runSteadyState(                               # <2
   method = list("use_newton"=TRUE, accept_negative_concentrations = FALSE)  # <3>
 )
 ```
-1. Run `CoRC::loadModel()` function to load the COPASI model in R^[Note that models are loaded **by reference** with the CoRC package, meaning that you modify the object **in place**. Note that his behaviour is rather uncommon in R, the default being the **Copy-on-Modify Behavior** (aka by **value**).]. 
-2. We ue the `CoRC::runSteadyState` function to run the steady-states...
-3. ... and for this this, several algorithms can be chosen. We used in our framework the well-known **root-finding** [Newton-Raphson algorithm](https://en.wikipedia.org/wiki/Newton%27s_method).
+1. Run `CoRC::loadModel()` function to load the COPASI model in R. 
+2. We use the `CoRC::runSteadyState` function to run the steady-states...
+3. ... and for this task, several algorithms can be chosen, when no explicit solution can be derived directly. We used in our framework the well-known **root-finding** [Newton-Raphson algorithm](https://en.wikipedia.org/wiki/Newton%27s_method).
 
 ::: {#nte-steady-state .callout-note title="Derive Steady-States Conditions of an ODE model"}
 
@@ -81,7 +81,7 @@ $$ {#eq-steady-states}
 
 :::
 
-To ensure that the model converged, we assert in @lst-steady-state-convergence that the outcome of the stability analysis is `found`. Other outcomes include `notFound` and `foundNegative` (which is irrealistic in our setting, since concentrations of species can either be positive or null).
+To ensure that the model converged, we assert in @lst-steady-state-convergence that the outcome of the stability analysis is `found`. Other outcomes include `notFound` and `foundNegative` (which is unrealistic in our setting, since concentrations of species can either be positive or null).
 
 ```{r}
 #| label: assert-convergence
