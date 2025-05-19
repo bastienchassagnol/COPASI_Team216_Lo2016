@@ -227,7 +227,7 @@ Then, instead on relying on standard Pearson correlation which may yield spuriou
 
 The `pcor::ppcor` function returns both:
 
-- `estimate`, the symmetric matrix of the partial correlation coefficient between two variables (included between -1 and 1, the sign providing the type of correlation, and the absolute value the magnitude or strenght of the direct relationship)
+- `estimate`, the symmetric matrix of the partial correlation coefficient between two variables (included between -1 and 1, the sign providing the type of correlation, and the absolute value the magnitude or strength of the direct relationship)
 - `p.value`, a matrix of the $p-$ values for each of the tests. 
 - As in @lo2016po, the threshold for *significance* was set to $0.01$.
 
@@ -342,7 +342,7 @@ prcc_sensitivity_annot <- data.frame(x=n_samples/2, y=Inf,
                                                      ordered = TRUE))
 ```
 
-We generate a scatter plot after applying rank-transformation of $T_1$ and $T_2$ immune cells subsets, against 3 parameters playing a critical role on the viability of cell pools, namely $\sigma_b$, $\sigma_{10}$ and $\sigma_{12}$, the first two controlling the activation rate of Tregs, and the induction of $T_1$ by the global pool of macrophages (including both $M1$ and $M2$ types)^[Note that we don't round the PRCC values, but only format them to display 3 significant digits using the native C `sprintf()`: difference between both approaches is notably crucial when saving datasets to avoid loss of nuemrical precision].
+We generate a scatter plot after applying rank-transformation of $T_1$ and $T_2$ immune cells subsets, against 3 parameters playing a critical role on the viability of cell pools, namely $\sigma_b$, $\sigma_{10}$ and $\sigma_{12}$, the first two controlling the activation rate of Tregs, and the induction of $T_1$ by the global pool of macrophages (including both $M1$ and $M2$ types)^[Note that we don't round the PRCC values, but only format them to display 3 significant digits using the native C `sprintf()`: difference between both approaches is notably crucial when saving datasets to avoid loss of numerical precision].
 
 ```{r}
 #| label: fig-sensitivity-plots

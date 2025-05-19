@@ -41,7 +41,7 @@ Note the recently published `SBMLNetwork` framework that automates the standardi
 
 ::: aside
 - 80 pre-defined functions in COPASI, from standard Henri-Michaelis-Menten and mass-actions equations, to complex Bi-Uni competitive enzymatic reaction mechanisms 
-- Feature for providing user-defined function
+- Feature for providing user-defined functions
 - Critical choice of the nature of the reaction either *reversible* or *irreversible* (uni-directional)
 :::
 

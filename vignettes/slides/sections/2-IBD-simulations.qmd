@@ -272,3 +272,93 @@ Specifically, by applying the following **affine** transformation $X=a + (b - a)
 
 :::
 
+
+### {.scrollable  data-menu-title="Partial Correlation"}
+
+[3) Partial Correlation Analyses]{.slide-title2}
+
+<hr>
+
+::: columns
+
+:::: {.column width="33%"}
+
+Standard **Pearson correlation** between two variables $X$ and $Y$ in @eq-pearson-correlation:  
+
+$$
+\rho_{X,Y} = \frac{\text{Cov}(X, Y)}{\sigma_X \sigma_Y}
+$${#eq-pearson-correlation}
+
+- $\text{Cov}(X, Y) = \mathbb{E}[(X - \mu_X)(Y - \mu_Y)]$ is the empirical *covariance matrix*.  
+- $\sigma_X = \sqrt{\text{Var}(X)}$ and $\sigma_Y = \sqrt{\text{Var}(Y)}$ are *standard deviations*. 
+
+[Measures the strength of the **linear relationship** between $X$ and $Y$, without controlling for confounding variables.]{.magenta-text}
+
+::::
+
+:::: {.column width="33%"}
+
+The *Partial Correlation* measures the linear relationship between two variables, [conditioned on the remaining set of variables $\mathrm{Z}$]{fg="red"}, given by @eq-partial-correlation:
+
+$$
+\rho_{X,Y \mid \mathbf{Z}} = -\frac{\Omega_{X,Y}}{\sqrt{\Omega_{X,X} \Omega_{Y,Y}}}
+$${#eq-partial-correlation}
+
+- $\mathbf{\Omega} = \mathbf{\Sigma}^{-1}$ is the **precision matrix**.
+- Non Null off-diagonal terms of the precision matrix reflect direct, causal connections between two variables.
+
+[Partial correlation enables more straightforward interpretation by revealing **truly causal relationships**, while discarding spurious connections.]{.magenta-text}
+
+::::
+
+:::: {.column width="33%"}
+
+[**Practical use case**]{.body-text-l}: in @fig-prcc-illustration, 
+
+- The standard Pearson correlation would have certainly observed a significant correlation between variables $A$ and $C$. 
+- This spurious connection between $A$ and $C$ due to the confusing effect of $B$ is clipped using partial correlation instead. 
+
+```{dot}
+//| label: fig-prcc-illustration
+//| fig-cap: "Simple example of **chain rule** associations."
+digraph G {
+    layout=neato
+    A -> B;
+    B -> C;
+}
+```
+
+::::
+
+:::
+
+::: aside
+Computing partial correlation scores with R is straightforward, using the `pcor::ppcor` function, returning both the `estimate` (normalised precision matrix), and `p.value` depicting the level of significance of the pairwise interaction. 
+:::
+
+
+### {data-menu-title="Partial Correlation"}
+
+[4) Rank Transformation and Scatter Plots]{.slide-title2}
+
+<hr>
+
+::: {#fig-PRCC layout-ncol=2}
+
+![Original Fig.2. reproduced from [@lo2016po, pp. 11]](images/Fig2_PRCC_original.png){width=95% style="border-radius:1em;margin-top:auto"}
+
+![Fig.2. resulting from our own sensitivity analyses.](images/Fig2_PRCC.jpg){width=95% style="border-radius:1em;margin-top:auto"}
+
+Scatter plots of *rank-transformed* concentrations of $T_1$ and $T_2$ immune cells, against 3 variations of parameters. [We can depict at least 2 errors or biological inconsistencies from original simulations: PRCC is not strictly bounded between -1 and 1 (while it should have been normalised by the variances), and from @zenewicz2009timm, and ODE Equations 12 and 13 from @lo2016po, we would have expected a Th2 inhibition by Th1, in other words, a negative PRCC coefficient for factor $\sigma_{12}$.]{fg="red"}
+:::
+
+
+::: aside
+In addition to computing partial correlation scores, @lo2016po applied *rank-transformation*. This kind of scaling offers:
+
+- increased robustness to outliers
+- capture monotonic relations beyond linear trends
+- reduces *scaling issues* associated with distinct orders of magnitude.
+:::
+
+

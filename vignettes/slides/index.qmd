@@ -25,7 +25,7 @@ execute:
   message: false
   warning: false
   error: false
-  freeze: false
+  freeze: auto
 # table options
 tbl-cap-location: bottom
 # document metadata
