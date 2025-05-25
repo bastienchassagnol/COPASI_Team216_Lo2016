@@ -1,4 +1,13 @@
-### Bibliographic References {#biblio .scrollable .slide-title2}
+### Bibliographic References {#biblio .scrollable .slide-title2 data-menu-title="Bibliographic resources" .appendix}
 
 ::: {#refs}
 :::
+
+
+### Reproducibility Recent News {data-menu-title="Additional Reproducibility Links" .slide-title3 .smaller}
+
+- [`LinkedIn` Post](https://www.linkedin.com/posts/andriibuvailo_ai-is-a-powerful-tool-in-science-but-second-order-activity-7331279688205598720-EtU4) and [AI linked to explosion of low-quality biomedical research papers](https://www.nature.com/articles/d41586-025-01592-0), from @naddaf2025n, reports associations between health conditions and omics variables that seem driven from LLM-generated outputs. **Proper statistical analyses fail in recovering these pairwise interactions in half of the cases!!**
+
+- From recent *Le Monde* newspaper, written by @larousserie2025, half of the clinical trials' outcomes are not publicly available. Surprisingly, the ratio of unpublished results tops the $78\%$ for public research (CHU, universities, public institutes…), against $30\%$ for private pharmaceutical companies.
+
+- [‘Publish or perish’ culture blamed for reproducibility crisis](https://www.nature.com/articles/d41586-024-04253-w): recent survey of $1,600$ biomedical researchers, from @udesky2025n flagged small sample sizes, cherry-picking and pressuring editorial guidelines as leading causes of reproducibility problems.

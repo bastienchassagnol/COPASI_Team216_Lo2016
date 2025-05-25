@@ -1,4 +1,4 @@
-### {data-menu-title="Steady-states conditions"}
+###  {data-menu-title="Steady-states conditions"}
 
 ```{r}
 #| label: setup-steady-states
@@ -7,22 +7,21 @@
 #| eval: true
 library(flextable)
 library(dplyr)
+library(tidyr)
 library(CoRC)
 
 healthy_model <- loadModel("../../models/team_2016_final_model_lo2016_2025_05_13.cps") 
-healthy_model_steady_state <- runSteadyState(                               
+healthy_steady_state <- runSteadyState(                               
   model = healthy_model,                                                      
   calculate_jacobian = TRUE,                                                
   perform_stability_analysis = TRUE,                                          
   method = list("use_newton"=TRUE, accept_negative_concentrations = FALSE))
 ```
 
-
 [1) Steady-state conditions]{.slide-title2}
 
 ::: {#nte-steady-state .callout-note title="Derive Steady-States Conditions of an ODE model"}
-
-Computing the **steady-state conditions** for an ordinary differential equation (ODE) means finding the system's *equilibrium points*, where the variables remain **constant** over time. Given a system of $n=15$ ODEs (number of varying species in our model):  
+Computing the **steady-state conditions** for an ordinary differential equation (ODE) means finding the system's *equilibrium points*, where the variables remain **constant** over time. Given a system of $n=15$ ODEs (number of varying species in our model):
 
 $$
 \begin{cases}
@@ -32,7 +31,7 @@ $$
 \end{cases}
 $$
 
-the steady-state conditions are obtained by solving system @eq-steady-states:  
+the steady-state conditions are obtained by solving system @eq-steady-states:
 
 $$
 \begin{cases}
@@ -41,40 +40,38 @@ f_1(x_1^*, x_2^*, \dots, x_{15}^*)& = 0 \\
 f_n(x_1^*, x_2^*, \dots, x_{15}^*) &= 0.
 \end{cases}
 $$ {#eq-steady-states}
-
-
 :::
 
-### {data-menu-title="Steady-states implementation"}
+###  {data-menu-title="Steady-states implementation"}
 
 [1) Steady-state implementation]{.slide-title2}
 
-
-```r
+``` r
 healthy_model <- loadModel("../../models/team_2016_final_model_lo2016_2025_05_13.cps") # <1>
-healthy_model_steady_state <- runSteadyState(                               # <2>
+healthy_steady_state <- runSteadyState(                               # <2>
   model = healthy_model,                                                    # <2>  
   calculate_jacobian = TRUE,                                            # <2>
   perform_stability_analysis = TRUE,                                        # <2>  
   method = list("use_newton"=TRUE, accept_negative_concentrations = FALSE)  # <3>
 )
 ```
-1. Run `CoRC::loadModel()` function to load the COPASI model in R. 
-2. We use the `CoRC::runSteadyState` function to run the steady-states...
-3. ... and for this task, several algorithms can be chosen, when no explicit solution can be derived directly. We used in our framework the well-known **root-finding** [Newton-Raphson algorithm](https://en.wikipedia.org/wiki/Newton%27s_method).
+
+1.  Run `CoRC::loadModel()` function to load the COPASI model in R.
+2.  We use the `CoRC::runSteadyState` function to run the steady-states...
+3.  ... and for this task, several algorithms can be chosen, when no explicit solution can be derived directly. We used in our framework the well-known **root-finding** [Newton-Raphson algorithm](https://en.wikipedia.org/wiki/Newton%27s_method).
 
 ::: aside
 All models are loaded **by reference** with the `CoRC` package, meaning that you modify the object **in place**. Note that this behaviour is rather uncommon in R, the default being the **Copy-on-Modify Behaviour** (aka by **value**).
 :::
 
-### {data-menu-title="Steady-states results"}
+<br>
+
+###  {data-menu-title="Steady-states results"}
 
 [1) Steady-state results]{.slide-title2}
 
-::: columns
-
-:::: {.column width="50%"}
-
+::::: columns
+::: {.column width="50%"}
 ```{r}
 #| label: tbl-steady-state
 #| echo: false
@@ -84,7 +81,7 @@ All models are loaded **by reference** with the `CoRC` package, meaning that you
 #|   in healthy individuals in our model.
 
 ## Format table for reporting.
-steady_state_concentrations <- healthy_model_steady_state$species |> 
+steady_state_concentrations <- healthy_steady_state$species |> 
   select(name, concentration) |> 
   mutate(name = factor(name, 
                           levels = c("M1", "M2", 
@@ -123,19 +120,14 @@ steady_state_table <- flextable(steady_state_concentrations) |>
 
 steady_state_table
 ```
-
-::::
-
-:::: {.column width="50%"}
-
-![Original SS reported in **Table 4**, [@lo2016po, pp. 10].](images/steady_states_original.png){width=80% style="border-radius:1em;margin-top:auto"}
-
-::::
-
 :::
 
+::: {.column width="50%"}
+![Original SS reported in **Table 4**, [@lo2016po, pp. 10].](images/steady_states_original.png){width="80%" style="border-radius:1em;margin-top:auto"}
+:::
+:::::
 
-### {data-menu-title="Sensitivity analyses"}
+###  {data-menu-title="Sensitivity analyses" .smaller .scrollable}
 
 [2) Sensitivity analyses]{.slide-title2}
 
@@ -143,11 +135,13 @@ steady_state_table
 
 [i) **Sensitivity analysis** Objectives]{.slide-title3}
 
-**Sensitivity analysis** aims to identify how changes in parameters affect model behaviour, identifying the most influential parameters on the outcome. Besides, these simulation studies contribute to prioritise where uncertainty matters most, and early capture bad representations of the model.
+**Sensitivity analysis** aim to identify:
 
-<br>
+- how changes in prior parameters affect the global model behaviour, 
+- the most influential parameters on the outcome
+- prioritise where uncertainty matters most.
 
-9 parameters were assumed in @lo2016po to have the strongest impact on the concentrations of T cell subsets. We retrieve their values, inferred from healthy individuals, using the `CoRC::getParameters` function (see @tbl-healthy-parameters):  
+[:nine: parameters were assumed in @lo2016po to have the strongest impact on the concentrations of T cell subsets. We retrieve their values, inferred from healthy individuals, using the `CoRC::getParameters` function (see @tbl-healthy-parameters):]{.body-text-s}
 
 ```{r}
 #| label: tbl-healthy-parameters
@@ -170,8 +164,7 @@ flextable(parameters_healthy) |>
   bold(part = "header") 
 ```
 
-
-### {.scrollable data-menu-title="Latin Hypercube Sampling"}
+###  {.scrollable data-menu-title="Latin Hypercube Sampling"}
 
 [2) Sensitivity analyses]{.slide-title2}
 
@@ -179,51 +172,52 @@ flextable(parameters_healthy) |>
 
 [ii) Latin HyperCube Sampling, step I]{.slide-title3}
 
-::: columns
-
-:::: {.column width="50%"}
-
-**Random Sampling** for a $d-$ random vector is performed as @eq-random-sampling: 
+::::: columns
+::: {.column width="50%"}
+**Random Sampling** for a $d-$ random vector is performed as @eq-random-sampling:
 
 $$
-x_i^{(j)} \sim \mathcal{U}\left(x_{\min_j}^{(j)}, x_{\max_j}^{(j)}\right), \quad j = 1, 2, \dots, d, \quad i = 1, 2, \dots, N
+x_i^{(j)} \sim \mathcal{U}\left(x_{\min_j}^{(j)}, x_{\max_j}^{(j)}\right)
 $$ {#eq-random-sampling}
 
-![**Random sampling**, from [@rustell](https://www.researchgate.net/figure/Randomly-sampled-variables-vs-Latin-hypercube-samples_fig3_322386503). With a low number of observations, the **clustering pattern** inherent to standard random sampling is clearly showcased.](images/Randomly-sampled-variables.png){#fig-random-sampling}
+$$
+\begin{cases}
+j = 1, 2, \dots, d, \\
+i = 1, 2, \dots, N
+\end{cases}
+$$
 
-[Out of pure randomness, as shown in @fig-random-sampling, some regions of the bi-dimensional parameter space remain unsampled, while others are oversampled, as evidenced by visible **clustering** of points.]{.body-text-m .magenta-text} 
-
-::::
-
-:::: {.column width="50%"}
-
-In **Latin Hypercube Sampling (LHS)**:
-
-1. Sampling space is stratified into $N$ equally-binned intervals for each dimension $j$
-2. Permutation is applied across all dimensions to avoid sampling correlation. 
-3. Each sample is drawn from a distinct $N-$ defined $d-$sized interval.
-
-![**Latin hypercube sample**, from Fig.3 [@rustell](https://www.researchgate.net/figure/Randomly-sampled-variables-vs-Latin-hypercube-samples_fig3_322386503).](images/Latin-hypercube-samples.png){#fig-LHS}
-
-[LHS provides a **better Coverage of the Input Space** and **Improved Convergence**, especially when the sampling size is large with respect to the number of draws, see @fig-LHS.]{.body-text-m .magenta-text} 
-
-::::
-
+![**Random sampling**, from [\@rustell](https://www.researchgate.net/figure/Randomly-sampled-variables-vs-Latin-hypercube-samples_fig3_322386503). With a low number of observations, the **clustering pattern** inherent to standard random sampling is clearly showcased.](images/Randomly-sampled-variables.png){width=70%}
 
 :::
 
+::: {.column width="50%"}
+In **Latin Hypercube Sampling (LHS)**:
+
+1.  Sampling space is stratified into $N$ equally-binned intervals for each dimension $j$
+2.  Permutation is applied across all dimensions to avoid sampling correlation.
+3.  Each sample is drawn from a distinct $N-$ defined $d-$sized interval.
+
+![**Latin hypercube sample**, from Fig.3 [\@rustell](https://www.researchgate.net/figure/Randomly-sampled-variables-vs-Latin-hypercube-samples_fig3_322386503).](images/Latin-hypercube-samples.png){width=70%}
+
+[LHS provides a **better Coverage of the Input Space** and **Improved Convergence**, especially when the sampling size is large with respect to the number of draws]{.body-text-s .magenta-text}
+:::
+:::::
+
+
 **Main parameters**:
 
-- $x_i^{(j)}$ is the $i$-th sample drawn for the $j$-th dimension
+-   $x_i^{(j)}$ is the $i$-th sample drawn for the $j$-th dimension
 
-- $d=9$ (number of parameters included in the sensitivity analysis)
+-   $d=9$ (number of parameters included in the sensitivity analysis)
 
-- $N=5000$ the number of parameter distributions simulated
+-   $N=5000$ the number of parameter distributions simulated
 
-- $\mathcal{U}(x_{\min_j}^{(j)}, x_{\max_j}^{(j)})$ is the **Uniform distribution**, with bounds defined independently per dimension.
+-   $\mathcal{U}(x_{\min_j}^{(j)}, x_{\max_j}^{(j)})$ is the **Uniform distribution**, with bounds defined independently per dimension.
 
+<br>
 
-### {.scrollable  data-menu-title="Latin Hypercube Sampling 2"}
+###  {.scrollable data-menu-title="Latin Hypercube Sampling 2"}
 
 [2) Sensitivity analyses]{.slide-title2}
 
@@ -231,7 +225,7 @@ In **Latin Hypercube Sampling (LHS)**:
 
 [ii) Latin HyperCube Sampling, step II]{.slide-title3}
 
-```r
+``` r
 n_samples <- 5000 # <1>
 
 parameters_sensitivity <- parameters_healthy$value
@@ -249,15 +243,16 @@ for (i in seq_along(parameters_sensitivity)) { # <4>
 }                                                             # <4>
 apply(bootstrap_parameters,2, quantile)                       # <5>
 ```
-1. Determine hyper-parameters of sensitivity analysis, such as the number of simulations $N$, and lower and upper bounds within a $\pm 20\%$ range.
-2. We fix the **random seed** to ensure reproducibility of the sensitivity analyses.
-3. The core function of the `lhs` package, `lhs::randomLHS()`, is only able to perform **standard uniform sampling**.
-4. Apply the **Inverse Transform Sampling Theorem** (see @tip-ITST-short) to switch from a standard uniform distribution ($U \sim \mathcal{U}(0, 1)$) modelling to any bounded uniform distribution^[Reproduce this result by applying this affine transformation: `bootstrap_parameters[,i] * (param_ranges$UB[i] -param_ranges$LB[i]) +  param_ranges$LB[i]`.] 
-5. Apply the `quantile` function to verify the quantiles are rather close from their expected theoretical values from uniform sampling.
 
+1.  Determine hyper-parameters of sensitivity analysis, such as the number of simulations $N$, and lower and upper bounds within a $\pm 20\%$ range.
+2.  We fix the **random seed** to ensure reproducibility of the sensitivity analyses.
+3.  The core function of the `lhs` package, `lhs::randomLHS()`, is only able to perform **standard uniform sampling**.
+4.  Apply the **Inverse Transform Sampling Theorem** (see @tip-ITST-short) to switch from a standard uniform distribution ($U \sim \mathcal{U}(0, 1)$) modelling to any bounded uniform distribution[^2-ibd-simulations-1]
+5.  Apply the `quantile` function to verify the quantiles are rather close from their expected theoretical values from uniform sampling.
+
+[^2-ibd-simulations-1]: Reproduce this result by applying this affine transformation: `bootstrap_parameters[,i] * (param_ranges$UB[i] -param_ranges$LB[i]) +  param_ranges$LB[i]`.
 
 ::: {#tip-ITST-short .callout-tip collapse="true" title="The Inverse Transform Sampling Theorem"}
-
 The **Inverse Transform Sampling Theorem** allows generating any probability distribution from the **standard uniform distribution**, $U \sim \mathcal{U}(0,1)$. Let $X$ be a continuous random variable with *cumulative distribution function* (CDF) $F(x)$ and $F^{-1}$ its reciprocal (the quantile function), then:
 
 $$
@@ -266,57 +261,49 @@ $$
 
 follows the same distribution as $X$.
 
----
 
-Specifically, by applying the following **affine** transformation $X=a + (b - a) U$ on a standard uniformly distributed variable $u$, $X$ will follow this distribution: $\mathcal{U}(a,b)$ 
-
+Specifically, by applying the following **affine** transformation $X=a + (b - a) U$ on a standard uniformly distributed variable $u$, $X$ will follow this distribution: $\mathcal{U}(a,b)$
 :::
 
-
-### {.scrollable  data-menu-title="Partial Correlation"}
+###  {.scrollable data-menu-title="Partial Correlation"}
 
 [3) Partial Correlation Analyses]{.slide-title2}
 
 <hr>
 
-::: columns
-
-:::: {.column width="33%"}
-
-Standard **Pearson correlation** between two variables $X$ and $Y$ in @eq-pearson-correlation:  
+:::::: columns
+::: {.column width="50%"}
+Standard **Pearson correlation** between two variables $X$ and $Y$ in @eq-pearson-correlation:
 
 $$
 \rho_{X,Y} = \frac{\text{Cov}(X, Y)}{\sigma_X \sigma_Y}
-$${#eq-pearson-correlation}
+$$ {#eq-pearson-correlation}
 
-- $\text{Cov}(X, Y) = \mathbb{E}[(X - \mu_X)(Y - \mu_Y)]$ is the empirical *covariance matrix*.  
-- $\sigma_X = \sqrt{\text{Var}(X)}$ and $\sigma_Y = \sqrt{\text{Var}(Y)}$ are *standard deviations*. 
+-   $\text{Cov}(X, Y)$ is the empirical *covariance matrix*.\
+-   $\sigma_X = \sqrt{\text{Var}(X)}$ and $\sigma_Y = \sqrt{\text{Var}(Y)}$ are *standard deviations*.
 
 [Measures the strength of the **linear relationship** between $X$ and $Y$, without controlling for confounding variables.]{.magenta-text}
+:::
 
-::::
-
-:::: {.column width="33%"}
-
+::: {.column width="50%"}
 The *Partial Correlation* measures the linear relationship between two variables, [conditioned on the remaining set of variables $\mathrm{Z}$]{fg="red"}, given by @eq-partial-correlation:
 
 $$
 \rho_{X,Y \mid \mathbf{Z}} = -\frac{\Omega_{X,Y}}{\sqrt{\Omega_{X,X} \Omega_{Y,Y}}}
-$${#eq-partial-correlation}
+$$ {#eq-partial-correlation}
 
-- $\mathbf{\Omega} = \mathbf{\Sigma}^{-1}$ is the **precision matrix**.
-- Non Null off-diagonal terms of the precision matrix reflect direct, causal connections between two variables.
+-   $\mathbf{\Omega} = \mathbf{\Sigma}^{-1}$ is the **precision matrix**.
+-   Non Null off-diagonal terms of the precision matrix reflect direct, causal connections between two variables.
 
 [Partial correlation enables more straightforward interpretation by revealing **truly causal relationships**, while discarding spurious connections.]{.magenta-text}
+:::
 
-::::
+::::::
 
-:::: {.column width="33%"}
+In @fig-prcc-illustration,
 
-[**Practical use case**]{.body-text-l}: in @fig-prcc-illustration, 
-
-- The standard Pearson correlation would have certainly observed a significant correlation between variables $A$ and $C$. 
-- This spurious connection between $A$ and $C$ due to the confusing effect of $B$ is clipped using partial correlation instead. 
+-   The standard Pearson correlation would have certainly observed a significant correlation between variables $A$ and $C$.
+-   This spurious connection between $A$ and $C$ due to the confusing effect of $B$ is clipped using partial correlation instead.
 
 ```{dot}
 //| label: fig-prcc-illustration
@@ -328,37 +315,265 @@ digraph G {
 }
 ```
 
-::::
-
-:::
-
 ::: aside
-Computing partial correlation scores with R is straightforward, using the `pcor::ppcor` function, returning both the `estimate` (normalised precision matrix), and `p.value` depicting the level of significance of the pairwise interaction. 
+Computing partial correlation scores with R is straightforward, using the `pcor::ppcor` function, returning both the `estimate` (normalised precision matrix), and `p.value` depicting the level of significance of the pairwise interaction.
 :::
 
+<br>
 
-### {data-menu-title="Partial Correlation"}
+###  {data-menu-title="Partial Correlation"}
 
 [4) Rank Transformation and Scatter Plots]{.slide-title2}
 
 <hr>
 
-::: {#fig-PRCC layout-ncol=2}
+::: {#fig-PRCC layout-ncol="2" layout-valign="center"}
+![Original Fig.2. reproduced from [@lo2016po, pp. 11]](images/Fig2_PRCC_original.png){width="95%" style="border-radius:1em;margin-top:auto"}
 
-![Original Fig.2. reproduced from [@lo2016po, pp. 11]](images/Fig2_PRCC_original.png){width=95% style="border-radius:1em;margin-top:auto"}
-
-![Fig.2. resulting from our own sensitivity analyses.](images/Fig2_PRCC.jpg){width=95% style="border-radius:1em;margin-top:auto"}
+![Fig.2. resulting from our own sensitivity analyses.](images/Fig2_PRCC.jpg){width="95%" style="border-radius:1em;margin-top:auto"}
 
 Scatter plots of *rank-transformed* concentrations of $T_1$ and $T_2$ immune cells, against 3 variations of parameters. [We can depict at least 2 errors or biological inconsistencies from original simulations: PRCC is not strictly bounded between -1 and 1 (while it should have been normalised by the variances), and from @zenewicz2009timm, and ODE Equations 12 and 13 from @lo2016po, we would have expected a Th2 inhibition by Th1, in other words, a negative PRCC coefficient for factor $\sigma_{12}$.]{fg="red"}
 :::
 
+<br>
 
-::: aside
-In addition to computing partial correlation scores, @lo2016po applied *rank-transformation*. This kind of scaling offers:
+<!-- ::: aside -->
+<!-- In addition to computing partial correlation scores, @lo2016po applied *rank-transformation*. This kind of scaling offers: -->
 
-- increased robustness to outliers
-- capture monotonic relations beyond linear trends
-- reduces *scaling issues* associated with distinct orders of magnitude.
+<!-- -   increased robustness to outliers -->
+<!-- -   capture monotonic relations beyond linear trends -->
+<!-- -   reduces *scaling issues* associated with distinct orders of magnitude. -->
+<!-- ::: -->
+
+###  {data-menu-title="Patient stratification" .smaller}
+
+[3) Patient stratification]{.slide-title2}
+
+<hr>
+
+[i) **Precision medicine**]{.slide-title3}
+
+::::: columns
+::: {.column width="45%"}
+![**Precision Medicine** Informatics: Principles, Prospects, and Challenges. Reproduced from Fig 1, @afzal2020ia.](images/precision_medicine.png){width="80%" style="border-radius:1em;margin-top:auto"}
+
+**Traditional** (left) Versus **Personalised** (right) Medicine approaches.
 :::
 
+::: {.column width="55%"}
+```{r}
+#| label: tbl-parameters-estimation
+#| echo: false
+#| tbl-cap: Fold Changes of *cytokine* concentrations, from *Table 7*, [@lo2016po, pp. 13]. 
 
+data_experiment_displayed <- readr::read_csv("../../data/IBD DGEA.csv", show_col_types = FALSE) |>
+  tidyr::pivot_longer(!cluster, names_to = "name", values_to = "concentration") |>
+  dplyr::inner_join(healthy_steady_state$species |> 
+                      select(name, concentrationH = concentration),
+                    by = "name") |>
+  mutate(`Fold Change` = concentration, 
+         concentration = concentrationH * (1 + concentration / 100), 
+         concentrationH =   formatC(concentrationH, format = "e", digits = 2), 
+         concentration = formatC(concentration, format = "e", digits = 2)) |> 
+  relocate(concentrationH, .before = concentration) |> 
+  dplyr::filter(cluster %in% c("type 1"))
+
+labels <- list(
+  name = "Species",  cluster = "Types of disease", 
+  concentrationH = "Species' concentration at steady-state",
+  concentration = "Concentrations in IBD clusters")
+
+flextable(data_experiment_displayed) |> 
+  colformat_double(j = c("Fold Change"), suffix = "%") |> 
+  set_header_labels(values = labels) |> 
+  footnote(j = "name", i = c(4, 5),
+           value = as_paragraph("These quantities have been numerically estimated."),
+           part = "body",   ref_symbols = c("*")) |> 
+  bold(part = "header")
+```
+:::
+:::::
+
+<br>
+
+::: aside
+**Tailored medicine** stratifies patients based on their unique biological profiles, driven from genetic or molecular fingerprints, into [**endotypes**]{fg="magenta"}.
+
+By targeting specific [**endotypes**]{fg="magenta"}, personalised medicine claims to more accurate diagnoses, optimised treatments, and better predictions of disease outcome.
+:::
+
+<br>
+
+###  {.scrollable data-menu-title="Parameters' estimation I"}
+
+[3) Patient stratification]{.slide-title2}
+
+<hr>
+
+[ii) **Parameters' estimation I: Methods**]{.slide-title3}
+
+1.  Define parameters' configuration per endotype (observed concentration values, ODE definition model, ...)
+
+2.  Run numerical optimisation algorithm to infer the values of free parameters to recover altered cytokine concentrations.
+
+3.  Mock $TNF-\alpha$ blockade by fixing the total concentration to 0:
+
+    1.  In `COPASI`, you switch the species' status from `reactions` to `fixed`.
+
+    2.  With `CoRC`, use `setSpecies` function with `initial_concentration = 0` and `type ="fixed"`.
+
+``` r
+absolute_parameter_per_cluster <- purrr::map(fit_experiments, function(cluster) { # <1>
+  CoRC::clearParameterEstimationParameters(model = healthy_model)   # <2>
+  CoRC::clearExperiments(model = healthy_model)                     # <2>
+  return(runParameterEstimation(                             # <3>
+    parameters = fit_parameters, # <3>
+    experiments = cluster, # <3>
+    method = list(method = "LevenbergMarquardt",   # <4>
+                  iteration_limit = 500,   # <4>
+                  tolerance = 1e-6),   # <4>
+    update_model = FALSE, # <3>
+    randomize_start_values = FALSE, # <3>
+    create_parameter_sets = TRUE,  # <3>
+    calculate_statistics = FALSE,  # <3>
+    model = healthy_model  # <3>
+  )$parameters)
+})
+```
+1.  One parameters' estimation per **endotype** configuration. [The number of observations, aka concentrations' species, must exceed the number of free parameters to infer]{fg="red"} :warning:
+2.  `clearParameterEstimationParameters` and `clearExperiments` guarantee a fresh start for each parameters estimation (equivalent to `pandas.deepcopy()`).
+3.  `runParameterEstimation` is used for estimating the 10 free parameters allowed to vary.
+4.  All numerical optimisation approaches to reduce the cost function between the observed steady-state concentrations and the expected ones are listed in [Optimization Methods](https://copasi.org/Support/User_Manual/Methods/Optimization_Methods/). For reproducible analyses, you need to provide the `method` and numerical optimisation hyper-parameters, such as `iteration_limit` or `tolerance`.
+
+<!-- ::: {#tip-optimisation .callout-tip title="Optimisation Descent Methods" collapse="true"} -->
+<!-- Consider a multivariate function $f(\mathbf{x})$ that we want to **maximize** with respect to $\mathbf{x}$. The canonical unconstrained optimization approaches include *Gradient Descent* (see [@eq-GD]), *Newton-Raphson* (see [@eq-NR]) and *Levenbergh-Marquart* (see [@eq-LM]): -->
+
+<!-- ------------------------------------------------------------------------ -->
+
+<!-- In **steepest Descent Approach** (@eq-GD), the method updates $\mathbf{x}$ towards the direction of the gradient (steepest slope): -->
+
+<!-- $$ -->
+<!-- \mathbf{x}_{k+1} = \mathbf{x}_k + \alpha_k \nabla f(\mathbf{x}_k) -->
+<!-- $$ {#eq-GD} -->
+
+<!-- where: -->
+
+<!-- -   $\nabla f(\mathbf{x}_k)$ is the gradient of $f$ at $\mathbf{x}_k$,\ -->
+<!-- -   $\alpha_k$ is the **step size (learning rate)** -->
+<!-- -   **The steepest descent method only converges linearly, but is guaranteed to converge.** -->
+
+<!-- ------------------------------------------------------------------------ -->
+
+<!-- The **Newton-Raphson Approach** is a second-order method, requiring the computation of the *Hessian matrix* (see @eq-NR): -->
+
+<!-- $$ -->
+<!-- \mathbf{x}_{k+1} = \mathbf{x}_k +  \mathbf{H}^{-1}(\mathbf{x}_k) \nabla f(\mathbf{x}_k) -->
+<!-- $$ {#eq-NR} -->
+
+<!-- -   $\mathbf{H}(\mathbf{x}_k) = \nabla^2 f(\mathbf{x}_k)$ is the Hessian matrix,\ -->
+<!-- -   $\nabla f(\mathbf{x}_k)$ is the gradient. -->
+
+<!-- **On the other hand, the Newton method converges quadratically towards the minimum in its vicinity. However, it's really sensible to the initialisation, and may not converge at all if it is far away from it**. -->
+
+<!-- ------------------------------------------------------------------------ -->
+
+<!-- The **Levenberg-Marquardt Descent Approach** (@eq-LM): -->
+
+<!-- $$ -->
+<!-- \mathbf{x}_{k+1} = \mathbf{x}_k + \left( \mathbf{H}(\mathbf{x}_k) + \lambda \mathbf{I} \right)^{-1} \nabla f(\mathbf{x}_k) -->
+<!-- $$ {#eq-LM} -->
+
+<!-- -   $\lambda$ is a dampening hyper-parameter controlling the trade-off between gradient descent and Newton-Raphson -->
+<!-- ::: -->
+
+::: aside
+The [Levenberg - Marquardt](https://copasi.org/Support/User_Manual/Methods/Optimization_Methods/Levenberg_-_Marquardt/) algorithm is a good trade-off between the steepest descent approach, and Newton-Raphson.
+:::
+
+###  {.scrollable data-menu-title="Parameters' estimation II"}
+
+[3) Patient stratification]{.slide-title2}
+
+<hr>
+
+[ii) **Parameters' estimation II: Main Reproducibility Hurdles**]{.slide-title3}
+
+1.  :no_entry_sign: No computer-readable datasets (only hard-coded pdf tables) :arrow_right: Manual typing is an error-proned process.
+
+2.  :no_entry_sign: Averaged differential expression inputs instead of raw, individual values, preventing from:
+
+    1.  Reproducing differential analyses reported in Table 7, @lo2016po.
+
+    2.  Running a **multivariate** regression model, thus artificially underestimating the uncertainty of the parameters.
+
+3.  :no_entry_sign: No supplying of the parameters' estimation approach:
+
+    3.  Optimisation method
+    4.  Hyper-parameters for evaluating numerical convergence
+    5.  Individual parameter weights
+
+###  {.scrollable data-menu-title="Parameters' estimation III"}
+
+[3) Patient stratification]{.slide-title2}
+
+<hr>
+
+[iii) **Parameters' estimation III: Results**]{.slide-title3}
+
+::: {layout-ncol="2"}
+
+![Original results, reproduced from [@lo2016po, pp. 13], Fig.3.](images/Fig3_Patient_Clusters_original.png){width="85%" style="border-radius:1em;margin-top:auto"}
+
+![Barplots from our Reproducibility Analysis](images/Fig3_Patient_clusters.jpg){width="85%" style="border-radius:1em;margin-top:auto"}
+
+:::
+
+<!-- :warning: **I plug-in Parameters estimation from Table 8, instead of reproduced Parameters.** -->
+
+Simulated **Fold Change** variations of the cytokine and T-cell concentrations before and after TNF-$\alpha$ blockade, per endotype. [Blue bars represent the results of pre-treatment]{fg="blue"}; [red bars represent the results of post-treatment.]{fg="red"}
+
+-   {{< iconify emojione-v1:cross-mark >}}   [In original Cluster 4 (reduced abundances of Th1 and Th2 cell subsets), all species' concentrations are decreasing]{fg="red"}
+
+-   {{< iconify mdi:tick-outline style="color:#40e612;" >}}   [In reproduced Cluster 4, concentrations of IL-10, Tregs and TGF-$\beta$ are increasing with respect to healthy state conditions, an effect magnified by blocking the production of IFN-$\gamma$ :arrow_right: noting the positive feedback loop between these three entities, and the overall negative regulatory effect of Tregs on T cells concentrations, this result is biologically more meaningful.]{fg="green"}
+
+<br>
+
+###  {.scrollable data-menu-title="Model annotation"}
+
+[3) Model Annotation]{.slide-title2}
+
+<hr>
+
+1.  General annotations of the model: name, biological processes modelled, publication if any, curation authors, ...
+
+2.  Annotate the models species (nodes of the ODE model) with established `EBI-EMBL` ontologies to enable cross-linking between databases:
+
+    -   `UniProt` for proteins (including cytokines)
+
+    -   `Cell Line Ontology` (CLO) for immune cells
+
+    -   Gene Ontology: `GO` terms for pathways.
+
+3.  *(Optional)*: detail each ODE reaction, namely **edges** (for instance, provide bibliographic references mentioning interplay between two cell types).
+
+::: {layout="[[1], [1,1]]"}
+
+![A compendium of the European Bioinformatics Institute's ontologies. Reproduced from Fig.1, @brooksbank2010nar.](images/embl_ontologies.jpeg){width="60%" style="border-radius:1em;margin-top:auto"}
+
+![Screenshot from `COPASI` Annotation's tab, Model Level.](images/annotation_tab1.png){width="95%" style="border-radius:1em;margin-top:auto"}
+
+![Screenshot from `COPASI` Annotation's tab, Species Level.](images/annotation_tab2.png){width="95%" style="border-radius:1em;margin-top:auto"}
+
+:::
+
+<br>
+
+. . .
+
+::: {.center-text}
+
+:bangbang: [Major hurdle: choose among one of the **848** ontology databases listed under [`Identifiers`](https://registry.identifiers.org/registry)]{.magenta-text .body-text-m}
+
+:::
+
+<br>

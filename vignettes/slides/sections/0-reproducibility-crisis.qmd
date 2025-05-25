@@ -1,168 +1,131 @@
-### {#repro-crisis data-menu-title="Reproducibility crisis"}
+###  {#repro-crisis data-menu-title="Reproducibility crisis"}
 
-[Is there a Reproducibility crisis?]{.slide-title}
+[Is there a Reproducibility crisis?]{.slide-title2}
 
 <hr>
 
-::: {.body-text-l}
-Classes of cell-cell communications cover:
+::::::: columns
+:::: {.column width="75%"}
+::: panel-tabset
+#### Feeling
+
+![**Nature's survey of 1,576 researchers on reproducibility in research**. Reproduced from [Fig1, *1,500 scientists lift the lid on reproducibility*](https://www.nature.com/articles/533452a), from @baker2016n.](images/reproducibility_crisis.webp){width="70%" style="border-radius:1em;margin-top:auto"}
+
+#### Domain-dependant
+
+![Physicists and chemists show the most confidence, in contrast with social or biological studies. Reproduced from [Fig2, *1,500 scientists lift the lid on reproducibility*](https://www.nature.com/articles/533452a), from @baker2016n.](images/reproducibility_crisis_dependant.webp){width="70%" style="border-radius:1em;margin-top:auto"}
 :::
-
-::: columns
-
-:::: {.column width="70%"}
-
-::: {.panel-tabset}
-
-#### General feeling
-
-![**Nature's survey of 1,576 researchers on reproducibility in research**. Reproduced from [Fig1, *1,500 scientists lift the lid on reproducibility*](https://www.nature.com/articles/533452a), from @baker2016n.](images/reproducibility_crisis.webp){width=95% style="border-radius:1em;margin-top:auto"}
-
-#### Domain-dependant reproducibility
-
-![Physicists and chemists show the most confidence, in contrast with social or biological studies. Reproduced from [Fig2, *1,500 scientists lift the lid on reproducibility*](https://www.nature.com/articles/533452a), from @baker2016n.](images/reproducibility_crisis_dependant.webp){width=95% style="border-radius:1em;margin-top:auto"}
-
-#### BioModels focus
-
-![Half of public mathematical models stored in `BioModels` are not curated. Results drawn from 17.05.2025, from @malik-sheriff2020nar.](images/biomodels_features.png){width=95% style="border-radius:1em;margin-top:auto"}
-
-:::
-
 ::::
 
+:::: {.column width="25%"}
+::: {.vertical-center .body-text-s}
+-   $52\%$ considering there's a significant crisis
 
+-   $90\%$ considering there's a Reproducibility crisis generally speaking
 
-:::: {.column width="30%"}
+-   From @opensciencecollaboration2015s analyses, $40\%$ of studies in psychology are trustworthy...
 
-:::: {.body-text-s .vertical-center}
-
-- $52\%$ considering there's a significant crisis
-
-- $90\%$ considering there's a Reproducibility crisis generally speaking
-
-- From @opensciencecollaboration2015s analyses, $40\%$ of studies in psychology are trustworthy...
-
-- ... and only $10\%$ in cancer biology, from @begley2012n
-
-::::
-
-::::
-
+-   ... and only $10\%$ in cancer biology, from @begley2012n.
 :::
+::::
+:::::::
 
 ::: aside
-Most features on reproducibility crisis date back from 10 years ago -> what are the features from now on?
+Most features on reproducibility crisis date back from 10 years ago :arrow_forward: what are the features from now on?
 :::
 
-
-### {#repro-categories data-menu-title="Reproducibility Definition"}
+###  {#repro-categories data-menu-title="Reproducibility Definition"}
 
 [Different types of reproducibility]{.slide-title}
 
-::: {.panel-tabset}
+::: panel-tabset
+#### Empirical reproducibility
 
-#### Empirical reproducibility 
+Aka **Methodological Reproducibility**:
 
-Aka **Methodological Reproducibility**: 
+-   Ability to repeat the same experiment using the same methodology and obtain the same results
+-   *Example in scRNA-seq*: 2 teams working on the same tissue, get similar distribution of cell type abundances
+-   *Example in biomedical studies*: The @initiative2025 Brasilian consortium only recovered findings of $1/4$ of 3 commonly used techniques for quantifying gene expression, while demonstrating *systematic underestimation* of true coefficient of variation in original experiments.
 
-- Ability to repeat the same experiment using the same methodology and obtain the same results
-- **Example in scRNA-seq**: 2 teams working on the same tissue, get similar distribution of cell type abundances
+#### Statistical reproducibility
 
-#### Statistical reproducibility 
+-   Also named **Inferential Reproducibility**
 
-- Reproduce statistical results derived from data analysis ($p$-values, effect sizes, confidence intervals, ...) using the same statistical methods (or slightly similar ones)
+-   Reproduce statistical results derived from data analysis using the same statistical methods (or slightly similar ones)
 
-- Also named Inferential Reproducibility
+-   Examples in **sensitivity analyses**: does a change of the random seed or the sampling process induce significant changes of biological findings?[^0-reproducibility-crisis-1]
 
-- Examples in **sensitivity analyses**: does a change of the random seed or the sampling process induce significant changes of biological findings?^[**P-hacking** refers to the process of tweaking datasets or models until finding something statistically significant, or recovering their prior biological hypotheses.]
+![Satirical illustration of **Data dredging**, aka **data snooping** or $p$-hacking, from [`sbmc-comics`](https://www.smbc-comics.com/comic/p-2).](images/p-hacking.png)
 
 #### Computational reproducibility
 
-- Also named Result Reproducibility, can encompass all previously mentioned reproducibility approaches.
+-   Also named **Result Reproducibility**, the most generalist.
 
-- Ability to reproduce the computational aspects of a study, which includes reproducing the figures, tables, or other outputs from the data and code provided.
+-   Ability to reproduce the computational aspects of a study, including reproducing Figures, Tables, or other outputs from the data and code provided.
 
-- Example in mathematical models: given the same fixed parameters, can you recover the same steady-state conditions?
-
+-   *Example in ODE models*: given the same fixed parameters, can you recover the steady-state conditions?
 :::
 
-### {#repro-failure data-menu-title="Computational Failures"}
+[^0-reproducibility-crisis-1]: **P-hacking** refers to the process of tweaking datasets or models until finding something statistically significant, or recovering their prior biological hypotheses.
 
-[Reproduce figures and main results from biological papers: Impossible mission?]{.slide-title}
+###  {#repro-failure data-menu-title="Computational Failures"}
 
-::: columns
+[Reproduce figures and results from peer-reviewed papers I]{.slide-title2}
 
-:::: {.column width="50%"}
-
-![Main factors contributing to irreproducible research. Unavalaible code and/or datasets is one of the most quoted reasons, while being one of the easiest to address with. Reproduced from Fig.4, @baker2016n.](images/reproducibility_failures_causes.webp){width=95% style="border-radius:1em;margin-top:auto"}
-
-::::
-
-
-:::: {.column width="50%"}
-
-![Mentoring and training emerge out as the main incentives, along with more stringent journal guidelines. Reproduced from Fig.5, @baker2016n.](images/reproducibility_failures_workarounds.webp){width=95% style="border-radius:1em;margin-top:auto"}
-
-::::
+::::: columns
+::: {.column width="50%"}
+![Main factors contributing to non-reproducible research. Unavailable code and/or datasets is one of the most quoted reasons, while being one of the easiest to address with. Reproduced from Fig.4, @baker2016n.](images/reproducibility_failures_causes.webp){width="60%" style="border-radius:1em;margin-top:auto"}
 :::
 
-
-::: aside
-One workaround to overcome the reproducibility crisis is not mentioned, can you guess it? 
+::: {.column width="50%"}
+![Mentoring and training emerge out as the main incentives, along with more stringent journal guidelines. Reproduced from Fig.5, @baker2016n.](images/reproducibility_failures_workarounds.webp){width="60%" style="border-radius:1em;margin-top:auto"}
 :::
-
-
-### {#repro-hackathon data-menu-title="Reproducible Hackathons"}
-
-[Repro-hackathons as community-driven events to overcome reproducibility crisis?]{.slide-title}
-
-::: columns
-
-:::: {.column width="70%"}
-
-![Comparison of differentially expressed genes among 12 groups, illustrated by **upset plots**. Reproduced from [Fig.6, @cokelaer2023b](https://academic.oup.com/view-large/figure/409576502/btad227f6.tif)](images/degs_reprohackathons.jpeg){width=95% style="border-radius:1em;margin-top:auto"}
-
-::::
-
-
-:::: {.column width="30%"}
-
-::::: {.body-text-s .vertical-center}
-
-- **Core objective**: 12 group students aim at reproducing the main findings from a previously published study, namely the subset of DEGs.
-
-- Two-stage Hackathon: 
-
-  1. Free choice of differential analysis model, genome reference and filtering thresholds (scenario A)
-  2. Constrained choice of methods and hyperparameters (scenario B)
-  
-- **Conclusion**: majority of the differentially expressed genes were common to only a few groups (and no DEG found across all the 12 groups), while all pipelines were runnable.
-
 :::::
 
+::: aside
+One workaround to overcome the reproducibility crisis is not mentioned, can you guess it?
+:::
+
+###  {#repro-hackathon .scrollable .smaller data-menu-title="Reproducible Hackathons"}
+
+[Reproduce figures and results from peer-reviewed papers II]{.slide-title2}
+
+<hr>
+
+**Repro-hackathons** as community-driven events to overcome reproducibility crisis:
+
+:::::: columns
+::: {.column width="75%"}
+![Comparison of differentially expressed genes among 12 groups, illustrated by **upset plots**. Reproduced from [Fig.6, \@cokelaer2023b](https://academic.oup.com/view-large/figure/409576502/btad227f6.tif)](images/degs_reprohackathons.jpeg){width="70%" style="border-radius:1em;margin-top:auto"}
+:::
+
+:::: {.column width="25%"}
+::: {.body-text-s .vertical-center}
+-   **Core objective**: 12 group students aim at recovering DEGs from a peer-reviewed publication.
+
+-   Two-stage Hackathon:
+
+    1.  Free choice of differential analysis model, genome reference and filtering thresholds (scenario A)
+    2.  Constrained choice of methods and hyperparameters (scenario B)
+
+-   **Conclusion**: DEGs poolry overlap between the groups, whereas all pipelines were runnable.
+:::
 ::::
-:::
+::::::
+
+###  {#repro-hackathon-2 .smaller data-menu-title="Hackathon and BioModels"}
+
+[Repro-hackathon to curate biological models to unified SBML standards]{.slide-title2}
+
+![BioModels x BioQuant x BioMedX Team VPE sponsors.](images/reprohackathon_sponsors.png){width="80%" style="border-radius:1em;margin-top:auto"}
+
+-   :hourglass: curate 11 mathematical models of human disease in :two: days
+-   {{< iconify game-icons:team-upgrade >}} One :microscope:, one :computer:, and one {{< iconify material-symbols:modeling-rounded >}}.
+-   :bar_chart: Reproduce, or recode, **at least one output** of a given biological model + curate **species** to standard ontologies.
 
 ::: aside
-Recently paper in @initiative2025 managed to only reproduce around $1/4$ of recently published replicates of 3 common experimental techniques for quantifying gene expression. Besides, @initiative2025 demonstrate systematic underestimation of true coefficient of variation (and higher effect size) in original experiments.
-:::
+:link:
 
-### {#repro-hackathon-2 data-menu-title="Hackathon and BioModels"}
-
-[Repro-hackathon to curate biological models to unified SBML standards]{.slide-title}
-
-![BioModels x BioQuant x BioMedX Team VPE sponsors.](images/reprohackathon_sponsors.png){width=95% style="border-radius:1em;margin-top:auto"}
-
-
-- *Objective*: curate 11 mathematical models of human disease. Cross-disciplinary teams: one biologist, one data scientist, and one computational modeller.
-- *Methods*: reproduce **at least one output** (or recode when only hard-coded ODE equations were provided) of a given biological model + curate **species** to standard ontologies.
-- *Results*: 2 models were completely curated, 4 models were almost recoded and reproduced, 5 models were partially reproduced.
-
-
-
-::: aside
-Useful links: 
-
-- [BioModels x BioQuant x BioMedX Team VPE Hackathon](https://virtualpatientengine.github.io/VPEHackathonBioModelsCO/)
-- [LinkedIn Announce](https://www.linkedin.com/posts/douglas-mccloskey-b89bb833_hackathon-virtualpatient-computationalbiology-activity-7236311943878225920-bKO7)
+-   [BioModels x BioQuant x BioMedX Team VPE Hackathon](https://virtualpatientengine.github.io/VPEHackathonBioModelsCO/)
+-   [LinkedIn Announce](https://www.linkedin.com/posts/douglas-mccloskey-b89bb833_hackathon-virtualpatient-computationalbiology-activity-7236311943878225920-bKO7)
 :::

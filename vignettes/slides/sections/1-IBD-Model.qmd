@@ -1,48 +1,162 @@
-### {data-menu-title="IBD Network"}
+###  {data-menu-title="IBD Network"}
 
 [Inflammatory Bowel Disease: an ODE model]{.slide-title2}
 
-IBD ODE network is depicted in @fig-ODE-network.
-
-::: {#fig-ODE-network}
-
+:::: {.r-stack}
+::: {.fragment .fade-out}
 ```{mermaid}
- flowchart LR
-      A["$$x^2$$"] -->|"$$\sqrt{x+3}$$"| B("$$\frac{1}{2}$$")
-      A -->|"$$\overbrace{a+b+c}^{\text{note}}$$"| C("$$\pi r^2$$")
-      B --> D("$$x = \begin{cases} a &\text{if } b \\ c &\text{if } d \end{cases}$$")
-      C --> E("$$x(t)=c_1\begin{bmatrix}-\cos{t}+\sin{t}\\ 2\cos{t} \end{bmatrix}e^{2t}$$")
+flowchart LR
+
+      subgraph Macrophages
+      A["Inactivated Macrophage $$\,M_0$$"] --> B["Activated Macrophage $$\, M_1 M_2$$"]
+      end
+      
+      subgraph Cytokines
+      B <-->|"Inflammation"| C["TNF-$$\alpha$$"]      
+      B <--> D["IL-10"]
+      B <--> E["TGF-$$\beta$$"]
+      B --> F["IL-6"]
+      B --> G["IL-21"]
+      B --> H["IL-4"]
+      B --> I["IL-2"]
+      B <--> J["IFN-$$\gamma$$"]
+      J --> I      
+      I --> D 
+      D --x I
+      end
+      
+      subgraph T cells      
+      M["Th17"] x--x N["Treg"]
+      K["Th1"] x--x L["Th2"]
+      K --> J
+      I <--> K
+      L <--> H
+      M <--> E
+      N <--> E
+      N <--> D
+      C --x N
+      N --x K & L
+      J & H --x M
+      end
+      
+    linkStyle 11,12,13,20,21,22,23,24 stroke:red, stroke-width:5px;
+    linkStyle 0,1,2,3,4,5,6,7,8,9,10,14,15,16,17,18,19 stroke:green, stroke-width:5px;
 ```
 
-This is a simple `mermaid` graph.
+Depiction of the ODE Network of immune cells and cytokines' interactions. Reproduced from [Fig.1, \@lo2016po](https://pmc.ncbi.nlm.nih.gov/articles/PMC5289480/figure/pone.0170865.g001/)
 :::
 
+::: {.fragment .fade-in-then-out}
+![Original rendering on [`Mermaid Edit`](https://mermaid.live/edit)](images/mermaid_original_graph.png){width="75%"}
+:::
+
+::::
 
 ::: aside
-Note the recently published `SBMLNetwork` framework that automates the standardisation visualization of biochemical models, spanning from SBGN Pathways to Metabolic Models and Flux-diffusion processes. Available as an open-source Python package on [Github](https://github.com/sys-bio/SBMLNetwork).
+`SBMLNetwork` framework, from @heydarabadipour2025, automates the rendering of biochemical models, spanning from Pathways to Metabolic Models and Flux-diffusion process. Available as the open-source Python package [`SBMLNetwork`](https://github.com/sys-bio/SBMLNetwork).
 :::
 
+###  {.scrollable data-menu-title="IBD ODEs"}
 
-### {data-menu-title="IBD ODEs"}
+[Main classes of ODE models, ordered by increasing complexity]{.slide-title2}[^1-ibd-model-1]
 
-[Main classes of ODE models, ordered by increasing complexity]{.slide-title2}
+[^1-ibd-model-1]: [All these equations adhere to the **rate-law** principle, see @tip-mass-action.]{.slide-title2}
 
-- First order equations: 
+::::: {.panel-tabset}
 
-- Michaelis-Menten equations
+#### **Linear Equations**
 
-- Auto-catalytic and Feedback Models
+-   Constant fluxes, and/or **Production and decay model**.
 
-  - Positive activation
-  - negative activation
+-   *Example*: secretion of IL-2 by Th1 cells minus IL-2 decay, in @eq-cytokine-variation:
 
-- Complex combination of several processes, pairing together multiple variables
+    -   $I_2$: cytokine concentration
+    -   $T_1$: **substrate**, cell-type abundance
+    -   $\nu_{21}$ and $\delta_2$: **parameters** of the model, respectively production rate and decay rate
 
+$$
+\frac{dI_2}{dt} = \nu_{21} T_1 - \delta_2 I_2
+$$ {#eq-cytokine-variation}
 
-::: aside
-- 80 pre-defined functions in COPASI, from standard Henri-Michaelis-Menten and mass-actions equations, to complex Bi-Uni competitive enzymatic reaction mechanisms 
-- Feature for providing user-defined functions
-- Critical choice of the nature of the reaction either *reversible* or *irreversible* (uni-directional)
+#### **Michaelis-Menten**
+
+:::: {.r-stack}
+
+::: {.fragment .fade-out}
+-   **Catalytic activation**: used when a the speed of the reaction is driven by a limiting resource:
+
+-   @lo2016po models reactions' kinetics with a **Michaelis-Menten** process.
+
+-   **Example**: differentiation of $M_0$ macrophages into $M_1$ functional macrophages driven by $TNF-\alpha$, see @eq-Michaelis-Menten:
+
+    -   $f_1$: (optional), basal activation of $M_0$
+    -   $M_0$: undifferentiated **substrate**
+    -   $I_{\alpha}$: modifier or **catalyst** of the reaction (e.g., antigen, cytokine precursor)
+    -   $\sigma_{M_{\alpha}}$: **maximum rate** signalling or activation rate.
+    -   $\zeta _{M_{\alpha}}$: **half-saturation** constant
+
+$$
+\frac{dM_1}{dt} = \left(f_1 + \frac{\sigma_{M_{\alpha}} I_{\alpha}}{\zeta _{M_{\alpha}} + I_{\alpha}}\right) M_0
+$$ {#eq-Michaelis-Menten}
 :::
 
+::: {.fragment .fade-in-then-out}
+-   **Uncompetitive inhibition**, formula is the inverse of the **catalytic activation**.
 
+-   **Example**: alteration of IL-$21$ activation efficiency by the IL-4 interleukin, in @eq-inhibition:
+
+    -   $M$: the macrophages subset
+    -   $\zeta_4$: Michaelis half-constant for inhibition activity
+    -   $I_{21}$ and $I_4$: Activator and Inhibitor concentration, respectively
+
+$$
+\frac{dT_{17}}{dt} = M \frac{1}{1 + \frac{I_4}{\zeta_4}}
+$$ {#eq-inhibition}
+:::
+
+::::
+
+#### **Homoeostatic**, Regulatory Models
+
+-   Complex and intertwined network of positive and negative **Feedback loops**.
+-   *Example*: **Differentiation** of T-17 population is primarily driven by **macrophages induction**.
+-   However, the overall efficiency is regulated by a complex balance of cytokines activation and repression, see @fig-T17-regulation:
+
+![Complex regulatory mechanism of $T_{17}$ immune cells, from @lo2016po, Eq.14. Macrophages induction is enhanced by interleukin $I_{\beta}$ in conjunction with $I_{21}$ and $I_6$, but inhibited by both interleukins $I_4$ and $I_{\gamma}$. Finally, a natural death of the cells occurred.](images/T17_regulation.png){#fig-T17-regulation}
+
+:::::
+
+. . .
+
+[Unrepresented ODE equations include **Logistic Growth Models** (used for population dynamics in which *crowding effects* matter), **Hill** equations (controlling the steepness of feedback loops), or **Competitive** inhibitions.]{fg="red"}
+
+###  {.scrollable data-menu-title="IBD ODEs II"}
+
+[All ODE equations adhere to the **rate-law** principle, see @tip-mass-action.]{.slide-title2}
+
+::: {#tip-mass-action .callout-tip collapse = "true" title="Mass-action principle"}
+
+The following **mass-action** reaction (@eq-mass-action): 
+
+$$
+aA + bB \rightarrow P
+$$ {#eq-mass-action}
+
+adheres to the following **rate law**(@eq-rate-law)[^1-ibd-model-2]
+
+[^1-ibd-model-2]: The **mass-action principle** states that the rate of a chemical reaction is proportional to the product of the concentrations of the reactants, raised to the power of their **stoichiometric coefficients**.
+
+$$
+\text{Rate} = k [A]^a [B]^b
+$$ {#eq-rate-law}
+
+:::
+
+. . .
+
+<br>
+
+-   80 pre-defined functions in `COPASI`, from basic constant fluxes to complex competitive enzymatic reactions
+-   Feature for providing user-defined functions
+-   **Critical**: identify if the reaction is *reversible* or *irreversible* (uni-directional)
+-   **Critical 2**: assign each element of the reaction one of these values, `parameter`, `modifier`, `product` or `substrate`.

@@ -185,13 +185,13 @@ fit_experiments <- purrr::map(data_experiment, ~ defineExperiments( # <3>
 ))            # <3>                 
 ```
 1. To adjust the variations of steady-state concentrations observed in the identified four subgroups of patients suffering from Inflammatory Bowel Disease, @lo2016po chose to play with 10 biological constants (10 degrees of freedom). Note that for the system of equations to be **determined** (at the very least), the number of free parameters to estimate must be equal or inferior to the number of equations (here, one by species included in the ODE model, aka 15).
-2. We initialise the iterative search by initialising the 10 free parameters with the biological constant vitals observed in healthy inviduals. Besides, we can enforce bounds (either for each of the parameters, or shared by all of them), coercing the optimisation algorithm not to go beyond. 
+2. We initialise the iterative search by initialising the 10 free parameters with the biological constant vitals observed in healthy individuals. Besides, we can enforce bounds (either for each of the parameters, or shared by all of them), coercing the optimisation algorithm not to go beyond. 
 3. For each of the patient subgroups, we need to provide the type of experiment (either `steady-state`, or `time_course` when several time points have been considered in the design), the measured concentrations diverging from the average concentrations in healthy patients with `data`, define each of the measured variables  (constant with `independent`, `dependent` if used for tailoring the parameter estimates, or `ignore` if not quantified in the ODE model). We had only the averaged expression per patient subgroup To better capture within-patient variability, it would have been valuable to provide the individual cytokine profiles, and perform a [**multiple least-squares regression, aka MMR**](https://en.wikipedia.org/wiki/General_linear_model) task.
 4. `mappings` guarantees the proper pairing between COPASI variables and string values of column names^[In contrast with documentation, this step seems mandatory, as the output returned by `` has a **placeholder** typical syntax.].
 5. Finally, the [`weight_method`] coupled with `weights` describe for each variable the assumed mean-variation trend. Report to COPASI Manual, section [*Experimental Data*](https://copasi.org/Support/User_Manual/Tasks/Parameter_Estimation/Experimental_Data/), for further details. 
 
 
-Finally, once the experimental design and optimisation criterias have been configured independently for each free parameter and patient subgroup, we have to run the parameter estimation itself:
+Finally, once the experimental design and optimisation criteria have been configured independently for each free parameter and patient subgroup, we have to run the parameter estimation itself:
   
 ```{r}
 #| label: runParameterEstimation
@@ -219,7 +219,7 @@ absolute_parameter_per_cluster <- purrr::map(fit_experiments, function(cluster) 
   )$parameters)
 })
 
-# Make results directly comparable with Table 8 by switchign from absolute to relative ratios
+# Make results directly comparable with Table 8 by switching from absolute to relative ratios
 relative_parameter_per_cluster <- absolute_parameter_per_cluster |> 
   purrr::list_rbind(names_to = "cluster") |> 
   dplyr::select(cluster, parameter, start_value, value) |> 
@@ -291,13 +291,13 @@ where:
 
 ---
 
-The **Levenberg-Marquardt Descent Approach** blends Newton’s method with a trust-region adjustment, controlling step size:
+The **Levenberg-Marquardt Descent Approach** (@eq-LM):
 
 $$
 \mathbf{x}_{k+1} = \mathbf{x}_k + \left( \mathbf{H}(\mathbf{x}_k) + \lambda \mathbf{I} \right)^{-1} \nabla f(\mathbf{x}_k)
 $${#eq-LM}
 
-where $\lambda$ controls the trade-off between gradient descent, when $\lambda \to \infty$, and Newton’s method $\lambda \to 0$.  
+where $\lambda$ is a dampening hyper-parameter controlling the trade-off between gradient descent, when $\lambda \to \infty$, and Newton’s method $\lambda \to 0$.  
 
 :::
 
@@ -306,7 +306,7 @@ where $\lambda$ controls the trade-off between gradient descent, when $\lambda \
 
 Our estimations are compared with *Table 8*, [@lo2016po, pp. 13] variations in @tbl-parameter-estimation. 
 
-**Of note, all tables in the original paper were provided as screenshots and images, rather than CSV files, preventing straightforward reporducibility of the results**.
+**Of note, all tables in the original paper were provided as screenshots and images, rather than CSV files, preventing straightforward reproducibility of the results**.
 
 
 ```{r}
@@ -372,7 +372,7 @@ relative_parameter_variations_flextable <- flextable(relative_parameter_per_clus
   set_caption("Table 8: Parameter variations in different types of diseases. 
               In blue, disease subtype induces shrinkage of the coefficients, 
               while red values correspond to increased parameter uptakes. ") |>
-  merge_at(part = "head", i = 1:2, j= 1)
+  merge_at(part = "head", i = 1:2, j = 1)
 relative_parameter_variations_flextable
 ```
 
@@ -400,7 +400,7 @@ save_as_docx(relative_parameter_variations_flextable,
 
 The objective of this section is to predict the efficiency of a novel anti-TNF-$\alpha$ treatment, assuming that the blocking treatment is equivalent to force the concentration of TNF-$\alpha$ to remain zero, and calculate the change of other variables at the **steady-state concentrations**. 
 
-Second objective is to determine the efficiency of the treatment conditionned to the *patient endotype* determined using *patient stratification* approaches. 
+Second objective is to determine the efficiency of the treatment conditioned to the *patient endotype* determined using *patient stratification* approaches. 
 
 
 ### Load Free Parameter variations in different types of diseases

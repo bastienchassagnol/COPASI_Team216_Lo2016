@@ -3,9 +3,16 @@ bibliography: ../assets/papers.bib
 engine: knitr
 link-citations: true
 highlight-style: github
-date: last-modified
-date-format: "DD MMM, YYYY"
+auto-stretch: false
 from: markdown+emoji 
+# collapsible call-outs
+filters: 
+  - reveal-header
+  - highlight-text
+  - collapse-callout
+collapse-callout:
+  all: true
+# footer, header and logo options
 pagetitle: "IBD ODE Disease Model"
 footer: "Digital Twins and Reproducibility // [Open-Source Website of IBD Model](https://bastienchassagnol.github.io/COPASI_Team216_Lo2016/)"
 footer-logo-link: "https://www.lpsm.paris/"
@@ -25,9 +32,10 @@ execute:
   message: false
   warning: false
   error: false
-  freeze: auto
+  freeze: false
 # table options
 tbl-cap-location: bottom
+layout-valign: center
 # document metadata
 lang: en-GB
 format: 
@@ -44,11 +52,10 @@ format:
     mainfont: "Didact Gothic"
     css: styles.css
     code-fold: true
+    mermaid:
+      theme: neutral
     theme: 
       - meds-slides-styles.scss
-filters: 
-  - reveal-header
-  - highlight-text
 ---
 
 ###  {#title-slide data-menu-title="Title Slide" background="#053660"}
@@ -62,7 +69,6 @@ filters:
 library(xml2)
 library(downlit)
 ```
-
 
 [Digital Twins and Reproducibility]{.custom-title}
 
@@ -80,78 +86,140 @@ library(downlit)
 
 <hr class="hr-teal">
 
-::::: columns
-
+:::::::: columns
 ::: {.column width="20%"}
-[Bastien CHASSAGNOL \|]{.custom-subtitle3}<br> [Post-Doc]{.custom-subtitle3}<br> [*LPSM and Laval*]{.body-text-xs}
+[Bastien CHASSAGNOL \|]{.custom-subtitle3}<br> [Post-Doc]{.custom-subtitle3}<br> [*LPSM, Sorbonne Université*]{.body-text-xs}
 :::
 
 ::: {.column width="20%"}
-[Lilija Wehling \|]{.custom-subtitle3}<br> [Ph.D.]{.custom-subtitle3}<br> [*VPE BioMed X Institute*]{.body-text-xs}
+[Lilija WEHLING \|]{.custom-subtitle3}<br> [Ph.D.]{.custom-subtitle3}<br> [*VPE BioMed X Institute*]{.body-text-xs}
 :::
 
 ::: {.column width="20%"}
-[Atreyee Banerjee \|]{.custom-subtitle3}<br> [Ph.D.]{.custom-subtitle3}<br> [*Mainz Universität*]{.body-text-xs}
+[Atreye BANERJEE \|]{.custom-subtitle3}<br> [Ph.D.]{.custom-subtitle3}<br> [*Mainz Universität*]{.body-text-xs}
 :::
 
 ::: {.column width="20%"}
-[Soria Gasparini \|]{.custom-subtitle3}<br> [Ph.D.]{.custom-subtitle3}<br> [*Heidelberg University*]{.body-text-xs}
+[Soria GASPARINI \|]{.custom-subtitle3}<br> [Ph.D.]{.custom-subtitle3}<br> [*Heidelberg University*]{.body-text-xs}
 :::
 
 ::: {.column width="20%"}
-[Sanjana Balaji Kuttae \|]{.custom-subtitle3}<br> [Computational Biologist (Research Assistant)]{.custom-subtitle3}<br> [*VPE BioMed X Institute*]{.body-text-xs}
+[Sanjana Balaji KUTTAE \|]{.custom-subtitle3}<br> [Computational Biologist (Research Assistant)]{.custom-subtitle3}<br> [*VPE BioMed X Institute*]{.body-text-xs}
 :::
-
-:::::
-
+::::::::
 
 <br>
 
 Slides available on [GitHub {{< fa brands github title="GitHub Octocat logo" >}}](https://github.com/bastienchassagnol/COPASI_Team216_Lo2016/tree/master/vignettes/slides)
 
----
+------------------------------------------------------------------------
 
 ### Talks' Layout {.slide-title}
 
-::: {.incremental}
-- Reproducibility Crisis. :wave:
-- IBD ODE Model :clock9:
-- IBD Numerical Simulations :clock9:
-- `BioModels` database :arrow_down:
-:::
 
-# Reproducibility Crisis {.section #reproducibility data-menu-title="Reproducibility Crisis"}
+-   Reproducibility Crisis. :warning:
+-   IBD ODE Model :notebook:
+-   IBD Numerical Simulations :computer:
+-   `BioModels` database :file_folder:
+
+# Reproducibility Crisis {#reproducibility .section data-menu-title="Reproducibility Crisis"}
 
 {{< include sections/0-reproducibility-crisis.qmd >}}
 
-# An ODE of the Immune System {.section #ibd-ode data-menu-title="An ODE of the Immune System"}
+# An ODE of the Immune System {#ibd-ode .section data-menu-title="An ODE of the Immune System"}
 
 {{< include sections/1-IBD-Model.qmd >}}
 
-# Personalised medecine applied to Inflammatory Bowel Disease {.section #ibd-models data-menu-title="Simulations of IBD endotypes"}
+# Personalised medecine applied to Inflammatory Bowel Disease {#ibd-models .section data-menu-title="Simulations of IBD endotypes"}
 
 {{< include sections/2-IBD-simulations.qmd >}}
 
-# `BioModels`: a repository of biological models {.section #biomodels data-menu-title="`BioModels`: a repository of biological models"}
+# `BioModels`: a repository of biological models {#biomodels .section data-menu-title="`BioModels`: a repository of biological models"}
 
 {{< include sections/3-BioModels.qmd >}}
 
+# Conclusion {#conclusion .section data-menu-title="Conclusion"}
 
-# Conclusion {.section #conclusion data-menu-title="Conclusion"}
+###  {data-menu-title="Hackathon's results I"}
+
+[Hackathon's results]{.slide-title2}
+
+![Hackathon concluding photo, on August 29th 2024](images/hackathon_final.jpg){width="60%"}
+
+::: incremental
+-   :seven: teams on-site, and :three: teams on-line.
+-   :one: :one: **mathematical models were hacked**,including :two: curated models and :two: recoded
+-   :trophy: a 3rd place for my team.
+:::
+
+::: aside
+Details on [Douglas Mccloskey `LinkedIn` post](https://www.linkedin.com/posts/douglas-mccloskey-b89bb833_hackathon-virtualpatient-computationalbiology-activity-7236311943878225920-bKO7/) and [Own promotional post](https://www.linkedin.com/posts/bastien-chassagnol-677b67140_identifiersorg-activity-7250082014123425793-jItc)
+:::
+
+<br>
+
+### Hackathon Quarto Website {.slide-title2 data-menu-title="Hackathon's results II" background-iframe="https://bastienchassagnol.github.io/COPASI_Team216_Lo2016/" background-interactive="true"}
+
+###  {data-menu-title="Biological Modelling Perspectives" .smaller}
+
+::: slide-title2
+Modelling Perspectives
+:::
+
+. . .
+
+-   Numerous arbitrary choices for **parameter estimation**. Inferred from blood samples, while the ODE is applied on gut tissues...
+
+-   ... and arbitrary selection of regulatory cytokines.
+
+. . .
+
+-   No justification for the modelling kinetics assumptions:
+
+    -   All enzyme inhibitions are modelled as **uncompetitive**.
+    -   The inhibitor binds to the enzyme-substrate complex (ES), and not on the free enzymes :arrow_forward: Rarely observed in practice.
+    -   Other models are available however, such as competitive or non-competitive.
+
+. . .
+
+-   *Patient stratification* into 4 endotypes is basic:
+
+    -   Driven by 2 factors only, namely the fold-change signs of $T_1$ and $T_2$ concentrations
+    -   Without FACS, transcriptomic expression of 2 master gene regulators have been used instead as proxies of T cells abundances.
+
+. . .
+
+-   Model at the *organoid*/tissue level (and not at the single cell level, as could have been performed by `PhysiCell` :smirk:)
+
+. . .
+
+-   :frowning: No validation of the ODE model on real clinical datasets.
 
 ###  {#TheEnd data-menu-title="Take-Aways"}
 
 ::: {.slide-title .center-text}
-Take-Aways:
+Take-Aways
 :::
 
-::: {.incremental}
-- `BioModels`, a data platform for storing curated biological models. 
-- However, no automated running of code snippets, nor mandatory access to original data
-- Hard-coded tools, such as COPASI, enable quick analyses for non-expert audience
-- But they're limited in terms of functionalities and flexibility, to be used with caution.
+::: {.fragment .fade-in-then-out}
+-   Hard-coded tools, such as `COPASI`, enable quick analyses for non-expert audience
+
+-   But they are limited in terms of functionalities and flexibility, to be used with caution.
 :::
 
+::: {.fragment .fade-in-then-out}
+-   `BioModels`, a data platform for storing curated biological models.
+
+-   However, no automated running of code snippets, nor mandatory access to original data
+:::
+
+::: {.fragment .fade-in-then-out}
+-   Use `Mermaid` or `Graphviz` {{< iconify file-icons:graphviz >}} syntax for plotting graphs
+
+-   Avoid `Cytoscape` {{< iconify simple-icons:cytoscapedotjs >}} or any point-and-click software, except for the final visual rendering :arrow_right:
+
+-   :file_folder: Streamlined and reproducible exporting, when paired with hard-coded adjacency matrices stored in `.csv`, or even better with dedicated **Graph-based databases**(`.graphml` or `.gml`)
+:::
 
 ::: {.center-text .body-text-m .gray-text}
 This is a Quarto `RevealJS` Presentation. To learn more, visit <https://quarto.org/docs/presentations/revealjs>.
@@ -163,12 +231,35 @@ This is a Quarto `RevealJS` Presentation. To learn more, visit <https://quarto.o
 *If you see mistakes, please raise a [GitHub issue](https://github.com/bastienchassagnol/CCCSTBench-Book/issues).*
 :::
 
+### Take-Aways II {.slide-title2 data-menu-title="Take-Aways II" background-iframe="https://www.ebi.ac.uk/biomodels/search?query=ibd&domain=biomodels"}
+
+
+### Take-Aways III {.slide-title2 data-menu-title="Take-Aways II"}
+
+::: {.body-text-s}
+
+-   Only :two: IBD models available on `BioModels`, both loaded following the `BioModels` Hackathon ...
+
+. . .
+
+
+-   :triangular_flag_on_post: ... and none could be be fully reproduced, due to limited data availability and missing modelling parametrisations.
+
+. . .
+
+-   Had to recode modelling scenarios and equations manually 
+
+  - :arrow_right_hook: Ask authors of the paper to supply original datasets OR/AND
+  
+  - Automate these error-prone digitalisation processes with tailored *OCR* software: 
+  
+    - :free: and open-source **OCR**^[Optical Character Recognition converts images or scanned documents, such as PDFs, into machine-readable text and structured datasets.] maths-heavy PDF Content Extraction: [`PDF-Extract-Kit`](https://github.com/opendatalab/PDF-Extract-Kit) and (`LaTeX-OCR/`)[https://lukas-blecher.github.io/LaTeX-OCR/]
+    - :moneybag: Corporate digitalised software: [`mathpix`](https://mathpix.com/convert) chained with `LangChain` or `LlamaIndex` for content refinement
+
+:::
+
 {{< include references.qmd >}}
 
 {{< include _about.qmd >}}
 
 {{< include license.qmd >}}
-
-
-
-

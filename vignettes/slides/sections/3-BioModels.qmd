@@ -2,9 +2,9 @@
 
 [`BioModels`: Metadata description]{.slide-title}
 
-::: {#fig-BioModels-feature layout="[[1,1], [1]]"} 
+::: {#fig-BioModels-feature layout="[[1,1], [1]]" layout-valign="center"} 
 
-![Around half of the publicly avalaible models are tagged **manually-curated**, a ratio slightly increasing over time.](images/biomodels_features.png){width=95% style="border-radius:1em;margin-top:auto"}
+![Around half of the publicly avalaible models are tagged **manually-curated**, a ratio decreasing over time. Features retrieved from @malik-sheriff2020nar.](images/biomodels_features.png){width=95% style="border-radius:1em;margin-top:auto"}
 
 ![Main reasons underlying failure of reproducing models.](images/biomodels_curated.png){width=95% style="border-radius:1em;margin-top:auto"}
 
@@ -12,7 +12,7 @@
 :::
 
 ::: aside
-On the 17th of May, 2025, 1,096 models were reported as **curated** against 1,643 as **non-curated**.
+:date: 2025-05-17: $1,096$ models were reported as **curated** against $1,643$ as **non-curated**.
 :::
 
 
@@ -20,7 +20,7 @@ On the 17th of May, 2025, 1,096 models were reported as **curated** against 1,64
 
 [`BioModels` submission flowchart]{.slide-title}
 
-::: {#fig-BioModels-flowchart layout-ncol=2}
+::: {#fig-BioModels-flowchart layout-ncol=2 layout-valign="center"}
 
 ![From submission to publication of a model in BioModels. Reproduced from [Fig4]( https://academic.oup.com/view-large/figure/191000472/gkz1055fig4.jpg), from @malik-sheriff2020nar](images/biomodels_flowchart_1.jpeg){width=95% style="border-radius:1em;margin-top:auto"}
 

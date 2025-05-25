@@ -89,16 +89,15 @@ Five tabs: overview, files, history (versions), components (the SBML model itsel
 - environment: flex default or dedicated machines
 - straightforward deployment 
 - Jupyter Notebook
-- Pipeline is composed of several capsule, with drag and drop system, and custom data // Code is versionned
+- Pipeline is composed of several capsule, with drag and drop system, and custom data // Code is versioned
 - Papers are available on Data
 - Focused on COPASI, ok as long as the final output is SBML. 
 
-- = ->, respectively reversible and irreversible reactions, * to add the stochiometric coefficients
+- = ->, respectively reversible and irreversible reactions, * to add the stoichiometric coefficients
 - Output: `B + C ->`
 - add to set the quantity unit concentration, does not really change the modelling, but relevant for the curation. Includes as well unit times
 - Mathematical equations: 
   - differential equations: Michaelis-Menten equation can be used to include further equations
-  -  
 - Jury evaluation: are we able to reproduce the models? Major objective: improve BioModels repository. Model annotation, from tomorrow, is also relevant. 
 
 # Annotation
