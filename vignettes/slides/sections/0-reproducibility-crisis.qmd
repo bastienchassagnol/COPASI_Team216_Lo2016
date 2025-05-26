@@ -1,23 +1,23 @@
-###  {#repro-crisis data-menu-title="Reproducibility crisis"}
+###  {#repro-crisis data-menu-title="Reproducibility crisis" .scrollable}
 
 [Is there a Reproducibility crisis?]{.slide-title2}
 
 <hr>
 
 ::::::: columns
-:::: {.column width="75%"}
+:::: {.column width="70%"}
 ::: panel-tabset
 #### Feeling
 
-![**Nature's survey of 1,576 researchers on reproducibility in research**. Reproduced from [Fig1, *1,500 scientists lift the lid on reproducibility*](https://www.nature.com/articles/533452a), from @baker2016n.](images/reproducibility_crisis.webp){width="70%" style="border-radius:1em;margin-top:auto"}
+![**Nature's survey of 1,576 researchers on reproducibility in research**. Reproduced from [Fig1, *1,500 scientists lift the lid on reproducibility*](https://www.nature.com/articles/533452a), from @baker2016n.](images/reproducibility_crisis.webp){width="50%" style="border-radius:1em;margin-top:auto"}
 
 #### Domain-dependant
 
-![Physicists and chemists show the most confidence, in contrast with social or biological studies. Reproduced from [Fig2, *1,500 scientists lift the lid on reproducibility*](https://www.nature.com/articles/533452a), from @baker2016n.](images/reproducibility_crisis_dependant.webp){width="70%" style="border-radius:1em;margin-top:auto"}
+![Physicists and chemists show the most confidence, in contrast with social or biological studies. Reproduced from [Fig2, *1,500 scientists lift the lid on reproducibility*](https://www.nature.com/articles/533452a), from @baker2016n.](images/reproducibility_crisis_dependant.webp){width="50%" style="border-radius:1em;margin-top:auto"}
 :::
 ::::
 
-:::: {.column width="25%"}
+:::: {.column width="30%"}
 ::: {.vertical-center .body-text-s}
 -   $52\%$ considering there's a significant crisis
 
