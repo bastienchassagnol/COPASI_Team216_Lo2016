@@ -1,0 +1,78 @@
+---
+title: "GT BioSS"
+format: html
+---
+
+# Logical Modelling of biological network
+
+## Logical modelling focus:
+
+1. Regulatory graph + Boolean variables + Boolean functions for updating the graph states
+
+Objective: understand the dynamics of the system:
+
+  - Equilibrium points
+  - Trajectories
+
+**synchronous updating**: deterministic trajectories (far from biologic perspectives) -> instead, use *asynchronous updating* scheme, in which he activity level of only one component is updated at a time 
+
+- *(STG), state transition graph*: find its properties, such as **stability** (fixed points) and **cyclic attractors**
+
+- **multi-valued** variable, to encompass more qualitative situations or regulatory situations -> enrich the dynamics while enforcing the Boolean dynamics:
+
+    - questions: how to discretise originally quantitative information? 
+
+- **Most permissive updating rule**, from Loic Paulevé: 
+
+## Boolean properties
+
+- How to refine the graphs: change updating property rules, add nodes, or most permissive updating rule?
+
+- **Reachability**
+- `MRBM` method: Identify a **minimal set of components** 
+
+[Refining Boolean models with the partial most permissive scheme](https://pmc.ncbi.nlm.nih.gov/articles/PMC12021794/)
+
+# `AstroLogics`
+
+- Objective: differential Boolean dynamics network
+
+- Logic differences: disjunctive boolean distances
+
+- **Applications**: `Bonesis` tutorial, Invasion model
+
+- Question: which projecting technique used?
+
+# A view of the diversity of Boolean networks, through the lens of canalisation
+
+## Declarative framework and semiology
+
+- solving process: `clingo`, model is named `BoNesis`
+- characterise the solution space
+
+(heuristics used: do you have theoretical results confirming the computational speed gain for exploring the graphs' solution space)
+
+## On Model Reduction of Boolean Networks, Patricia Roxo
+
+- How to overcome state explosion? 
+
+  1. Reduction of the graph, while keeping dynamic properties
+  
+- Time scale separation reduction to be preserved
+
+? **trace** = trajectory
+
+## Reachability Analysis for Parametric Rule-Based Models
+
+- `Kappa`: rule-based language for modelling systems of interacting proteins
+- Detects local properties of incomplete models
+
+Objective: find reachable molecular species
+
+Resulting **Horn clause**
+
+
+
+
+
+

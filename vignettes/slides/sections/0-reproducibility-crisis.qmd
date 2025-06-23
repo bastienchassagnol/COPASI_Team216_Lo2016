@@ -86,7 +86,7 @@ Aka **Methodological Reproducibility**:
 One workaround to overcome the reproducibility crisis is not mentioned, can you guess it?
 :::
 
-###  {#repro-hackathon .scrollable .smaller data-menu-title="Reproducible Hackathons"}
+###  {#repro-hackathon .scrollable data-menu-title="Reproducible Hackathons"}
 
 [Reproduce figures and results from peer-reviewed papers II]{.slide-title2}
 
@@ -95,11 +95,11 @@ One workaround to overcome the reproducibility crisis is not mentioned, can you 
 **Repro-hackathons** as community-driven events to overcome reproducibility crisis:
 
 :::::: columns
-::: {.column width="75%"}
-![Comparison of differentially expressed genes among 12 groups, illustrated by **upset plots**. Reproduced from [Fig.6, \@cokelaer2023b](https://academic.oup.com/view-large/figure/409576502/btad227f6.tif)](images/degs_reprohackathons.jpeg){width="70%" style="border-radius:1em;margin-top:auto"}
+::: {.column width="60%"}
+![Comparison of differentially expressed genes among 12 groups, illustrated by **upset plots**. Reproduced from [Fig.6, \@cokelaer2023b](https://academic.oup.com/view-large/figure/409576502/btad227f6.tif)](images/degs_reprohackathons.jpeg){width="50%" style="border-radius:1em;margin-top:auto"}
 :::
 
-:::: {.column width="25%"}
+:::: {.column width="40%"}
 ::: {.body-text-s .vertical-center}
 -   **Core objective**: 12 group students aim at recovering DEGs from a peer-reviewed publication.
 
@@ -108,7 +108,7 @@ One workaround to overcome the reproducibility crisis is not mentioned, can you 
     1.  Free choice of differential analysis model, genome reference and filtering thresholds (scenario A)
     2.  Constrained choice of methods and hyperparameters (scenario B)
 
--   **Conclusion**: DEGs poolry overlap between the groups, whereas all pipelines were runnable.
+-   **Conclusion**: DEGs poorly overlap between the groups, whereas all pipelines were runnable.
 :::
 ::::
 ::::::
