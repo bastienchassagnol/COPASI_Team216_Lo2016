@@ -96,7 +96,7 @@ library(downlit)
 :::
 
 ::: {.column width="20%"}
-[Atreye BANERJEE \|]{.custom-subtitle3}<br> [Ph.D.]{.custom-subtitle3}<br> [*Mainz Universität*]{.body-text-xs}
+[Atreye BANERJEE \|]{.custom-subtitle3}<br> [Ph.D.]{.custom-subtitle3}<br> [*Max Planck Institute of Polymer Research, Mainz*]{.body-text-xs}
 :::
 
 ::: {.column width="20%"}
