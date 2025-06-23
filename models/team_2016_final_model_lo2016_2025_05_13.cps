@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- generated with COPASI 4.45 (Build 298) (http://www.copasi.org) at 2025-05-14T13:48:32Z -->
+<!-- generated with COPASI 4.45 (Build 298) (http://www.copasi.org) at 2025-06-23T15:45:24Z -->
 <?oxygen RNGSchema="http://www.copasi.org/static/schema/CopasiML.rng" type="xml"?>
 <COPASI xmlns="http://www.copasi.org/static/schema" versionMajor="4" versionMinor="45" versionDevel="298" copasiSourcesModified="0">
   <ListOfFunctions>
@@ -245,17 +245,32 @@ Reaction scheme where the products are created from the reactants and the change
     </dcterms:created>
     <dcterms:creator>
       <rdf:Description>
-        <vCard:EMAIL>wehling@bmedx.com</vCard:EMAIL>
+        <vCard:EMAIL>banerjeea@mpip-mainz.mpg.de</vCard:EMAIL>
         <vCard:N>
           <rdf:Description>
-            <vCard:Family>Wehling</vCard:Family>
-            <vCard:Given>Lilija</vCard:Given>
+            <vCard:Family>Banerjee</vCard:Family>
+            <vCard:Given>Atreyee</vCard:Given>
           </rdf:Description>
         </vCard:N>
         <vCard:ORG>
           <rdf:Description>
-            <vCard:Orgname>Virtual Patient Engine
-BioMed X Institute</vCard:Orgname>
+            <vCard:Orgname>Max Planck Institute of Polymer Research, Mainz</vCard:Orgname>
+          </rdf:Description>
+        </vCard:ORG>
+      </rdf:Description>
+    </dcterms:creator>
+    <dcterms:creator>
+      <rdf:Description>
+        <vCard:EMAIL>bastien_chassagnol@laposte.net</vCard:EMAIL>
+        <vCard:N>
+          <rdf:Description>
+            <vCard:Family>CHASSAGNOL</vCard:Family>
+            <vCard:Given>Bastien</vCard:Given>
+          </rdf:Description>
+        </vCard:N>
+        <vCard:ORG>
+          <rdf:Description>
+            <vCard:Orgname>Aix marseille Université</vCard:Orgname>
           </rdf:Description>
         </vCard:ORG>
       </rdf:Description>
@@ -306,22 +321,6 @@ BioMed X Institute</vCard:Orgname>
         <vCard:ORG>
           <rdf:Description>
             <vCard:Orgname>Heidelberg Universität</vCard:Orgname>
-          </rdf:Description>
-        </vCard:ORG>
-      </rdf:Description>
-    </dcterms:creator>
-    <dcterms:creator>
-      <rdf:Description>
-        <vCard:EMAIL>banerjeea@mpip-mainz.mpg.de</vCard:EMAIL>
-        <vCard:N>
-          <rdf:Description>
-            <vCard:Family>Banerjee</vCard:Family>
-            <vCard:Given>Atreyee</vCard:Given>
-          </rdf:Description>
-        </vCard:N>
-        <vCard:ORG>
-          <rdf:Description>
-            <vCard:Orgname>Mainz Universität</vCard:Orgname>
           </rdf:Description>
         </vCard:ORG>
       </rdf:Description>
